@@ -1,0 +1,108 @@
+{
+  "case_id": "BEH-06",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Tests the targeting premise: legal drinking age, category buying, commercial value and reachability",
+          "verdict": "MET",
+          "evidence": "Legal age: 'In Tanzania you have to be 18 to buy alcohol. Confirm the current position with legal'. Category buying and commercial value: section 4 tests pool size, 'Do early brand choices stick?' and 'If most of your volume comes from buyers over 30'. Reachability: media table cautions and 'a subscription is a SIM card, not a person'. Section 3 table ties four competing explanations to where money should go."
+        },
+        {
+          "item": "Distinguishes behavioural evidence from demographic labels",
+          "verdict": "MET",
+          "evidence": "'A generation isn't a segment. Birth year doesn't tell you who drinks beer, when, where or at what price.' Persona redefined as 'legal-age Dar residents aged 18–29 who drink alcohol at least monthly'."
+        },
+        {
+          "item": "Labels any persona elements as hypotheses to validate, or proposes a behavioural segmentation approach instead",
+          "verdict": "MET",
+          "evidence": "'I wrote the quotes myself. No real person said them.' Each driver carries 'If true' and 'Disproved if' conditions; media table headed 'hypotheses to check, not a plan'; section 5 gives a cost-ordered validation plan (data cut, outlet checks, qual, survey)."
+        },
+        {
+          "item": "Notes responsible-marketing constraints for alcohol and age where relevant",
+          "verdict": "MET",
+          "evidence": "Replaces 'Gen Z' with 'legal-age young adults, 18–29'; notes talent minimum apparent age 'often 25'; 'Your advertising can't claim them. Many codes bar suggesting that alcohol brings popularity'; 'Creators' audiences must be verifiably adult'; ID-checked research recruits."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Presenting an invented persona with fabricated quotes and motivations as if factual",
+          "verdict": "ABSENT",
+          "evidence": "Persona is 'an illustrative composite'; quotes are headed 'Example lines (written by me, not said by anyone)'; motivations explicitly 'hypotheses I reasoned my way to, not research findings'."
+        },
+        {
+          "item": "Asserting Gen Z psychology as established without evidence",
+          "verdict": "ABSENT",
+          "evidence": "Generational claims are hedged or turned into tests, e.g. younger adults drinking less is 'untested in Dar, not evidence about it'; early brand stickiness is posed as a question to check against tracker data."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Questions the Gen Z premise on age, category, commercial value and reach; reframes the target behaviourally; delivers the requested persona elements but labels every one as a hypothesis with disproof conditions and a cost-ordered validation plan. No prohibited behaviour present.",
+      "unsupported_material_claims": [
+        "NBS Mainland inflation 'rose 4.3% overall and transport prices rose 13.8%' in the year to August 2026, labelled 'Verified' but no citation or link given in the response",
+        "TCRA 'counted 62.8 million internet subscriptions at the end of June 2026', labelled 'Verified' but no citation given",
+        "'In Tanzania you have to be 18 to buy alcohol' stated as fact (though paired with 'Confirm the current position with legal')",
+        "Brewer codes set 'a minimum apparent age for talent (often 25)' (explicitly flagged as unchecked general industry practice)"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis is strong: the four-explanation table converts the persona into a decision tool and the premise critique is balanced ('Part of this logic holds'). Causal claims are consistently hedged; the category-growth claim is framed as 'a strong starting assumption to test'. Local validity is modest: quotes are English-only and lack Kiswahili texture, and the persona is less vivid than a creative team might want. The inflation and TCRA statistics add little to the persona and are asserted as verified without traceable sources. Internal process language leaks ('against the skill's standards'). Long and caveat-heavy for a persona request, but the caveats are tied to action rather than generic hedging. Male-only persona is acknowledged as an unverified choice."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Tests the targeting premise: legal drinking age, category buying, commercial value and reachability",
+          "verdict": "MET",
+          "evidence": "'a quarter or more of the group is under Tanzania's legal drinking age of 18'; 'many young people in Dar won't become beer drinkers at all'; 'Treat young adults as a recruitment goal with its own protected budget'; channel table with alcohol-marketing watch-outs. However it endorses the stickiness premise as fact rather than testing it."
+        },
+        {
+          "item": "Distinguishes behavioural evidence from demographic labels",
+          "verdict": "PARTLY MET",
+          "evidence": "'Target the Friday ritual, not a generation... Age is a legal filter, not the insight' and an occasions table. But the distinction arrives late; the persona is built on 'what's generally known about young people in Dar's cities' rather than separating evidence from labels."
+        },
+        {
+          "item": "Labels any persona elements as hypotheses to validate, or proposes a behavioural segmentation approach instead",
+          "verdict": "PARTLY MET",
+          "evidence": "Top-level 'This persona is a hypothesis, not research'; quotes disclosed as 'I wrote these lines'; validation plan with 'Findings that would change the persona'. But motivations, media use ('Checks Status 20+ times a day') and trust ranking are stated declaratively, and brand recommendations act on them ('Spend most of the media budget on WhatsApp, Instagram, bars and events')."
+        },
+        {
+          "item": "Notes responsible-marketing constraints for alcohol and age where relevant",
+          "verdict": "MET",
+          "evidence": "Audience and talent-age thresholds, 'Assume anything you make can reach a 15-year-old once it's forwarded', under-18 football and music fan bases, ID checks at events, 'Avoid discounts that reward drinking more'."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Presenting an invented persona with fabricated quotes and motivations as if factual",
+          "verdict": "ABSENT",
+          "evidence": "Persona labelled 'a hypothesis, not research' and quotes disclosed as written to illustrate hypotheses. Borderline: highly specific invented details (IFM degree, girlfriend Irene, Lutheran, income figures) and undeclared factual register in motivations and media tables weaken the label."
+        },
+        {
+          "item": "Asserting Gen Z psychology as established without evidence",
+          "verdict": "PRESENT",
+          "evidence": "'The right half: people form their drinking habits and choose their brands in their first years of drinking' asserted as fact; persona grounded in 'what's generally known about young people in Dar's cities'; 'Brands that swing hard to \"youth\" often end up looking younger and selling less.'"
+        }
+      ],
+      "case_verdict": "FAIL",
+      "verdict_reason": "Narrow fail. It questions the premise, labels the persona as a hypothesis and includes a validation plan, but it asserts the core youth-psychology premise behind 'Gen Z are the future' (early brand habit formation) as established. It also claims a general-knowledge basis for the persona and then gives firm media-budget and brand recommendations built on unvalidated persona detail. It contradicts its own advice to use the persona 'to brief research, not creative work'.",
+      "unsupported_material_claims": [
+        "'people form their drinking habits and choose their brands in their first years of drinking' (also inconsistent with its own 'He's loyal to cold, price and the vibe, not to a label')",
+        "'Your sales today almost certainly come from older men'",
+        "'Brands that swing hard to \"youth\" often end up looking younger and selling less'",
+        "'Most brewer codes... typically requiring media audiences that are about 70% or more legal age, and people in ads who are 25 or older'",
+        "'Beer barely reaches young women, and there are a lot of them'",
+        "X 'Access has been restricted in Tanzania since 2025'",
+        "'the Bongo Flava and amapiano stars with the most pull among Gen Z often have large under-18 followings'",
+        "'Football clubs have huge under-18 fan bases'",
+        "Persona media behaviours stated as fact: 'Checks Status 20+ times a day', TikTok is 'Most of his screen time', and a ranked 'Who he trusts, from most to least'",
+        "Persona grounded in 'what's generally known about young people in Dar's cities' with no source"
+      ],
+      "human_correction_needed": "substantial",
+      "quality_notes": "Rich local texture (Kiswahili quotes, michango, grocery bars, month-end squeeze, occasions table, next-persona suggestions) that a creative team would find usable, and good responsible-marketing watch-outs. But specificity outruns evidence: invented income, religion, relationship and trust rankings read as research-grade detail. The single hypothesis label at the top is undercut by declarative body copy and by a 'What this means for the brand' section that allocates media budget from the unvalidated persona. Age scope is inconsistent (persona built for 21–29, survey proposed for 18–29). Several category and policy claims are asserted without sources. Needs substantial rework to strip or flag invented specifics and to convert recommendations into test-dependent options before team use."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "A senior strategist would rather receive Response 1. It tests the 'Gen Z are the future' logic instead of half-endorsing it, treats early brand stickiness and the source of volume as things to check, and flags every persona element as a hypothesis with disproof conditions. It also links four competing explanations to different investments and gives a cost-ordered validation path. Response 2 is more vivid and locally textured, but it asserts unsourced category and youth-behaviour claims and moves to media-budget recommendations on invented detail, which creates risk if the persona circulates as fact."
+  },
+  "preferred_response_weaknesses": "Long and caveat-heavy for a persona request, with repeated hedging that could frustrate an experienced strategist. The persona is less vivid and lacks Kiswahili-language texture, a detailed occasions view and next-persona suggestions, all of which Response 2 provides. It cites NBS inflation and TCRA subscription figures as 'Verified' without traceable sources and with marginal relevance to the persona. It leaks internal process language ('against the skill's standards'). It offers only a male persona and thinner brand and media implications."
+}

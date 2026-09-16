@@ -1,0 +1,43 @@
+{
+  "id": "pvm-02-fixed-unit-separate-interaction",
+  "recipe": "pvm",
+  "purpose": "Same data as pvm-01 with the interaction term reported separately.",
+  "input_csv": "period,sku,units,price,unit,currency\n2025,A,100,10,unit,TZS\n2026,A,90,12,unit,TZS\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--unit-col",
+    "unit",
+    "--currency-col",
+    "currency",
+    "--interaction",
+    "separate"
+  ],
+  "convention": "Price at base quantity = (p1-p0) x q0; interaction = (p1-p0) x (q1-q0) reported separately; volume and mix at base prices.",
+  "derivation": "Price at base q = 2 x 100 = 200. Interaction = 2 x (-10) = -20. Volume = -100. Mix = 0. 200 - 20 - 100 = 80.",
+  "tolerance": 1e-09,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.components.price": 200,
+    "results.components.price_volume_interaction": -20,
+    "results.components.volume": -100,
+    "results.components.mix": 0,
+    "results.revenue_change": 80
+  },
+  "edge_case_expectation": "The two conventions give different price effects (180 vs 200) but both reconcile to 80; the convention must be declared in output.",
+  "expected_failure_behavior": "Not applicable (valid input).",
+  "kind": "analytics"
+}

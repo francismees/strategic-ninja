@@ -1,0 +1,1091 @@
+{
+  "schema_version": "1.0",
+  "engagement": {
+    "id": "ENG-pesalo-2027-critique",
+    "namespace": "demo-pesalo/pesalo/tanzania/2027-strategy-critique",
+    "decision": "Whether the board should approve TZS 2.5 billion for Pesalo's 2027 Gen Z campaign and Pesalo Gold launch, and what to fund instead if not",
+    "decision_maker": "Pesalo board (fictional)",
+    "audience": "CEO and board (fictional)",
+    "client": "Pesalo (fictional)",
+    "brand": "Pesalo (fictional mobile savings wallet)",
+    "category": "Mobile savings and wallets",
+    "market": "Tanzania (national claims in the deck; operating data company-wide)",
+    "horizon": "annual",
+    "outcome": "Profitable growth in active savers",
+    "success_metric": "Active savers (monthly active users with at least one deposit) and 90-day retention",
+    "baseline": "Q2 2026: 210,000 monthly active users of 1,400,000 registered; 30-day retention of new users 22%",
+    "constraints": [
+      "Board meeting in two weeks",
+      "Budget request TZS 2.5 billion"
+    ],
+    "scope": "Critique of the 2027 strategy deck and a repaired storyline",
+    "mode": "critique_red_team",
+    "depth": "standard",
+    "unresolved_questions": [
+      "Do users whose first cash-out fails churn more than others?",
+      "Would target users pay TZS 5,000 a month for Pesalo Gold?",
+      "Does radio cause sign-ups once salary timing is controlled?"
+    ],
+    "persistence": "authorised_local_files",
+    "synthetic": true,
+    "created": "2026-09-17"
+  },
+  "sources": [
+    {
+      "id": "SRC-C01",
+      "title": "Pesalo 2027 Growth Strategy deck (synthetic)",
+      "url_or_file": "examples/demo-c-critique/data/original-strategy-deck.md",
+      "publisher_owner": "Pesalo management (fictional)",
+      "locator": "Slides 1-12 and Appendix A",
+      "publication_date": "2026-09",
+      "data_period": "Q2 2026 operating data; claims undated",
+      "geography": "Tanzania",
+      "population_sample": "unknown: most slide claims cite no sample",
+      "method": "Management presentation",
+      "access_date": "2026-09-17",
+      "limitations": "Advocacy document; most claims unsourced",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "company_communication"
+    },
+    {
+      "id": "SRC-C02",
+      "title": "Pesalo operating data, Q2 2026 (deck Appendix A, synthetic)",
+      "url_or_file": "examples/demo-c-critique/data/original-strategy-deck.md",
+      "publisher_owner": "Pesalo operations (fictional)",
+      "locator": "Appendix A",
+      "publication_date": "2026-09",
+      "data_period": "April-June 2026",
+      "geography": "All Pesalo users",
+      "population_sample": "All registered accounts and transactions",
+      "method": "Platform transaction data",
+      "access_date": "2026-09-17",
+      "limitations": "Summary figures only; no cohort breakdown by first cash-out outcome",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "first_party_data"
+    },
+    {
+      "id": "SRC-C03",
+      "title": "Weekly sign-ups with radio and salary-week flags (synthetic)",
+      "url_or_file": "examples/demo-c-critique/data/weekly_signups_q2q3.csv",
+      "publisher_owner": "Pesalo growth team (fictional)",
+      "locator": "All 26 rows",
+      "publication_date": "2026-09",
+      "data_period": "26 weeks, Q2-Q3 2026",
+      "geography": "National",
+      "population_sample": "All sign-ups",
+      "method": "Platform counts with media calendar flags",
+      "access_date": "2026-09-17",
+      "limitations": "Observational; no regional control",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "first_party_data"
+    },
+    {
+      "id": "SRC-C04",
+      "title": "One-star app review sample (synthetic)",
+      "url_or_file": "examples/demo-c-critique/data/app_review_sample.md",
+      "publisher_owner": "Pesalo insights team (fictional)",
+      "locator": "Theme table",
+      "publication_date": "2026-07",
+      "data_period": "April-June 2026",
+      "geography": "App store reviewers",
+      "population_sample": "Random sample of 120 one-star reviews",
+      "method": "Thematic coding",
+      "access_date": "2026-09-17",
+      "limitations": "Reviewers are self-selected and dissatisfied; not representative of all users",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "social_signal"
+    },
+    {
+      "id": "SRC-C05",
+      "title": "Nairobi Fintech Youth Report 2025 (fictional, as cited on slide 5)",
+      "url_or_file": "examples/demo-c-critique/data/original-strategy-deck.md",
+      "publisher_owner": "unknown: publisher not named in the deck",
+      "locator": "Slide 5 citation only; report not supplied",
+      "publication_date": "2025",
+      "data_period": "unknown: not stated",
+      "geography": "Nairobi, Kenya",
+      "population_sample": "unknown: not stated",
+      "method": "unknown: not stated",
+      "access_date": "2026-09-17",
+      "limitations": "Report not supplied; Kenyan evidence; method unknown",
+      "lineage": {
+        "origin": "unknown",
+        "derived_from": [],
+        "note": "Only the deck's citation is available"
+      },
+      "source_class": "industry_research"
+    },
+    {
+      "id": "SRC-TZ-TCRA-2026-Q2",
+      "title": "Communications Sector Performance Report, quarter ending June 2026",
+      "url_or_file": "https://www.tcra.go.tz/publications/statistics/2026/q4 (report listing page linking the PDF)",
+      "publisher_owner": "Tanzania Communications Regulatory Authority (TCRA)",
+      "locator": "p.7-8 glossary (definition of subscription; penetration); p.10 snapshot; p.13 Table 1.1.1; p.14 Tables 1.1.1.1-1.1.1.2; p.35 Table 1.9.1.1",
+      "publication_date": "2026-08-10",
+      "data_period": "April-June 2026 (end-June stock figures)",
+      "geography": "United Republic of Tanzania",
+      "population_sample": "Operator-reported subscriptions (administrative data)",
+      "method": "Regulatory returns from licensed operators",
+      "access_date": "2026-09-17",
+      "limitations": "Counts subscriptions (SIMs used at least once in 90 days), including machine-to-machine SIMs and fixed lines; not unique people. Penetration denominator not stated in the report.",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": "Secondary portals republish these figures; cite this report"
+      },
+      "source_class": "regulator",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Superseded by the next quarterly TCRA report (quarter ending September 2026)"
+    },
+    {
+      "id": "SRC-TZ-WB-WDI-POP",
+      "title": "World Development Indicators: Population, total (SP.POP.TOTL), Tanzania",
+      "url_or_file": "https://api.worldbank.org/v2/country/TZA/indicator/SP.POP.TOTL?format=json",
+      "publisher_owner": "World Bank",
+      "locator": "API record for date 2025; database lastupdated 2026-07-13",
+      "publication_date": "2026-07-13",
+      "data_period": "2025",
+      "geography": "United Republic of Tanzania",
+      "population_sample": "Total population (all ages)",
+      "method": "World Bank estimate compiled from census and projection sources",
+      "access_date": "2026-09-17",
+      "limitations": "Modelled estimate for a non-census year; may differ from NBS projections",
+      "lineage": {
+        "origin": "derived",
+        "derived_from": [],
+        "note": "Compiled from national and UN population sources; underlying source not traced in this check"
+      },
+      "source_class": "official_statistics",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next WDI update, or when an NBS projection for the same year is used"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-C01",
+      "statement": "The deck states that 117 million mobile users in Tanzania equal 117 million potential Pesalo customers",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-C01"
+        ],
+        "records": [],
+        "locator": "Slide 2"
+      },
+      "units_denominator": "Deck assertion",
+      "period": "2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Directly read from the deck"
+      },
+      "market_applicability": {
+        "status": "not_applicable",
+        "scope": "Content of the deck",
+        "reason": "Describes what the deck says"
+      },
+      "verification_status": "verified",
+      "limitations": "Establishes what the deck claims, not its truth"
+    },
+    {
+      "id": "CLM-TZ-004",
+      "statement": "TCRA reported 116,952,295 telecom subscriptions at end-June 2026 (mobile 116,850,926; fixed 101,369), of which 1,233,467 were machine-to-machine SIMs.",
+      "type": "observed",
+      "value": 116952295,
+      "basis": {
+        "sources": [
+          "SRC-TZ-TCRA-2026-Q2"
+        ],
+        "records": [],
+        "locator": "p.13 Table 1.1.1; p.14 Tables 1.1.1.1-1.1.1.2"
+      },
+      "units_denominator": "Subscriptions (SIMs used at least once in 90 days, plus fixed lines)",
+      "period": "End-June 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Regulator's administrative data for exactly this measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, telecom subscriptions (not people)",
+        "reason": "Direct regulator data"
+      },
+      "verification_status": "verified",
+      "limitations": "Subscriptions, not unique people or households",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next TCRA quarterly report"
+    },
+    {
+      "id": "CLM-TZ-006",
+      "statement": "TCRA defines a subscription as a SIM used at least once for voice, SMS or data in the past 90 days, and reports penetration of 167.0% (telecom) and 89.7% (internet) without stating the population denominator.",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-TZ-TCRA-2026-Q2"
+        ],
+        "records": [],
+        "locator": "Glossary p.7-8; snapshot p.10; Figure 1.1.4.1 p.17; p.35"
+      },
+      "units_denominator": "Definition and reported ratios",
+      "period": "Quarter ending June 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Definitions and figures read directly from the report"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "TCRA reporting definitions",
+        "reason": "Regulator's own definitions"
+      },
+      "verification_status": "verified",
+      "limitations": "Denominator not stated; implied denominator is an inference, not a reported figure",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next TCRA quarterly report"
+    },
+    {
+      "id": "CLM-TZ-007",
+      "statement": "The World Bank estimates Tanzania's total population in 2025 at 70,545,865.",
+      "type": "observed",
+      "value": 70545865,
+      "basis": {
+        "sources": [
+          "SRC-TZ-WB-WDI-POP"
+        ],
+        "records": [],
+        "locator": "SP.POP.TOTL, date 2025"
+      },
+      "units_denominator": "People, all ages",
+      "period": "2025",
+      "confidence": {
+        "level": "medium",
+        "reason": "Authoritative compiler but a modelled estimate between censuses"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, total population",
+        "reason": "Country-level estimate"
+      },
+      "verification_status": "verified",
+      "limitations": "Estimate; compare with NBS projections when precision matters",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next WDI update"
+    },
+    {
+      "id": "CLM-TZ-008",
+      "statement": "Telecom subscription counts cannot be read as unique people or audience reach: end-June 2026 subscriptions (about 117.0 million) exceed the estimated 2025 total population (about 70.5 million) of all ages.",
+      "type": "inference",
+      "basis": {
+        "sources": [],
+        "records": [
+          "CLM-TZ-004",
+          "CLM-TZ-006",
+          "CLM-TZ-007"
+        ],
+        "reasoning": "A count larger than the whole population must include multiple subscriptions per person and non-person subscriptions (machine-to-machine SIMs are reported separately); the 90-day activity definition also counts intermittently used SIMs."
+      },
+      "units_denominator": "Comparison of subscriptions with population",
+      "period": "2025-2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Follows arithmetically from two direct measures and the stated definition"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania",
+        "reason": "Based on local regulator and population data"
+      },
+      "verification_status": "unverified",
+      "limitations": "Does not estimate the number of unique mobile users; that requires survey or operator unique-user data",
+      "recorded": "2026-09-17",
+      "review_condition": "When either input record is superseded"
+    },
+    {
+      "id": "CLM-C02",
+      "statement": "Only 15% of registered accounts were active in a 30-day window (210,000 of 1,400,000), and 22% of users who registered in Q2 were retained at 30 days",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-C02"
+        ],
+        "records": [],
+        "calculation": "210,000 / 1,400,000 = 15.0%; 30-day retention as reported in Appendix A"
+      },
+      "units_denominator": "% of registered accounts; % of Q2 registrants",
+      "period": "Q2 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "First-party data; retention definition not documented"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Pesalo users",
+        "reason": "Platform data"
+      },
+      "verification_status": "reproduced",
+      "limitations": "No cohort curves beyond 30 days"
+    },
+    {
+      "id": "CLM-C03",
+      "statement": "18% of cash-out attempts failed in Q2 2026 (468,000 of 2.6 million), attributed by operations to agent float shortages",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-C02"
+        ],
+        "records": [],
+        "locator": "Appendix A; slide 10"
+      },
+      "units_denominator": "% of cash-out attempts",
+      "period": "Q2 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Platform counts; cause attribution by operations not independently checked"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Pesalo agent network",
+        "reason": "Platform data"
+      },
+      "verification_status": "verified",
+      "limitations": "Failure causes other than float not broken out"
+    },
+    {
+      "id": "CLM-C04",
+      "statement": "41 of 120 sampled one-star reviews mention failed withdrawals or agents without cash, the most common theme",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-C04"
+        ],
+        "records": [],
+        "locator": "Theme table, row 1"
+      },
+      "units_denominator": "Count in a sample of 120 one-star reviews",
+      "period": "April-June 2026",
+      "confidence": {
+        "level": "low",
+        "reason": "Self-selected dissatisfied reviewers"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Pesalo reviewers",
+        "reason": "Non-representative signal"
+      },
+      "verification_status": "verified",
+      "limitations": "Describes complaints, not prevalence among users"
+    },
+    {
+      "id": "CLM-C05",
+      "statement": "Radio weeks averaged 42% more sign-ups than non-radio weeks, but five of eight radio weeks were salary weeks; within salary and non-salary weeks the differences were 9% and 5% on very few weeks",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-C03"
+        ],
+        "records": [],
+        "calculation": "Mean weekly sign-ups by radio flag, overall and within salary-week strata (analysis/signups_stratified.md)"
+      },
+      "units_denominator": "Mean sign-ups per week",
+      "period": "26 weeks, Q2-Q3 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Simple, reproducible; small strata"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Pesalo sign-ups",
+        "reason": "Platform data"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Observational; cannot establish or rule out a radio effect"
+    },
+    {
+      "id": "CLM-C06",
+      "statement": "The deck cites a Nairobi report that Kenyan youth adopted savings apps rapidly",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-C05"
+        ],
+        "records": [],
+        "locator": "Slide 5 citation"
+      },
+      "units_denominator": "Cited finding",
+      "period": "2025",
+      "confidence": {
+        "level": "low",
+        "reason": "Report not supplied; method unknown"
+      },
+      "market_applicability": {
+        "status": "regional_proxy",
+        "scope": "Nairobi youth",
+        "reason": "Kenyan evidence; transfer untested"
+      },
+      "verification_status": "unverified",
+      "limitations": "Not evidence about Tanzanian users"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "HYP-C01",
+      "kind": "hypothesis",
+      "proposition": "Failed cash-outs, driven by agent float shortages, are a major cause of Pesalo's early churn",
+      "basis": "High cash-out failure rate, low retention and review complaints",
+      "basis_records": [
+        "CLM-C02",
+        "CLM-C03",
+        "CLM-C04"
+      ],
+      "confirming_signal": "30-day retention markedly lower for users whose first cash-out failed than for those whose first cash-out succeeded",
+      "falsifier": "Similar retention regardless of first cash-out outcome",
+      "current_support": "mixed",
+      "decision_impact": "If true, reliability fixes should come before acquisition spend",
+      "validation_step": "Cohort analysis of Q2 registrants by first cash-out outcome (first-party data, days not months)",
+      "status": "open",
+      "review_condition": "After cohort analysis",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "Pattern plausible and consistent, but the link to churn has not been measured"
+      }
+    },
+    {
+      "id": "HYP-C02",
+      "kind": "hypothesis",
+      "proposition": "Radio advertising increases sign-ups",
+      "basis": "Deck slide 9",
+      "basis_records": [
+        "CLM-C05"
+      ],
+      "confirming_signal": "Higher sign-ups in radio regions than matched holdout regions in the same weeks",
+      "falsifier": "No difference in a regional holdout test",
+      "current_support": "untested",
+      "decision_impact": "Determines whether radio deserves acquisition budget",
+      "validation_step": "Regional holdout test once retention is fixed",
+      "status": "open",
+      "review_condition": "After holdout test",
+      "depends_on": [],
+      "confidence": {
+        "level": "unknown",
+        "reason": "Observational association confounded by salary timing"
+      }
+    },
+    {
+      "id": "HYP-C03",
+      "kind": "hypothesis",
+      "proposition": "Young Tanzanians want savings to feel like a game and reject banks",
+      "basis": "Deck slide 4 assertion; no research cited",
+      "basis_records": [
+        "CLM-C01"
+      ],
+      "confirming_signal": "Research with target users showing gamified saving increases saving behaviour",
+      "falsifier": "Research showing reliability, fees or access matter more",
+      "current_support": "unsupported",
+      "decision_impact": "Would shape positioning and product",
+      "validation_step": "Switching interviews with active and lapsed savers",
+      "status": "open",
+      "review_condition": "After research",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "Unsourced assertion"
+      }
+    },
+    {
+      "id": "ASM-C01",
+      "kind": "assumption",
+      "proposition": "100,000 users will pay TZS 5,000 a month for Pesalo Gold in year one",
+      "basis": "Deck slide 7 target",
+      "basis_records": [
+        "CLM-C02"
+      ],
+      "confirming_signal": "Priced test conversion consistent with target",
+      "falsifier": "Low conversion in a priced test",
+      "current_support": "untested",
+      "decision_impact": "Drives part of the budget request",
+      "validation_step": "Priced test with existing active savers",
+      "status": "open",
+      "review_condition": "After priced test",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "No willingness-to-pay evidence; the target equals almost half of current monthly active users"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "id": "INS-C01",
+      "decision": "2027 budget allocation",
+      "audience_context": "New Pesalo users in their first 30 days",
+      "insight_kind": "operational",
+      "evidence": [
+        "CLM-C02",
+        "CLM-C03",
+        "CLM-C04"
+      ],
+      "observation": "Most new users stop transacting within a month, cash-out failures are frequent, and failed withdrawals dominate one-star reviews",
+      "contrast": "Acquisition ambition in the deck versus retention and reliability in the appendix",
+      "mechanism": "Users who cannot withdraw their savings when needed lose trust and stop using the wallet, so acquisition spend buys churn",
+      "tension": null,
+      "explanation": "Pesalo's growth problem looks like a leaking bucket rather than a shortage of sign-ups",
+      "alternatives": [
+        "Users sign up for a one-off purpose and never intended to save",
+        "Fees or app crashes drive churn more than cash-out failures"
+      ],
+      "contradictions": [
+        "Crashes and fees also appear in reviews (22 and 17 of 120)"
+      ],
+      "confidence": {
+        "level": "low",
+        "reason": "Consistent signals, but the churn link is not yet measured by cohort"
+      },
+      "implication": "Fund reliability and onboarding before scaled acquisition; measure the churn link first",
+      "validation_need": "Retention by first cash-out outcome",
+      "status": "mechanism_hypothesis"
+    }
+  ],
+  "options": [
+    {
+      "id": "OPT-C01",
+      "title": "Deck proposal: viral Gen Z campaign plus Pesalo Gold (TZS 2.5 billion)",
+      "diagnosis_addressed": "Assumed shortage of awareness and sign-ups among young users",
+      "where_to_act": "Gen Z nationally via TikTok and influencers",
+      "how_to_win": "Viral challenge, gamified savings, premium subscription",
+      "mechanism": {
+        "levers": [
+          "acquisition",
+          "price"
+        ],
+        "explanation": "More downloads and subscription revenue"
+      },
+      "supporting_records": [
+        "CLM-C01",
+        "CLM-C06",
+        "HYP-C03"
+      ],
+      "assumptions": [
+        "ASM-C01",
+        "HYP-C02"
+      ],
+      "economics": "unknown: no unit economics, retention-adjusted acquisition cost or subscription conversion evidence in the deck",
+      "resources": "TZS 2.5 billion",
+      "risks": [
+        "Acquired users churn",
+        "Gold subscriptions do not materialise"
+      ],
+      "non_choices": [],
+      "conditions": [],
+      "reversal_triggers": [],
+      "status": "rejected",
+      "recommendation_type": "not_recommended",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Rests on misread market size, unsourced psychology, a Kenyan proxy and a confounded radio claim, while the appendix shows a retention and reliability problem"
+    },
+    {
+      "id": "OPT-C02",
+      "title": "Fix the leaking bucket first: cash-out reliability and onboarding, measure the churn link, then gated acquisition",
+      "diagnosis_addressed": "Low retention with frequent cash-out failures (INS-C01)",
+      "where_to_act": "Top agents and new users' first 30 days",
+      "how_to_win": "Make the first save-and-withdraw experience reliable, then acquire where reliability is proven",
+      "mechanism": {
+        "levers": [
+          "retention",
+          "acquisition",
+          "cost"
+        ],
+        "explanation": "Higher retention raises the value of every acquired user and lowers effective acquisition cost"
+      },
+      "supporting_records": [
+        "CLM-C02",
+        "CLM-C03",
+        "CLM-C04",
+        "INS-C01"
+      ],
+      "assumptions": [
+        "HYP-C01"
+      ],
+      "economics": "Float partner cost unknown: quote needed. Value depends on retention gain; cohort analysis will size it. Acquisition budget released only after retention improves",
+      "resources": "Operations and product time; float partner fee; a small part of the TZS 2.5 billion request",
+      "risks": [
+        "Cash-out failures are not the main churn driver",
+        "Float partner underperforms"
+      ],
+      "non_choices": [
+        "No viral influencer campaign in H1 2027",
+        "No Pesalo Gold launch before a priced test",
+        "No national radio expansion before a holdout test"
+      ],
+      "conditions": [
+        "Cohort analysis shows materially lower retention after a failed first cash-out; otherwise re-diagnose churn",
+        "Acquisition spend released only when 30-day retention of new users exceeds an agreed threshold"
+      ],
+      "reversal_triggers": [
+        "No retention difference by first cash-out outcome: re-diagnose (fees, crashes, purpose of sign-up)"
+      ],
+      "status": "selected",
+      "recommendation_type": "conditional",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Keeps the deck's sound operational fix, addresses the evident retention constraint and makes acquisition spend conditional on evidence"
+    },
+    {
+      "id": "OPT-C03",
+      "title": "Pesalo Gold subscription",
+      "diagnosis_addressed": "Revenue per user",
+      "where_to_act": "Existing active savers",
+      "how_to_win": "Premium benefits",
+      "mechanism": {
+        "levers": [
+          "price",
+          "margin"
+        ],
+        "explanation": "Subscription revenue"
+      },
+      "supporting_records": [
+        "CLM-C02"
+      ],
+      "assumptions": [
+        "ASM-C01"
+      ],
+      "economics": "unknown: willingness to pay not measured",
+      "resources": "Product development",
+      "risks": [
+        "Low uptake",
+        "Distraction from retention"
+      ],
+      "non_choices": [],
+      "conditions": [
+        "Priced test among active savers before any launch decision"
+      ],
+      "reversal_triggers": [
+        "Test conversion far below the level needed to cover costs"
+      ],
+      "status": "deferred",
+      "recommendation_type": "research_first",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "No willingness-to-pay evidence; revisit after the retention fix"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-C01",
+      "decision_link": "OPT-C02",
+      "description": "Sign the float-rebalancing partner for the top 2,000 agents (kept from slide 10)",
+      "intended_change": "Fewer failed cash-outs",
+      "mechanism": "Agents have cash when users withdraw",
+      "owner_role": "Head of agent network",
+      "dependencies": [
+        "Partner contract"
+      ],
+      "timing": "Q4 2026",
+      "resource_basis": "unknown: partner fee not quoted",
+      "metrics": [
+        "MET-C01"
+      ],
+      "review_condition": "Monthly",
+      "reversal_trigger": "Failure rate not below 8% after three months: change partner or model",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-C02",
+      "decision_link": "OPT-C02",
+      "description": "Cohort analysis of Q2-Q3 registrants: 30- and 90-day retention by first cash-out outcome",
+      "intended_change": "Evidence on the churn mechanism",
+      "mechanism": "Measurement",
+      "owner_role": "Data analytics lead",
+      "dependencies": [
+        "Access to transaction logs"
+      ],
+      "timing": "Within 3 weeks",
+      "resource_basis": "Internal analyst time",
+      "metrics": [
+        "MET-C02"
+      ],
+      "review_condition": "Before the board meeting if possible",
+      "reversal_trigger": "Not applicable (analysis)",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-C03",
+      "decision_link": "OPT-C02",
+      "description": "Redesign onboarding around a first successful deposit and withdrawal (guided first save, nearest reliable agent)",
+      "intended_change": "New users complete a successful first cycle",
+      "mechanism": "Early trust in access to savings",
+      "owner_role": "Product lead",
+      "dependencies": [
+        "ACT-C02 findings"
+      ],
+      "timing": "Q1 2027",
+      "resource_basis": "Product team capacity",
+      "metrics": [
+        "MET-C02",
+        "MET-C03"
+      ],
+      "review_condition": "Monthly cohort read",
+      "reversal_trigger": "No retention improvement after two monthly cohorts",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-C04",
+      "decision_link": "OPT-C02",
+      "description": "Regional holdout test for radio before any national expansion",
+      "intended_change": "Causal evidence on radio",
+      "mechanism": "Measurement",
+      "owner_role": "Growth marketing manager",
+      "dependencies": [
+        "Retention above threshold"
+      ],
+      "timing": "Q2 2027",
+      "resource_basis": "Part of existing media budget",
+      "metrics": [
+        "MET-C04",
+        "MET-C05"
+      ],
+      "review_condition": "After 8 weeks",
+      "reversal_trigger": "No sign-up or active-saver difference between regions",
+      "status": "proposed"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "MET-C01",
+      "actions": [
+        "ACT-C01"
+      ],
+      "definition": "Cash-out success rate at top 2,000 agents and network-wide",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "82% network-wide (Q2 2026)",
+      "target_rationale": "At least 92% within three months; based on eliminating most float-related failures (to be refined once failure causes are broken out)",
+      "data_source": "Transaction logs",
+      "cadence": "Weekly",
+      "owner_role": "Head of agent network",
+      "decision_rule": "Below 90% after three months: escalate",
+      "horizon": "Q4 2026-Q1 2027"
+    },
+    {
+      "id": "MET-C02",
+      "actions": [
+        "ACT-C02",
+        "ACT-C03"
+      ],
+      "definition": "30- and 90-day retention of monthly registrant cohorts, split by first cash-out outcome",
+      "level": "behavioural_response",
+      "timing_role": "leading",
+      "baseline": "30-day retention 22% (Q2 2026 registrants); split unknown: not yet analysed",
+      "target_rationale": "Set after the cohort analysis",
+      "data_source": "Transaction logs",
+      "cadence": "Monthly",
+      "owner_role": "Data analytics lead",
+      "decision_rule": "Release acquisition budget only when 30-day retention exceeds the agreed threshold",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-C03",
+      "actions": [
+        "ACT-C03"
+      ],
+      "definition": "Active savers: monthly active users with at least one deposit",
+      "level": "business_outcome",
+      "timing_role": "lagging",
+      "baseline": "unknown: deposit-active count not reported (210,000 monthly active users of any transaction)",
+      "target_rationale": "Set once baseline is extracted",
+      "data_source": "Transaction logs",
+      "cadence": "Monthly",
+      "owner_role": "CFO",
+      "decision_rule": "Flat active savers after two quarters: re-diagnose",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-C04",
+      "actions": [
+        "ACT-C04"
+      ],
+      "definition": "Sign-ups and 30-day active savers in radio test regions versus holdout regions",
+      "level": "behavioural_response",
+      "timing_role": "leading",
+      "baseline": "Pre-period levels by region (to be extracted)",
+      "target_rationale": "Detect a difference large enough to justify cost",
+      "data_source": "Transaction logs by region",
+      "cadence": "Weekly during test",
+      "owner_role": "Growth marketing manager",
+      "decision_rule": "No meaningful difference: do not expand radio",
+      "horizon": "Q2 2027"
+    },
+    {
+      "id": "MET-C05",
+      "actions": [
+        "ACT-C04"
+      ],
+      "definition": "Radio reach in test regions",
+      "level": "exposure_output",
+      "timing_role": "leading",
+      "baseline": "unknown: test not yet run",
+      "target_rationale": "Delivery check only",
+      "data_source": "Station logs and media reports",
+      "cadence": "Weekly during test",
+      "owner_role": "Media manager",
+      "decision_rule": "Under-delivery invalidates the test week",
+      "horizon": "Q2 2027"
+    }
+  ],
+  "learnings": [],
+  "defects": [
+    {
+      "id": "DEF-C01",
+      "claim_or_section": "Slide 2: 117 million mobile users = 117 million potential customers",
+      "gate": "local_validity",
+      "verdict": "FAIL",
+      "defect": "Subscriptions are presented as people and as addressable customers",
+      "evidence_or_missing_evidence": "TCRA counts about 117.0 million subscriptions (SIMs active in 90 days, incl. machine-to-machine) against a population of about 70.5 million of all ages (CLM-TZ-004, CLM-TZ-006, CLM-TZ-007)",
+      "strategic_consequence": "Market size overstated many times over; targets and budget built on it are unfounded",
+      "required_fix": "Size the market with unique adults with mobile money access in target areas, from survey data, and state the scope",
+      "retest_condition": "Market size built from a people-based source with scope and date",
+      "status": "repaired",
+      "affected_records": [
+        "CLM-C01"
+      ]
+    },
+    {
+      "id": "DEF-C02",
+      "claim_or_section": "Slide 3: SWOT presented as strategy",
+      "gate": "meaningful_choice",
+      "verdict": "FAIL",
+      "defect": "A SWOT list replaces diagnosis and choice; 'leverage strengths to capture opportunities' excludes nothing",
+      "evidence_or_missing_evidence": "No diagnosis or trade-offs in the deck",
+      "strategic_consequence": "No basis for allocating the budget",
+      "required_fix": "State the diagnosis (retention and reliability), the guiding choice and non-choices",
+      "retest_condition": "Storyline contains a diagnosis, a choice and explicit non-choices",
+      "status": "repaired"
+    },
+    {
+      "id": "DEF-C03",
+      "claim_or_section": "Slide 4: Gen Z crave instant gratification and hate banks",
+      "gate": "customer_relevance",
+      "verdict": "FAIL",
+      "defect": "Invented psychology and a demographic stereotype used as an insight",
+      "evidence_or_missing_evidence": "No research cited; appendix and reviews point to reliability, not gamification (CLM-C04)",
+      "strategic_consequence": "Product and campaign built on an unsupported motive",
+      "required_fix": "Remove; replace with a hypothesis to test through switching interviews with active and lapsed savers",
+      "retest_condition": "Qualitative evidence from target users",
+      "status": "repaired",
+      "affected_records": [
+        "HYP-C03"
+      ]
+    },
+    {
+      "id": "DEF-C04",
+      "claim_or_section": "Slide 5: Kenyan youth adoption proves Tanzania will follow",
+      "gate": "local_validity",
+      "verdict": "FAIL",
+      "defect": "Regional proxy presented as proof",
+      "evidence_or_missing_evidence": "Report not supplied; Kenyan scope; no Tanzanian adoption evidence (CLM-C06)",
+      "strategic_consequence": "Adoption forecast unfounded",
+      "required_fix": "Remove as proof; if relevant, list as a hypothesis with a local validation step",
+      "retest_condition": "Tanzanian evidence on savings app adoption",
+      "status": "repaired",
+      "affected_records": [
+        "CLM-C06"
+      ]
+    },
+    {
+      "id": "DEF-C05",
+      "claim_or_section": "Slide 6: 'smart savings for smart people'",
+      "gate": "brand_credibility",
+      "verdict": "CONCERN",
+      "defect": "Generic positioning that any competitor could use",
+      "evidence_or_missing_evidence": "Competitor substitution test fails; no proof point",
+      "strategic_consequence": "No distinctive reason to choose or trust Pesalo",
+      "required_fix": "Defer positioning until the reliability promise can be proven; then test a reliability-based proposition",
+      "retest_condition": "Proposition with proof, tested with target users",
+      "status": "bounded_provisional"
+    },
+    {
+      "id": "DEF-C06",
+      "claim_or_section": "Slide 7: Pesalo Gold, 100,000 subscribers at TZS 5,000 a month",
+      "gate": "commercial_mechanism",
+      "verdict": "FAIL",
+      "defect": "Premium subscription target without willingness-to-pay evidence; the target is almost half of current monthly active users",
+      "evidence_or_missing_evidence": "No pricing research or test; 210,000 monthly active users (CLM-C02)",
+      "strategic_consequence": "Revenue plan and budget request overstated",
+      "required_fix": "Priced test with active savers before any launch decision",
+      "retest_condition": "Test conversion and retention of subscribers",
+      "status": "bounded_provisional",
+      "affected_records": [
+        "ASM-C01",
+        "OPT-C03"
+      ]
+    },
+    {
+      "id": "DEF-C07",
+      "claim_or_section": "Slide 8: viral TikTok challenge, 10 million views",
+      "gate": "problem_framing",
+      "verdict": "FAIL",
+      "defect": "Virality treated as the strategy before the business problem and communications task are established",
+      "evidence_or_missing_evidence": "Appendix shows 22% 30-day retention; no evidence awareness is the constraint",
+      "strategic_consequence": "Spend buys downloads that churn",
+      "required_fix": "Hold acquisition campaigns until retention improves; define the communications task afterwards",
+      "retest_condition": "Retention above agreed threshold and a defined communications task",
+      "status": "repaired"
+    },
+    {
+      "id": "DEF-C08",
+      "claim_or_section": "Slide 9: radio ROI is proven",
+      "gate": "logic_causality",
+      "verdict": "FAIL",
+      "defect": "Correlation presented as causal ROI; radio weeks coincided with salary weeks",
+      "evidence_or_missing_evidence": "Five of eight radio weeks were salary weeks; stratified differences 5-9% on tiny numbers of weeks (CLM-C05)",
+      "strategic_consequence": "Media budget justified by a confounded association",
+      "required_fix": "State as unproven; run a regional holdout test",
+      "retest_condition": "Holdout test result",
+      "status": "repaired",
+      "affected_records": [
+        "HYP-C02"
+      ]
+    },
+    {
+      "id": "DEF-C09",
+      "claim_or_section": "Slide 11: KPIs (awareness, followers, downloads)",
+      "gate": "measurement",
+      "verdict": "FAIL",
+      "defect": "Exposure and vanity metrics only; no retention, active savers or unit economics",
+      "evidence_or_missing_evidence": "KPI list on slide 11",
+      "strategic_consequence": "Success could be declared while the business loses users",
+      "required_fix": "Measure cash-out success, cohort retention, active savers and acquisition cost per retained saver",
+      "retest_condition": "Measurement plan includes behavioural and business outcomes with decision rules",
+      "status": "repaired"
+    },
+    {
+      "id": "DEF-C10",
+      "claim_or_section": "Deck overall: acquisition strategy ignores the appendix",
+      "gate": "evidence",
+      "verdict": "FAIL",
+      "defect": "The deck's own data show a retention and reliability constraint that the strategy does not address",
+      "evidence_or_missing_evidence": "15% of registered accounts active; 22% 30-day retention; 18% cash-out failures (CLM-C02, CLM-C03)",
+      "strategic_consequence": "TZS 2.5 billion would be spent filling a leaking bucket",
+      "required_fix": "Rebuild around reliability and retention; make acquisition conditional",
+      "retest_condition": "Storyline leads with retention diagnosis and conditional acquisition",
+      "status": "repaired"
+    }
+  ],
+  "gate_results": [
+    {
+      "gate": "problem_framing",
+      "verdict": "FAIL",
+      "reason": "Virality and Gen Z ambition treated as the strategy; business constraint not diagnosed",
+      "defects": [
+        "DEF-C07",
+        "DEF-C10"
+      ]
+    },
+    {
+      "gate": "evidence",
+      "verdict": "FAIL",
+      "reason": "Key claims unsourced or misread; appendix contradicts strategy",
+      "defects": [
+        "DEF-C10"
+      ]
+    },
+    {
+      "gate": "logic_causality",
+      "verdict": "FAIL",
+      "reason": "Confounded radio association presented as ROI",
+      "defects": [
+        "DEF-C08"
+      ]
+    },
+    {
+      "gate": "insight",
+      "verdict": "FAIL",
+      "reason": "Stereotype presented as insight",
+      "defects": [
+        "DEF-C03"
+      ]
+    },
+    {
+      "gate": "meaningful_choice",
+      "verdict": "FAIL",
+      "reason": "SWOT instead of choice; no non-choices",
+      "defects": [
+        "DEF-C02"
+      ]
+    },
+    {
+      "gate": "commercial_mechanism",
+      "verdict": "FAIL",
+      "reason": "No unit economics; subscription target unsupported",
+      "defects": [
+        "DEF-C06"
+      ]
+    },
+    {
+      "gate": "customer_relevance",
+      "verdict": "FAIL",
+      "reason": "Invented psychology",
+      "defects": [
+        "DEF-C03"
+      ]
+    },
+    {
+      "gate": "competitive_response",
+      "verdict": "NOT_TESTED",
+      "reason": "No competitor data in the deck"
+    },
+    {
+      "gate": "brand_credibility",
+      "verdict": "CONCERN",
+      "reason": "Generic positioning",
+      "defects": [
+        "DEF-C05"
+      ]
+    },
+    {
+      "gate": "local_validity",
+      "verdict": "FAIL",
+      "reason": "Subscriptions as people; Kenyan proxy as proof",
+      "defects": [
+        "DEF-C01",
+        "DEF-C04"
+      ]
+    },
+    {
+      "gate": "feasibility",
+      "verdict": "PASS",
+      "reason": "The one operational action (float partner) is feasible and addresses a measured problem"
+    },
+    {
+      "gate": "measurement",
+      "verdict": "FAIL",
+      "reason": "Vanity metrics only",
+      "defects": [
+        "DEF-C09"
+      ]
+    },
+    {
+      "gate": "clarity",
+      "verdict": "CONCERN",
+      "reason": "Slides are clear but argue for the wrong problem"
+    }
+  ],
+  "changes": []
+}

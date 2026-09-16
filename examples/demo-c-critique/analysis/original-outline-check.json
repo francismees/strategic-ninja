@@ -1,0 +1,40 @@
+{
+  "command": "outline",
+  "status": "invalid",
+  "schema_validator": "builtin-subset",
+  "sections": 9,
+  "errors": [
+    {
+      "code": "ASSERTION_WITHOUT_EVIDENCE",
+      "record": "S03",
+      "message": "'diagnosis' sections must cite evidence or decision records"
+    },
+    {
+      "code": "UNCERTAINTY_NOT_SHOWN",
+      "record": "S04",
+      "message": "linked evidence is uncertain (HYP-C03 confidence is low; HYP-C03 is an untested or planning hypothesis) but the section states no uncertainty"
+    },
+    {
+      "code": "UNCERTAINTY_NOT_SHOWN",
+      "record": "S05",
+      "message": "linked evidence is uncertain (CLM-C06 confidence is low; CLM-C06 is regional_proxy for the target market; CLM-C06 is unverified) but the section states no uncertainty"
+    },
+    {
+      "code": "RECOMMENDATION_STRENGTH_MISMATCH",
+      "record": "S06",
+      "message": "storyline states a supported recommendation but OPT-C01 is recorded as not_recommended"
+    },
+    {
+      "code": "UNCERTAINTY_NOT_SHOWN",
+      "record": "S07",
+      "message": "linked evidence is uncertain (HYP-C02 confidence is unknown; HYP-C02 is an untested or planning hypothesis) but the section states no uncertainty"
+    },
+    {
+      "code": "ASSERTION_WITHOUT_EVIDENCE",
+      "record": "S08",
+      "message": "'measurement' sections must cite evidence or decision records"
+    }
+  ],
+  "warnings": [],
+  "scope_note": "Checks structure and evidence links. Whether each slide's evidence actually supports its assertion, and whether the sequence forms a coherent argument, requires judgement."
+}

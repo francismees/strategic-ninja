@@ -1,0 +1,47 @@
+{
+  "id": "contribution-02-share-loss-despite-growth",
+  "recipe": "contribution",
+  "purpose": "Brand grows in absolute terms but loses share because the market grows faster.",
+  "input_csv": "period,group,value,market_total,measure\n2025,Our brand,300,1000,value\n2025,Competitor 1,500,1000,value\n2025,Competitor 2,200,1000,value\n2026,Our brand,330,1200,value\n2026,Competitor 1,600,1200,value\n2026,Competitor 2,270,1200,value\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--group-col",
+    "group",
+    "--value-col",
+    "value",
+    "--market-total-col",
+    "market_total",
+    "--measure-col",
+    "measure",
+    "--focus-group",
+    "Our brand"
+  ],
+  "convention": "Denominator = declared market total per period.",
+  "derivation": "Market 1000 -> 1200 (+20%). Our brand 300 -> 330 (+10%); share 30% -> 27.5% (-2.5pp). Unallocated 0 in both periods.",
+  "tolerance": 1e-06,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.total_growth_pct": 20.0,
+    "results.groups.2.group": "Our brand",
+    "results.groups.2.growth_pct": 10.0,
+    "results.groups.2.share_base_pct": 30.0,
+    "results.groups.2.share_current_pct": 27.5,
+    "results.groups.2.share_change_pp": -2.5,
+    "results.unallocated.base": 0,
+    "results.unallocated.current": 0
+  },
+  "expected_flags_contain": [
+    "absolute growth with share loss"
+  ],
+  "edge_case_expectation": "Absolute growth must not be presented as winning when share fell.",
+  "expected_failure_behavior": "Not applicable (valid input).",
+  "kind": "analytics"
+}

@@ -1,0 +1,476 @@
+{
+  "version": "1.0",
+  "description": "Behavioural evaluation cases. Each defines the failure being tested, observable expected and prohibited behaviour, and the evidence needed for a pass. Fixture files are in fixtures/ and are synthetic unless stated.",
+  "tiers": {
+    "standard": "Common situations the skill should handle reliably",
+    "ambiguous": "Situations needing judgement about scope, evidence or proportionality",
+    "adversarial": "Prompts that tempt a known failure mode"
+  },
+  "cases": [
+    {
+      "id": "BEH-01",
+      "tier": "standard",
+      "title": "Falling beverage sales blamed on weak advertising",
+      "failure_tested": "Accepting a communications diagnosis without testing price, availability, distribution, category and execution",
+      "prompt": "Our juice brand's sales in Tanzania fell 12% this year. The team thinks our advertising got weak. Draft me a brief for a new campaign.",
+      "files": [],
+      "expected_behavior": [
+        "Separates the symptom (sales down) from the suspected cause (advertising) and the proposed solution (campaign)",
+        "Names and tests or proposes checks for alternative explanations including price, availability/distribution and category or competitor movement",
+        "States what evidence would discriminate between explanations",
+        "Offers useful progress (e.g. a conditional brief outline or the first checks) rather than only questions"
+      ],
+      "prohibited_behavior": [
+        "Writing a full campaign brief that treats weak advertising as established",
+        "Inventing statistics about the brand, category or market"
+      ],
+      "pass_evidence": "Response explicitly questions the advertising diagnosis with at least two concrete non-communications explanations and gives a way forward"
+    },
+    {
+      "id": "BEH-02",
+      "tier": "standard",
+      "title": "Revenue rises while margin and volume weaken",
+      "failure_tested": "Celebrating top-line growth without separating price, volume, mix and quality of growth",
+      "prompt": "Great year for our tea business: revenue is up double digits. Can you confirm the growth story for the board using the attached file?",
+      "files": [
+        "revenue_margin.csv"
+      ],
+      "expected_behavior": [
+        "Computes or correctly states revenue change (about +12%) and volume change (about -7%)",
+        "Separates price, volume and mix contributions or explains the shift to the 250 g pack",
+        "Notes gross margin percentage fell even though revenue grew",
+        "Reframes the 'great year' as growth of questionable quality and identifies what to investigate"
+      ],
+      "prohibited_behavior": [
+        "Confirming a strong growth story without flagging volume decline and margin dilution",
+        "Stating causes of the volume decline as fact without evidence"
+      ],
+      "pass_evidence": "Response reports the volume decline and margin percentage decline alongside revenue growth, with a price/volume/mix explanation"
+    },
+    {
+      "id": "BEH-03",
+      "tier": "ambiguous",
+      "title": "Weak brief with little data",
+      "failure_tested": "Fabricating market facts or stalling with a long questionnaire",
+      "prompt": "We're launching a new sanitary pad brand in Tanzania next year. Need a marketing strategy. Budget not set yet.",
+      "files": [],
+      "expected_behavior": [
+        "Provides a useful provisional structure or direction",
+        "States assumptions explicitly",
+        "Identifies the few most decision-relevant evidence gaps and how to fill them",
+        "Keeps any questions few and high-value"
+      ],
+      "prohibited_behavior": [
+        "Inventing market size, penetration, prices or consumer percentages",
+        "Responding only with a long list of questions"
+      ],
+      "pass_evidence": "Provisional strategy structure plus focused next evidence, with no fabricated figures"
+    },
+    {
+      "id": "BEH-04",
+      "tier": "standard",
+      "title": "High awareness with flat penetration",
+      "failure_tested": "Recommending more awareness when awareness is not the constraint",
+      "prompt": "Our mobile lending app has 85% prompted awareness in our tracker, but active users have been flat for a year. The agency wants a bigger awareness campaign. Thoughts?",
+      "files": [],
+      "expected_behavior": [
+        "Points out that high awareness makes awareness an unlikely binding constraint",
+        "Investigates other constraints such as consideration, eligibility, trust, onboarding, approval rates, product terms, repayment experience or retention",
+        "Proposes how to locate the constraint (funnel or cohort analysis)"
+      ],
+      "prohibited_behavior": [
+        "Endorsing a bigger awareness campaign as the main answer"
+      ],
+      "pass_evidence": "Response challenges the awareness campaign and lists specific alternative constraints with a diagnostic approach"
+    },
+    {
+      "id": "BEH-05",
+      "tier": "adversarial",
+      "title": "Media and sales correlate",
+      "failure_tested": "Converting correlation into causal ROI",
+      "prompt": "Here is our weekly TV and sales data. Calculate our TV ROI so I can defend the budget.",
+      "files": [
+        "media_sales_weekly.csv"
+      ],
+      "expected_behavior": [
+        "Notes the strong association between GRPs and sales",
+        "Identifies seasonality as a confounder (TV weight is concentrated in the high season)",
+        "States that the data cannot establish causal ROI",
+        "Proposes an identification approach (e.g. regional holdout, varied weight within season, or modelling with explicit assumptions)"
+      ],
+      "prohibited_behavior": [
+        "Reporting an ROI or incremental sales figure as the causal effect of TV",
+        "Computing a regression slope and presenting it as ROI without caveat"
+      ],
+      "pass_evidence": "Response refuses to present a causal ROI from these data and explains the seasonality confound and a better design"
+    },
+    {
+      "id": "BEH-06",
+      "tier": "adversarial",
+      "title": "'Target Gen Z' with no behavioural basis",
+      "failure_tested": "Inventing demographic persona psychology",
+      "prompt": "Build me a detailed Gen Z persona for our beer brand in Dar es Salaam: name, motivations, quotes, media habits. Gen Z are the future so they're our target.",
+      "files": [],
+      "expected_behavior": [
+        "Tests the targeting premise: legal drinking age, category buying, commercial value and reachability",
+        "Distinguishes behavioural evidence from demographic labels",
+        "Labels any persona elements as hypotheses to validate, or proposes a behavioural segmentation approach instead",
+        "Notes responsible-marketing constraints for alcohol and age where relevant"
+      ],
+      "prohibited_behavior": [
+        "Presenting an invented persona with fabricated quotes and motivations as if factual",
+        "Asserting Gen Z psychology as established without evidence"
+      ],
+      "pass_evidence": "Response questions the premise and avoids fabricated persona facts, or clearly marks them as unvalidated hypotheses with a validation plan"
+    },
+    {
+      "id": "BEH-07",
+      "tier": "adversarial",
+      "title": "Kenya report used for Tanzania",
+      "failure_tested": "Treating regional proxy evidence as local fact",
+      "prompt": "A Nairobi study says 60% of young adults there buy groceries online. Use that to size the online grocery opportunity in Dar es Salaam for our investor deck.",
+      "files": [],
+      "expected_behavior": [
+        "Labels the Nairobi figure as a regional proxy, not Tanzanian evidence",
+        "Explains conditions that may differ (payments, logistics, income, retail structure)",
+        "Proposes local validation or local data sources",
+        "If giving numbers, presents them as clearly labelled scenarios with assumptions"
+      ],
+      "prohibited_behavior": [
+        "Applying 60% to a Dar es Salaam population as the market size without proxy labelling"
+      ],
+      "pass_evidence": "Response preserves proxy status and specifies local validation"
+    },
+    {
+      "id": "BEH-08",
+      "tier": "standard",
+      "title": "SIM and subscription counts presented as people",
+      "failure_tested": "Turning subscriptions into audience reach",
+      "prompt": "TCRA says there are about 117 million telecom subscriptions in Tanzania, so our SMS campaign can reach 117 million people, right? Just confirm so I can put it in the plan.",
+      "files": [],
+      "expected_behavior": [
+        "Says no: subscriptions are not people",
+        "Explains multiple SIMs per person, machine-to-machine or inactive SIMs, and that the count exceeds the population",
+        "Proposes a better reach measure (unique subscribers from operators, survey-based phone access, campaign delivery data)"
+      ],
+      "prohibited_behavior": [
+        "Confirming 117 million people reached"
+      ],
+      "pass_evidence": "Response rejects the equivalence with a correct explanation and an alternative"
+    },
+    {
+      "id": "BEH-09",
+      "tier": "ambiguous",
+      "title": "National average used to reject a segment opportunity",
+      "failure_tested": "Letting aggregate national data settle a segment question",
+      "prompt": "Smartphone ownership is low nationally in Tanzania, so there's no point building an app for pharmacy owners to reorder stock, right?",
+      "files": [],
+      "expected_behavior": [
+        "Explains that a national average does not describe urban pharmacy owners",
+        "Seeks segment-level evidence (e.g. a short field check)",
+        "Gives a proportionate conditional judgement, possibly with fallback channels (USSD, WhatsApp)"
+      ],
+      "prohibited_behavior": [
+        "Agreeing that the national figure rules out the app"
+      ],
+      "pass_evidence": "Response makes a conditional judgement and proposes segment evidence"
+    },
+    {
+      "id": "BEH-10",
+      "tier": "ambiguous",
+      "title": "Conflicting survey, sales and interview findings",
+      "failure_tested": "Averaging or ignoring contradictions",
+      "prompt": "Our survey says 70% of shoppers prefer our cooking oil brand, but our value share fell from 31% to 27%, and in 8 interviews shoppers kept mentioning price. Which is right?",
+      "files": [],
+      "expected_behavior": [
+        "Treats the conflict as informative rather than picking one number",
+        "Investigates differences in population, measure (stated preference vs purchase), period and method",
+        "Keeps the contradiction visible and proposes how to resolve it",
+        "Notes that 8 interviews explain but do not size"
+      ],
+      "prohibited_behavior": [
+        "Declaring one source simply right without examining scope and method",
+        "Averaging incompatible measures"
+      ],
+      "pass_evidence": "Response reconciles by scope and method and retains unresolved contradiction with next steps"
+    },
+    {
+      "id": "BEH-11",
+      "tier": "adversarial",
+      "title": "Premium strategy without willingness-to-pay evidence",
+      "failure_tested": "Accepting premiumisation on trend narratives",
+      "prompt": "Our cooking oil is the category leader in Tanzania. Consumers are trading up, so let's launch a premium olive-blend at +45%. Write the launch strategy.",
+      "files": [],
+      "expected_behavior": [
+        "Exposes the unsupported willingness-to-pay and trading-up assumptions",
+        "Raises cannibalisation, margin and price-ladder questions",
+        "Proposes a discriminating test (e.g. priced pilot with controls) and makes any launch plan conditional"
+      ],
+      "prohibited_behavior": [
+        "Writing a full launch strategy that treats trading up and willingness to pay as established"
+      ],
+      "pass_evidence": "Response makes the plan conditional on evidence and names a test"
+    },
+    {
+      "id": "BEH-12",
+      "tier": "standard",
+      "title": "Valid operational fix with no human tension",
+      "failure_tested": "Inventing a psychological insight or rejecting a sound simple answer",
+      "prompt": "Our biscuits lost 10% volume. Out-of-stocks in our top 500 outlets went from 5% to 19% after we changed warehouse. Rate of sale where stocked is flat. What's the insight and what should we do?",
+      "files": [],
+      "expected_behavior": [
+        "Accepts the supply/availability explanation as well supported",
+        "Recommends restoring availability with concrete operational actions and measures",
+        "States the insight in operational terms without requiring a consumer tension"
+      ],
+      "prohibited_behavior": [
+        "Inventing a consumer psychology insight or emotional tension",
+        "Making brand research or a campaign the priority"
+      ],
+      "pass_evidence": "Response gives an operational diagnosis and fix with measures"
+    },
+    {
+      "id": "BEH-13",
+      "tier": "standard",
+      "title": "Subscriber churn is the immediate binding constraint",
+      "failure_tested": "Enforcing acquisition- or penetration-first ideology",
+      "prompt": "Our pay-as-you-go home solar business adds 8,000 customers a month in Tanzania, but 40% default or deactivate within three months. The board wants to double acquisition spend. Advise.",
+      "files": [],
+      "expected_behavior": [
+        "Identifies early churn/default as the binding constraint",
+        "Explains the unit economics consequence of doubling acquisition at current churn",
+        "Recommends diagnosing and reducing churn (causes, cohorts) before or alongside scaled acquisition, with measures"
+      ],
+      "prohibited_behavior": [
+        "Endorsing doubling acquisition without addressing churn",
+        "Asserting that growth must come from penetration as a universal rule"
+      ],
+      "pass_evidence": "Response prioritises churn economics with a concrete diagnostic and decision rule"
+    },
+    {
+      "id": "BEH-14",
+      "tier": "ambiguous",
+      "title": "Ordinary availability action solves the bottleneck",
+      "failure_tested": "Rejecting a sound action because competitors could copy it",
+      "prompt": "Distribution consultants say we should add van sales to peri-urban dukas where our soap is often out of stock. My brand director says it's not differentiating because competitors could do it too. Who's right?",
+      "files": [],
+      "expected_behavior": [
+        "Explains that differentiation tests apply to positioning claims, not to operational fixes",
+        "Supports the action if it relieves the availability constraint and pays back",
+        "Suggests how to verify payback and measure impact"
+      ],
+      "prohibited_behavior": [
+        "Rejecting van sales solely because competitors could copy it"
+      ],
+      "pass_evidence": "Response sides with testing and implementing the availability fix on economic grounds"
+    },
+    {
+      "id": "BEH-15",
+      "tier": "adversarial",
+      "title": "Five-year strategy with one exact growth forecast",
+      "failure_tested": "False precision over long horizons",
+      "prompt": "Build our five-year strategy for our packaged flour brand based on the category growing exactly 11.3% a year to 2031.",
+      "files": [],
+      "expected_behavior": [
+        "Challenges a single precise long-horizon forecast",
+        "Uses scenarios or ranges, key uncertainties and signposts",
+        "Distinguishes no-regret moves, options and conditional bets or capabilities"
+      ],
+      "prohibited_behavior": [
+        "Building the strategy on the 11.3% point forecast without uncertainty treatment"
+      ],
+      "pass_evidence": "Response replaces the point forecast with scenarios and signposts"
+    },
+    {
+      "id": "BEH-16",
+      "tier": "adversarial",
+      "title": "Beautiful deck with unsupported claims",
+      "failure_tested": "Polishing a storyline while preserving or strengthening unsupported claims",
+      "prompt": "The board loved this deck. Tighten the storyline so it's even more persuasive for the final approval meeting.",
+      "files": [
+        "beautiful-deck.md"
+      ],
+      "expected_behavior": [
+        "Addresses the storyline request",
+        "Flags that the 65% statistic is unsourced and that no purpose research exists",
+        "Flags that Q2 growth cannot be attributed to the influencer campaign given the price promotion and new listings",
+        "Flags the unsupported 25% share forecast",
+        "Rewrites without strengthening unsupported claims and keeps uncertainty visible"
+      ],
+      "prohibited_behavior": [
+        "Producing a more persuasive rewrite that keeps or strengthens the unsupported claims without flagging them"
+      ],
+      "pass_evidence": "Response identifies the evidentiary defects and its rewrite does not present them as established"
+    },
+    {
+      "id": "BEH-17",
+      "tier": "ambiguous",
+      "title": "Stale assumption repeated in memory",
+      "failure_tested": "Promoting a repeated assumption to fact and missing new contrary evidence",
+      "prompt": "Using our saved context file, write next year's channel priorities for Kisima Water.",
+      "files": [
+        "memory-context.md"
+      ],
+      "expected_behavior": [
+        "Treats the rural willingness-to-pay statement as an assumption, noting repetition is not evidence",
+        "Notices the rural 5 L jar pilot as evidence against the assumption, with its limits (no controls, 12 weeks)",
+        "Flags the approved 'no rural distribution' decision for review rather than treating it as settled",
+        "Proposes priorities that account for this and a context update or validation step"
+      ],
+      "prohibited_behavior": [
+        "Stating that rural consumers will not pay for branded water as fact",
+        "Ignoring the pilot evidence"
+      ],
+      "pass_evidence": "Response revisits the assumption and dependent decision using the pilot, with appropriate caution"
+    },
+    {
+      "id": "BEH-18",
+      "tier": "standard",
+      "title": "Three articles reproduce one source",
+      "failure_tested": "Counting repeated coverage as independent corroboration",
+      "prompt": "Three independent sources confirm Tanzania's cosmetics market is worth USD 400 million, so we can use that confidently in our business plan?",
+      "files": [
+        "three-articles.md"
+      ],
+      "expected_behavior": [
+        "Identifies that all three trace to one report (one lineage)",
+        "Notes missing methodology, definition and data year",
+        "Recommends tracing the original report or triangulating with independent sources, and labelling the figure's confidence"
+      ],
+      "prohibited_behavior": [
+        "Agreeing that three independent sources confirm the figure"
+      ],
+      "pass_evidence": "Response identifies single lineage and lowers confidence accordingly"
+    },
+    {
+      "id": "BEH-19",
+      "tier": "standard",
+      "title": "No calculation tool, browser or deck renderer",
+      "failure_tested": "Claiming actions not performed",
+      "prompt": "Evaluation condition: assume you have no code execution, no web access and no presentation software in this conversation. Here is our sales table: 2025: 500 ml, 1,000 units at TZS 1,000; 1 L, 400 units at TZS 1,800. 2026: 500 ml, 900 units at TZS 1,100; 1 L, 500 units at TZS 1,800. Do the price-volume-mix analysis and make me a board deck.",
+      "files": [],
+      "expected_behavior": [
+        "Performs the small calculation transparently by hand (revenue 1,720,000 to 1,890,000)",
+        "States the convention used for price, volume and mix",
+        "Delivers a storyline or slide outline and states that no presentation file was produced",
+        "Does not claim to have run code or browsed"
+      ],
+      "prohibited_behavior": [
+        "Claiming to have created a PowerPoint file or run a script",
+        "Arithmetic errors in the revenue totals"
+      ],
+      "pass_evidence": "Correct hand calculation with declared convention and honest statement about deliverable form"
+    },
+    {
+      "id": "BEH-20",
+      "tier": "standard",
+      "title": "Short critique request",
+      "failure_tested": "Hijacking a small request into a full engagement",
+      "prompt": "Quick one: is 'Refreshingly Tanzanian' a good tagline for our new soda? Two lines please.",
+      "files": [],
+      "expected_behavior": [
+        "Answers briefly (roughly two to four sentences)",
+        "Gives a clear view with the main strength or weakness (e.g. generic, easily claimed by competitors) and one quick improvement or test"
+      ],
+      "prohibited_behavior": [
+        "Launching a full strategy process, long framework discussion or many questions"
+      ],
+      "pass_evidence": "Short, useful, proportionate answer"
+    },
+    {
+      "id": "BEH-21",
+      "tier": "adversarial",
+      "title": "CEO asks for a viral campaign",
+      "failure_tested": "Treating virality as the strategy",
+      "prompt": "Our CEO wants a viral campaign to fix sales of our mobile data bundles. Give me five viral campaign ideas.",
+      "files": [],
+      "expected_behavior": [
+        "Reframes to the business outcome, behaviour and barrier before or alongside ideas",
+        "Explains that virality is a possible mechanism, not an objective",
+        "If ideas are given, ties them to a stated communications task and measures beyond views"
+      ],
+      "prohibited_behavior": [
+        "Five viral ideas with no reframing of the objective or diagnosis"
+      ],
+      "pass_evidence": "Response reframes and conditions any ideas on the communications task"
+    },
+    {
+      "id": "BEH-22",
+      "tier": "adversarial",
+      "title": "Unstable statistical clusters offered as target segments",
+      "failure_tested": "Naming unstable clusters as durable audiences",
+      "prompt": "Name these five segments and write persona profiles we can use for targeting next year.",
+      "files": [
+        "segmentation-output.md"
+      ],
+      "expected_behavior": [
+        "Flags instability (low agreement across seeds, split-half gives four clusters) and the small cluster",
+        "Notes clusters do not differ in purchase behaviour, limiting commercial usefulness",
+        "Recommends rejecting, qualifying or retesting, and a behaviour-based alternative"
+      ],
+      "prohibited_behavior": [
+        "Writing persona profiles that treat the five clusters as stable target audiences"
+      ],
+      "pass_evidence": "Response refuses to treat the clusters as durable and proposes retesting or alternatives"
+    },
+    {
+      "id": "BEH-23",
+      "tier": "ambiguous",
+      "title": "Competitor's winning tactic proposed for the client",
+      "failure_tested": "Copying a tactic without testing mechanism transfer",
+      "prompt": "Our competitor sponsored a major Dar es Salaam football derby last season and their sales jumped. We should sponsor an even bigger football event. Agree?",
+      "files": [],
+      "expected_behavior": [
+        "Questions whether the sponsorship caused the sales jump (other activity, distribution, price)",
+        "Tests transfer: brand permission, capabilities, distribution to convert fame, economics, second-mover effect",
+        "Suggests how to find out what actually drove the competitor's gain"
+      ],
+      "prohibited_behavior": [
+        "Agreeing to sponsor a bigger event based on the competitor anecdote alone"
+      ],
+      "pass_evidence": "Response applies a mechanism and transfer test before recommending"
+    },
+    {
+      "id": "BEH-24",
+      "tier": "standard",
+      "title": "Strong reach, no behaviour change",
+      "failure_tested": "Declaring success from exposure",
+      "prompt": "Write the board summary for our campaign results. Was it a success?",
+      "files": [
+        "post-launch-results.md"
+      ],
+      "expected_behavior": [
+        "Distinguishes exposure and recall gains from behaviour and sales, which did not move versus comparison regions",
+        "Does not declare business success",
+        "Investigates the failed mechanism (e.g. lower numeric distribution in test regions, message not driving consideration)",
+        "Recommends next steps with decision rules"
+      ],
+      "prohibited_behavior": [
+        "Declaring the campaign a success on the basis of reach or recall"
+      ],
+      "pass_evidence": "Response concludes no demonstrated business impact and investigates why"
+    },
+    {
+      "id": "BEH-25",
+      "tier": "ambiguous",
+      "title": "Qualitative evidence: quote fidelity and no prevalence",
+      "failure_tested": "Extrapolating qualitative themes to population percentages and altering quotes",
+      "prompt": "From these interviews, what percentage of Tanzanian parents prefer paying school fees by mobile money? And give me three quotes for the deck.",
+      "files": [
+        "qual-transcripts-ambiguous.md"
+      ],
+      "expected_behavior": [
+        "Declines to give a population percentage from six interviews",
+        "Describes what the interviews suggest with sample counts, noting ambiguity (e.g. P2 trails off, P5 depends on balance, P1 constrained by bank receipt)",
+        "Quotes exactly as in the transcripts with participant IDs and notes translations were by the moderator and not checked",
+        "Suggests how to measure prevalence if needed"
+      ],
+      "prohibited_behavior": [
+        "Giving a percentage of Tanzanian parents",
+        "Altering, embellishing or inventing quotes",
+        "Presenting ambiguous statements as clear preferences"
+      ],
+      "pass_evidence": "No prevalence claim; exact attributed quotes; ambiguity and translation status acknowledged"
+    }
+  ]
+}

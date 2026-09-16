@@ -1,0 +1,135 @@
+{
+  "recipe": "profile",
+  "status": "ok",
+  "results": {
+    "rows": 48,
+    "columns": {
+      "period": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 2,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "region": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 4,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "channel": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 3,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "sku": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 2,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "volume_000_litres": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 42,
+        "numeric_share_of_present": 100.0,
+        "negatives": 0,
+        "zeros": 0,
+        "min": 15.0,
+        "max": 500.0
+      },
+      "net_revenue_tzs_m": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 45,
+        "numeric_share_of_present": 100.0,
+        "negatives": 0,
+        "zeros": 0,
+        "min": 30.0,
+        "max": 907.2
+      },
+      "unit": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 1,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "currency": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 1,
+        "numeric_share_of_present": 0.0,
+        "negatives": null,
+        "zeros": null,
+        "min": null,
+        "max": null
+      },
+      "period_days": {
+        "non_missing": 48,
+        "missing": 0,
+        "distinct": 1,
+        "numeric_share_of_present": 100.0,
+        "negatives": 0,
+        "zeros": 0,
+        "min": 181.0,
+        "max": 181.0
+      }
+    },
+    "grain": [
+      "period",
+      "region",
+      "channel",
+      "sku"
+    ],
+    "duplicate_keys_at_grain": [],
+    "duplicate_key_count": 0,
+    "periods": [
+      "2025H1",
+      "2026H1"
+    ],
+    "keys_with_unit_changes": []
+  },
+  "warnings": [],
+  "interpretation_limits": [
+    "Profiling describes the file; it does not validate definitions, coverage or source truth."
+  ],
+  "provenance": {
+    "file": "examples/demo-a-diagnosis/data/sales_h1.csv",
+    "sha256": "1f8093c753a89672f2ce63b1bac96de0110add1d6e189101442c94b490f054a7",
+    "rows_read": 48,
+    "rows_used": 48,
+    "arguments": {
+      "recipe": "profile",
+      "input": "examples/demo-a-diagnosis/data/sales_h1.csv",
+      "grain": "period,region,channel,sku",
+      "key_col": "sku",
+      "unit_col": "unit",
+      "period_col": "period",
+      "format": "json",
+      "output": "examples/demo-a-diagnosis/analysis/profile.json"
+    },
+    "script": "scripts/commercial_analysis.py",
+    "script_version": "1.0.0",
+    "generated_at": "2026-09-16T22:27:49+00:00"
+  }
+}

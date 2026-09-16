@@ -1,0 +1,53 @@
+{
+  "id": "pvm-01-fixed-unit-price-led",
+  "recipe": "pvm",
+  "purpose": "Required fixture: 100 units at price 10 becoming 90 units at price 12. Revenue 1,000 -> 1,080. Distinguish price-led revenue growth from falling volume.",
+  "input_csv": "period,sku,units,price,unit,currency\n2025,A,100,10,unit,TZS\n2026,A,90,12,unit,TZS\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--unit-col",
+    "unit",
+    "--currency-col",
+    "currency",
+    "--revenue-basis",
+    "net"
+  ],
+  "convention": "Interaction allocated to price: price = (p1-p0) x q1; volume = (Q1-Q0) x base average price; mix = sum(q1 x p0) - Q1 x base average price.",
+  "derivation": "R0 = 100 x 10 = 1000. R1 = 90 x 12 = 1080. Change = 80 (+8%). Price = (12-10) x 90 = 180. Volume = (90-100) x 10 = -100. Mix = 90 x 10 - 90 x 10 = 0. 180 - 100 + 0 = 80. Volume change = -10%.",
+  "tolerance": 1e-09,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.base_revenue": 1000,
+    "results.current_revenue": 1080,
+    "results.revenue_change": 80,
+    "results.revenue_growth_pct": 8.0,
+    "results.volume_growth_pct": -10.0,
+    "results.components.price": 180,
+    "results.components.volume": -100,
+    "results.components.mix": 0,
+    "results.components.new_items": 0,
+    "results.components.discontinued_items": 0,
+    "reconciliation.residual": 0
+  },
+  "expected_flags_contain": [
+    "Revenue grew while total volume fell",
+    "Positive price effect with negative volume effect"
+  ],
+  "edge_case_expectation": "Single SKU: mix must be exactly zero; revenue growth must be flagged as price-led with falling volume, not celebrated as growth.",
+  "expected_failure_behavior": "Not applicable (valid input).",
+  "kind": "analytics"
+}

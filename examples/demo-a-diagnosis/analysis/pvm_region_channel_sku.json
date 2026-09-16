@@ -1,0 +1,539 @@
+{
+  "recipe": "pvm",
+  "status": "ok",
+  "coverage": "complete",
+  "convention": {
+    "items": "an item is the combination of --dims and --key",
+    "continuing_items": "quantity > 0 in both periods",
+    "price_effect": "sum over continuing items of (current price - base price) x current quantity",
+    "interaction": "allocated to the price effect",
+    "volume_effect": "(current total continuing quantity - base total continuing quantity) x base average price of continuing items",
+    "mix_effect": "sum of current quantity x base price, minus current total continuing quantity x base average price",
+    "new_items": "current revenue of items with zero or absent base quantity",
+    "discontinued_items": "minus base revenue of items with zero or absent current quantity",
+    "revenue_basis": "net",
+    "currency": "TZS million",
+    "volume_unit": "000 litres"
+  },
+  "results": {
+    "base_period": "2025H1",
+    "current_period": "2026H1",
+    "base_revenue": 6215.0,
+    "current_revenue": 5838.06,
+    "revenue_change": -376.94,
+    "revenue_growth_pct": -6.065004,
+    "revenue_growth_note": null,
+    "base_volume": 3315.0,
+    "current_volume": 3021.0,
+    "volume_growth_pct": -8.868778,
+    "components": {
+      "price": 166.86,
+      "volume": -551.1945701357,
+      "mix": 7.3945701357,
+      "new_items": 0.0,
+      "discontinued_items": 0.0
+    },
+    "continuing": {
+      "items": 24,
+      "base_revenue": 6215.0,
+      "current_revenue": 5838.06,
+      "base_average_price": 1.874811463,
+      "price_effect_at_current_quantity": 166.86,
+      "price_effect_at_base_quantity": 186.75,
+      "price_volume_interaction": -19.89,
+      "volume_effect": -551.1945701357,
+      "mix_effect": 7.3945701357
+    },
+    "new_items": [],
+    "discontinued_items": [],
+    "inactive_items": [],
+    "period_lengths": {
+      "base_days": 181.0,
+      "current_days": 181.0,
+      "equal": true
+    },
+    "items": [
+      {
+        "item": [
+          "Arusha",
+          "Dukas - direct van",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 70.0,
+        "current_quantity": 71.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 140.0,
+        "current_revenue": 142.0,
+        "revenue_change": 2.0,
+        "revenue_growth_pct": 1.428571,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 2.0
+      },
+      {
+        "item": [
+          "Arusha",
+          "Dukas - direct van",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 120.0,
+        "current_quantity": 116.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 216.0,
+        "current_revenue": 219.24,
+        "revenue_change": 3.24,
+        "revenue_growth_pct": 1.5,
+        "price_effect_at_current_quantity": 10.44,
+        "quantity_effect_at_base_price": -7.2
+      },
+      {
+        "item": [
+          "Arusha",
+          "Dukas - via wholesalers",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 140.0,
+        "current_quantity": 98.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 280.0,
+        "current_revenue": 196.0,
+        "revenue_change": -84.0,
+        "revenue_growth_pct": -30.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": -84.0
+      },
+      {
+        "item": [
+          "Arusha",
+          "Dukas - via wholesalers",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 230.0,
+        "current_quantity": 156.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 414.0,
+        "current_revenue": 294.84,
+        "revenue_change": -119.16,
+        "revenue_growth_pct": -28.782609,
+        "price_effect_at_current_quantity": 14.04,
+        "quantity_effect_at_base_price": -133.2
+      },
+      {
+        "item": [
+          "Arusha",
+          "Modern trade",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 25.0,
+        "current_quantity": 26.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 50.0,
+        "current_revenue": 52.0,
+        "revenue_change": 2.0,
+        "revenue_growth_pct": 4.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 2.0
+      },
+      {
+        "item": [
+          "Arusha",
+          "Modern trade",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 45.0,
+        "current_quantity": 44.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 81.0,
+        "current_revenue": 83.16,
+        "revenue_change": 2.16,
+        "revenue_growth_pct": 2.666667,
+        "price_effect_at_current_quantity": 3.96,
+        "quantity_effect_at_base_price": -1.8
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Dukas - direct van",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 300.0,
+        "current_quantity": 309.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 600.0,
+        "current_revenue": 618.0,
+        "revenue_change": 18.0,
+        "revenue_growth_pct": 3.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 18.0
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Dukas - direct van",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 500.0,
+        "current_quantity": 480.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 900.0,
+        "current_revenue": 907.2,
+        "revenue_change": 7.2,
+        "revenue_growth_pct": 0.8,
+        "price_effect_at_current_quantity": 43.2,
+        "quantity_effect_at_base_price": -36.0
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Dukas - via wholesalers",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 150.0,
+        "current_quantity": 153.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 300.0,
+        "current_revenue": 306.0,
+        "revenue_change": 6.0,
+        "revenue_growth_pct": 2.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 6.0
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Dukas - via wholesalers",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 250.0,
+        "current_quantity": 240.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 450.0,
+        "current_revenue": 453.6,
+        "revenue_change": 3.6,
+        "revenue_growth_pct": 0.8,
+        "price_effect_at_current_quantity": 21.6,
+        "quantity_effect_at_base_price": -18.0
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Modern trade",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 120.0,
+        "current_quantity": 126.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 240.0,
+        "current_revenue": 252.0,
+        "revenue_change": 12.0,
+        "revenue_growth_pct": 5.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 12.0
+      },
+      {
+        "item": [
+          "Dar es Salaam",
+          "Modern trade",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 200.0,
+        "current_quantity": 196.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 360.0,
+        "current_revenue": 370.44,
+        "revenue_change": 10.44,
+        "revenue_growth_pct": 2.9,
+        "price_effect_at_current_quantity": 17.64,
+        "quantity_effect_at_base_price": -7.2
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Dukas - direct van",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 60.0,
+        "current_quantity": 61.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 120.0,
+        "current_revenue": 122.0,
+        "revenue_change": 2.0,
+        "revenue_growth_pct": 1.666667,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 2.0
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Dukas - direct van",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 100.0,
+        "current_quantity": 97.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 180.0,
+        "current_revenue": 183.33,
+        "revenue_change": 3.33,
+        "revenue_growth_pct": 1.85,
+        "price_effect_at_current_quantity": 8.73,
+        "quantity_effect_at_base_price": -5.4
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Dukas - via wholesalers",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 90.0,
+        "current_quantity": 91.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 180.0,
+        "current_revenue": 182.0,
+        "revenue_change": 2.0,
+        "revenue_growth_pct": 1.111111,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 2.0
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Dukas - via wholesalers",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 150.0,
+        "current_quantity": 144.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 270.0,
+        "current_revenue": 272.16,
+        "revenue_change": 2.16,
+        "revenue_growth_pct": 0.8,
+        "price_effect_at_current_quantity": 12.96,
+        "quantity_effect_at_base_price": -10.8
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Modern trade",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 15.0,
+        "current_quantity": 15.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 30.0,
+        "current_revenue": 30.0,
+        "revenue_change": 0.0,
+        "revenue_growth_pct": 0.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 0.0
+      },
+      {
+        "item": [
+          "Dodoma",
+          "Modern trade",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 30.0,
+        "current_quantity": 30.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 54.0,
+        "current_revenue": 56.7,
+        "revenue_change": 2.7,
+        "revenue_growth_pct": 5.0,
+        "price_effect_at_current_quantity": 2.7,
+        "quantity_effect_at_base_price": 0.0
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Dukas - direct van",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 80.0,
+        "current_quantity": 82.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 160.0,
+        "current_revenue": 164.0,
+        "revenue_change": 4.0,
+        "revenue_growth_pct": 2.5,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 4.0
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Dukas - direct van",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 140.0,
+        "current_quantity": 136.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 252.0,
+        "current_revenue": 257.04,
+        "revenue_change": 5.04,
+        "revenue_growth_pct": 2.0,
+        "price_effect_at_current_quantity": 12.24,
+        "quantity_effect_at_base_price": -7.2
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Dukas - via wholesalers",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 160.0,
+        "current_quantity": 104.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 320.0,
+        "current_revenue": 208.0,
+        "revenue_change": -112.0,
+        "revenue_growth_pct": -35.0,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": -112.0
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Dukas - via wholesalers",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 260.0,
+        "current_quantity": 166.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 468.0,
+        "current_revenue": 313.74,
+        "revenue_change": -154.26,
+        "revenue_growth_pct": -32.961538,
+        "price_effect_at_current_quantity": 14.94,
+        "quantity_effect_at_base_price": -169.2
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Modern trade",
+          "350ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 30.0,
+        "current_quantity": 31.0,
+        "base_price": 2.0,
+        "current_price": 2.0,
+        "base_revenue": 60.0,
+        "current_revenue": 62.0,
+        "revenue_change": 2.0,
+        "revenue_growth_pct": 3.333333,
+        "price_effect_at_current_quantity": 0.0,
+        "quantity_effect_at_base_price": 2.0
+      },
+      {
+        "item": [
+          "Mwanza",
+          "Modern trade",
+          "500ml"
+        ],
+        "status": "continuing",
+        "base_quantity": 50.0,
+        "current_quantity": 49.0,
+        "base_price": 1.8,
+        "current_price": 1.89,
+        "base_revenue": 90.0,
+        "current_revenue": 92.61,
+        "revenue_change": 2.61,
+        "revenue_growth_pct": 2.9,
+        "price_effect_at_current_quantity": 4.41,
+        "quantity_effect_at_base_price": -1.8
+      }
+    ]
+  },
+  "reconciliation": {
+    "observed_change": -376.94,
+    "sum_of_components": -376.94,
+    "residual": 0.0,
+    "tolerance": 0.01,
+    "reconciles": true
+  },
+  "flags": [
+    "Positive price effect with negative volume effect on continuing items."
+  ],
+  "warnings": [],
+  "interpretation_limits": [
+    "Arithmetic decomposition under the stated convention: it locates where revenue change arose, not why.",
+    "Mix depends on item granularity; a different --dims choice gives a different price/mix split with the same total.",
+    "Price effects use realised average price per item (revenue / quantity), which includes promotions and discounts if revenue is net of them."
+  ],
+  "provenance": {
+    "file": "examples/demo-a-diagnosis/data/sales_h1.csv",
+    "sha256": "1f8093c753a89672f2ce63b1bac96de0110add1d6e189101442c94b490f054a7",
+    "rows_read": 48,
+    "rows_used": 48,
+    "arguments": {
+      "recipe": "pvm",
+      "input": "examples/demo-a-diagnosis/data/sales_h1.csv",
+      "key": "sku",
+      "period_col": "period",
+      "base": "2025H1",
+      "current": "2026H1",
+      "quantity_col": "volume_000_litres",
+      "revenue_col": "net_revenue_tzs_m",
+      "price_col": null,
+      "unit_col": "unit",
+      "currency_col": "currency",
+      "dims": "region,channel",
+      "period_days_col": "period_days",
+      "allow_unequal_periods": false,
+      "interaction": "allocate-to-price",
+      "revenue_basis": "net",
+      "exclude_missing": false,
+      "tolerance": 0.01,
+      "format": "json",
+      "output": "examples/demo-a-diagnosis/analysis/pvm_region_channel_sku.json"
+    },
+    "script": "scripts/commercial_analysis.py",
+    "script_version": "1.0.0",
+    "generated_at": "2026-09-16T22:27:50+00:00",
+    "excluded_lines": [],
+    "rows_outside_periods": 0
+  }
+}

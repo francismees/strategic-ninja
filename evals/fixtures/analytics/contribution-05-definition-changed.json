@@ -1,0 +1,29 @@
+{
+  "id": "contribution-05-definition-changed",
+  "recipe": "contribution",
+  "purpose": "Category definition changed between periods (e.g. an audit added a sub-category).",
+  "input_csv": "period,group,value,definition\n2025,A,100,carbonated soft drinks\n2025,B,100,carbonated soft drinks\n2026,A,120,soft drinks incl. juices\n2026,B,140,soft drinks incl. juices\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--group-col",
+    "group",
+    "--value-col",
+    "value",
+    "--definition-col",
+    "definition"
+  ],
+  "convention": "Shares need a constant market definition.",
+  "derivation": "Definitions differ between periods.",
+  "expected_status": "error",
+  "expected_error_code": "DEFINITION_CHANGED",
+  "edge_case_expectation": "Reclassification is not reported as growth.",
+  "expected_failure_behavior": "Exit code 2 with DEFINITION_CHANGED.",
+  "kind": "analytics"
+}

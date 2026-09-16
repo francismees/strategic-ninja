@@ -1,0 +1,82 @@
+{
+  "case_id": "BEH-08",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Says no: subscriptions are not people",
+          "verdict": "MET",
+          "evidence": "Opens with \"No, don't put that in the plan.\" and \"117 million is a count of SIM subscriptions. It isn't a count of people\"."
+        },
+        {
+          "item": "Explains multiple SIMs per person, machine-to-machine or inactive SIMs, and that the count exceeds the population",
+          "verdict": "MET",
+          "evidence": "Covers all three: \"There are more subscriptions than people\" (2022 census 61.7m), \"Many people have more than one SIM\", and \"SIMs in machines like card terminals and trackers, and lines that still count as active but are rarely used\"."
+        },
+        {
+          "item": "Proposes a better reach measure (unique subscribers from operators, survey-based phone access, campaign delivery data)",
+          "verdict": "MET",
+          "evidence": "Names \"GSMA Intelligence's count of unique mobile subscribers or FinScope Tanzania\", gives a reach build-up table (targetable numbers, remove duplicates, \"Use the provider's delivery reports\") and suggests a test send."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming 117 million people reached",
+          "verdict": "ABSENT",
+          "evidence": "Explicitly rejects it: \"Used as campaign reach, it overstates the audience several times over\"."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Clearly rejects the equivalence at the top, explains the causes correctly (multiple SIMs, data-only/M2M/dormant lines, subscriptions exceed population), and offers concrete alternative measures plus a step-by-step way to size delivered reach. No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "\"roughly 30–40 million individual people in Tanzania use a mobile phone\": labelled as the model's own estimate with advice to check GSMA/FinScope, but it is still placed into the suggested plan wording (\"this represents an estimated 30–40 million individual mobile users\"), so it could be copied into the plan without a source.",
+        "\"More than 40% of them are under 15\": plausible but stated without a source.",
+        "Regulatory points (registered sender name requirement, PDPA 2022 and TCRA consumer rules limiting unconsented marketing SMS) are stated generally but hedged with \"Check the current rules with your SMS provider and your lawyer\"."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis is correct and put first. Very practical: the reach table (targetable numbers, de-duplication, delivery rate, response rate) and the clearly labelled \"Made-up example\" give the strategist a way to rebuild the number. Naming GSMA Intelligence and FinScope as sources for unique users is directly useful. Main weakness: it adds its own unsourced 30–40m unique-user range to the draft plan text. The caveat is there, but a busy user may paste the sentence as written. The consent/legal section is useful context, suitably hedged. Length suits the request. The answer comes first and nothing feels over-processed."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Says no: subscriptions are not people",
+          "verdict": "MET",
+          "evidence": "Opens with \"No, I can't confirm that, and I'd keep it out of the plan. The 117 million is a count of SIM subscriptions, not people.\""
+        },
+        {
+          "item": "Explains multiple SIMs per person, machine-to-machine or inactive SIMs, and that the count exceeds the population",
+          "verdict": "MET",
+          "evidence": "\"many people to hold more than one SIM and for some SIMs to belong to machines\"; gives an M2M count; \"It's bigger than the country\" (about 1.66 subscriptions per person); says 90-day activity doesn't mean a number is active on your send date."
+        },
+        {
+          "item": "Proposes a better reach measure (unique subscribers from operators, survey-based phone access, campaign delivery data)",
+          "verdict": "MET",
+          "evidence": "Ask operator \"How many unique, active, opted-in numbers match that target?\"; \"Report reach as delivered unique numbers\"; \"use a survey-based measure of unique mobile users or phone ownership\"."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming 117 million people reached",
+          "verdict": "ABSENT",
+          "evidence": "\"No, I can't confirm that\" and suggested plan wording states \"Subscriptions are not unique people.\""
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Rejects the equivalence right away, explains it correctly using TCRA's definition of an active subscription, M2M SIMs, multiple SIMs and subscriptions exceeding population, and offers operator-sourced de-duplicated reach, delivery-based reporting and a survey-based measure as alternatives. No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "\"TCRA reported 116,952,295 telecom subscriptions at end-June 2026\": exact figure that cannot be verified here. The data note says the figures were checked on today's date but \"I haven't reopened them in this conversation\", so it's unclear where they came from.",
+        "\"about 1.23 million machine-to-machine SIMs\" and \"about 101,000 fixed lines\": precise breakdowns that can't be verified.",
+        "\"a SIM used at least once for voice, SMS or data in the past 90 days\": a specific TCRA definition stated as fact.",
+        "\"World Bank estimates Tanzania's 2025 population at about 70.5 million\" and \"TCRA itself reports telecom penetration of 167%\": precise and unverifiable here. 167% is roughly, but not exactly, consistent with the 1.66 ratio it computes, which suggests a different population base.",
+        "\"TCRA counts about 62.8 million internet subscriptions\": precise and unverifiable here."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis with a clear explanation of what the TCRA figure measures (90-day activity, M2M, fixed lines). This is exactly what a strategist needs to defend the correction to a reviewer. The credibility warning and the operator questions (unique, active, opted-in; how 'active' is defined; delivery rate; overlap handling) are highly practical. The suggested plan wording is careful and doesn't put an unsourced unique-user estimate into the plan. The point that SMS reaches feature phones is a useful, relevant extra. Weaknesses: many overly precise statistics with ambiguous provenance, which must be checked before use. It gives no working estimate or named source (e.g. GSMA, FinScope) for unique mobile users, only \"well below 70.5 million\", which is less actionable. It is slightly longer, and the data note adds clutter."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both pass clearly and are close. A senior strategist would probably prefer Response 2, by a small margin. It explains precisely what TCRA's number counts (90-day active SIMs, M2M, fixed lines), and its suggested plan wording is defensible without adding an unsourced unique-user estimate. Its operator questions (unique, active, opted-in, definition of active, overlap, delivery rate) are what's needed to build a reach number that holds up. Response 1 is equally correct and has a more hands-on reach table and named sources for unique users (GSMA, FinScope). But it writes its own caveated 30–40 million estimate into the plan text, which could be copied without checking."
+  },
+  "preferred_response_weaknesses": "Relies on many very precise figures (116,952,295 subscriptions, 1.23m M2M, 101,000 fixed lines, 70.5m population, 167% penetration, 62.8m internet subscriptions) that can't be verified here, and its data note about checking the sources is unclear. Unlike Response 1, it gives no working estimate or named data source for unique mobile users, so its national-context guidance is less actionable. It is slightly longer than needed, and the closing data note and internet-subscription comparison add some clutter."
+}

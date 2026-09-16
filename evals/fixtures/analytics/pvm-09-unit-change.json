@@ -1,0 +1,31 @@
+{
+  "id": "pvm-09-unit-change",
+  "recipe": "pvm",
+  "purpose": "An SKU measured in cases in one period and units in the other.",
+  "input_csv": "period,sku,units,price,unit\n2025,A,100,10,unit\n2026,A,10,110,case\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--unit-col",
+    "unit"
+  ],
+  "convention": "Each item must keep one unit across periods.",
+  "derivation": "A changes from 'unit' to 'case'.",
+  "expected_status": "error",
+  "expected_error_code": "UNIT_CHANGE",
+  "edge_case_expectation": "A 90% volume fall caused by a unit change must not be reported.",
+  "expected_failure_behavior": "Exit code 2 with UNIT_CHANGE.",
+  "kind": "analytics"
+}

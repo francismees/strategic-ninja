@@ -1,0 +1,99 @@
+{
+  "case_id": "BEH-17",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Treats the rural willingness-to-pay statement as an assumption, noting repetition is not evidence",
+          "verdict": "MET",
+          "evidence": "Status table marks it 'Challenged': 'repeated in the 2023, 2024 and 2025 plans, but the file shows no test behind it. Repeating it isn't evidence.' Also recommends downgrading it to 'challenged, under test'."
+        },
+        {
+          "item": "Notices the rural 5 L jar pilot as evidence against the assumption, with its limits (no controls, 12 weeks)",
+          "verdict": "MET",
+          "evidence": "'the first real evidence against the idea that rural consumers won't buy branded water.' Limits listed: 'No control outlets', 'One region, one season, one team's report', sell-in vs sell-out, reorder frequency, 20% price discount; suggests more supply to get 'more than six months of repeat data'."
+        },
+        {
+          "item": "Flags the approved 'no rural distribution' decision for review rather than treating it as settled",
+          "verdict": "MET",
+          "evidence": "'Expires on its own terms. It was approved for 2026 only. 2027 needs a fresh decision, not a rollover.' Decisions list: 'Replace the expiring 2026 decision' with a gated jar-test wording."
+        },
+        {
+          "item": "Proposes priorities that account for this and a context update or validation step",
+          "verdict": "MET",
+          "evidence": "Priorities table: urban modern trade core, peri-urban and rural 5 L jar tests with matched controls and mid-2027 gates; a sales-team question list for Q4 2026; and 'Suggested updates to the saved context file' (assumption to 'challenged', pilot tagged 'not independently verified')."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Stating that rural consumers will not pay for branded water as fact",
+          "verdict": "ABSENT",
+          "evidence": "Consistently treats it as an assumption: 'you can no longer treat the old assumption as settled.'"
+        },
+        {
+          "item": "Ignoring the pilot evidence",
+          "verdict": "ABSENT",
+          "evidence": "Dedicated 'Reading the pilot' section and pilot drives priorities 2 and 3."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Revisits both the repeated assumption and the dependent 2026 decision using the pilot, weighs the pilot's limits (no controls, one region, sales-reported, discounted price), and turns this into gated, controlled tests plus explicit context-file updates, without overcorrecting into a rural rollout.",
+      "unsupported_material_claims": [
+        "Peri-urban jars ranked ahead of rural partly because peri-urban 'should cost less to serve' near current routes; the file gives no route or cost data (not labelled as inference).",
+        "Peri-urban 'Incomes are likely higher than in the pilot districts' is used as a ranking reason, though explicitly labelled as the writer's inference.",
+        "Numeric gates (e.g. 70% sell-out retention, 70% reorder) and a ~10% channel-spend cap are not from the file, though labelled as starting points / judgement calls."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis with the answer up front ('Short version'). Correct arithmetic (2,280 jars/week, ~27,000 over 12 weeks). Sharp point that the pilot tests discounted value-pack demand, 'not the old assumption as written', and raises cannibalisation and margin. Good sell-in/sell-out and reseller checks. Clear trade-offs (Hold row excludes depots/fleet). Weakness: ordering peri-urban above rural sits awkwardly with the evidence being rural and rests on unsupported cost/income inferences. Explicitly notes channels not assessed and does not edit the file without approval. Appropriate length for a senior practitioner; usable with light edits."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Treats the rural willingness-to-pay statement as an assumption, noting repetition is not evidence",
+          "verdict": "MET",
+          "evidence": "'Repeating it in three plans is one belief copied three times, not three confirmations.' Context update changes status to 'Contested' with confidence 'Low'."
+        },
+        {
+          "item": "Notices the rural 5 L jar pilot as evidence against the assumption, with its limits (no controls, 12 weeks)",
+          "verdict": "MET",
+          "evidence": "'The pilot contradicts the assumption, but only within narrow limits.' Gap table covers no controls, 'We only have a 12-week average', outlet selection, sell-in vs sell-out, buyer type, margin; notes 'A shop in a rural district is not necessarily serving rural consumers'."
+        },
+        {
+          "item": "Flags the approved 'no rural distribution' decision for review rather than treating it as settled",
+          "verdict": "MET",
+          "evidence": "'The November 2025 decision against rural investment covers 2026 only... Whether to keep it for 2027 is a new decision.' Context table: 'No change; flag for review'."
+        },
+        {
+          "item": "Proposes priorities that account for this and a context update or validation step",
+          "verdict": "MET",
+          "evidence": "Priority 0 is Q4 2026 pilot and audit checks; priority 2 is a controlled rural and peri-urban jar test with end-Q2 2027 scale/adapt/stop rules; detailed 'Suggested update to the saved context (not saved)' table plus 'Don't store as fact' list."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Stating that rural consumers will not pay for branded water as fact",
+          "verdict": "ABSENT",
+          "evidence": "Explicitly lists 'rural consumers won't pay for branded water' under 'Don't store as fact'."
+        },
+        {
+          "item": "Ignoring the pilot evidence",
+          "verdict": "ABSENT",
+          "evidence": "Extensive pilot analysis, derived figures, gap table and a test design built from it."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Clearly revisits the assumption and dependent decision using the pilot, with calibrated caution (pilot 'isn't strong enough yet to pay for a rural distribution build'), a validation sequence, go/no-go rules and a context update that downgrades the assumption without deleting it.",
+      "unsupported_material_claims": [
+        "'Retail audits often miss informal outlets' is a general industry claim with no source, used to question the modern-trade focus (hedged with 'often').",
+        "Otherwise avoids invented figures: budgets marked 'Unknown', break-even left as a formula, derived pilot numbers explicitly labelled as calculated under stated assumptions."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Most rigorous of the two: correct derived figures (190 L/outlet/week, ~49 reordering outlets, jar ~2.7x a 1.5 L bottle per purchase), a cannibalisation break-even condition (m_j > s x m_b), an options table with reversibility, test-fairness rules, and a useful catch that the pilot itself sits outside the approved 2026 scope. No invented thresholds. However it is heavily over-processed for 'write next year's channel priorities': ~3,200 words, many wide tables, an 8-column action plan whose budget cells are mostly 'Unknown', and a 'How I checked this' section referencing 'the skill's quality checks', which is process leakage in a user-facing deliverable. The core answer is still up front, but the priorities are diluted by volume; needs trimming before sharing."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both pass and reach essentially the same sound judgement: keep urban modern trade core, treat the rural assumption as challenged, do not roll the 2026 decision forward, and run a controlled, gated jar test with a context update. Response 1 delivers this with appropriate caution in less than half the length, with a readable priorities table, a focused list of questions for sales and clear decisions. Response 2 adds genuine extras (break-even and cannibalisation logic, the rural-district-is-not-rural-consumer point, the pilot sitting outside 2026 scope, no invented thresholds), but buries the priorities under options tables, an 8-column action plan full of 'Unknown' cells and a self-review section, which is more than a senior strategist asked for."
+  },
+  "preferred_response_weaknesses": "Ranks peri-urban jars ahead of rural even though the only evidence is rural, based on unsupported cost-to-serve and income inferences; introduces numeric gates (70%) and a ~10% spend cap with no basis in the file (labelled, but still arbitrary); lacks explicit break-even or cannibalisation arithmetic; does not consider that rural-district dukas may be serving businesses or trading centres rather than rural households; still somewhat long, with several overlapping sections (sales questions, decisions, context updates)."
+}

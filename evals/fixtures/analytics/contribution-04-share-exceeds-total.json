@@ -1,0 +1,29 @@
+{
+  "id": "contribution-04-share-exceeds-total",
+  "recipe": "contribution",
+  "purpose": "Brand rows sum to more than the declared market total (definition or unit inconsistency).",
+  "input_csv": "period,group,value,market_total\n2025,A,700,1000\n2025,B,400,1000\n2026,A,700,1000\n2026,B,300,1000\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--group-col",
+    "group",
+    "--value-col",
+    "value",
+    "--market-total-col",
+    "market_total"
+  ],
+  "convention": "Sum of groups cannot exceed the market total.",
+  "derivation": "2025: 700 + 400 = 1100 > 1000.",
+  "expected_status": "error",
+  "expected_error_code": "SHARE_EXCEEDS_TOTAL",
+  "edge_case_expectation": "No shares above a consistent 100%.",
+  "expected_failure_behavior": "Exit code 2 with SHARE_EXCEEDS_TOTAL.",
+  "kind": "analytics"
+}

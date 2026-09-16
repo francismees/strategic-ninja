@@ -1,0 +1,33 @@
+{
+  "id": "buyers-06-buyers-exceed-population",
+  "recipe": "buyers",
+  "purpose": "Buyer count larger than the eligible population (e.g. SIM or account counts treated as people).",
+  "input_csv": "period,population,buyers,occasions,units,window_days\n2025,20000,25000,50000,60000,364\n2026,20000,26000,52000,62000,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days",
+    "--population-col",
+    "population"
+  ],
+  "convention": "Penetration cannot exceed 100% of a defined population of people.",
+  "derivation": "25000 > 20000.",
+  "expected_status": "error",
+  "expected_error_code": "BUYERS_EXCEED_POPULATION",
+  "edge_case_expectation": "Incompatible units/denominators are flagged, not reported as 125% penetration.",
+  "expected_failure_behavior": "Exit code 2 with BUYERS_EXCEED_POPULATION.",
+  "kind": "analytics"
+}

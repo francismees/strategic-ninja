@@ -1,0 +1,33 @@
+{
+  "id": "buyers-03-rates-identity-mismatch",
+  "recipe": "buyers",
+  "purpose": "Rates supplied that do not reproduce the stated volume (inconsistent definitions or windows).",
+  "input_csv": "period,buyers,frequency,upo,volume,window_days\n2025,1000,4,1.5,6500,364\n2026,1000,4,1.5,6000,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--frequency-col",
+    "frequency",
+    "--units-per-occasion-col",
+    "upo",
+    "--volume-col",
+    "volume",
+    "--window-col",
+    "window_days"
+  ],
+  "convention": "buyers x frequency x units per occasion must equal volume.",
+  "derivation": "1000 x 4 x 1.5 = 6000, stated 6500.",
+  "expected_status": "error",
+  "expected_error_code": "IDENTITY_MISMATCH",
+  "edge_case_expectation": "The identity is only used when it reconciles.",
+  "expected_failure_behavior": "Exit code 2 with IDENTITY_MISMATCH.",
+  "kind": "analytics"
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "engagement_id": "ENG-pesalo-2027-critique",
+  "title": "Pesalo 2027: fix the leaking bucket, then grow",
+  "audience": "Pesalo board (fictional)",
+  "format": "deck",
+  "synthetic": true,
+  "decision_requested": "Approve reliability and onboarding work plus a three-week cohort analysis now; hold the TZS 2.5 billion acquisition and Gold spend until retention evidence meets an agreed threshold",
+  "governing_thought": "Pesalo loses most new users within a month and one in six cash-outs fails; fix reliability and prove the churn link before paying to acquire more users",
+  "recommendation_type": "conditional",
+  "sections": [
+    {
+      "id": "S01",
+      "role": "complication",
+      "assertion": "Most new Pesalo users stop transacting within a month",
+      "audience_decision": "Recognise retention as the issue",
+      "evidence_ids": [
+        "CLM-C02"
+      ],
+      "exhibit": "Registered vs 30-day active vs 30-day retained, Q2 2026",
+      "notes": "",
+      "uncertainty": "Retention definition not documented; only 30-day data available",
+      "source_locators": [
+        "Appendix A, Q2 2026 operating data"
+      ]
+    },
+    {
+      "id": "S02",
+      "role": "evidence",
+      "assertion": "Nearly one in five cash-out attempts failed in Q2, and failed withdrawals are the top complaint in one-star reviews",
+      "audience_decision": "Accept reliability as a leading suspect",
+      "evidence_ids": [
+        "CLM-C03",
+        "CLM-C04"
+      ],
+      "exhibit": "Cash-out failure rate; review themes",
+      "notes": "Reviews are a biased sample of unhappy users",
+      "uncertainty": "Review sample is self-selected; failure causes beyond float not broken out",
+      "source_locators": [
+        "Appendix A",
+        "App review sample theme table"
+      ]
+    },
+    {
+      "id": "S03",
+      "role": "diagnosis",
+      "assertion": "The growth problem looks like a leaking bucket, not a shortage of sign-ups; we will confirm the churn link within three weeks",
+      "audience_decision": "Accept the working diagnosis and the test",
+      "evidence_ids": [
+        "INS-C01",
+        "HYP-C01"
+      ],
+      "exhibit": "Leaking bucket diagram with the cohort test",
+      "notes": "",
+      "uncertainty": "The link between failed cash-outs and churn is a hypothesis until the cohort analysis is done",
+      "source_locators": []
+    },
+    {
+      "id": "S04",
+      "role": "evidence",
+      "assertion": "The market is not 117 million customers: subscriptions exceed the population, so they are not people",
+      "audience_decision": "Retire the market-size slide",
+      "evidence_ids": [
+        "CLM-TZ-004",
+        "CLM-TZ-007",
+        "CLM-TZ-008"
+      ],
+      "exhibit": "Subscriptions vs population with definitions",
+      "notes": "Replace with survey-based adults with mobile money access in target areas",
+      "uncertainty": "People-based market size not yet built",
+      "source_locators": [
+        "TCRA quarter ending June 2026, p.13 Table 1.1.1 and glossary",
+        "World Bank SP.POP.TOTL 2025"
+      ]
+    },
+    {
+      "id": "S05",
+      "role": "evidence",
+      "assertion": "The radio test does not prove ROI: most radio weeks were salary weeks",
+      "audience_decision": "Treat radio as unproven",
+      "evidence_ids": [
+        "CLM-C05"
+      ],
+      "exhibit": "Raw vs stratified sign-ups table",
+      "notes": "",
+      "uncertainty": "Stratified differences rest on very few weeks; a holdout test is needed",
+      "source_locators": [
+        "weekly_signups_q2q3.csv; analysis/signups_stratified.md"
+      ]
+    },
+    {
+      "id": "S06",
+      "role": "recommendation",
+      "assertion": "Fund reliability and onboarding now; release acquisition spend only when retention clears an agreed threshold",
+      "audience_decision": "Approve the conditional plan",
+      "evidence_ids": [
+        "OPT-C02"
+      ],
+      "exhibit": "Choice on a page with non-choices and gates",
+      "notes": "Keeps the deck's float-partner action",
+      "uncertainty": "Conditional on the cohort analysis confirming that failed cash-outs drive churn",
+      "source_locators": []
+    },
+    {
+      "id": "S07",
+      "role": "alternatives",
+      "assertion": "The viral campaign and Pesalo Gold are held, not killed: each needs evidence first",
+      "audience_decision": "Agree the non-choices",
+      "evidence_ids": [
+        "OPT-C01",
+        "OPT-C03",
+        "ASM-C01"
+      ],
+      "exhibit": "Options table with evidence gaps",
+      "notes": "",
+      "uncertainty": "Willingness to pay for Gold is untested rather than disproven",
+      "source_locators": []
+    },
+    {
+      "id": "S08",
+      "role": "action",
+      "assertion": "Four actions: float partner, cohort analysis, onboarding redesign, radio holdout test",
+      "audience_decision": "Confirm owners and timing",
+      "evidence_ids": [
+        "ACT-C01",
+        "ACT-C02",
+        "ACT-C03",
+        "ACT-C04"
+      ],
+      "exhibit": "Timeline with owners",
+      "notes": "",
+      "uncertainty": "Float partner fee not yet quoted",
+      "source_locators": []
+    },
+    {
+      "id": "S09",
+      "role": "measurement",
+      "assertion": "Success means reliable cash-outs, retained savers and active savers, not followers or downloads",
+      "audience_decision": "Replace the KPI slide",
+      "evidence_ids": [
+        "MET-C01",
+        "MET-C02",
+        "MET-C03",
+        "MET-C04"
+      ],
+      "exhibit": "Measurement ladder with decision rules",
+      "notes": "",
+      "uncertainty": "Active-saver baseline not yet extracted",
+      "source_locators": []
+    },
+    {
+      "id": "S10",
+      "role": "ask",
+      "assertion": "Approve the reliability plan today; return in six weeks with cohort results and an acquisition gate",
+      "audience_decision": "Approve",
+      "evidence_ids": [],
+      "exhibit": "Decision box",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "pvm-12-unequal-period-length",
+  "recipe": "pvm",
+  "purpose": "A 53-week year compared with a 52-week year.",
+  "input_csv": "period,sku,units,price,days\n2025,A,100,10,364\n2026,A,105,10,371\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--period-days-col",
+    "days"
+  ],
+  "convention": "Periods must have equal length unless explicitly allowed.",
+  "derivation": "364 vs 371 days.",
+  "expected_status": "error",
+  "expected_error_code": "PERIOD_LENGTH_MISMATCH",
+  "edge_case_expectation": "A 5% volume rise partly caused by an extra week must not be reported as growth.",
+  "expected_failure_behavior": "Exit code 2 with PERIOD_LENGTH_MISMATCH.",
+  "kind": "analytics"
+}

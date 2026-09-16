@@ -1,0 +1,65 @@
+{
+  "run_at": "2026-09-16T23:12:41+00:00",
+  "python": "3.9.6",
+  "files": 198,
+  "results": [
+    {
+      "check": "frontmatter",
+      "status": "PASS",
+      "detail": "name 'strategic-ninja' (15 chars); description 719 chars; fields ['description', 'metadata', 'name']"
+    },
+    {
+      "check": "size",
+      "status": "PASS",
+      "detail": "SKILL.md 139 lines, 2252 words, about 4508 tokens (estimate: max of chars/4 and words x 1.33; guide: under 500 lines and about 5,000 tokens)"
+    },
+    {
+      "check": "links",
+      "status": "PASS",
+      "detail": "all relative Markdown links resolve"
+    },
+    {
+      "check": "routing",
+      "status": "PASS",
+      "detail": "every module in references, workflows, markets, templates, integrations is linked directly from SKILL.md"
+    },
+    {
+      "check": "reachability",
+      "status": "PASS",
+      "detail": "all 198 files reachable from SKILL.md or README.md"
+    },
+    {
+      "check": "hygiene",
+      "status": "PASS",
+      "detail": "no empty folders, caches or junk; all JSON parses"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no e-mail addresses found"
+    },
+    {
+      "check": "records",
+      "status": "PASS",
+      "detail": [
+        "examples/demo-a-diagnosis/records.json: 0 errors, 0 warnings",
+        "examples/demo-b-annual-strategy/records.json: 0 errors, 0 warnings",
+        "examples/demo-c-critique/records.json: 0 errors, 0 warnings",
+        "templates/engagement-records.json: 0 errors, 0 warnings",
+        "examples/demo-b-annual-strategy/outline.json: valid",
+        "examples/demo-c-critique/improved-outline.json: valid",
+        "markets/tanzania-observations.json: 0 errors"
+      ]
+    },
+    {
+      "check": "scripts",
+      "status": "PASS",
+      "detail": "all scripts compile on Python 3.9.6"
+    },
+    {
+      "check": "fixtures",
+      "status": "PASS",
+      "detail": "39 of 39 fixtures passed."
+    }
+  ]
+}

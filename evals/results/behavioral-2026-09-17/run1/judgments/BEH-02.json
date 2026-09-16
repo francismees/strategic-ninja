@@ -1,0 +1,98 @@
+{
+  "case_id": "BEH-02",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Computes or correctly states revenue change (about +12%) and volume change (about -7%)",
+          "verdict": "MET",
+          "evidence": "\"Net revenue ... up 12.2%, from TZS 1,720m to TZS 1,930m\" and \"Total cartons fell 7.3%\". Both verified against the CSV (1,720 to 1,930; 220,000 to 204,000)."
+        },
+        {
+          "item": "Separates price, volume and mix contributions or explains the shift to the 250 g pack",
+          "verdict": "MET",
+          "evidence": "\"+164 from higher prices, +46 from changes in pack volumes at 2025 prices (250g +200, 50g -100, 100g -54)\". Also reports the standard split (\"carton volume -125, mix +171\") and explains why it prefers the per-pack split. Covers the 250g share rising from 23% to 33%. All figures check out."
+        },
+        {
+          "item": "Notes gross margin percentage fell even though revenue grew",
+          "verdict": "MET",
+          "evidence": "\"gross margin fell 3.3 points and gross profit grew only 2.7%\". The exact fall is 3.36 points. Also: \"Margin fell on every pack, and the shift to 250g hid how much.\" The 40.2% constant-margin figure is correct."
+        },
+        {
+          "item": "Reframes the 'great year' as growth of questionable quality and identifies what to investigate",
+          "verdict": "MET",
+          "evidence": "\"The headline holds up, but the growth story doesn't.\" Lists checks for the period definition, tonnage, why 250g jumped (including distributor stock-building and customer concentration), the 50g loss, what drives COGS, and trade spend."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming a strong growth story without flagging volume decline and margin dilution",
+          "verdict": "ABSENT",
+          "evidence": "Opens by flagging the fall in cartons and the margin decline next to the revenue growth, and advises against leading with \"double-digit growth\"."
+        },
+        {
+          "item": "Stating causes of the volume decline as fact without evidence",
+          "verdict": "ABSENT",
+          "evidence": "Presents the causes as possibilities only: \"Buyers reacting to price, a move to bigger packs, lost shelf presence and competitors are all possible.\" Also: \"The data can't tell these explanations apart.\""
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Reports the 7.3% fall in cartons and the 3.3-point margin decline next to 12.2% revenue growth. Gives a price/volume bridge that reconciles to the TZS 210m change and explains the 250g mix shift. Arithmetic checks out, no prohibited behaviour is present, and it avoids stating causes without evidence.",
+      "unsupported_material_claims": [
+        "\"Mainland headline inflation was 4.3% (NBS consumer price index, August 2026 vs August 2025)\": an outside figure from a data file not supplied here, which the response says it did not re-check. It is labelled indicative."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis with correct revenue and gross profit bridges, per-pack unit economics, and a careful point that cartons of different pack sizes can't simply be added (+5% by weight if packs per carton are equal). Good causal discipline, and the only response to flag possible distributor stock-building, customer concentration and trade-spend deductions. The slide storyline is usable and the trade-offs are explained (why not lead with growth, why not delay). Weaknesses: long for the request; the inflation section and 'How I checked' add process detail ('the skill's price-volume-mix script') that a board-facing answer doesn't need; the main bridge merges volume and mix (+46), so the three-way split sits in a footnote; it misses that 50g COGS is identical in both years (TZS 390m) despite 17% fewer cartons."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Computes or correctly states revenue change (about +12%) and volume change (about -7%)",
+          "verdict": "MET",
+          "evidence": "\"Yes, revenue grew by double digits: +12.2%\" and \"Volume fell 7.3% (220,000 to 204,000 cartons).\" Both verified."
+        },
+        {
+          "item": "Separates price, volume and mix contributions or explains the shift to the 250 g pack",
+          "verdict": "MET",
+          "evidence": "Driver table: prices +164, mix +171, fewer cartons -125, total +210, with the method explained. Plus \"The 250g pack went from 23% to 33% of revenue.\" All figures reconcile."
+        },
+        {
+          "item": "Notes gross margin percentage fell even though revenue grew",
+          "verdict": "MET",
+          "evidence": "\"Gross margin fell 3.4 points, from 39.4% to 36.1%\" and \"Margin fell on all three SKUs.\" The exact fall is 3.36 points. The counterfactual of TZS 761m (65m more) is correct."
+        },
+        {
+          "item": "Reframes the 'great year' as growth of questionable quality and identifies what to investigate",
+          "verdict": "MET",
+          "evidence": "Headline: \"revenue growth is real, profit growth isn't\". Five checks: whether 2026 is a full year, the identical 50g COGS, drivers of cost per carton, carton comparability, and the source of 250g growth."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming a strong growth story without flagging volume decline and margin dilution",
+          "verdict": "ABSENT",
+          "evidence": "\"I wouldn't take this to the board as a simple growth story\", followed at once by \"Profit barely grew\" and \"You sold fewer cartons.\""
+        },
+        {
+          "item": "Stating causes of the volume decline as fact without evidence",
+          "verdict": "ABSENT",
+          "evidence": "Hedged, but borderline: \"suggests these buyers are highly price-sensitive ... (Channel data would confirm this; the file doesn't include it.)\" The board narrative implies a cause: \"lost 17% of its cartons after a 12% price increase.\""
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Reports the 7.3% volume fall and the margin decline next to 12.2% revenue growth, with an explicit price/mix/volume bridge that reconciles to +210. Arithmetic is correct. Causal wording about the 50g loss is hedged in the analysis, though the board narrative leans towards stating causes.",
+      "unsupported_material_claims": [
+        "\"In Tanzania, the smallest pack is usually the entry point for price-sensitive households buying through dukas and kiosks\": a general market claim with no source.",
+        "The board narrative says \"Input costs rose faster than our prices\", attributing the COGS rise to input costs, although the response itself lists overhead allocation or a copying error as possible causes.",
+        "The board narrative says \"strong demand for our 250g pack\", assuming consumer demand without ruling out distributor stock-building or a single large customer."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Tight, clear and board-ready, with a textbook three-way price/volume/mix bridge that reconciles, a correct gross profit bridge, and a useful constant-margin counterfactual. It makes a sharp data-quality catch that Response 1 misses: 50g COGS is exactly TZS 390m in both years. It also flags carton comparability and the period definition. Weaknesses: the volume effect treats cartons as the same unit even though the response later questions this; it doesn't consider pipeline or stock-building risk behind the 250g jump; and the board narrative, the part most likely to be pasted into a board paper, states causes ('input costs', 'strong demand', the 50g loss 'after' the price rise) more firmly than the data supports. Concise and appropriately sized."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "The two are close: both pass, both have correct arithmetic, and both reframe the growth as low quality. Response 1 is preferred narrowly for tighter causal discipline in the parts a board would act on. It separates possible explanations for the 250g surge, including distributor stock-building, customer concentration and trade-spend deductions, and its slide storyline avoids claims the data can't support. Response 2 is more concise, catches the identical 50g COGS, and gives the clearer three-way bridge, but its ready-to-paste board narrative asserts input-cost pressure, 'strong demand' and price sensitivity without evidence."
+  },
+  "preferred_response_weaknesses": "It is considerably longer than needed, with an inflation adjustment built on an outside, unchecked figure and a 'How I checked' section that mentions 'the skill's' script and data file, which a board answer doesn't need. The main revenue bridge merges volume and mix (+46), so the explicit three-way split sits in a footnote. It misses the suspicious identical 50g COGS (TZS 390m in both years) despite saying it checked the data. The margin fall is rounded down to 3.3 points (exact 3.36)."
+}

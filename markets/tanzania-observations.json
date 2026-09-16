@@ -1,0 +1,384 @@
+{
+  "description": "Dated, verified Tanzania observations stored as source and claim records (schemas/records.schema.json $defs source and claim). Refreshable examples of the record discipline, not a fact pack. Check each review_condition before use; re-verify material figures at their source.",
+  "last_reviewed": "2026-09-17",
+  "verified_by": "Build verification, 2026-09-17: documents downloaded and tables inspected at the stated locators; World Bank values retrieved from the Indicators API.",
+  "sources": [
+    {
+      "id": "SRC-TZ-NBS-NCPI-2026-08",
+      "title": "National Consumer Price Index (NCPI) for August 2026",
+      "url_or_file": "https://www.nbs.go.tz/uploads/statistics/documents/en-1788862063-CPI%20%20Release_082026_English.pdf",
+      "publisher_owner": "National Bureau of Statistics (NBS), Tanzania",
+      "locator": "p.2, Table 1: rows 'TOTAL - ALL ITEMS INDEX' and '7 Transport', 12-month percentage change column; p.1 sections 1.1-1.2 for scope and base",
+      "publication_date": "2026-09-08",
+      "data_period": "August 2026 compared with August 2025",
+      "geography": "Tanzania Mainland (prices collected in the 26 mainland regional headquarters)",
+      "population_sample": "Price collection in 26 mainland regional headquarters; weights from Household Budget Survey 2017/18 urban and rural households",
+      "method": "Consumer price index, base period average Jan-Dec 2020 = 100",
+      "access_date": "2026-09-17",
+      "limitations": "Mainland only (Zanzibar CPI published separately by OCGS). Prices collected in urban regional headquarters. Measures household consumer prices, not any firm's input costs. Page 4 text contains a typo for the July index (125.85; Table 1 gives 124.85).",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": "Figures cross-checked against the NBS XLS summary for the same release"
+      },
+      "source_class": "official_statistics",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Superseded by the next monthly NCPI release (scheduled 2026-10-08)"
+    },
+    {
+      "id": "SRC-TZ-OCGS-CPI-2026-08",
+      "title": "Zanzibar Consumer Price Index, August 2026 (news summary)",
+      "url_or_file": "http://www.ocgs.go.tz/news/zanzibar-consumer-price-index-august-2026",
+      "publisher_owner": "Office of the Chief Government Statistician (OCGS), Zanzibar",
+      "locator": "News page dated 2026-09-07, annual inflation figure in summary text",
+      "publication_date": "2026-09-07",
+      "data_period": "August 2026 compared with August 2025",
+      "geography": "Zanzibar",
+      "population_sample": "unknown: price collection coverage not stated on the news page",
+      "method": "Consumer price index (method details in the full release PDF, not inspected)",
+      "access_date": "2026-09-17",
+      "limitations": "News summary only; full release PDF not inspected. Not comparable to Mainland NCPI without checking basket, weights and base.",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "official_statistics",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Superseded by the next monthly Zanzibar CPI release"
+    },
+    {
+      "id": "SRC-TZ-TCRA-2026-Q2",
+      "title": "Communications Sector Performance Report, quarter ending June 2026",
+      "url_or_file": "https://www.tcra.go.tz/publications/statistics/2026/q4 (report listing page linking the PDF)",
+      "publisher_owner": "Tanzania Communications Regulatory Authority (TCRA)",
+      "locator": "p.7-8 glossary (definition of subscription; penetration); p.10 snapshot; p.13 Table 1.1.1; p.14 Tables 1.1.1.1-1.1.1.2; p.35 Table 1.9.1.1",
+      "publication_date": "2026-08-10",
+      "data_period": "April-June 2026 (end-June stock figures)",
+      "geography": "United Republic of Tanzania",
+      "population_sample": "Operator-reported subscriptions (administrative data)",
+      "method": "Regulatory returns from licensed operators",
+      "access_date": "2026-09-17",
+      "limitations": "Counts subscriptions (SIMs used at least once in 90 days), including machine-to-machine SIMs and fixed lines; not unique people. Penetration denominator not stated in the report.",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": "Secondary portals republish these figures; cite this report"
+      },
+      "source_class": "regulator",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Superseded by the next quarterly TCRA report (quarter ending September 2026)"
+    },
+    {
+      "id": "SRC-TZ-WB-WDI-POP",
+      "title": "World Development Indicators: Population, total (SP.POP.TOTL), Tanzania",
+      "url_or_file": "https://api.worldbank.org/v2/country/TZA/indicator/SP.POP.TOTL?format=json",
+      "publisher_owner": "World Bank",
+      "locator": "API record for date 2025; database lastupdated 2026-07-13",
+      "publication_date": "2026-07-13",
+      "data_period": "2025",
+      "geography": "United Republic of Tanzania",
+      "population_sample": "Total population (all ages)",
+      "method": "World Bank estimate compiled from census and projection sources",
+      "access_date": "2026-09-17",
+      "limitations": "Modelled estimate for a non-census year; may differ from NBS projections",
+      "lineage": {
+        "origin": "derived",
+        "derived_from": [],
+        "note": "Compiled from national and UN population sources; underlying source not traced in this check"
+      },
+      "source_class": "official_statistics",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next WDI update, or when an NBS projection for the same year is used"
+    },
+    {
+      "id": "SRC-TZ-WB-FINDEX-ACCOUNT",
+      "title": "World Development Indicators / Global Findex: Account ownership (FX.OWN.TOTL.ZS), Tanzania",
+      "url_or_file": "https://api.worldbank.org/v2/country/TZA/indicator/FX.OWN.TOTL.ZS?format=json",
+      "publisher_owner": "World Bank (Global Findex)",
+      "locator": "API records for 2024 and 2021; indicator metadata sourceNote; lastupdated 2026-07-13",
+      "publication_date": "2026-07-13",
+      "data_period": "2024 (survey year); 2021 comparison",
+      "geography": "United Republic of Tanzania",
+      "population_sample": "Adults aged 15+ (survey respondents)",
+      "method": "Global Findex survey: respondents reporting an account at a financial institution or personally using a mobile money service in the past 12 months",
+      "access_date": "2026-09-17",
+      "limitations": "Survey estimate with sampling error (not shown in API); definition combines financial institution and mobile money accounts; differs from FinScope's adult definition and from BoT/TCRA account counts",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "survey_primary",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next Findex round"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-TZ-001",
+      "statement": "Annual headline inflation measured by the Mainland NCPI was 4.3% in August 2026 (4.2% in July 2026).",
+      "type": "observed",
+      "value": 4.3,
+      "basis": {
+        "sources": [
+          "SRC-TZ-NBS-NCPI-2026-08"
+        ],
+        "records": [],
+        "locator": "p.2 Table 1, 'TOTAL - ALL ITEMS INDEX', 12-month change; p.2 section 2.1"
+      },
+      "units_denominator": "% change in the all-items index over 12 months",
+      "period": "August 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Official release, direct measure, matches NBS XLS summary"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Tanzania Mainland, all-items consumer prices",
+        "reason": "Direct official measure for this scope; does not cover Zanzibar"
+      },
+      "verification_status": "verified",
+      "limitations": "Does not establish any firm's cost exposure or a category's price changes",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next NCPI release (2026-10-08)"
+    },
+    {
+      "id": "CLM-TZ-002",
+      "statement": "Transport division prices rose 13.8% over the 12 months to August 2026 in the Mainland NCPI; transport carries a weight of 14.1 in the index.",
+      "type": "observed",
+      "value": 13.8,
+      "basis": {
+        "sources": [
+          "SRC-TZ-NBS-NCPI-2026-08"
+        ],
+        "records": [],
+        "locator": "p.2 Table 1, row '7 Transport' (weight 14.1; index 119.69 Aug 2025, 136.18 Aug 2026)"
+      },
+      "units_denominator": "% change in the transport division index over 12 months",
+      "period": "August 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Official release, direct measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Tanzania Mainland, household transport prices",
+        "reason": "Direct official measure for this scope"
+      },
+      "verification_status": "verified",
+      "limitations": "Household transport prices (fares, fuel, vehicles), not freight or distribution costs of a specific business",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next NCPI release (2026-10-08)"
+    },
+    {
+      "id": "CLM-TZ-003",
+      "statement": "Zanzibar annual inflation was reported at 5.57% for August 2026.",
+      "type": "observed",
+      "value": 5.57,
+      "basis": {
+        "sources": [
+          "SRC-TZ-OCGS-CPI-2026-08"
+        ],
+        "records": [],
+        "locator": "OCGS news page dated 2026-09-07"
+      },
+      "units_denominator": "% change in Zanzibar CPI over 12 months",
+      "period": "August 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Official source but taken from the news summary; full release not inspected"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Zanzibar consumer prices",
+        "reason": "Official Zanzibar statistics office"
+      },
+      "verification_status": "verified",
+      "limitations": "Basket, weights and coverage not checked; not directly comparable with Mainland NCPI",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next Zanzibar CPI release"
+    },
+    {
+      "id": "CLM-TZ-004",
+      "statement": "TCRA reported 116,952,295 telecom subscriptions at end-June 2026 (mobile 116,850,926; fixed 101,369), of which 1,233,467 were machine-to-machine SIMs.",
+      "type": "observed",
+      "value": 116952295,
+      "basis": {
+        "sources": [
+          "SRC-TZ-TCRA-2026-Q2"
+        ],
+        "records": [],
+        "locator": "p.13 Table 1.1.1; p.14 Tables 1.1.1.1-1.1.1.2"
+      },
+      "units_denominator": "Subscriptions (SIMs used at least once in 90 days, plus fixed lines)",
+      "period": "End-June 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Regulator's administrative data for exactly this measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, telecom subscriptions (not people)",
+        "reason": "Direct regulator data"
+      },
+      "verification_status": "verified",
+      "limitations": "Subscriptions, not unique people or households",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next TCRA quarterly report"
+    },
+    {
+      "id": "CLM-TZ-005",
+      "statement": "TCRA reported 62,793,986 internet subscriptions at end-June 2026 (mobile wireless 62,203,801; fixed wireless 391,488; fixed wired 198,697).",
+      "type": "observed",
+      "value": 62793986,
+      "basis": {
+        "sources": [
+          "SRC-TZ-TCRA-2026-Q2"
+        ],
+        "records": [],
+        "locator": "p.35 Table 1.9.1.1"
+      },
+      "units_denominator": "Internet subscriptions",
+      "period": "End-June 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Regulator's administrative data for exactly this measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, internet subscriptions (not users)",
+        "reason": "Direct regulator data"
+      },
+      "verification_status": "verified",
+      "limitations": "Subscriptions, not unique internet users; says nothing about usage intensity or device type",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next TCRA quarterly report"
+    },
+    {
+      "id": "CLM-TZ-006",
+      "statement": "TCRA defines a subscription as a SIM used at least once for voice, SMS or data in the past 90 days, and reports penetration of 167.0% (telecom) and 89.7% (internet) without stating the population denominator.",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-TZ-TCRA-2026-Q2"
+        ],
+        "records": [],
+        "locator": "Glossary p.7-8; snapshot p.10; Figure 1.1.4.1 p.17; p.35"
+      },
+      "units_denominator": "Definition and reported ratios",
+      "period": "Quarter ending June 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Definitions and figures read directly from the report"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "TCRA reporting definitions",
+        "reason": "Regulator's own definitions"
+      },
+      "verification_status": "verified",
+      "limitations": "Denominator not stated; implied denominator is an inference, not a reported figure",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next TCRA quarterly report"
+    },
+    {
+      "id": "CLM-TZ-007",
+      "statement": "The World Bank estimates Tanzania's total population in 2025 at 70,545,865.",
+      "type": "observed",
+      "value": 70545865,
+      "basis": {
+        "sources": [
+          "SRC-TZ-WB-WDI-POP"
+        ],
+        "records": [],
+        "locator": "SP.POP.TOTL, date 2025"
+      },
+      "units_denominator": "People, all ages",
+      "period": "2025",
+      "confidence": {
+        "level": "medium",
+        "reason": "Authoritative compiler but a modelled estimate between censuses"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, total population",
+        "reason": "Country-level estimate"
+      },
+      "verification_status": "verified",
+      "limitations": "Estimate; compare with NBS projections when precision matters",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next WDI update"
+    },
+    {
+      "id": "CLM-TZ-008",
+      "statement": "Telecom subscription counts cannot be read as unique people or audience reach: end-June 2026 subscriptions (about 117.0 million) exceed the estimated 2025 total population (about 70.5 million) of all ages.",
+      "type": "inference",
+      "basis": {
+        "sources": [],
+        "records": [
+          "CLM-TZ-004",
+          "CLM-TZ-006",
+          "CLM-TZ-007"
+        ],
+        "reasoning": "A count larger than the whole population must include multiple subscriptions per person and non-person subscriptions (machine-to-machine SIMs are reported separately); the 90-day activity definition also counts intermittently used SIMs."
+      },
+      "units_denominator": "Comparison of subscriptions with population",
+      "period": "2025-2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Follows arithmetically from two direct measures and the stated definition"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania",
+        "reason": "Based on local regulator and population data"
+      },
+      "verification_status": "unverified",
+      "limitations": "Does not estimate the number of unique mobile users; that requires survey or operator unique-user data",
+      "recorded": "2026-09-17",
+      "review_condition": "When either input record is superseded"
+    },
+    {
+      "id": "CLM-TZ-009",
+      "statement": "Global Findex estimates that 59.8% of adults aged 15+ in Tanzania had an account at a financial institution or personally used a mobile money service in 2024 (52.4% in 2021).",
+      "type": "observed",
+      "value": 59.83,
+      "basis": {
+        "sources": [
+          "SRC-TZ-WB-FINDEX-ACCOUNT"
+        ],
+        "records": [],
+        "locator": "FX.OWN.TOTL.ZS, dates 2024 and 2021"
+      },
+      "units_denominator": "% of population aged 15+",
+      "period": "2024 (2021 comparison)",
+      "confidence": {
+        "level": "medium",
+        "reason": "Direct survey measure; sampling error not shown in the API; definition combines account types"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "United Republic of Tanzania, adults 15+",
+        "reason": "Country survey"
+      },
+      "verification_status": "verified",
+      "limitations": "National survey estimate; does not describe specific regions, segments or active usage",
+      "recorded": "2026-09-17",
+      "last_verified": "2026-09-17",
+      "review_condition": "Next Findex round"
+    }
+  ]
+}

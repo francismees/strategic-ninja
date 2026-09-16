@@ -1,0 +1,31 @@
+{
+  "id": "pvm-13-price-revenue-mismatch",
+  "recipe": "pvm",
+  "purpose": "Price x quantity disagrees with revenue (e.g. list price vs net revenue).",
+  "input_csv": "period,sku,units,price,revenue\n2025,A,100,10,1000\n2026,A,100,12,1100\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--revenue-col",
+    "revenue"
+  ],
+  "convention": "When both price and revenue are supplied they must agree within tolerance.",
+  "derivation": "2026: 100 x 12 = 1200, revenue 1100.",
+  "expected_status": "error",
+  "expected_error_code": "PRICE_REVENUE_MISMATCH",
+  "edge_case_expectation": "Gross/net or list/realised price confusion is surfaced.",
+  "expected_failure_behavior": "Exit code 2 with PRICE_REVENUE_MISMATCH.",
+  "kind": "analytics"
+}

@@ -1,0 +1,125 @@
+{
+  "recipe": "buyers",
+  "status": "ok",
+  "convention": {
+    "identity": "volume = eligible population x penetration x occasions per buyer x units per occasion",
+    "attribution": "Shapley (average of all factor orderings): order-independent and exact",
+    "window": "both periods must share the same window",
+    "form": "counts"
+  },
+  "results": {
+    "Dar es Salaam": {
+      "window": "52 weeks",
+      "base": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.36,
+        "occasions_per_buyer": 12.0,
+        "units_per_occasion": 1.1
+      },
+      "current": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.34,
+        "occasions_per_buyer": 13.0,
+        "units_per_occasion": 1.1
+      },
+      "base_buyers": 432000.0,
+      "current_buyers": 408000.0,
+      "base_volume": 5702400.0,
+      "current_volume": 5834400.0,
+      "volume_change": 132000.0,
+      "volume_growth_pct": 2.314815,
+      "penetration_pct": {
+        "base": 36.0,
+        "current": 34.0
+      },
+      "penetration_note": null,
+      "effects": {
+        "eligible_population": 0.0,
+        "penetration": -330000.0,
+        "occasions_per_buyer": 462000.0,
+        "units_per_occasion": 0.0
+      },
+      "reconciliation": {
+        "observed_change": 132000.0,
+        "sum_of_components": 132000.0,
+        "residual": 0.0,
+        "tolerance": 1e-06,
+        "reconciles": true
+      }
+    },
+    "Mwanza": {
+      "window": "52 weeks",
+      "base": {
+        "eligible_population": 260000.0,
+        "penetration": 0.34,
+        "occasions_per_buyer": 11.0,
+        "units_per_occasion": 1.1
+      },
+      "current": {
+        "eligible_population": 262000.0,
+        "penetration": 0.3,
+        "occasions_per_buyer": 11.5,
+        "units_per_occasion": 1.1
+      },
+      "base_buyers": 88400.0,
+      "current_buyers": 78600.0,
+      "base_volume": 1069640.0,
+      "current_volume": 994290.0,
+      "volume_change": -75350.0,
+      "volume_growth_pct": -7.044426,
+      "penetration_pct": {
+        "base": 34.0,
+        "current": 30.0
+      },
+      "penetration_note": null,
+      "effects": {
+        "eligible_population": 7916.3333333333,
+        "penetration": -129198.6666666667,
+        "occasions_per_buyer": 45932.3333333333,
+        "units_per_occasion": 0.0
+      },
+      "reconciliation": {
+        "observed_change": -75350.0,
+        "sum_of_components": -75350.0,
+        "residual": 0.0,
+        "tolerance": 1e-06,
+        "reconciles": true
+      }
+    }
+  },
+  "warnings": [
+    "Segments are decomposed separately. Buyers may overlap across segments, so segment buyer counts are not summed."
+  ],
+  "interpretation_limits": [
+    "Attribution shows which multiplicative component moved volume. It does not explain why buyers or frequency changed.",
+    "Penetration is only as valid as the eligible population definition; panel or survey estimates carry sampling error not shown here."
+  ],
+  "provenance": {
+    "file": "examples/demo-b-annual-strategy/data/panel_region.csv",
+    "sha256": "e49419fcf57fce9410a28ce7a9daf20e19b451b6464d36d9c4564ec7ff3b0a6e",
+    "rows_read": 4,
+    "rows_used": 4,
+    "arguments": {
+      "recipe": "buyers",
+      "input": "examples/demo-b-annual-strategy/data/panel_region.csv",
+      "period_col": "period",
+      "base": "52w_to_Jun2025",
+      "current": "52w_to_Jun2026",
+      "buyers_col": "buyers",
+      "occasions_col": "occasions",
+      "units_col": "litres",
+      "frequency_col": null,
+      "units_per_occasion_col": null,
+      "volume_col": null,
+      "population_col": "households",
+      "window_col": "window",
+      "segment_col": "region",
+      "tolerance": 1e-06,
+      "format": "json",
+      "output": "examples/demo-b-annual-strategy/analysis/buyers_by_region.json"
+    },
+    "script": "scripts/commercial_analysis.py",
+    "script_version": "1.0.0",
+    "generated_at": "2026-09-16T22:32:34+00:00"
+  }
+}

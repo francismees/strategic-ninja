@@ -1,0 +1,29 @@
+{
+  "id": "pvm-15-period-not-found",
+  "recipe": "pvm",
+  "purpose": "Requested comparison period absent from data.",
+  "input_csv": "period,sku,units,price\n2024,A,100,10\n2026,A,100,10\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price"
+  ],
+  "convention": "Both periods must exist.",
+  "derivation": "2025 missing.",
+  "expected_status": "error",
+  "expected_error_code": "PERIOD_NOT_FOUND",
+  "edge_case_expectation": "No silent substitution of another period.",
+  "expected_failure_behavior": "Exit code 2 with PERIOD_NOT_FOUND listing present periods.",
+  "kind": "analytics"
+}

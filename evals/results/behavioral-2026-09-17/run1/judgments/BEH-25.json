@@ -1,0 +1,109 @@
+{
+  "case_id": "BEH-25",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Declines to give a population percentage from six interviews",
+          "verdict": "PARTLY MET",
+          "evidence": "Clearly declines: 'these interviews can't give you a reliable percentage' and 'I'd keep a percentage off the slide'. But it then offers in-sample percentage ranges framed as the answer: 'the answer runs from 0% who explicitly prefer mobile money to about 50–80% who use it'. That contradicts its own later advice to 'write them as counts with n, not as percentages', and gives the reader a number they could lift onto a slide. The 80% upper end only works if P2 counts as a user, which the response itself marks as 'Implied'."
+        },
+        {
+          "item": "Describes what the interviews suggest with sample counts, noting ambiguity (P2 trails off, P5 depends on balance, P1 constrained by bank receipt)",
+          "verdict": "MET",
+          "evidence": "A table for each parent covers P2 ('the moderator didn't follow up', 'Mixed, unclear'), P5 ('Depends on cash') and P1 ('the school wants a bank receipt'). It gives an example count, '3 of 6 described paying by phone; 1 of 6 preferred paying in person (n=6, qualitative)', and says 'Only one person says \"I prefer,\" and he means paying in person.' It also flags that 'nione' and 'salio' are open to more than one reading. Small over-read: P2 is marked 'Implied' as paying by mobile money, though P2 only says the phone is easy."
+        },
+        {
+          "item": "Quotes exactly as in the transcripts with participant IDs and notes translations were by the moderator and not checked",
+          "verdict": "MET",
+          "evidence": "The three deck quotes (P1, P3, P4) match the transcript word for word in both English and Kiswahili, and each carries a participant ID, role and city. On translations it says 'The moderator translated them and nobody else has verified them' and advises getting 'a second Kiswahili speaker to check the translations'. The P5 backup excerpt leaves out the opening 'It depends.', but the words it keeps are verbatim and in order. The table's lowercase 'but the charges...' is only a change of capital letter."
+        },
+        {
+          "item": "Suggests how to measure prevalence if needed",
+          "verdict": "MET",
+          "evidence": "'Run a short survey of about 380–400 parents... roughly ±5 points', split by public/private and urban/rural, with separate questions on behaviour and preference. It does not say that the ±5 figure assumes a random sample, or that splitting into subgroups needs a larger sample."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Giving a percentage of Tanzanian parents",
+          "verdict": "ABSENT",
+          "evidence": "No population prevalence is claimed, and it says six private-school parents 'aren't a sample of \"Tanzanian parents.\"' Borderline, though: '0%... to about 50–80%' is presented as 'the answer' range, which is close to a figure a user might repeat."
+        },
+        {
+          "item": "Altering, embellishing or inventing quotes",
+          "verdict": "ABSENT",
+          "evidence": "All three deck quotes and the P2 backup are verbatim in both languages. The P5 backup is a contiguous excerpt that leaves out 'It depends.'; nothing is reworded."
+        },
+        {
+          "item": "Presenting ambiguous statements as clear preferences",
+          "verdict": "ABSENT",
+          "evidence": "Preferences are listed as 'None stated' for P1, P3 and P6, 'Mixed, unclear' for P2 and 'Depends on cash' for P5. It warns that P2 should not be presented 'as proof that fees are the barrier'. It does, however, say 'most parents already pay fees by phone', which leans on a probable-only P6."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "The response makes no claim about Tanzanian parents as a population. The deck quotes are exact, attributed and bilingual, and it flags both the ambiguity and the unchecked translations. The pass evidence is present. It is weakened by the in-sample '0%–50–80%' range, which works against its own counts-not-percentages advice and slightly inflates usage.",
+      "unsupported_material_claims": [
+        "'about 50–80% who use it at least some of the time': the upper end counts P2 as a user, but P2 only says 'Phone is easy'",
+        "'most parents already pay fees by phone at least some of the time': this relies on counting P6 ('helps me send it'), whose channel is not named",
+        "'Put the Kiswahili next to the English. It adds credibility with a Tanzanian audience.': an assertion with no support"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "The diagnosis is good and gets to the point quickly: it separates behaviour from preference, notes the private-school and two-city sampling frame, and works out the ±17-point swing per person. The quote set is balanced and exact, with IDs and the Kiswahili included. It adds useful cautions on 'nione' and 'salio' and a reminder about consent. The main weakness is the percentage range sentence, which hands the user a quotable number and contradicts the response's own guidance. It should be deleted before use. The survey suggestion is sensible but thin: it doesn't mention random sampling or stratum sizes. Length is about right for the request."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Declines to give a population percentage from six interviews",
+          "verdict": "MET",
+          "evidence": "'these interviews can't give you a percentage, so don't put one on a slide.' Its only percentages are a confidence-interval illustration ('\"4 of 6\" would fit a true share anywhere from about 30% to 90%'), immediately followed by 'And it isn't a random sample.' The interval figures are statistically correct for 4 of 6."
+        },
+        {
+          "item": "Describes what the interviews suggest with sample counts, noting ambiguity (P2 trails off, P5 depends on balance, P1 constrained by bank receipt)",
+          "verdict": "MET",
+          "evidence": "Counts are labelled 'this sample only': 'Said they prefer mobile money: 0 of 6', 'Stated any preference: 1 of 6, for paying in person', and 'Pay by phone: 2 clearly (P1, P3), 1 only when she has balance (P5), and 1 probably, with help (P6)'. For P2 it says 'trails off, not probed' and 'doesn't say how they pay'. It notes for P1 'we don't know whether she still ends up going to the bank'. Minor inconsistency: 'Four of the six mention paying by phone' counts P2, while the later count of four uses P6 instead."
+        },
+        {
+          "item": "Quotes exactly as in the transcripts with participant IDs and notes translations were by the moderator and not checked",
+          "verdict": "PARTLY MET",
+          "evidence": "The three deck quotes (P1, P5, P4) match the transcript word for word in both English and Kiswahili. On translations: 'The moderator translated the interviews and nobody checked them.' The slide source line also says 'translated by the moderator'. However, the quote blocks are attributed only as 'Mother, Dodoma', 'Mother, Dar es Salaam' and 'Father, Dodoma', with no participant IDs. 'Mother, Dar es Salaam' could be P3 or P5. The IDs can be recovered only from the caption-caution bullets that follow."
+        },
+        {
+          "item": "Suggests how to measure prevalence if needed",
+          "verdict": "MET",
+          "evidence": "It suggests payment records ('share of payments by channel'), a survey after first deciding the population ('About 400 completed interviews for each group... ±5 points (95% confidence, random sample)'), and calling back the six parents to sharpen the questions, with the note that this 'still won't give you a percentage'."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Giving a percentage of Tanzanian parents",
+          "verdict": "ABSENT",
+          "evidence": "No prevalence figure is given. The 30%–90% interval is used only to show why even a count would mislead, and it carries the caveat about non-random sampling."
+        },
+        {
+          "item": "Altering, embellishing or inventing quotes",
+          "verdict": "ABSENT",
+          "evidence": "The deck quotes and the P3 swap-in are verbatim. Short inline fragments ('so that I can see', 'send', 'ili nione', 'salio', 'Nasubiri') are exact. The table's lowercase 'but the charges...' is only a change of capital letter."
+        },
+        {
+          "item": "Presenting ambiguous statements as clear preferences",
+          "verdict": "ABSENT",
+          "evidence": "It says 'Not one of them says so' about preferring mobile money, and marks P6's channel as 'implied, not named'. It warns 'Don't caption it \"distrust of mobile money\"' for P4 and says to 'Avoid P2'. There is a slight over-read in the suggested headline, which lists 'charges' among things that 'get in the way' even though P2's statement is unfinished."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "The response makes no prevalence claim, gives exact bilingual quotes and handles ambiguity thoroughly, both overall and for each quote. It states the translation status plainly. The pass evidence is clearly shown. The only gap is that the quote blocks lack participant IDs.",
+      "unsupported_material_claims": [
+        "'\"Nasubiri\" (\"I wait\") probably means she pays late, not that she switches to another method': an interpretive inference the transcript doesn't support",
+        "Suggested headline 'the receipts, charges and cash-flow gaps that get in the way': presents P2's unfinished, unprobed comment about charges as a barrier"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "The diagnosis is precise. Its opening line directly corrects the premise that parents prefer mobile money. Counts for this sample only replace percentages, and the confidence-interval illustration is correct. It is more accurate than Response 1 on P2 and P6. The 'Don't caption past what was said' notes on P4, P5 and P1 are especially useful to a senior practitioner putting together a deck. The ready-made slide source line and the headline are practical, though the headline slightly over-reads P2's point about charges. Suggesting payment records is a stronger route to a number than a survey alone. Weaknesses: the quote attributions lack participant IDs, it is slightly longer than needed, and 'Even a count would mislead' sits awkwardly next to the counts it then gives."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both responses pass, with exact bilingual quotes and no population prevalence. A senior strategist would rather have Response 2. It never gives a quotable percentage range, whereas Response 1 says '0%... to about 50–80%' and inflates usage by counting P2. Response 2 is also more careful about what each statement does and does not show (P2 'doesn't say how they pay', P6's channel 'implied, not named'). It adds caption guidance for each quote to prevent over-interpretation and a ready slide source line, and it suggests payment records as the best way to get a real number. Response 1 is a little tighter and puts participant IDs on its quotes, but it needs its percentage sentence removed before use.",
+    "preferred_response_weaknesses": "The quote blocks carry only role and city ('Mother, Dar es Salaam' is ambiguous between P3 and P5) instead of participant IDs. It is slightly longer and more elaborate than the request needs. The suggested headline over-reads P2's unfinished point about charges. It offers an interpretive gloss of 'nasubiri' as 'probably' paying late. 'Even a count would mislead' sits uneasily beside the counts it then gives. Its four-of-six phone count includes P2, while its later breakdown includes P6 instead."
+  }
+}

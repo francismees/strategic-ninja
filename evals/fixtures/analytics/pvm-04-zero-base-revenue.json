@@ -1,0 +1,39 @@
+{
+  "id": "pvm-04-zero-base-revenue",
+  "recipe": "pvm",
+  "purpose": "Zero base: the only item had zero sales in the base period.",
+  "input_csv": "period,sku,units,revenue,unit\n2025,A,0,0,unit\n2026,A,10,50,unit\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--revenue-col",
+    "revenue",
+    "--unit-col",
+    "unit"
+  ],
+  "convention": "Item with zero base quantity is classified as new.",
+  "derivation": "R0 = 0, R1 = 50, change = 50. Growth rate undefined (division by zero). New items effect = 50; all continuing effects 0.",
+  "tolerance": 1e-09,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.revenue_growth_pct": null,
+    "results.revenue_growth_note": "not computed: base revenue is zero",
+    "results.components.new_items": 50,
+    "results.components.price": 0,
+    "results.revenue_change": 50
+  },
+  "edge_case_expectation": "No infinity, NaN or fabricated growth percentage.",
+  "expected_failure_behavior": "Not applicable; zero base is valid and reported explicitly.",
+  "kind": "analytics"
+}

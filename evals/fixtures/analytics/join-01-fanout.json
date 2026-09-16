@@ -1,0 +1,22 @@
+{
+  "id": "join-01-fanout",
+  "recipe": "join-check",
+  "purpose": "Joining sales to a price list that has duplicate SKU rows would multiply sales.",
+  "input_csv": "sku,units\nA,100\nB,50\n",
+  "right_csv": "sku,list_price\nA,10\nA,11\nB,20\n",
+  "args": [
+    "--left",
+    "{input}",
+    "--right",
+    "{right}",
+    "--on",
+    "sku"
+  ],
+  "convention": "Right table keys must be unique unless --allow-many.",
+  "derivation": "A appears twice on the right.",
+  "expected_status": "error",
+  "expected_error_code": "JOIN_FANOUT",
+  "edge_case_expectation": "No inflated totals from a broken join.",
+  "expected_failure_behavior": "Exit code 2 with JOIN_FANOUT listing duplicate keys.",
+  "kind": "analytics"
+}

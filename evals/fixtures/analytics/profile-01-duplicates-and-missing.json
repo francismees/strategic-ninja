@@ -1,0 +1,47 @@
+{
+  "id": "profile-01-duplicates-and-missing",
+  "recipe": "profile",
+  "purpose": "Profiling reports duplicate grain and missing values without altering data.",
+  "input_csv": "period,sku,units,unit\n2025,A,100,unit\n2025,A,100,unit\n2026,A,,case\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--grain",
+    "period,sku",
+    "--key-col",
+    "sku",
+    "--unit-col",
+    "unit",
+    "--period-col",
+    "period"
+  ],
+  "convention": "Descriptive only.",
+  "derivation": "Lines 2 and 3 duplicate (2025, A); line 4 missing units; A has units 'unit' and 'case'.",
+  "tolerance": 0,
+  "expected_status": "ok",
+  "expected": {
+    "results.duplicate_key_count": 1,
+    "results.columns.units.missing": 1,
+    "results.keys_with_unit_changes": [
+      {
+        "key": "A",
+        "units": [
+          "case",
+          "unit"
+        ]
+      }
+    ],
+    "results.periods": [
+      "2025",
+      "2026"
+    ]
+  },
+  "expected_warnings_contain": [
+    "Duplicate rows",
+    "more than one unit",
+    "missing value"
+  ],
+  "edge_case_expectation": "Problems surfaced before analysis.",
+  "expected_failure_behavior": "Not applicable (profiling does not fail on data problems).",
+  "kind": "analytics"
+}

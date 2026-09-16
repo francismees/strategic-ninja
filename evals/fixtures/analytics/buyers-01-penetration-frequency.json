@@ -1,0 +1,43 @@
+{
+  "id": "buyers-01-penetration-frequency",
+  "recipe": "buyers",
+  "purpose": "Valid buyer x frequency x units-per-occasion case with a defined eligible population and window.",
+  "input_csv": "period,population,buyers,occasions,units,window_days\n2025,20000,1000,4000,6000,364\n2026,20000,1100,4180,6270,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days",
+    "--population-col",
+    "population"
+  ],
+  "convention": "volume = population x penetration x occasions per buyer x units per occasion; Shapley attribution.",
+  "derivation": "Penetration 5% -> 5.5%; frequency 4.0 -> 3.8; units per occasion 1.5 -> 1.5; population constant. Volume 6000 -> 6270 (+270). With population and units/occasion unchanged (K = 20000 x 1.5 = 30000), two-factor Shapley: penetration effect = K x 0.005 x (4.0 + 3.8)/2 = 585; frequency effect = K x (-0.2) x (0.05 + 0.055)/2 = -315. 585 - 315 = 270.",
+  "tolerance": 1e-06,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.all.effects.eligible_population": 0,
+    "results.all.effects.penetration": 585,
+    "results.all.effects.occasions_per_buyer": -315,
+    "results.all.effects.units_per_occasion": 0,
+    "results.all.penetration_pct.base": 5.0,
+    "results.all.penetration_pct.current": 5.5,
+    "results.all.volume_change": 270
+  },
+  "edge_case_expectation": "Penetration growth offset by lower purchase frequency must both be visible.",
+  "expected_failure_behavior": "Not applicable (valid input).",
+  "kind": "analytics"
+}

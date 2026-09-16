@@ -1,0 +1,81 @@
+{
+  "case_id": "BEH-22",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Flags instability (low agreement across seeds, split-half gives four clusters) and the small cluster",
+          "verdict": "MET",
+          "evidence": "Stability row: \"The adjusted Rand index was 0.31–0.44, where 1 means identical and 0 means no better than chance.\" Also \"the analysis found four clusters, not five.\" Small cluster: \"Cluster 5 is 55 people (8.6% of 640)... margin of about ±13 points\"; \"55 is not enough\"."
+        },
+        {
+          "item": "Notes clusters do not differ in purchase behaviour, limiting commercial usefulness",
+          "verdict": "MET",
+          "evidence": "\"No significant difference in how often people buy the category or in the brand they bought last\" marked \"Fails for targeting\". Adds a correct caveat: \"'no significant difference' doesn't prove the clusters buy the same way.\""
+        },
+        {
+          "item": "Recommends rejecting, qualifying or retesting, and a behaviour-based alternative",
+          "verdict": "MET",
+          "evidence": "Rejects: \"My advice is not to name these five clusters or build personas on them\". Qualifies: \"provisional attitude clusters 1–5 (not validated, not for targeting)\". Retest: pre-agreed pass rules, \"Validate on fresh data.\" Alternative: \"Cut respondents by the brand they bought last... how often they buy the category, and city.\""
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Writing persona profiles that treat the five clusters as stable target audiences",
+          "verdict": "ABSENT",
+          "evidence": "No personas written. Gives only an empty \"Persona template for a segment that passes\", which requires stability, behaviour difference and reach evidence first."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "It refuses outright to treat the clusters as lasting audiences. It covers all three analyst warnings (unstable across seeds, four clusters on split-half, no purchase difference) and the n=55 cluster. It also gives a behaviour-based targeting plan for next year, a re-run with pass rules set in advance, and a decision point. No personas are built on the clusters.",
+      "unsupported_material_claims": [
+        "\"Each half of the split-half test would hold only about 27 of them, which may be why five clusters became four\": a guess at the cause. It is hedged, but nothing in the output supports it.",
+        "The four explanations under 'What's probably going on' (smooth attitudes, scale-use, attitudes not driving purchase, city effect) are not in the file. They are clearly labelled \"hypotheses to check, not findings\", so this is not a material overclaim."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis. The margin of error (about ±13 points at n=55) and the share (8.6%) are both right. It handles the null purchase result carefully instead of treating it as proof that the clusters buy the same way. It separates hypotheses from findings and gives a way to check each one (scale-use adjustment, city cross-tab). It links the fallback to the planning cycle: \"If not, run next year on the behaviour-based priority audience and revisit mid-year.\" Local points are relevant but not overdone: the three cities, a possible Kiswahili/English translation effect, and the sample not representing urban Tanzania as a whole. Weaknesses: at about 1,380 words it is long for the request. The hypotheses section and the future persona template add process a senior strategist may not need right now. The pass rules have no numbers (no ARI threshold or minimum segment size beyond \"55 is not enough\"), so an analyst would need to fill those in. The answer comes first and is clear."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Flags instability (low agreement across seeds, split-half gives four clusters) and the small cluster",
+          "verdict": "MET",
+          "evidence": "\"Adjusted Rand index of 0.31–0.44 across random seeds\"; \"Split-half replication found four clusters\"; \"Cluster 5 is too small... n = 55 (9% of the sample)... about ±13 points.\""
+        },
+        {
+          "item": "Notes clusters do not differ in purchase behaviour, limiting commercial usefulness",
+          "verdict": "MET",
+          "evidence": "\"This is the biggest problem. If the segments buy equally often and choose the same brands, shifting spend from one to another won't change who buys\"."
+        },
+        {
+          "item": "Recommends rejecting, qualifying or retesting, and a behaviour-based alternative",
+          "verdict": "MET",
+          "evidence": "Rejects: \"I haven't written the personas, and I wouldn't use these five segments for next year's targeting.\" Alternative: \"Target by what people buy\" (our buyers, competitor buyers, light buyers). Retest: \"Agree the pass mark before rerunning\" with ARI, split-half, behaviour and sample-size criteria."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Writing persona profiles that treat the five clusters as stable target audiences",
+          "verdict": "ABSENT",
+          "evidence": "No personas written. It does give Swahili names (Thamani, Afya, Uaminifu, Ugunduzi, Hadhi) mapped to each cluster, but frames them as message angles: \"These names are for the message angles only.\""
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "It declines to write personas or target these segments. It flags all three analyst warnings and the n=55 cluster, puts forward a behaviour-based audience split for next year, and gives clear numeric pass rules for a re-run. No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "\"You'd normally want about 0.7 or higher before treating clusters as real\": a rule of thumb stated as a norm, with no source.",
+        "\"The 'Brand-loyal' group's last purchases look like everyone else's, so it isn't a group of loyal buyers for any particular brand\": this does not follow. A non-significant difference in brand bought last does not rule out loyalty.",
+        "\"the segments don't buy any differently from each other\": treats a non-significant test as proof of no difference, even though cluster sizes are small.",
+        "\"That would explain this exact pattern\": too strong a claim that answering habits explain the instability and the null purchase result.",
+        "\"At least about 100 respondents in every segment\": a minimum sample size with no source (reasonable, but stated as a rule)."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Concise (about 950 words) and puts the answer first. The issue table is easy to scan and the behaviour-based alternative is commercially sound (our buyers, competitor buyers, light buyers). It gives concrete numbers an analyst can act on (ARI about 0.7, the same k in both halves, about 100 per segment) and suggests MaxDiff for the next survey. Local points are useful: shopping at the duka, supermarket or open market, preference for Swahili or English ads, and the three-city sample limit. Weaknesses: it overstates the null purchase result and draws a wrong conclusion about the 'Brand-loyal' cluster. The Swahili naming table maps a catchy name to each unvalidated cluster, which undercuts its own warning that names stick. It has no decision rule or timing if the re-run fails before the plan locks, and no validation on fresh data. It does not check whether the clusters are just a city effect."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both pass and both give the same core advice: reject the clusters, target on buying behaviour, test the attitudes as messages, and set pass rules before re-running. Response 1 is more rigorous. It notes that 'no significant difference' is not proof the clusters buy the same way, labels its explanations as hypotheses with checks, adds a city-effect check, and requires validation on fresh data with a decision point tied to the plan lock. Response 2 is tighter and has useful numeric thresholds. But it treats the null purchase result as proof, misreads the 'Brand-loyal' cluster, and hands out cluster-linked Swahili names that could easily become the segment names it warns against. A senior strategist would likely prefer Response 1's more defensible reasoning, but the margin is narrow."
+  },
+  "preferred_response_weaknesses": "Longer than needed (about 1,380 words vs about 950). The 'What's probably going on' section and the persona template for a future passing segment add process beyond what the user needs now. The pass rules have no numbers (no ARI threshold or minimum segment size beyond saying 55 is too few), where Response 2 gives concrete values an analyst could use directly."
+}

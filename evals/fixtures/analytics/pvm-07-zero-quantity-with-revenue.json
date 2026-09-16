@@ -1,0 +1,29 @@
+{
+  "id": "pvm-07-zero-quantity-with-revenue",
+  "recipe": "pvm",
+  "purpose": "Revenue with zero quantity makes price undefined.",
+  "input_csv": "period,sku,units,revenue\n2025,A,0,500\n2026,A,10,100\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--revenue-col",
+    "revenue"
+  ],
+  "convention": "Price = revenue / quantity requires quantity > 0 when revenue is non-zero.",
+  "derivation": "Line 2 has revenue 500 and 0 units.",
+  "expected_status": "error",
+  "expected_error_code": "ZERO_QUANTITY_WITH_REVENUE",
+  "edge_case_expectation": "No division-by-zero crash or infinite price.",
+  "expected_failure_behavior": "Exit code 2 with ZERO_QUANTITY_WITH_REVENUE.",
+  "kind": "analytics"
+}

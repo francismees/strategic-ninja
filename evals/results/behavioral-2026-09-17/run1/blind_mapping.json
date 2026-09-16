@@ -1,0 +1,77 @@
+{
+  "seed": 20260917,
+  "selected": [
+    "BEH-01",
+    "BEH-02",
+    "BEH-05",
+    "BEH-06",
+    "BEH-08",
+    "BEH-12",
+    "BEH-13",
+    "BEH-16",
+    "BEH-17",
+    "BEH-20",
+    "BEH-22",
+    "BEH-25",
+    "HELDOUT-01",
+    "HELDOUT-02"
+  ],
+  "mapping": {
+    "BEH-01": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-02": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-05": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-06": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-08": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "BEH-12": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "BEH-13": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "BEH-16": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "BEH-17": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "BEH-20": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-22": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    },
+    "BEH-25": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "HELDOUT-01": {
+      "Response 1": "baseline",
+      "Response 2": "treatment"
+    },
+    "HELDOUT-02": {
+      "Response 1": "treatment",
+      "Response 2": "baseline"
+    }
+  }
+}

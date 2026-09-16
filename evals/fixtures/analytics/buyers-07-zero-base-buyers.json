@@ -1,0 +1,31 @@
+{
+  "id": "buyers-07-zero-base-buyers",
+  "recipe": "buyers",
+  "purpose": "New product with no base-period buyers.",
+  "input_csv": "period,buyers,occasions,units,window_days\n2025,0,0,0,364\n2026,500,900,900,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days"
+  ],
+  "convention": "Frequency and units per occasion are undefined at zero buyers.",
+  "derivation": "Base buyers = 0.",
+  "expected_status": "error",
+  "expected_error_code": "ZERO_BASE_NOT_DECOMPOSABLE",
+  "edge_case_expectation": "No infinite growth rates or fabricated frequency change.",
+  "expected_failure_behavior": "Exit code 2 with ZERO_BASE_NOT_DECOMPOSABLE explaining that buyers and volume should be reported directly.",
+  "kind": "analytics"
+}

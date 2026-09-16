@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "engagement_id": "ENG-pesalo-2027-critique",
+  "title": "Pesalo 2027 Growth Strategy (original deck as outline)",
+  "audience": "Pesalo board (fictional)",
+  "format": "deck",
+  "synthetic": true,
+  "decision_requested": "Approve TZS 2.5 billion for the Gen Z campaign and Pesalo Gold",
+  "governing_thought": "Pesalo will be Tanzania's number one Gen Z savings app by 2027",
+  "recommendation_type": "supported",
+  "sections": [
+    {
+      "id": "S01",
+      "role": "context",
+      "assertion": "Pesalo will be Tanzania's number one Gen Z savings app by 2027",
+      "audience_decision": "Endorse vision",
+      "evidence_ids": [],
+      "exhibit": "Hero image",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S02",
+      "role": "evidence",
+      "assertion": "117 million mobile users means 117 million potential customers",
+      "audience_decision": "Accept market size",
+      "evidence_ids": [
+        "CLM-C01"
+      ],
+      "exhibit": "Big number",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": [
+        "TCRA 2026"
+      ]
+    },
+    {
+      "id": "S03",
+      "role": "diagnosis",
+      "assertion": "SWOT shows we should leverage strengths to capture opportunities",
+      "audience_decision": "Accept strategy",
+      "evidence_ids": [],
+      "exhibit": "SWOT grid",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S04",
+      "role": "insight",
+      "assertion": "Gen Z crave instant gratification and hate banks",
+      "audience_decision": "Accept insight",
+      "evidence_ids": [
+        "HYP-C03"
+      ],
+      "exhibit": "Lifestyle photos",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S05",
+      "role": "evidence",
+      "assertion": "Kenya proves Tanzania will follow",
+      "audience_decision": "Accept adoption curve",
+      "evidence_ids": [
+        "CLM-C06"
+      ],
+      "exhibit": "Kenyan adoption curve",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": [
+        "Nairobi Fintech Youth Report 2025"
+      ]
+    },
+    {
+      "id": "S06",
+      "role": "recommendation",
+      "assertion": "Launch Pesalo Gold and a viral TikTok challenge",
+      "audience_decision": "Approve",
+      "evidence_ids": [
+        "OPT-C01"
+      ],
+      "exhibit": "Campaign mock-ups",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S07",
+      "role": "evidence",
+      "assertion": "Radio ROI is proven: sign-ups 40% higher in radio weeks",
+      "audience_decision": "Accept marketing effectiveness",
+      "evidence_ids": [
+        "HYP-C02"
+      ],
+      "exhibit": "Bar chart",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S08",
+      "role": "measurement",
+      "assertion": "Success = 60% awareness, 500,000 followers, 1 million downloads",
+      "audience_decision": "Approve KPIs",
+      "evidence_ids": [],
+      "exhibit": "KPI table",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    },
+    {
+      "id": "S09",
+      "role": "ask",
+      "assertion": "Approve TZS 2.5 billion",
+      "audience_decision": "Approve",
+      "evidence_ids": [],
+      "exhibit": "",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    }
+  ]
+}

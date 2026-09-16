@@ -1,0 +1,43 @@
+{
+  "id": "pvm-06-missing-value-explicit-exclusion",
+  "recipe": "pvm",
+  "purpose": "Explicit exclusion of a row with missing values is allowed but must be recorded and marked partial.",
+  "input_csv": "period,sku,units,price\n2025,A,100,10\n2025,B,,5\n2026,A,110,10\n2026,B,20,5\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--exclude-missing"
+  ],
+  "convention": "Excluded rows listed in provenance; coverage partial.",
+  "derivation": "After excluding line 3, B exists only in 2026 and is new (20 x 5 = 100). A: price 0, volume (110-100) x 10 = 100, mix 0. R0 = 1000, R1 = 1200, change 200 = 100 + 100.",
+  "tolerance": 1e-09,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "coverage": "partial",
+    "provenance.excluded_lines": [
+      3
+    ],
+    "results.components.volume": 100,
+    "results.components.new_items": 100,
+    "results.revenue_change": 200
+  },
+  "expected_flags_contain": [
+    "partial dataset"
+  ],
+  "edge_case_expectation": "Exclusion is visible in output; B's revenue is treated as new only because its base row was excluded, which the partial flag warns about.",
+  "expected_failure_behavior": "Not applicable (explicit user choice).",
+  "kind": "analytics"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "buyers-04-window-mismatch",
+  "recipe": "buyers",
+  "purpose": "52-week buyers compared with 12-week buyers.",
+  "input_csv": "period,buyers,occasions,units,window_days\n2025,1000,4000,6000,364\n2026,600,1100,1650,84\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days"
+  ],
+  "convention": "Both periods must share the same window.",
+  "derivation": "364 vs 84 days.",
+  "expected_status": "error",
+  "expected_error_code": "WINDOW_MISMATCH",
+  "edge_case_expectation": "No 'penetration fell 40%' from a window change.",
+  "expected_failure_behavior": "Exit code 2 with WINDOW_MISMATCH.",
+  "kind": "analytics"
+}

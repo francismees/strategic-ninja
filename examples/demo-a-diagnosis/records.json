@@ -1,0 +1,964 @@
+{
+  "schema_version": "1.0",
+  "engagement": {
+    "id": "ENG-fizzi-h1-2026-diagnosis",
+    "namespace": "demo-fizzi/fizzi-cola/tanzania/h1-2026-diagnosis",
+    "decision": "Whether to brief a new advertising campaign for H2 2026 or address a different constraint on Fizzi Cola volume",
+    "decision_maker": "CEO, Fizzi Beverages (fictional)",
+    "audience": "CEO and leadership team (fictional)",
+    "client": "Fizzi Beverages (fictional)",
+    "brand": "Fizzi Cola (fictional)",
+    "category": "Carbonated soft drinks",
+    "market": "Tanzania Mainland: Dar es Salaam, Mwanza, Arusha, Dodoma",
+    "horizon": "campaign_quarter",
+    "outcome": "Return H2 2026 volume to H2 2025 levels",
+    "success_metric": "Net sales volume (thousand litres) versus same half of prior year, with outlet-level availability as leading indicator",
+    "baseline": "H1 2026 volume 3,021 thousand litres versus 3,315 in H1 2025 (-8.9%)",
+    "constraints": [
+      "Decision on agency brief requested within one month",
+      "H2 media budget not yet approved"
+    ],
+    "scope": "Four regions and three channels in the supplied data; competitor sales not available",
+    "mode": "diagnose",
+    "depth": "standard",
+    "unresolved_questions": [
+      "Are wholesalers destocking in addition to losing outlet availability?",
+      "What is the 500 ml price gap outside Dar es Salaam?",
+      "What would weekly delivery service cost with Distributor B?"
+    ],
+    "persistence": "authorised_local_files",
+    "synthetic": true,
+    "created": "2026-09-17"
+  },
+  "sources": [
+    {
+      "id": "SRC-A01",
+      "title": "Company net sales to trade by region, channel and SKU, H1 2025 and H1 2026 (synthetic)",
+      "url_or_file": "examples/demo-a-diagnosis/data/sales_h1.csv",
+      "publisher_owner": "Fizzi Beverages finance team (fictional)",
+      "locator": "All 48 rows",
+      "publication_date": "2026-07",
+      "data_period": "January-June 2025 and January-June 2026 (181 days each)",
+      "geography": "Dar es Salaam, Mwanza, Arusha, Dodoma",
+      "population_sample": "All company sales to trade in the four regions",
+      "method": "Invoice data: sell-in to modern trade, to dukas by direct van, and to wholesalers serving dukas",
+      "access_date": "2026-09-17",
+      "limitations": "Sell-in, not consumer sell-out; wholesaler channel sales can differ from outlet sales if stock levels change; four regions only",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "first_party_data"
+    },
+    {
+      "id": "SRC-A02",
+      "title": "Outlet distribution field audit, H1 2025 and H1 2026 (synthetic)",
+      "url_or_file": "examples/demo-a-diagnosis/data/distribution_audit.csv",
+      "publisher_owner": "Fizzi Beverages sales operations (fictional)",
+      "locator": "All 8 rows",
+      "publication_date": "2026-07",
+      "data_period": "H1 2025 and H1 2026 audit waves",
+      "geography": "Duka channels in the four regions (modern trade not audited)",
+      "population_sample": "120 outlets per region-channel per wave",
+      "method": "Field visits recording whether Fizzi is stocked and out of stock",
+      "access_date": "2026-09-17",
+      "limitations": "Outlet selection method not documented; sample estimates; modern trade not covered",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "first_party_data"
+    },
+    {
+      "id": "SRC-A03",
+      "title": "Brand tracker summary, H1 2025 and H1 2026 waves (synthetic)",
+      "url_or_file": "examples/demo-a-diagnosis/data/tracker_summary.md",
+      "publisher_owner": "Research agency (fictional)",
+      "locator": "Summary table",
+      "publication_date": "2026-07",
+      "data_period": "H1 2025 and H1 2026 waves",
+      "geography": "Urban Dar es Salaam, Mwanza, Arusha",
+      "population_sample": "Urban adults 18-45 who bought carbonated soft drinks in the past month; total base 612; regional bases 153-305",
+      "method": "Face-to-face survey",
+      "access_date": "2026-09-17",
+      "limitations": "Urban only; Dodoma not covered; claimed purchase; regional bases around 150 give wide margins of error",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "survey_primary"
+    },
+    {
+      "id": "SRC-A04",
+      "title": "Media and trade notes including CEO brief (synthetic)",
+      "url_or_file": "examples/demo-a-diagnosis/data/media_and_trade_notes.md",
+      "publisher_owner": "Fizzi Beverages marketing and sales (fictional)",
+      "locator": "Bullets 1-4",
+      "publication_date": "2026-07",
+      "data_period": "H1 2025 to July 2026",
+      "geography": "All four regions; price checks Dar es Salaam only",
+      "population_sample": "GRP plan; one sales email; 40 Dar es Salaam duka price checks",
+      "method": "Internal records and field price checks",
+      "access_date": "2026-09-17",
+      "limitations": "Delivery-frequency complaint is a single email; price checks only in Dar es Salaam",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "internal_document"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-A01",
+      "statement": "Net sales fell 6.1% (6,215 to 5,838 TZS million) and volume fell 8.9% (3,315 to 3,021 thousand litres); the bridge is price +166.9, volume -551.2, mix +7.4 TZS million",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-A01"
+        ],
+        "records": [],
+        "calculation": "python3 scripts/commercial_analysis.py pvm --input examples/demo-a-diagnosis/data/sales_h1.csv --key sku --dims region,channel --period-col period --base 2025H1 --current 2026H1 --quantity-col volume_000_litres --revenue-col net_revenue_tzs_m --unit-col unit --currency-col currency --period-days-col period_days --revenue-basis net (output analysis/pvm_region_channel_sku.json)"
+      },
+      "units_denominator": "TZS million net sales; thousand litres",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Reproducible and reconciled, but sell-in data"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Fizzi sales to trade, four regions",
+        "reason": "First-party data for this scope"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Sell-in; says where change arose, not why"
+    },
+    {
+      "id": "CLM-A02",
+      "statement": "Wholesaler-served dukas in Mwanza (-150, -35.7%) and Arusha (-116, -31.4%) account for 90.5% of the 294 thousand-litre volume decline; every other region-channel group moved between -2.1% and +0.6%",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-A01"
+        ],
+        "records": [],
+        "calculation": "python3 scripts/commercial_analysis.py contribution --input examples/demo-a-diagnosis/data/volume_by_region_channel.csv --period-col period --base 2025H1 --current 2026H1 --group-col group --value-col value --unit-col unit --measure-col measure --complete-market (output analysis/volume_contribution.json)"
+      },
+      "units_denominator": "Thousand litres; share of total volume change",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Reconciled contribution analysis on sell-in data"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Fizzi sales to trade, four regions",
+        "reason": "First-party data"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Sell-in; wholesaler stock changes could exaggerate or mute outlet-level change"
+    },
+    {
+      "id": "CLM-A03",
+      "statement": "Numeric distribution in wholesaler-served dukas fell from 58% to 37% in Mwanza and from 55% to 38% in Arusha, while out-of-stock rates rose from 11% to 34% and 12% to 31%; other duka channels moved by at most one point",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A02"
+        ],
+        "records": [],
+        "locator": "distribution_audit.csv rows for Mwanza and Arusha 'Dukas - via wholesalers'; other rows for comparison"
+      },
+      "units_denominator": "% of audited outlets (120 per region-channel per wave)",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Direct outlet observation; sample of 120 with undocumented selection"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Duka channels in the four regions",
+        "reason": "Direct field audit"
+      },
+      "verification_status": "verified",
+      "limitations": "Sample estimate; selection method undocumented"
+    },
+    {
+      "id": "CLM-A04",
+      "statement": "Volume per point of numeric distribution in the affected groups was essentially unchanged (Mwanza 7.24 to 7.30; Arusha 6.73 to 6.68 thousand litres per point)",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-A01",
+          "SRC-A02"
+        ],
+        "records": [
+          "CLM-A02",
+          "CLM-A03"
+        ],
+        "calculation": "Group volume (thousand litres) divided by numeric distribution (%): Mwanza 420/58 and 270/37; Arusha 370/55 and 254/38"
+      },
+      "units_denominator": "Thousand litres per percentage point of numeric distribution (rate-of-sale proxy)",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "low",
+        "reason": "Proxy combining sell-in volume with a sampled audit measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Wholesaler-served dukas, Mwanza and Arusha",
+        "reason": "First-party data"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Not true outlet rate of sale; sensitive to audit sampling and wholesaler stock changes"
+    },
+    {
+      "id": "CLM-A05",
+      "statement": "Tracker advertising recall fell from 34% to 29% while prompted awareness (91% to 90%) and consideration (52% to 51%) were stable",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A03"
+        ],
+        "records": [],
+        "locator": "tracker_summary.md summary table, rows 1-3"
+      },
+      "units_denominator": "% of urban adults 18-45 CSD buyers (base 612)",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Consistent survey measure; urban only"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Urban Dar es Salaam, Mwanza, Arusha CSD buyers",
+        "reason": "Urban survey; Dodoma and rural not covered"
+      },
+      "verification_status": "verified",
+      "limitations": "Survey measures; recall is not purchase behaviour"
+    },
+    {
+      "id": "CLM-A06",
+      "statement": "Claimed past-4-week purchase of Fizzi fell in Mwanza (37% to 29%) and Arusha (36% to 30%) but was unchanged in Dar es Salaam (40%)",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A03"
+        ],
+        "records": [],
+        "locator": "tracker_summary.md summary table, rows 4-6"
+      },
+      "units_denominator": "% of regional urban CSD buyers (bases 153-305)",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "low",
+        "reason": "Regional bases around 150; claimed behaviour"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Urban Mwanza, Arusha, Dar es Salaam",
+        "reason": "Small regional bases"
+      },
+      "verification_status": "verified",
+      "limitations": "Differences of 6-8 points on bases near 150 are directionally consistent but imprecise"
+    },
+    {
+      "id": "CLM-A07",
+      "statement": "TV and radio weight was cut 20% (1,450 to 1,160 GRPs) with the same weekly pattern in every region",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A04"
+        ],
+        "records": [],
+        "locator": "media_and_trade_notes.md bullet 1"
+      },
+      "units_denominator": "Gross rating points, H1",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Internal media plan record; delivery not independently verified"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "All four regions",
+        "reason": "Internal plan for these regions"
+      },
+      "verification_status": "verified",
+      "limitations": "Planned weight; actual delivery by region not supplied"
+    },
+    {
+      "id": "CLM-A08",
+      "statement": "Wholesaler supply in Mwanza and Arusha moved from Distributor A to Distributor B in January 2026, and one sales email reports fortnightly rather than weekly deliveries",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A04"
+        ],
+        "records": [],
+        "locator": "media_and_trade_notes.md bullet 2"
+      },
+      "units_denominator": "Event and delivery frequency report",
+      "period": "January-March 2026",
+      "confidence": {
+        "level": "low",
+        "reason": "Distributor change is recorded; delivery frequency rests on one email"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Mwanza and Arusha wholesaler channel",
+        "reason": "Internal record"
+      },
+      "verification_status": "verified",
+      "limitations": "Delivery frequency not measured"
+    },
+    {
+      "id": "CLM-A09",
+      "statement": "The 500 ml list price rose 5% in January 2026; in 40 Dar es Salaam dukas Fizzi 500 ml moved from 3% to 9% above the main competitor's shelf price",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-A04"
+        ],
+        "records": [],
+        "locator": "media_and_trade_notes.md bullet 3"
+      },
+      "units_denominator": "% shelf price difference, 500 ml",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Direct price checks, Dar es Salaam only"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Dar es Salaam dukas",
+        "reason": "Direct checks; other regions unknown"
+      },
+      "verification_status": "verified",
+      "limitations": "No checks outside Dar es Salaam"
+    },
+    {
+      "id": "CLM-A10",
+      "statement": "The H1 decline is primarily an availability loss in wholesaler-served dukas in Mwanza and Arusha following the distributor change, not a four-region demand or advertising problem",
+      "type": "inference",
+      "basis": {
+        "sources": [],
+        "records": [
+          "CLM-A02",
+          "CLM-A03",
+          "CLM-A04",
+          "CLM-A06",
+          "CLM-A07",
+          "CLM-A08"
+        ],
+        "reasoning": "Losses are concentrated where and when distribution fell after the distributor switch; the proxy rate of sale where stocked is flat; the media cut was uniform across regions but losses were not; claimed purchase fell only in the affected regions."
+      },
+      "units_denominator": "Diagnostic inference",
+      "period": "H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Several independent first-party signals align; sell-in and small survey bases limit precision"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Fizzi in the four regions",
+        "reason": "First-party evidence for this scope"
+      },
+      "verification_status": "unverified",
+      "limitations": "Wholesaler destocking and local competitor activity not yet measured"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "HYP-A01",
+      "kind": "hypothesis",
+      "proposition": "Weaker advertising (lower weight or worn-out creative) caused the volume decline",
+      "basis": "CEO brief; tracker ad recall fell 5 points",
+      "basis_records": [
+        "CLM-A05",
+        "CLM-A07"
+      ],
+      "confirming_signal": "Losses spread across regions and channels in line with the uniform media cut; consideration and claimed purchase falling everywhere",
+      "falsifier": "Losses concentrated in specific channels and regions while the media cut was uniform; consideration stable",
+      "current_support": "unsupported",
+      "decision_impact": "If true, a communications response would be justified; if false, a new campaign would not recover volume",
+      "validation_step": "Compare volume and consideration by region against the uniform GRP cut; later, a regional weight test once availability is restored",
+      "status": "weakened",
+      "review_condition": "Revisit if volume in unaffected regions declines in H2 or if availability recovers without volume recovery",
+      "depends_on": [],
+      "confidence": {
+        "level": "medium",
+        "reason": "Regional pattern contradicts it as the main driver; a smaller long-term effect of lower weight cannot be ruled out"
+      }
+    },
+    {
+      "id": "HYP-A02",
+      "kind": "hypothesis",
+      "proposition": "The distributor transition reduced outlet availability in wholesaler-served dukas in Mwanza and Arusha, causing most of the decline",
+      "basis": "Timing of distributor switch and audit results",
+      "basis_records": [
+        "CLM-A02",
+        "CLM-A03",
+        "CLM-A04",
+        "CLM-A08"
+      ],
+      "confirming_signal": "Losses concentrated in affected region-channels; distribution and out-of-stocks worsened there; rate of sale where stocked stable",
+      "falsifier": "Distribution stable in affected groups, or rate of sale where stocked falling",
+      "current_support": "supported",
+      "decision_impact": "Prioritise route-to-market repair over a new campaign",
+      "validation_step": "Measure wholesaler fill rate and delivery frequency; track recovery against control groups after service fixes",
+      "status": "supported",
+      "review_condition": "Monthly audit reads during H2 2026",
+      "depends_on": [],
+      "confidence": {
+        "level": "medium",
+        "reason": "Consistent first-party evidence; mechanism link through delivery frequency rests on one email"
+      }
+    },
+    {
+      "id": "HYP-A03",
+      "kind": "hypothesis",
+      "proposition": "A widening 500 ml price gap to the main competitor explains the small 500 ml declines outside the affected channels",
+      "basis": "Dar es Salaam price checks",
+      "basis_records": [
+        "CLM-A09",
+        "CLM-A01"
+      ],
+      "confirming_signal": "500 ml declines larger where the gap widened most; 350 ml (no price change) stable",
+      "falsifier": "No relationship between gap and 500 ml rate of sale; similar gaps in regions without decline",
+      "current_support": "mixed",
+      "decision_impact": "Could justify a 500 ml price or pack response later",
+      "validation_step": "Price checks in all four regions and rate of sale by price-gap band",
+      "status": "open",
+      "review_condition": "After four-region price checks",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "Price data for Dar es Salaam only; effects small"
+      }
+    },
+    {
+      "id": "HYP-A04",
+      "kind": "hypothesis",
+      "proposition": "Wholesaler destocking makes the sell-in decline in the affected groups larger than the outlet-level sales decline",
+      "basis": "Sell-in data cannot show wholesaler inventory",
+      "basis_records": [
+        "CLM-A02"
+      ],
+      "confirming_signal": "Wholesaler stock cover falling; outlet purchases from wholesalers declining less than sell-in",
+      "falsifier": "Wholesaler stock cover stable or rising",
+      "current_support": "mixed",
+      "decision_impact": "Affects the size of expected recovery, not the direction of the recommendation",
+      "validation_step": "Stock counts at the top 20 wholesalers in Mwanza and Arusha",
+      "status": "open",
+      "review_condition": "After wholesaler stock counts",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "Outlet out-of-stocks rose, so destocking is unlikely to be the whole story, but its share is unknown"
+      }
+    },
+    {
+      "id": "HYP-A05",
+      "kind": "hypothesis",
+      "proposition": "A category-wide decline in carbonated soft drinks explains the fall",
+      "basis": "Common explanation for volume declines",
+      "basis_records": [
+        "CLM-A02"
+      ],
+      "confirming_signal": "Declines across all regions and channels; competitor volumes also falling",
+      "falsifier": "Most groups flat while a few collapse",
+      "current_support": "unsupported",
+      "decision_impact": "Would redirect effort to category or portfolio responses",
+      "validation_step": "Obtain category or competitor data if available",
+      "status": "weakened",
+      "review_condition": "If category data become available",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "No category data; within-company pattern argues against a broad decline"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "id": "INS-A01",
+      "decision": "H2 2026 response to the volume decline",
+      "audience_context": "Wholesaler-served dukas in Mwanza and Arusha",
+      "insight_kind": "operational",
+      "evidence": [
+        "CLM-A02",
+        "CLM-A03",
+        "CLM-A04",
+        "CLM-A06",
+        "CLM-A08"
+      ],
+      "observation": "Volume losses are concentrated in two region-channel groups that lost numeric distribution after a distributor change",
+      "contrast": "Affected groups versus all other region-channel groups; before versus after the January 2026 distributor switch",
+      "mechanism": "Less frequent deliveries left wholesalers and then dukas out of stock, so purchases were lost where the product was absent; where stocked, it sold at a similar rate",
+      "tension": null,
+      "explanation": "Fizzi is not losing demand; it is losing shelves. The distributor transition removed the product from a fifth of wholesaler-served dukas in Mwanza and Arusha",
+      "alternatives": [
+        "Wholesaler destocking exaggerates the sell-in decline (open, HYP-A04)",
+        "Unmeasured local competitor activity in Mwanza and Arusha"
+      ],
+      "contradictions": [
+        "Ad recall fell 5 points nationally, consistent with the media cut but not with the regional concentration of losses"
+      ],
+      "confidence": {
+        "level": "medium",
+        "reason": "Several first-party signals align; proxy rate of sale and small survey bases limit precision"
+      },
+      "implication": "A new advertising campaign would not restore volume while the product is missing from these outlets",
+      "validation_need": "Wholesaler fill-rate and stock data; volume recovery versus control groups after service repair",
+      "status": "defensible"
+    }
+  ],
+  "options": [
+    {
+      "id": "OPT-A01",
+      "title": "Restore availability in wholesaler-served dukas in Mwanza and Arusha first; hold the new-campaign brief",
+      "diagnosis_addressed": "Availability loss after the distributor transition (INS-A01)",
+      "where_to_act": "Wholesaler channel and duka clusters in Mwanza and Arusha",
+      "how_to_win": "Weekly delivery service from Distributor B, with temporary direct van sales if service does not recover",
+      "mechanism": {
+        "levers": [
+          "distribution",
+          "volume"
+        ],
+        "explanation": "Restoring numeric distribution to 2025 levels at an unchanged rate of sale would recover most of the lost volume"
+      },
+      "supporting_records": [
+        "INS-A01",
+        "CLM-A02",
+        "CLM-A03",
+        "CLM-A04",
+        "HYP-A02"
+      ],
+      "assumptions": [],
+      "economics": "Volume at stake roughly 266 thousand litres per half-year (about TZS 500 million net sales at H1 2026 prices); cost of service upgrade or van routes unknown and must be quoted",
+      "resources": "Regional sales management time; possible distributor service fee or van-route costs",
+      "risks": [
+        "Distributor B cannot deliver weekly",
+        "Wholesaler destocking means sell-in recovers more slowly than outlet availability"
+      ],
+      "non_choices": [
+        "No new campaign creative in H2 2026 until availability recovers",
+        "No national price change on the basis of Dar es Salaam price checks alone"
+      ],
+      "conditions": [
+        "Delivery service route confirmed by week 6 (distributor agreement or van-sales bridge)"
+      ],
+      "reversal_triggers": [
+        "Availability restored to within 3 points of 2025 levels but volume still more than 10% below control groups: reopen the communications and category diagnosis"
+      ],
+      "status": "selected",
+      "recommendation_type": "supported",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Addresses the constraint that explains 90% of the decline; reversible and fast to test"
+    },
+    {
+      "id": "OPT-A02",
+      "title": "Brief a new advertising campaign now (CEO proposal)",
+      "diagnosis_addressed": "Weak advertising (HYP-A01)",
+      "where_to_act": "All regions, mass media",
+      "how_to_win": "New creative to lift recall and demand",
+      "mechanism": {
+        "levers": [
+          "penetration"
+        ],
+        "explanation": "More memorable advertising increases brand retrieval and purchase"
+      },
+      "supporting_records": [
+        "HYP-A01",
+        "CLM-A05"
+      ],
+      "assumptions": [],
+      "economics": "unknown: agency and production costs not supplied",
+      "resources": "Agency fees, production, media",
+      "risks": [
+        "Spends budget where product is unavailable",
+        "Does not address the diagnosed constraint"
+      ],
+      "non_choices": [],
+      "conditions": [],
+      "reversal_triggers": [],
+      "status": "rejected",
+      "recommendation_type": "not_recommended",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Evidence does not support advertising as the main cause; losses are regional and channel-specific while the media cut was uniform"
+    },
+    {
+      "id": "OPT-A03",
+      "title": "Decide H2 media weight with a regional weight test after availability recovers",
+      "diagnosis_addressed": "Possible longer-term effect of the 20% weight cut (HYP-A01 residual)",
+      "where_to_act": "Regions with stable availability",
+      "how_to_win": "Evidence on whether restoring weight changes brand measures and volume",
+      "mechanism": {
+        "levers": [
+          "penetration",
+          "frequency"
+        ],
+        "explanation": "If lower weight erodes brand retrieval over time, restoring it should protect future volume"
+      },
+      "supporting_records": [
+        "CLM-A05",
+        "CLM-A07"
+      ],
+      "assumptions": [],
+      "economics": "Cost of restoring 290 GRPs in the test region: unknown: rate card not supplied",
+      "resources": "Media budget for the test region",
+      "risks": [
+        "Test and control regions differ in size and trends"
+      ],
+      "non_choices": [
+        "No national weight restoration before the test reads"
+      ],
+      "conditions": [
+        "Restore 2025 weight in one region with stable availability and hold another as comparison for at least 12 weeks; compare consideration, claimed purchase and volume against pre-period trends"
+      ],
+      "reversal_triggers": [
+        "No difference between regions after 12 weeks"
+      ],
+      "status": "deferred",
+      "recommendation_type": "research_first",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Media weight may matter for the long term even though it did not cause the H1 decline",
+      "speculative": false
+    },
+    {
+      "id": "OPT-A04",
+      "title": "Investigate the 500 ml price gap before any price move",
+      "diagnosis_addressed": "Possible price-gap effect on 500 ml (HYP-A03)",
+      "where_to_act": "500 ml in all four regions",
+      "how_to_win": "Evidence-based decision on 500 ml price position",
+      "mechanism": {
+        "levers": [
+          "price",
+          "volume"
+        ],
+        "explanation": "If the gap suppresses rate of sale, narrowing it could recover volume at a margin cost"
+      },
+      "supporting_records": [
+        "CLM-A09",
+        "HYP-A03"
+      ],
+      "assumptions": [],
+      "economics": "unknown: margin impact depends on elasticity not yet estimated",
+      "resources": "Field price checks (40 outlets per region)",
+      "risks": [
+        "Delay if price is a real constraint"
+      ],
+      "non_choices": [
+        "No price change before the four-region read"
+      ],
+      "conditions": [
+        "Price checks in all four regions and rate of sale by price-gap band"
+      ],
+      "reversal_triggers": [
+        "Gap unrelated to rate of sale: close the question"
+      ],
+      "status": "selected",
+      "recommendation_type": "research_first",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Price evidence exists only for Dar es Salaam and effects are small"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-A01",
+      "decision_link": "OPT-A01",
+      "description": "Agree a weekly delivery service level (calls and fill-rate target) with Distributor B for Mwanza and Arusha wholesalers",
+      "intended_change": "Wholesalers receive weekly deliveries and stop running out",
+      "mechanism": "Restores wholesaler stock, enabling dukas to restock",
+      "owner_role": "Regional sales manager, Lake and Northern zones",
+      "dependencies": [
+        "Commercial terms with Distributor B"
+      ],
+      "timing": "Weeks 1-4",
+      "resource_basis": "unknown: service upgrade cost not yet quoted",
+      "metrics": [
+        "MET-A01",
+        "MET-A02"
+      ],
+      "review_condition": "Weekly",
+      "reversal_trigger": "No improvement in delivery frequency by week 6: activate ACT-A02",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-A02",
+      "decision_link": "OPT-A01",
+      "description": "Temporary direct van-sales cover for the top duka clusters in Mwanza and Arusha if weekly service is not in place by week 6",
+      "intended_change": "Top-cluster dukas restocked directly",
+      "mechanism": "Bypasses wholesaler stock gaps",
+      "owner_role": "Head of route-to-market",
+      "dependencies": [
+        "Van and crew availability"
+      ],
+      "timing": "Weeks 6-18 if triggered",
+      "resource_basis": "Estimate from existing Dar es Salaam van-route costs; to be quantified before launch",
+      "metrics": [
+        "MET-A01",
+        "MET-A03"
+      ],
+      "review_condition": "Every four weeks",
+      "reversal_trigger": "Route contribution negative after eight weeks",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-A03",
+      "decision_link": "OPT-A01",
+      "description": "Hold the new-campaign agency brief; keep current creative on air at the approved weight until availability recovers",
+      "intended_change": "Media budget not spent against unavailable product",
+      "mechanism": "Avoids wasted demand creation while the constraint is supply",
+      "owner_role": "Marketing director",
+      "dependencies": [
+        "CEO agreement"
+      ],
+      "timing": "H2 2026, reviewed at end of Q3",
+      "resource_basis": "Existing media plan",
+      "metrics": [
+        "MET-A03",
+        "MET-A04"
+      ],
+      "review_condition": "End of Q3 2026",
+      "reversal_trigger": "Availability recovered but volume still more than 10% below control groups: reopen communications diagnosis",
+      "status": "proposed"
+    },
+    {
+      "id": "ACT-A04",
+      "decision_link": "OPT-A04",
+      "description": "Run 500 ml price checks in 40 dukas per region and analyse rate of sale by price-gap band",
+      "intended_change": "Decision-grade evidence on price position",
+      "mechanism": "Discriminates between price and other explanations for 500 ml softness",
+      "owner_role": "Insights manager",
+      "dependencies": [
+        "Field team time"
+      ],
+      "timing": "Weeks 2-8",
+      "resource_basis": "Existing field audit team",
+      "metrics": [
+        "MET-A05"
+      ],
+      "review_condition": "Week 8",
+      "reversal_trigger": "Not applicable (learning action)",
+      "status": "proposed"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "MET-A01",
+      "actions": [
+        "ACT-A01",
+        "ACT-A02"
+      ],
+      "definition": "Numeric distribution and out-of-stock rate in wholesaler-served dukas, Mwanza and Arusha (field audit, 120 outlets each)",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "H1 2026: Mwanza 37% distribution, 34% out of stock; Arusha 38%, 31%",
+      "target_rationale": "Return to within 3 points of H1 2025 (58% and 55%) by end of Q4 2026",
+      "data_source": "Monthly field audit",
+      "cadence": "Monthly",
+      "owner_role": "Sales operations manager",
+      "decision_rule": "Below 45% by end of Q3: escalate to van-sales cover or distributor change",
+      "horizon": "H2 2026"
+    },
+    {
+      "id": "MET-A02",
+      "actions": [
+        "ACT-A01"
+      ],
+      "definition": "Distributor B delivery frequency and order fill rate to wholesalers",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "unknown: not currently measured; one report of fortnightly deliveries",
+      "target_rationale": "Weekly deliveries; fill-rate target to be agreed in the service level",
+      "data_source": "Distributor delivery logs",
+      "cadence": "Weekly",
+      "owner_role": "Regional sales manager",
+      "decision_rule": "Weekly delivery not achieved by week 6: trigger ACT-A02",
+      "horizon": "Weeks 1-12"
+    },
+    {
+      "id": "MET-A03",
+      "actions": [
+        "ACT-A02",
+        "ACT-A03"
+      ],
+      "definition": "Volume in affected groups (Mwanza and Arusha wholesaler-served dukas) versus control groups (Dodoma and Dar es Salaam wholesaler-served dukas), indexed to the same half of 2025",
+      "level": "business_outcome",
+      "timing_role": "lagging",
+      "baseline": "H1 2026 index: affected groups 66 (524/790); control groups 98 (628/640)",
+      "target_rationale": "Affected-group index within 5 points of control groups by H1 2027",
+      "data_source": "Company sales to trade; outlet sell-out if available",
+      "cadence": "Monthly",
+      "owner_role": "Commercial finance analyst",
+      "decision_rule": "Availability restored but index gap above 10 points: reopen diagnosis",
+      "horizon": "H2 2026-H1 2027"
+    },
+    {
+      "id": "MET-A04",
+      "actions": [
+        "ACT-A03"
+      ],
+      "definition": "Tracker consideration, ad recall and claimed past-4-week purchase by region",
+      "level": "brand_effect",
+      "timing_role": "lagging",
+      "baseline": "H1 2026: consideration 51%, ad recall 29%; claimed purchase Dar es Salaam 40%, Mwanza 29%, Arusha 30%",
+      "target_rationale": "Consideration stable or rising; claimed purchase in Mwanza and Arusha returning towards 2025 levels as availability recovers",
+      "data_source": "Brand tracker",
+      "cadence": "Half-yearly",
+      "owner_role": "Insights manager",
+      "decision_rule": "Consideration falls in regions with stable availability: prioritise the media weight test (OPT-A03)",
+      "horizon": "H2 2026"
+    },
+    {
+      "id": "MET-A05",
+      "actions": [
+        "ACT-A04"
+      ],
+      "definition": "500 ml shelf price gap to main competitor by region and 500 ml rate of sale by gap band",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "Dar es Salaam +9% (H1 2026); other regions unknown: not yet checked",
+      "target_rationale": "Not a target metric; decision input",
+      "data_source": "Field price checks and sales data",
+      "cadence": "Once, then quarterly if relevant",
+      "owner_role": "Insights manager",
+      "decision_rule": "Clear rate-of-sale drop above a gap threshold: develop price-pack options; otherwise close",
+      "horizon": "Weeks 2-8"
+    }
+  ],
+  "learnings": [],
+  "defects": [
+    {
+      "id": "DEF-A01",
+      "claim_or_section": "Diagnosis relies on sell-in volume (CLM-A01, CLM-A02)",
+      "gate": "evidence",
+      "verdict": "CONCERN",
+      "defect": "Sell-in can differ from outlet sales when wholesaler stock changes",
+      "evidence_or_missing_evidence": "No sell-out or wholesaler stock data supplied; outlet audit and regional tracker purchase measures point the same way",
+      "strategic_consequence": "Size of the demand loss and speed of recovery could be misjudged",
+      "required_fix": "Bound the claim; add wholesaler stock counts (HYP-A04) and track outlet-level recovery",
+      "retest_condition": "Wholesaler stock counts available",
+      "status": "bounded_provisional",
+      "affected_records": [
+        "CLM-A10",
+        "INS-A01"
+      ]
+    },
+    {
+      "id": "DEF-A02",
+      "claim_or_section": "Rate of sale where stocked is flat (CLM-A04)",
+      "gate": "logic_causality",
+      "verdict": "CONCERN",
+      "defect": "Proxy divides sell-in volume by a sampled distribution measure rather than measuring outlet rate of sale",
+      "evidence_or_missing_evidence": "No outlet-level sales data",
+      "strategic_consequence": "Could hide a demand decline among stocked outlets",
+      "required_fix": "State as low-confidence proxy; confirm with outlet sell-out from a sample of stocked dukas",
+      "retest_condition": "Outlet sell-out sample for stocked dukas in affected groups",
+      "status": "bounded_provisional",
+      "affected_records": [
+        "CLM-A04",
+        "INS-A01"
+      ]
+    },
+    {
+      "id": "DEF-A03",
+      "claim_or_section": "Action plan economics (OPT-A01)",
+      "gate": "feasibility",
+      "verdict": "CONCERN",
+      "defect": "Cost of distributor service upgrade or van routes unknown",
+      "evidence_or_missing_evidence": "No quotes supplied",
+      "strategic_consequence": "Payback not yet demonstrated",
+      "required_fix": "Obtain quotes before committing beyond week 6; compare with volume at stake",
+      "retest_condition": "Quotes obtained and compared with contribution at stake",
+      "status": "open",
+      "affected_records": [
+        "OPT-A01"
+      ]
+    }
+  ],
+  "gate_results": [
+    {
+      "gate": "problem_framing",
+      "verdict": "PASS",
+      "reason": "Solution-shaped brief restated; objective, symptom, suspected cause and proposed solution separated"
+    },
+    {
+      "gate": "evidence",
+      "verdict": "CONCERN",
+      "reason": "Sell-in data and small regional survey bases; bounded (DEF-A01)",
+      "defects": [
+        "DEF-A01"
+      ]
+    },
+    {
+      "gate": "logic_causality",
+      "verdict": "CONCERN",
+      "reason": "Decomposition kept separate from causal explanation; rate-of-sale proxy is weak (DEF-A02)",
+      "defects": [
+        "DEF-A02"
+      ]
+    },
+    {
+      "gate": "insight",
+      "verdict": "PASS",
+      "reason": "Operational insight with contrast, mechanism and alternatives; no invented tension"
+    },
+    {
+      "gate": "meaningful_choice",
+      "verdict": "PASS",
+      "reason": "Four options including the CEO proposal; explicit non-choices"
+    },
+    {
+      "gate": "commercial_mechanism",
+      "verdict": "PASS",
+      "reason": "Distribution-to-volume mechanism with volume at stake stated"
+    },
+    {
+      "gate": "customer_relevance",
+      "verdict": "NOT_APPLICABLE",
+      "reason": "No consumer-motivation claims made; problem is operational"
+    },
+    {
+      "gate": "competitive_response",
+      "verdict": "NOT_TESTED",
+      "reason": "No competitor data for Mwanza or Arusha"
+    },
+    {
+      "gate": "brand_credibility",
+      "verdict": "NOT_APPLICABLE",
+      "reason": "No positioning claims"
+    },
+    {
+      "gate": "local_validity",
+      "verdict": "PASS",
+      "reason": "Claims scoped to regions and channels; price evidence limited to Dar es Salaam and labelled"
+    },
+    {
+      "gate": "feasibility",
+      "verdict": "CONCERN",
+      "reason": "Service upgrade costs unknown (DEF-A03)",
+      "defects": [
+        "DEF-A03"
+      ]
+    },
+    {
+      "gate": "measurement",
+      "verdict": "PASS",
+      "reason": "Leading operational measures, controls and decision rules defined"
+    },
+    {
+      "gate": "clarity",
+      "verdict": "PASS",
+      "reason": "Memo leads with decision and binding constraint"
+    }
+  ],
+  "changes": []
+}

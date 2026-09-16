@@ -1,0 +1,9 @@
+{
+  "command": "outline",
+  "status": "valid",
+  "schema_validator": "builtin-subset",
+  "sections": 10,
+  "errors": [],
+  "warnings": [],
+  "scope_note": "Checks structure and evidence links. Whether each slide's evidence actually supports its assertion, and whether the sequence forms a coherent argument, requires judgement."
+}

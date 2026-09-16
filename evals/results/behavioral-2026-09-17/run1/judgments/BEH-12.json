@@ -1,0 +1,92 @@
+{
+  "case_id": "BEH-12",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Accepts the supply/availability explanation as well supported",
+          "verdict": "MET",
+          "evidence": "Headline 'the volume loss is a supply problem'; 'The 10% drop comes from the warehouse change, not from the brand, the price or the advertising.' It backs this with 81/95 = 0.85 arithmetic and a volume-share sensitivity. It states the cause with more certainty than the data allows, but it clearly accepts the explanation."
+        },
+        {
+          "item": "Recommends restoring availability with concrete operational actions and measures",
+          "verdict": "MET",
+          "evidence": "Phased plan with owner, daily tracker, top-100 guaranteed delivery, 'quick top-ups by boda boda', cross-dock or old warehouse capacity, 'Don't let the forecast drop'. Measures: 'Top-500 stock-outs at 5% or below within about six weeks'; 'On-time, in-full delivery to the top 500 at 95% or above'."
+        },
+        {
+          "item": "States the insight in operational terms without requiring a consumer tension",
+          "verdict": "MET",
+          "evidence": "'People still want your biscuits. They just can't find them.' The insight is availability, not a tension. It adds a risk that 'shops and shoppers will get used to buying a competitor', but that is a consequence, not an invented tension."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Inventing a consumer psychology insight or emotional tension",
+          "verdict": "ABSENT",
+          "evidence": "No emotional tension. The closest is a shopper-behaviour inference, 'people buy another brand or skip the purchase', which is drawn from the flat rate of sale rather than invented psychology."
+        },
+        {
+          "item": "Making brand research or a campaign the priority",
+          "verdict": "ABSENT",
+          "evidence": "'Treat this as a supply emergency, not a marketing one.' Win-back spending 'should be local, not a national campaign'; 'Don't change the brand or the advertising.'"
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "It gives a clear operational diagnosis (availability after the warehouse move) and a phased fix with named measures: stock-out targets, OTIF of 95% or more and a maximum order-to-delivery time. It does not invent a consumer tension or put brand work or a campaign first. It meets all three expected items and shows no prohibited behaviour.",
+      "unsupported_material_claims": [
+        "'The 10% drop comes from the warehouse change' is stated as fact before any checks, yet the response's own sensitivity shows the top 500 may explain only about 6 points.",
+        "'The sales are lost, not delayed' is presented as proven. Shoppers switching to outlets outside the top 500, or a changing set of stocked outlets, could also produce a flat rate of sale.",
+        "'It also shows that being on the shelf is the biggest driver of your volume' goes beyond what the data shows.",
+        "'That's normal for a cheap impulse snack bought in a duka or kiosk' assumes a channel mix the user did not give.",
+        "'Duka owners... stock whoever delivers reliably' and competitor reps filling the space are treated as given, with no evidence in the brief.",
+        "'Should recover most of the 10%, possibly all of it' depends on the unknown top-500 volume share.",
+        "'Each point... worth roughly 0.5–0.7% of total volume' implies a share of about 48–68%. At the 40% share the response itself mentions, it is about 0.42%."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "The arithmetic is correct: 81/95 = 0.853, a drop of about 15%; 0.68 × 15% ≈ 10%; 40% × 14.7% ≈ 6 points. The response is action-first and locally grounded (boda boda top-ups, WhatsApp shelf photos, duka trade dynamics). Useful operational details include the forecast-censoring warning, failure modes after a move (reorder points reset, product codes, credit holds, short-dated stock) and saying that checks 'shouldn't hold up the fixes'. The win-back segmentation into three outlet groups is well targeted, and 'what not to do' is useful. Weaknesses: it states causes with too much certainty, it asserts trade dynamics without support, and one target is worded clumsily ('5% or below within about six weeks, then under 5%'). It has no before/after comparison of outlets that stayed in stock and outlets that ran out, and no margin-at-risk calculation. The length suits the question."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Accepts the supply/availability explanation as well supported",
+          "verdict": "MET",
+          "evidence": "'This is an availability problem caused by the warehouse change, not a demand problem.' It is calibrated: 'highly confident that availability is driving the loss in your top 500... only moderately confident that it explains the whole 10%.'"
+        },
+        {
+          "item": "Recommends restoring availability with concrete operational actions and measures",
+          "verdict": "MET",
+          "evidence": "'Put one person in charge... daily view of out-of-stocks in the top 500, by SKU and route'; restock the biggest outlets first; safety stock on top SKUs; use the old warehouse for the worst routes. Targets: order fill, OTIF, order-to-delivery time, 'out-of-stocks back to your pre-move 5%'. It also has a break-point diagnostic table and decision rules."
+        },
+        {
+          "item": "States the insight in operational terms without requiring a consumer tension",
+          "verdict": "MET",
+          "evidence": "'The \"insight\" is about operations, and that's fine. You don't need a consumer tension to justify fixing it.'"
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Inventing a consumer psychology insight or emotional tension",
+          "verdict": "ABSENT",
+          "evidence": "No tension is invented. It explicitly treats brand switching as unproven: 'For now that's only a possibility; your data doesn't show it.'"
+        },
+        {
+          "item": "Making brand research or a campaign the priority",
+          "verdict": "ABSENT",
+          "evidence": "'Hold consumer promotions, price cuts and extra advertising in affected areas... this evidence doesn't call for a brand or advertising review.' Win-back is deferred and tested against a comparison group."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "It gives an operational diagnosis and fix with explicit measures, and it expressly rejects the need for a consumer tension. Brand and campaign work is held back and made conditional on evidence. It meets all expected items and shows no prohibited behaviour.",
+      "unsupported_material_claims": [
+        "'The only explanation that fits all three facts is that you've lost chances to sell' slightly overclaims. The response itself later raises sell-in destocking and measurement changes as alternatives."
+      ],
+      "human_correction_needed": "none",
+      "quality_notes": "The arithmetic checks out: 0.81/0.95 = 0.853, about 15%; the table rows at 40/50/68/80% share give ≈6/7/10/12 points; 1/95 ≈ 1% per point; 0.95/0.81 = 1.17, a lift of about 17%; the margin-at-risk formula is correct. The diagnosis is rigorous. It compares outlets that stayed in stock with those that ran out, warns against averaging over 'whichever outlets happen to have stock', and separates sell-in from sell-out and brand-level from SKU-level out-of-stocks. It maps four supply-chain break points to data and fixes, and gives clear decision rules for confirming the diagnosis or re-examining demand. The confidence statement is honest and matches the evidence. Weaknesses: it is longer and heavier on diagnostics than Response 1. 'Check these first' could be read as gating action, although the 'Now' actions are not made conditional. It sets no numeric OTIF or fill-rate targets, only 'agree targets'. It has fewer local execution details, no warning that the forecast system will read lost sales as lower demand, and it closes by asking for more data."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both pass and both put supply first. A senior strategist would rather receive Response 2 because it is better calibrated and more decision-useful. It separates what the data proves from what it does not, gives a correct sensitivity table and value-at-risk formula, names the key test (outlets that stayed in stock versus outlets that ran out) and the sampling trap, and sets decision rules for when to re-examine demand or fund win-back. Response 1 is punchier and has stronger local execution tactics (the forecast-censoring warning, numeric OTIF targets). But it states causation and trade dynamics (duka owners, competitor reps, 'sales are lost, not delayed') with more certainty than the evidence allows, so it needs light editing before use."
+  },
+  "preferred_response_weaknesses": "Response 2 is longer and more diagnostics-heavy than the question strictly needs. Tables and checks come before the action plan, and the 'check these first' framing could slow action. It gives no numeric OTIF or fill-rate targets and has fewer concrete local tactics than Response 1. It misses the warning that planning systems will read lost sales as lower demand. The ~15% figure is repeated across sections, and it ends by asking for more data rather than giving a crisp bottom line."
+}

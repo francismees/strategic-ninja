@@ -1,0 +1,87 @@
+{
+  "case_id": "BEH-13",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Identifies early churn/default as the binding constraint",
+          "verdict": "MET",
+          "evidence": "Headline: 'Don't double acquisition spend yet. Fix the 90-day leak first'; board script: 'We don't have a demand problem; we have a collections problem.' Also: 'In PAYGo, the sale doesn't make you money. The payments do.'"
+        },
+        {
+          "item": "Explains the unit economics consequence of doubling acquisition at current churn",
+          "verdict": "MET",
+          "evidence": "Labelled-placeholder scenario table: today '+$32k', doubling with worse extra customers '−$28k', capital deployed rising from '$680k' to '$1.36M'; break-even 'about 43%' vs current 40%. Checked: table contributions, 2.5x claim and '$1.15 per customer' all follow from inputs. One small inconsistency: lost-customer value stated as −$65, but −100 + 30 + 10 = −60."
+        },
+        {
+          "item": "Recommends diagnosing and reducing churn (causes, cohorts) before or alongside scaled acquisition, with measures",
+          "verdict": "MET",
+          "evidence": "Splits the 40% into 'Never started', 'Early drop', 'Intermittent'; asks for 'collection rate (days paid ÷ days elapsed) and 30/60/90-day repayment curves for each monthly sales cohort'; concentration by agent/district; arbitrage check; exit calls; PAR30 dashboard; phased gates 'Projected 90-day loss ≤ 30%' and a stop-loss rule."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Endorsing doubling acquisition without addressing churn",
+          "verdict": "ABSENT",
+          "evidence": "Recommends 'keep spend flat for one quarter', then 'release the extra budget in tranches as each group of new customers shows it pays.'"
+        },
+        {
+          "item": "Asserting that growth must come from penetration as a universal rule",
+          "verdict": "ABSENT",
+          "evidence": "No universal growth rule; it also proposes growth from existing payers ('Sell them appliances and reward referrals') and sets out 'When the board would be right'."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Treats early churn as the binding constraint and shows with clearly labelled placeholder numbers why doubling at current or worse marginal quality destroys value. It gives a concrete diagnostic (splitting the 40%, cohort curves, concentration, arbitrage, exit interviews) and a decision rule (phased gates, early-signal checks, stop-loss). No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "'Several East African PAYGo companies were forced to cut back or restructure in the late 2010s because growth outran collections' is a historical causal claim stated as fact with no source.",
+        "The scenario where 'the extra customers lose 50%' is labelled '(more likely)' without evidence, and that assumption drives the negative doubling result.",
+        "'In sales-driven books, losses are usually concentrated in a minority of agents and territories' is stated as a general pattern without support.",
+        "'Pay agents for customers who pay. This is usually the fastest and biggest lever' ranks levers without evidence."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis with the answer up front. The scenario table answers the board's exact question and shows that cutting churn at today's spend beats doubling while using half the capital. The Tanzania detail is useful and plausible: masika rains, REA grid rollout, Mixx by Yas/M-Pesa/HaloPesa, PDPA 2022, and harvest cycles by region. The agent-arbitrage check and the carbon/RBF per-unit trap are sharp. It also covers trade-offs ('When the board would be right'), gives a board-ready script, and lists the data it needs. Weaknesses: long, and some fixes are a generic PAYGo playbook. It has a small arithmetic inconsistency (−$65 vs the implied −$60), one unsourced industry-history claim, and some assumptions labelled 'more likely' without evidence. Gate thresholds are clearly marked as placeholders, which is good. Arithmetic otherwise checks out."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Identifies early churn/default as the binding constraint",
+          "verdict": "MET",
+          "evidence": "'Early failure is therefore the heart of your unit economics, not a side issue.' Opening: 'don't approve a blanket doubling yet.'"
+        },
+        {
+          "item": "Explains the unit economics consequence of doubling acquisition at current churn",
+          "verdict": "MET",
+          "evidence": "Gives the formula 'Break-even early-failure rate = (G − U) ÷ (G − B)'; the illustration shows '40% (today) −4' per customer and 'Doubling spend at a 40% failure rate at best doubles the loss'; a marginal cost of 115 cuts break-even 'from about 36% to about 23%'. Checked: 40 − 110f, the table values, 880 customers and 25/110 ≈ 23% are all correct."
+        },
+        {
+          "item": "Recommends diagnosing and reducing churn (causes, cohorts) before or alongside scaled acquisition, with measures",
+          "verdict": "MET",
+          "evidence": "Four-way split of the 40%; cohort analysis by 'agent or distributor, region, product, deposit level and sales channel' at '30, 60, 90 and 180 days'; rival-cause table with 'Ruled out if' tests; randomised control tests; 'Main measure: 90-day collections for each shilling of acquisition spend'; staged release with a stop rule."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Endorsing doubling acquisition without addressing churn",
+          "verdict": "ABSENT",
+          "evidence": "Rejects 'Double now' because 'you scale economics you haven't measured'; recommends 'Grow in stages' and 'Release the extra spend in stages'."
+        },
+        {
+          "item": "Asserting that growth must come from penetration as a universal rule",
+          "verdict": "ABSENT",
+          "evidence": "No such rule. It tests the board's view as a hypothesis ('40% is the price of scale') with explicit disconfirming evidence."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Puts churn economics first through a transferable break-even failure-rate formula, correct illustrative arithmetic and the marginal-cost effect of doubling. It gives a concrete cohort diagnostic, falsifiable rival explanations, controlled tests, and a gated release with a stop rule tied to break-even. No prohibited behaviour.",
+      "unsupported_material_claims": [],
+      "human_correction_needed": "light",
+      "quality_notes": "Rigorous and epistemically careful. It flags assumptions ('I'm assuming 8,000 is gross sales', 'For illustration only') and labels its inference ('an inference from timing only'). The break-even formula lets the user plug in real data at once, and the point that higher marginal acquisition cost moves the threshold is a strong insight. It sets out three options with trade-offs, including the cost of a full freeze, and says 'What would change my advice'. Randomised district/agent tests and measuring collections per shilling are good practice. Weaknesses: more abstract and less locally grounded; apart from 'shilling' and 'Kiswahili scripts', the advice could apply to any market. The gates are defined relative to break-even rather than given concrete example thresholds. Some phrasing is clumsy (the 'Rewards for connections alone' bullet). It is also long, though a little shorter than Response 1."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both pass clearly and the gap is modest. A senior strategist in Tanzania would probably rather receive Response 1. Its scenario table puts the board's choice in money and capital terms: doubling with weaker marginal customers turns contribution negative, while cutting churn at flat spend earns more on half the capital. It also gives concrete phase gates, a stop-loss, a board script and dashboard changes, and locally specific levers (REA grid rollout, harvest-linked plans by region, masika rains, mobile money operators, PDPA 2022) that show local validity. Response 2 is more rigorous: a portable formula, rival hypotheses with disconfirmation tests, and controlled experiments. It makes fewer unsupported claims, but it is more generic and less directly board-ready.",
+    "preferred_response_weaknesses": "Longer than needed, with some generic PAYGo playbook content. It contains an unsourced historical claim about East African PAYGo firms restructuring, labels its worse-quality scenario 'more likely' without evidence, and has a small arithmetic inconsistency (lost-customer value −$65 where the stated inputs give −$60). It is less careful than Response 2 in separating inference from fact, and it offers no general break-even formula for the user's own inputs."
+  }
+}

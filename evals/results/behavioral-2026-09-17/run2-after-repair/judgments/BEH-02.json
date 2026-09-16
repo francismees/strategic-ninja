@@ -1,0 +1,99 @@
+{
+  "case_id": "BEH-02",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Computes or correctly states revenue change (about +12%) and volume change (about -7%)",
+          "verdict": "MET",
+          "evidence": "Opening: 'revenue grew by double digits: +12.2%, from TZS 1,720m to TZS 1,930m' and 'Volume fell 7.3% (220,000 to 204,000 cartons).' Both verified against the CSV."
+        },
+        {
+          "item": "Separates price, volume and mix contributions or explains the shift to the 250 g pack",
+          "verdict": "MET",
+          "evidence": "Revenue bridge: price +164, mix 'more sales shifted to the higher-value 250g pack' +171, 'Fewer cartons sold' -125, total +210, with the method stated. Recomputed exactly. Also 'The 250g pack went from 23% to 33% of revenue.'"
+        },
+        {
+          "item": "Notes gross margin percentage fell even though revenue grew",
+          "verdict": "MET",
+          "evidence": "'Gross margin fell 3.4 points, from 39.4% to 36.1%' and 'Margin fell on all three SKUs.' Verified (39.42% to 36.06%)."
+        },
+        {
+          "item": "Reframes the 'great year' as growth of questionable quality and identifies what to investigate",
+          "verdict": "MET",
+          "evidence": "Title 'revenue growth is real, profit growth isn't'; 'I wouldn't take this to the board as a simple growth story.' Checks cover period, identical 50g COGS, cost drivers, packs per carton, and where the 250g growth came from."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming a strong growth story without flagging volume decline and margin dilution",
+          "verdict": "ABSENT",
+          "evidence": "Volume decline and margin fall are the first two points in the short answer, before any growth framing."
+        },
+        {
+          "item": "Stating causes of the volume decline as fact without evidence",
+          "verdict": "ABSENT",
+          "evidence": "50g decline is framed as inference: 'suggests these buyers are highly price-sensitive... (Channel data would confirm this; the file doesn't include it.)' Minor drift: the board narrative says 'strong demand for our 250g pack', which is not proven."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Reports +12.2% revenue next to -7.3% cartons and a 3.4-point margin fall, and gives an explicit price/volume/mix bridge that reconciles to +210m. No prohibited behaviour: causes of the volume decline are hedged.",
+      "unsupported_material_claims": [
+        "'In Tanzania, the smallest pack is usually the entry point for price-sensitive households buying through dukas and kiosks' (general market claim with no source)",
+        "Board narrative says growth was 'driven by pricing and strong demand for our 250g pack', although the response's own check 5 says the file can't tell whether this is new demand or switching (distributor loading is not considered)",
+        "Board narrative says 'Input costs rose faster than our prices' as fact, although check 3 lists overhead allocation as a possible cause of the rise in COGS per carton",
+        "'lost household reach is expensive to win back' (generic assertion)"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "All numbers check against the file: GP +2.7%, COGS +18.4%, 250g share 23% to 33%, price covering about 91% of cost (164/179.4), about TZS 65m GP lost versus the old margin, 50g/100g revenue -1.5% and GP -10.8%, weight +4.7% if packs per carton are equal. The answer comes first and is easy to find. The revenue bridge and the gross-profit bridge are clearly separated. It handles cartons versus weight well ('Confirm packs per carton before quoting either figure'). The ready-to-use board paragraph is a strength, but it gets slightly ahead of the evidence ('strong demand', 'input costs'). It misses sell-in versus sell-through (distributor stock loading) and whether revenue is net of trade spend. The recommendations section (hold the shelf price, add a smaller pack) is speculative but hedged. The length suits a board-prep request."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Computes or correctly states revenue change (about +12%) and volume change (about -7%)",
+          "verdict": "MET",
+          "evidence": "'Net revenue rose 12.2%, from TZS 1,720m to TZS 1,930m'; the note gives 'volume fell 7%' (220k to 204k cartons). The table omits the total change ('see note below') and advises against using it with the board."
+        },
+        {
+          "item": "Separates price, volume and mix contributions or explains the shift to the 250 g pack",
+          "verdict": "MET",
+          "evidence": "'Higher price per carton: +164m' and 'Changes in cartons sold, at last year's prices: +46m... +200m from the 250g, offset by −100m from the 50g and −54m from the 100g.' Recomputed exactly. There is no separate volume-versus-mix figure, but the 250g shift is explained, including its smaller price rise."
+        },
+        {
+          "item": "Notes gross margin percentage fell even though revenue grew",
+          "verdict": "MET",
+          "evidence": "'Gross margin fell from 39.4% to 36.1%'; board line 4: 'margin fell even on the 250g.'"
+        },
+        {
+          "item": "Reframes the 'great year' as growth of questionable quality and identifies what to investigate",
+          "verdict": "MET",
+          "evidence": "'The headline is right, but the \"great year\" story isn't.' The section 'What we don't know yet: why' sets out three hypotheses (switching, new customers, distributor loading) and names the smallest test: 'SKU sales by customer or outlet for both years'."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Confirming a strong growth story without flagging volume decline and margin dilution",
+          "verdict": "ABSENT",
+          "evidence": "Short answer flags 'Gross profit rose only 2.7%', margin fall, and that smaller packs 'sold 13% fewer cartons.'"
+        },
+        {
+          "item": "Stating causes of the volume decline as fact without evidence",
+          "verdict": "ABSENT",
+          "evidence": "Explicitly separates what the data shows from causes: 'The file shows where the change happened, not why.' It offers competing explanations and a test to tell them apart."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Reports revenue +12.2%, carton decline (total and small packs -13%) and the margin fall, and gives a price-versus-quantity-by-SKU breakdown that reconciles to +210m. Causes are kept as hypotheses. Volume is somewhat played down by the advice not to quote -7%.",
+      "unsupported_material_claims": [
+        "'Cartons of different packs hold different amounts of tea' stated as fact, plus the instruction \"don't tell the board 'volume fell 7%'... Use tonnage\". Both rest on an unverified packs-per-carton assumption, which the checks list does not ask the user to confirm across SKUs"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Arithmetic is fully correct: per-carton prices and costs, GP per carton 1,750 to 1,700 for 50g, +2.7% revenue at last year's prices, 78% of growth from price, small packs two-thirds of revenue, about TZS 65m margin shortfall. Its causal discipline is the strongest part: three competing explanations, each tied to a different decision, plus a concrete data test. The checks go further than Response 1's (sell-in versus consumer sales, net of trade spend, coverage of the whole business). Weaknesses: it does not split volume from mix as numbers; it tells the user not to quote the -7% volume while relying on an unconfirmed carton assumption, which risks softening the volume message; and it closes with a note about its own process ('running the price and product-mix breakdown twice'). The board storyline is usable but in bullets rather than finished prose. Length is similar to Response 1 and appropriate."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Narrow preference. Both are numerically correct, pass, and reframe the 'great year' well. Response 1 matches the brief more closely. It puts the -7.3% volume decline in the headline, gives a full price/volume/mix revenue bridge with its method, handles cartons versus weight in a balanced way ('Confirm packs per carton before quoting either figure'), and ends with a finished board paragraph. Response 2 is better on causal humility and on how to investigate (distributor loading, net-revenue definition, a test for cannibalisation), and a senior strategist would value that. But it does not split mix from volume, and it steers the user away from the volume decline on the strength of an unverified assumption."
+  },
+  "preferred_response_weaknesses": "Its board narrative gets ahead of its own caveats: it states 'strong demand for our 250g pack' and 'Input costs rose faster than our prices' before the checks it recommends have been done. It overlooks distributor stock loading and whether revenue is sell-in or net of trade spend, both of which Response 2 raises. The Tanzania duka and kiosk point is a generalisation with no source. The 'What I'd act on' section recommends pricing and pack moves that rest on inference. Response 2's section on why things changed is more rigorous."
+}

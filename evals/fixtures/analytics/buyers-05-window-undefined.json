@@ -1,0 +1,29 @@
+{
+  "id": "buyers-05-window-undefined",
+  "recipe": "buyers",
+  "purpose": "No time window declared.",
+  "input_csv": "period,buyers,occasions,units\n2025,1000,4000,6000\n2026,1100,4180,6270\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units"
+  ],
+  "convention": "A window is required for buyer measures.",
+  "derivation": "No --window-col.",
+  "expected_status": "error",
+  "expected_error_code": "WINDOW_UNDEFINED",
+  "edge_case_expectation": "Identities are not computed without a defined window.",
+  "expected_failure_behavior": "Exit code 2 with WINDOW_UNDEFINED.",
+  "kind": "analytics"
+}

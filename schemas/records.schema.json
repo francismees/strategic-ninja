@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategic-ninja/records.schema.json",
+  "title": "Engagement records",
+  "description": "Canonical record model for one strategy engagement. Semantic rules that JSON Schema cannot express (type-specific basis requirements, ID resolution, link-type checks, 'unknown: reason' values, staleness) are enforced by scripts/records.py and documented in references/evidence-model.md.",
+  "type": "object",
+  "required": ["schema_version", "engagement", "sources", "claims", "hypotheses", "insights", "options", "actions", "metrics", "learnings", "defects", "changes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["1.0"]},
+    "engagement": {"$ref": "#/$defs/engagement"},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "hypotheses": {"type": "array", "items": {"$ref": "#/$defs/hypothesis"}},
+    "insights": {"type": "array", "items": {"$ref": "#/$defs/insight"}},
+    "options": {"type": "array", "items": {"$ref": "#/$defs/option"}},
+    "actions": {"type": "array", "items": {"$ref": "#/$defs/action"}},
+    "metrics": {"type": "array", "items": {"$ref": "#/$defs/metric"}},
+    "learnings": {"type": "array", "items": {"$ref": "#/$defs/learning"}},
+    "defects": {"type": "array", "items": {"$ref": "#/$defs/defect"}},
+    "gate_results": {"type": "array", "items": {"$ref": "#/$defs/gate_result"}},
+    "changes": {"type": "array", "items": {"$ref": "#/$defs/change"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "id_list": {"type": "array", "items": {"type": "string", "pattern": "^(ENG|SRC|CLM|HYP|ASM|INS|OPT|ACT|MET|LRN|DEF|CHG)-[A-Za-z0-9._-]+$"}},
+    "text_list": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "confidence": {
+      "type": "object",
+      "required": ["level", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+        "reason": {"type": "string", "minLength": 3}
+      }
+    },
+    "market_applicability": {
+      "type": "object",
+      "required": ["status", "scope", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"type": "string", "enum": ["local_verified", "local_supported", "regional_proxy", "global_hypothesis", "unknown", "not_applicable"]},
+        "scope": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 3}
+      }
+    },
+    "review_flag": {
+      "type": "object",
+      "required": ["changed_record", "reason", "date", "resolved"],
+      "additionalProperties": false,
+      "properties": {
+        "changed_record": {"type": "string"},
+        "reason": {"type": "string", "minLength": 3},
+        "date": {"type": "string"},
+        "resolved": {"type": "boolean"}
+      }
+    },
+    "engagement": {
+      "type": "object",
+      "required": ["id", "namespace", "decision", "decision_maker", "audience", "client", "brand", "category", "market", "horizon", "outcome", "success_metric", "baseline", "constraints", "scope", "mode", "depth", "unresolved_questions"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ENG-[A-Za-z0-9._-]+$"},
+        "namespace": {"type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$", "description": "client/brand/market/engagement slug"},
+        "decision": {"$ref": "#/$defs/text"},
+        "decision_maker": {"$ref": "#/$defs/text"},
+        "audience": {"$ref": "#/$defs/text"},
+        "client": {"$ref": "#/$defs/text"},
+        "brand": {"$ref": "#/$defs/text"},
+        "category": {"$ref": "#/$defs/text"},
+        "market": {"$ref": "#/$defs/text"},
+        "horizon": {"type": "string", "enum": ["campaign_quarter", "annual", "two_three_year", "five_year", "not_applicable"]},
+        "outcome": {"$ref": "#/$defs/text"},
+        "success_metric": {"$ref": "#/$defs/text"},
+        "baseline": {"$ref": "#/$defs/text"},
+        "constraints": {"$ref": "#/$defs/text_list"},
+        "scope": {"$ref": "#/$defs/text"},
+        "mode": {"type": "string", "enum": ["diagnose", "research", "analyse", "insight", "build_strategy", "sparring_workshop", "critique_red_team", "articulate", "deck", "executive", "measure_learn"]},
+        "depth": {"type": "string", "enum": ["quick", "standard", "deep"]},
+        "unresolved_questions": {"$ref": "#/$defs/text_list"},
+        "persistence": {"type": "string", "enum": ["authorised_local_files", "proposed_update_only", "none"]},
+        "synthetic": {"type": "boolean", "description": "true for teaching fixtures and demonstrations"},
+        "created": {"type": "string"},
+        "updated": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "url_or_file", "publisher_owner", "locator", "publication_date", "data_period", "geography", "population_sample", "method", "access_date", "limitations", "lineage", "source_class"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^SRC-[A-Za-z0-9._-]+$"},
+        "title": {"$ref": "#/$defs/text"},
+        "url_or_file": {"$ref": "#/$defs/text"},
+        "publisher_owner": {"$ref": "#/$defs/text"},
+        "locator": {"$ref": "#/$defs/text"},
+        "publication_date": {"$ref": "#/$defs/text"},
+        "data_period": {"$ref": "#/$defs/text"},
+        "geography": {"$ref": "#/$defs/text"},
+        "population_sample": {"$ref": "#/$defs/text"},
+        "method": {"$ref": "#/$defs/text"},
+        "access_date": {"$ref": "#/$defs/text"},
+        "limitations": {"$ref": "#/$defs/text"},
+        "lineage": {
+          "type": "object",
+          "required": ["origin", "derived_from", "note"],
+          "additionalProperties": false,
+          "properties": {
+            "origin": {"type": "string", "enum": ["original", "derived", "unknown"]},
+            "derived_from": {"$ref": "#/$defs/id_list"},
+            "note": {"type": "string"}
+          }
+        },
+        "source_class": {"type": "string", "enum": ["first_party_data", "official_statistics", "regulator", "company_filing", "company_communication", "peer_reviewed", "industry_research", "journalism", "expert_opinion", "social_signal", "qualitative_primary", "survey_primary", "internal_document", "synthetic_fixture", "other"]},
+        "recorded": {"type": "string"},
+        "last_verified": {"type": "string"},
+        "review_condition": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "superseded_by": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["id", "statement", "type", "basis", "units_denominator", "confidence", "market_applicability", "verification_status", "limitations"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^CLM-[A-Za-z0-9._-]+$"},
+        "statement": {"$ref": "#/$defs/text"},
+        "type": {"type": "string", "enum": ["observed", "computed", "inference", "estimate"]},
+        "value": {"type": ["number", "string", "null"]},
+        "basis": {
+          "type": "object",
+          "required": ["sources", "records"],
+          "additionalProperties": false,
+          "properties": {
+            "sources": {"$ref": "#/$defs/id_list"},
+            "records": {"$ref": "#/$defs/id_list"},
+            "locator": {"type": "string"},
+            "calculation": {"type": "string"},
+            "reasoning": {"type": "string"},
+            "method": {"type": "string"},
+            "uncertainty": {"type": "string"}
+          }
+        },
+        "units_denominator": {"$ref": "#/$defs/text"},
+        "period": {"type": "string"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "market_applicability": {"$ref": "#/$defs/market_applicability"},
+        "verification_status": {"type": "string", "enum": ["verified", "reproduced", "unverified", "contested", "superseded"]},
+        "limitations": {"$ref": "#/$defs/text"},
+        "verbatim": {"type": "boolean"},
+        "respondent_id": {"type": "string"},
+        "translation_status": {"type": "string", "enum": ["original_language", "translated_by_analyst", "translation_verified", "not_applicable"]},
+        "contradicts": {"$ref": "#/$defs/id_list"},
+        "recorded": {"type": "string"},
+        "last_verified": {"type": "string"},
+        "review_condition": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "superseded_by": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "hypothesis": {
+      "type": "object",
+      "required": ["id", "kind", "proposition", "basis", "basis_records", "confirming_signal", "falsifier", "current_support", "decision_impact", "validation_step", "status", "review_condition", "depends_on", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^(HYP|ASM)-[A-Za-z0-9._-]+$"},
+        "kind": {"type": "string", "enum": ["hypothesis", "assumption"]},
+        "proposition": {"$ref": "#/$defs/text"},
+        "basis": {"$ref": "#/$defs/text"},
+        "basis_records": {"$ref": "#/$defs/id_list"},
+        "confirming_signal": {"$ref": "#/$defs/text"},
+        "falsifier": {"$ref": "#/$defs/text"},
+        "current_support": {"type": "string", "enum": ["untested", "supported", "mixed", "unsupported", "refuted"]},
+        "decision_impact": {"$ref": "#/$defs/text"},
+        "validation_step": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["open", "supported", "weakened", "refuted", "accepted_for_planning", "retired"]},
+        "review_condition": {"$ref": "#/$defs/text"},
+        "depends_on": {"$ref": "#/$defs/id_list"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "recorded": {"type": "string"},
+        "last_verified": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "superseded_by": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "insight": {
+      "type": "object",
+      "required": ["id", "decision", "audience_context", "evidence", "observation", "contrast", "mechanism", "tension", "explanation", "alternatives", "contradictions", "confidence", "implication", "validation_need", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^INS-[A-Za-z0-9._-]+$"},
+        "decision": {"$ref": "#/$defs/text"},
+        "audience_context": {"$ref": "#/$defs/text"},
+        "insight_kind": {"type": "string", "enum": ["consumer", "commercial", "operational", "category", "competitive", "channel", "economic", "cultural"]},
+        "evidence": {"$ref": "#/$defs/id_list"},
+        "observation": {"$ref": "#/$defs/text"},
+        "contrast": {"$ref": "#/$defs/text"},
+        "mechanism": {"$ref": "#/$defs/text"},
+        "tension": {"type": ["string", "null"]},
+        "explanation": {"$ref": "#/$defs/text"},
+        "alternatives": {"$ref": "#/$defs/text_list"},
+        "contradictions": {"$ref": "#/$defs/text_list"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "implication": {"$ref": "#/$defs/text"},
+        "validation_need": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["defensible", "mechanism_hypothesis", "rejected"]},
+        "recorded": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "option": {
+      "type": "object",
+      "required": ["id", "title", "diagnosis_addressed", "where_to_act", "how_to_win", "mechanism", "supporting_records", "assumptions", "economics", "resources", "risks", "non_choices", "conditions", "reversal_triggers", "status", "recommendation_type", "decision_state", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^OPT-[A-Za-z0-9._-]+$"},
+        "title": {"$ref": "#/$defs/text"},
+        "diagnosis_addressed": {"$ref": "#/$defs/text"},
+        "where_to_act": {"$ref": "#/$defs/text"},
+        "how_to_win": {"$ref": "#/$defs/text"},
+        "mechanism": {
+          "type": "object",
+          "required": ["levers", "explanation"],
+          "additionalProperties": false,
+          "properties": {
+            "levers": {"type": "array", "minItems": 1, "items": {"type": "string", "enum": ["price", "volume", "margin", "mix", "distribution", "penetration", "frequency", "retention", "switching", "acquisition", "cost", "capability", "risk_reduction", "other"]}},
+            "explanation": {"$ref": "#/$defs/text"}
+          }
+        },
+        "supporting_records": {"$ref": "#/$defs/id_list"},
+        "assumptions": {"$ref": "#/$defs/id_list"},
+        "economics": {"$ref": "#/$defs/text"},
+        "resources": {"$ref": "#/$defs/text"},
+        "risks": {"$ref": "#/$defs/text_list"},
+        "non_choices": {"$ref": "#/$defs/text_list"},
+        "conditions": {"$ref": "#/$defs/text_list"},
+        "reversal_triggers": {"$ref": "#/$defs/text_list"},
+        "status": {"type": "string", "enum": ["proposed", "selected", "rejected", "status_quo", "deferred"]},
+        "recommendation_type": {"type": "string", "enum": ["supported", "conditional", "research_first", "not_recommended"]},
+        "decision_state": {"type": "string", "enum": ["proposed_by_analyst", "approved_by_user", "rejected_by_user"]},
+        "rationale": {"$ref": "#/$defs/text"},
+        "speculative": {"type": "boolean"},
+        "recorded": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["id", "decision_link", "description", "intended_change", "mechanism", "owner_role", "dependencies", "timing", "resource_basis", "metrics", "review_condition", "reversal_trigger", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ACT-[A-Za-z0-9._-]+$"},
+        "decision_link": {"type": "string", "pattern": "^OPT-[A-Za-z0-9._-]+$"},
+        "description": {"$ref": "#/$defs/text"},
+        "intended_change": {"$ref": "#/$defs/text"},
+        "mechanism": {"$ref": "#/$defs/text"},
+        "owner_role": {"$ref": "#/$defs/text"},
+        "dependencies": {"$ref": "#/$defs/text_list"},
+        "timing": {"$ref": "#/$defs/text"},
+        "resource_basis": {"$ref": "#/$defs/text"},
+        "metrics": {"$ref": "#/$defs/id_list"},
+        "review_condition": {"$ref": "#/$defs/text"},
+        "reversal_trigger": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["proposed", "planned", "in_progress", "completed", "stopped"]},
+        "recorded": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "metric": {
+      "type": "object",
+      "required": ["id", "actions", "definition", "level", "timing_role", "baseline", "target_rationale", "data_source", "cadence", "owner_role", "decision_rule", "horizon"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^MET-[A-Za-z0-9._-]+$"},
+        "actions": {"$ref": "#/$defs/id_list"},
+        "definition": {"$ref": "#/$defs/text"},
+        "level": {"type": "string", "enum": ["exposure_output", "behavioural_response", "brand_effect", "business_outcome", "operational"]},
+        "timing_role": {"type": "string", "enum": ["leading", "lagging"]},
+        "baseline": {"$ref": "#/$defs/text"},
+        "target_rationale": {"$ref": "#/$defs/text"},
+        "data_source": {"$ref": "#/$defs/text"},
+        "cadence": {"$ref": "#/$defs/text"},
+        "owner_role": {"$ref": "#/$defs/text"},
+        "decision_rule": {"$ref": "#/$defs/text"},
+        "horizon": {"$ref": "#/$defs/text"},
+        "recorded": {"type": "string"},
+        "review_flags": {"type": "array", "items": {"$ref": "#/$defs/review_flag"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "learning": {
+      "type": "object",
+      "required": ["id", "evidence_from", "observed_result", "interpretation", "enters_as", "affected_records", "date", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^LRN-[A-Za-z0-9._-]+$"},
+        "evidence_from": {"$ref": "#/$defs/id_list"},
+        "observed_result": {"$ref": "#/$defs/text"},
+        "interpretation": {"$ref": "#/$defs/text"},
+        "enters_as": {"type": "string", "enum": ["observed", "computed", "inference", "hypothesis", "assumption"]},
+        "affected_records": {"$ref": "#/$defs/id_list"},
+        "date": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["proposed", "recorded", "rejected"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "defect": {
+      "type": "object",
+      "required": ["id", "claim_or_section", "gate", "verdict", "defect", "evidence_or_missing_evidence", "strategic_consequence", "required_fix", "retest_condition", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^DEF-[A-Za-z0-9._-]+$"},
+        "claim_or_section": {"$ref": "#/$defs/text"},
+        "gate": {"$ref": "#/$defs/gate"},
+        "verdict": {"type": "string", "enum": ["CONCERN", "FAIL"]},
+        "defect": {"$ref": "#/$defs/text"},
+        "evidence_or_missing_evidence": {"$ref": "#/$defs/text"},
+        "strategic_consequence": {"$ref": "#/$defs/text"},
+        "required_fix": {"$ref": "#/$defs/text"},
+        "retest_condition": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["open", "repaired", "bounded_provisional", "unresolved"]},
+        "affected_records": {"$ref": "#/$defs/id_list"},
+        "resolution": {"type": "string"}
+      }
+    },
+    "gate": {"type": "string", "enum": ["problem_framing", "evidence", "logic_causality", "insight", "meaningful_choice", "commercial_mechanism", "customer_relevance", "competitive_response", "brand_credibility", "local_validity", "feasibility", "measurement", "clarity"]},
+    "gate_result": {
+      "type": "object",
+      "required": ["gate", "verdict", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "gate": {"$ref": "#/$defs/gate"},
+        "verdict": {"type": "string", "enum": ["PASS", "CONCERN", "FAIL", "NOT_TESTED", "NOT_APPLICABLE"]},
+        "reason": {"type": "string", "minLength": 3},
+        "defects": {"$ref": "#/$defs/id_list"}
+      }
+    },
+    "change": {
+      "type": "object",
+      "required": ["id", "date", "record_id", "field", "previous", "new", "reason", "author", "flagged"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^CHG-[A-Za-z0-9._-]+$"},
+        "date": {"$ref": "#/$defs/text"},
+        "record_id": {"type": "string"},
+        "field": {"$ref": "#/$defs/text"},
+        "previous": {"type": ["string", "number", "boolean", "null"]},
+        "new": {"type": ["string", "number", "boolean", "null"]},
+        "reason": {"$ref": "#/$defs/text"},
+        "author": {"type": "string", "enum": ["user", "analyst", "script"]},
+        "flagged": {"$ref": "#/$defs/id_list"}
+      }
+    }
+  }
+}

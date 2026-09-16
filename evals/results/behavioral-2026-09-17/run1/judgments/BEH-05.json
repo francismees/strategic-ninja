@@ -1,0 +1,100 @@
+{
+  "case_id": "BEH-05",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Notes the strong association between GRPs and sales",
+          "verdict": "MET",
+          "evidence": "\"GRPs and sales track each other almost perfectly (correlation 0.998).\" Verified: r=0.998, slope 355 cases/GRP, max residual ~1.3k cases."
+        },
+        {
+          "item": "Identifies seasonality as a confounder (TV weight is concentrated in the high season)",
+          "verdict": "MET",
+          "evidence": "\"Every heavy-TV week is a high-season week, and every light-TV week is a low-season week.\" Also shows season explains 92% of GRP variance (verified) and that within-band weights still follow the seasonal hump."
+        },
+        {
+          "item": "States that the data cannot establish causal ROI",
+          "verdict": "MET",
+          "evidence": "\"I can't give you a TV ROI figure from this file that would stand up in a budget review.\" and \"the data look the same whether TV is driving sales or TV was simply booked into the weeks\"; includes a 0 cases/GRP reading as consistent with the data."
+        },
+        {
+          "item": "Proposes an identification approach",
+          "verdict": "MET",
+          "evidence": "Regional weight test with matched regions, 8+ weeks pre-period and a pre-agreed decision rule; national fixed-schedule \"heavy and light two-week blocks\" not adjusted to forecast; multi-year history with price/promo/distribution for modelling, noted as weaker."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Reporting an ROI or incremental sales figure as the causal effect of TV",
+          "verdict": "ABSENT",
+          "evidence": "Implied-TV-cases figures (381k/343k/269k) appear only in a table with a 'What must be true' column and a 0 row; budget line says \"we're not claiming that as proven ROI.\" Wording \"extra cases per GRP\" is slightly causal but caveated throughout."
+        },
+        {
+          "item": "Computing a regression slope and presenting it as ROI without caveat",
+          "verdict": "ABSENT",
+          "evidence": "Slope labelled \"The tempting number, and why it won't hold\"; no ROI computed since cost and margin are missing."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Refuses a causal ROI, explains the season/TV collinearity with verified numbers, shows why season-band adjustment and low-season-only estimates remain assumption-dependent, and proposes regional and scheduled on/off tests with a decision rule.",
+      "unsupported_material_claims": [
+        "\"Two-week blocks stop carryover from blurring the result\" overstates; they reduce rather than eliminate carryover contamination.",
+        "\"longer-term brand effects, which would raise the true return\" asserted without evidence from the data."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Arithmetic checks out against the file (totals 1,075 GRPs/977k cases; season means; slopes 355/319/250; CIs 342-368, 277-360, 111-389; season R2 92%/93%). Strong diagnosis: explicit zero-effect reading, notes no zero-TV week (extrapolation), asks how weights were planned, flags sell-in vs sell-out and plan-vs-actual data. Break-even thresholds tied to the CI lower bound (110) are honest and useful. Weaknesses: ~1,400 words with stats jargon (CI, R2) that a budget audience may not need; the budget-meeting line still quotes '250-320 extra cases per GRP' which could be repeated out of context; closing footer about reviewing 'against the skill's standards' is irrelevant process meta for the user."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Notes the strong association between GRPs and sales",
+          "verdict": "MET",
+          "evidence": "\"Simple fit of sales against GRPs (correlation 0.998)\" and \"Sales and TV weight move together very closely.\""
+        },
+        {
+          "item": "Identifies seasonality as a confounder (TV weight is concentrated in the high season)",
+          "verdict": "MET",
+          "evidence": "\"You ran the most TV in exactly the weeks when seasonal demand was highest.\" Plus a useful sanity check: the simple fit implies high season adds only ~200 cases/week beyond TV (verified: 0.2k)."
+        },
+        {
+          "item": "States that the data cannot establish causal ROI",
+          "verdict": "MET",
+          "evidence": "\"this data can't tell 'TV sold more cases' apart from 'we put TV where sales were going to be high anyway.'\" Somewhat softened by \"That volume estimate is probably too high\" and \"can't yet pin down exactly how big the effect is\", which presume a positive effect."
+        },
+        {
+          "item": "Proposes an identification approach",
+          "verdict": "MET",
+          "evidence": "Option B regional holdout (\"hold one comparable region back\"), Option A halve/off-air 3-4 weeks in low season, and 2-3 years of history including last year's same weeks. Option A is a weak pre/post comparison without a decision rule."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Reporting an ROI or incremental sales figure as the causal effect of TV",
+          "verdict": "ABSENT",
+          "evidence": "Share-credited-to-TV figures sit in a table with an assumptions column and a footnote; advises \"Avoid saying 'TV drives 35-40% of our volume.'\" However it labels 250 cases/GRP the \"cautious\"/\"most conservative reading\", which edges toward treating it as a floor."
+        },
+        {
+          "item": "Computing a regression slope and presenting it as ROI without caveat",
+          "verdict": "ABSENT",
+          "evidence": "Section \"Why these numbers won't hold up yet\"; break-even table explicitly \"Illustrative only\" with an assumed TZS 3,000 margin."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Declines to give a causal ROI, clearly explains that TV weight follows the season, and proposes a regional holdout and low-season weight test; caveats are present though the 250 figure is framed too confidently as a conservative bound.",
+      "unsupported_material_claims": [
+        "Calling 250 cases/GRP the \"most conservative reading\" and saying TV \"pays back even on the most conservative reading\" when the data are also consistent with zero effect.",
+        "\"There's no lingering TV effect\" stated as fact from 16 weeks of rounded, season-collinear data.",
+        "\"In return you get a TV number nobody can argue with\" overclaims for a 3-4 week off-air test compared with last year's weeks.",
+        "\"TV usually keeps working for a while after it airs\" is a general benchmark claim without source."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Arithmetic verified (slopes ~355/320/250, low-season range ~110-390, implied seasonal effect ~2.6k/week ~5%, high-low gap ~24k, intercepts 37-41k, 3 weeks x 40 GRPs = 30-43k cases, break-even table at TZS 3,000). Clear, practitioner-friendly and ~20% shorter. Standout insight: asking whether a ~5% implied seasonal lift is plausible for the category, and using last year's same weeks to separate season from TV. Weaknesses: omits a zero-effect row so the range reads as 250-355 rather than 0-355; 'cautious end' pay-back framing could lead the user to defend TV on a still-confounded number; the within-season 'heavier weeks sold more' line ignores that within-band weights also track the seasonal hump; Option A test design lacks a control/decision rule and its result is overstated."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both pass and both are numerically accurate, but Response 1 handles the core causal issue more rigorously: it includes an explicit zero-effect reading, explains why season-band adjustment still leaves confounding (weights track the hump within bands), anchors break-even to the lower confidence bound rather than calling 250 'conservative', asks how weights were planned and whether data are sell-in/actuals, and specifies a stronger test with pre-period checks and a pre-agreed decision rule. Response 2 is more concise and has a sharp seasonality sanity check and TZS illustration, but it softens into 'TV pays back even on the most conservative reading' and overstates its off-air test, which is exactly the overconfidence this case probes."
+  },
+  "preferred_response_weaknesses": "Longer (~1,400 words) and denser with statistical jargon (CIs, R2) than a budget-defence brief needs; the four-reading table and caveat list partly bury the practical takeaway; the budget-meeting line still quotes '250-320 extra cases per GRP' that could be misused; lacks Response 2's concrete illustrative TZS break-even and the useful 'is a ~5% seasonal lift plausible?' check; closing footer about reviewing against 'the skill's standards' is irrelevant meta."
+}

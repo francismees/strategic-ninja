@@ -1,0 +1,34 @@
+{
+  "id": "pvm-05-missing-value-fails",
+  "recipe": "pvm",
+  "purpose": "Missing quantity must stop the analysis rather than be dropped or treated as zero.",
+  "input_csv": "period,sku,units,price\n2025,A,100,10\n2025,B,,5\n2026,A,110,10\n2026,B,20,5\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price"
+  ],
+  "convention": "Missing values are errors by default.",
+  "derivation": "Line 3 (B, 2025) has no quantity.",
+  "expected_status": "error",
+  "expected_error_code": "MISSING_VALUES",
+  "expected": {
+    "details.lines": [
+      3
+    ]
+  },
+  "edge_case_expectation": "Unknown is never zero.",
+  "expected_failure_behavior": "Exit code 2 with code MISSING_VALUES and the offending line number.",
+  "kind": "analytics"
+}

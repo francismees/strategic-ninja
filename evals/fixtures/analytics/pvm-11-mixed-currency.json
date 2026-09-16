@@ -1,0 +1,31 @@
+{
+  "id": "pvm-11-mixed-currency",
+  "recipe": "pvm",
+  "purpose": "Revenue in two currencies.",
+  "input_csv": "period,sku,units,price,currency\n2025,A,100,10,TZS\n2026,A,100,11,USD\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--currency-col",
+    "currency"
+  ],
+  "convention": "One currency per comparison; convert with a documented rate first.",
+  "derivation": "TZS and USD present.",
+  "expected_status": "error",
+  "expected_error_code": "MIXED_CURRENCY",
+  "edge_case_expectation": "No price effect is computed across currencies.",
+  "expected_failure_behavior": "Exit code 2 with MIXED_CURRENCY.",
+  "kind": "analytics"
+}

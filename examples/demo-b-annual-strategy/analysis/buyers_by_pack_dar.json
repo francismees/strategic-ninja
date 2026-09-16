@@ -1,0 +1,164 @@
+{
+  "recipe": "buyers",
+  "status": "ok",
+  "convention": {
+    "identity": "volume = eligible population x penetration x occasions per buyer x units per occasion",
+    "attribution": "Shapley (average of all factor orderings): order-independent and exact",
+    "window": "both periods must share the same window",
+    "form": "counts"
+  },
+  "results": {
+    "1.25L": {
+      "window": "52 weeks",
+      "base": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.125,
+        "occasions_per_buyer": 7.0,
+        "units_per_occasion": 1.0
+      },
+      "current": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.1333333333,
+        "occasions_per_buyer": 8.0,
+        "units_per_occasion": 1.0
+      },
+      "base_buyers": 150000.0,
+      "current_buyers": 160000.0,
+      "base_volume": 1050000.0,
+      "current_volume": 1280000.0,
+      "volume_change": 230000.0,
+      "volume_growth_pct": 21.904762,
+      "penetration_pct": {
+        "base": 12.5,
+        "current": 13.333333
+      },
+      "penetration_note": null,
+      "effects": {
+        "eligible_population": 0.0,
+        "penetration": 75000.0,
+        "occasions_per_buyer": 155000.0,
+        "units_per_occasion": 0.0
+      },
+      "reconciliation": {
+        "observed_change": 230000.0,
+        "sum_of_components": 230000.0,
+        "residual": 0.0,
+        "tolerance": 1e-06,
+        "reconciles": true
+      }
+    },
+    "350ml": {
+      "window": "52 weeks",
+      "base": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.2166666667,
+        "occasions_per_buyer": 6.0,
+        "units_per_occasion": 1.1
+      },
+      "current": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.1841666667,
+        "occasions_per_buyer": 6.2,
+        "units_per_occasion": 1.1
+      },
+      "base_buyers": 260000.0,
+      "current_buyers": 221000.0,
+      "base_volume": 1716000.0,
+      "current_volume": 1507220.0,
+      "volume_change": -208780.0,
+      "volume_growth_pct": -12.166667,
+      "penetration_pct": {
+        "base": 21.666667,
+        "current": 18.416667
+      },
+      "penetration_note": null,
+      "effects": {
+        "eligible_population": 0.0,
+        "penetration": -261690.0,
+        "occasions_per_buyer": 52910.0,
+        "units_per_occasion": 0.0
+      },
+      "reconciliation": {
+        "observed_change": -208780.0,
+        "sum_of_components": -208780.0,
+        "residual": 0.0,
+        "tolerance": 1e-06,
+        "reconciles": true
+      }
+    },
+    "500ml": {
+      "window": "52 weeks",
+      "base": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.175,
+        "occasions_per_buyer": 7.0,
+        "units_per_occasion": 1.1
+      },
+      "current": {
+        "eligible_population": 1200000.0,
+        "penetration": 0.17,
+        "occasions_per_buyer": 7.0,
+        "units_per_occasion": 1.1
+      },
+      "base_buyers": 210000.0,
+      "current_buyers": 204000.0,
+      "base_volume": 1617000.0,
+      "current_volume": 1570800.0,
+      "volume_change": -46200.0,
+      "volume_growth_pct": -2.857143,
+      "penetration_pct": {
+        "base": 17.5,
+        "current": 17.0
+      },
+      "penetration_note": null,
+      "effects": {
+        "eligible_population": 0.0,
+        "penetration": -46200.0,
+        "occasions_per_buyer": 0.0,
+        "units_per_occasion": 0.0
+      },
+      "reconciliation": {
+        "observed_change": -46200.0,
+        "sum_of_components": -46200.0,
+        "residual": 0.0,
+        "tolerance": 1e-06,
+        "reconciles": true
+      }
+    }
+  },
+  "warnings": [
+    "Segments are decomposed separately. Buyers may overlap across segments, so segment buyer counts are not summed."
+  ],
+  "interpretation_limits": [
+    "Attribution shows which multiplicative component moved volume. It does not explain why buyers or frequency changed.",
+    "Penetration is only as valid as the eligible population definition; panel or survey estimates carry sampling error not shown here."
+  ],
+  "provenance": {
+    "file": "examples/demo-b-annual-strategy/data/panel_pack_dar.csv",
+    "sha256": "d933fe93bdc90a7a171d2843955a374e817cf3a675198595f415755b00e6e108",
+    "rows_read": 6,
+    "rows_used": 6,
+    "arguments": {
+      "recipe": "buyers",
+      "input": "examples/demo-b-annual-strategy/data/panel_pack_dar.csv",
+      "period_col": "period",
+      "base": "52w_to_Jun2025",
+      "current": "52w_to_Jun2026",
+      "buyers_col": "buyers",
+      "occasions_col": "occasions",
+      "units_col": "bottles",
+      "frequency_col": null,
+      "units_per_occasion_col": null,
+      "volume_col": null,
+      "population_col": "households",
+      "window_col": "window",
+      "segment_col": "pack",
+      "tolerance": 1e-06,
+      "format": "json",
+      "output": "examples/demo-b-annual-strategy/analysis/buyers_by_pack_dar.json"
+    },
+    "script": "scripts/commercial_analysis.py",
+    "script_version": "1.0.0",
+    "generated_at": "2026-09-16T22:32:34+00:00"
+  }
+}

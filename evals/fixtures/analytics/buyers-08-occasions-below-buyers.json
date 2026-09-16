@@ -1,0 +1,31 @@
+{
+  "id": "buyers-08-occasions-below-buyers",
+  "recipe": "buyers",
+  "purpose": "Fewer purchase occasions than buyers indicates mismatched definitions.",
+  "input_csv": "period,buyers,occasions,units,window_days\n2025,1000,800,1200,364\n2026,1000,4000,6000,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days"
+  ],
+  "convention": "Each buyer has at least one purchase occasion in the window.",
+  "derivation": "800 occasions < 1000 buyers.",
+  "expected_status": "error",
+  "expected_error_code": "OCCASIONS_BELOW_BUYERS",
+  "edge_case_expectation": "Inconsistent sources are not combined.",
+  "expected_failure_behavior": "Exit code 2 with OCCASIONS_BELOW_BUYERS.",
+  "kind": "analytics"
+}

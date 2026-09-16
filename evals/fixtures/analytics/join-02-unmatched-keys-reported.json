@@ -1,0 +1,38 @@
+{
+  "id": "join-02-unmatched-keys-reported",
+  "recipe": "join-check",
+  "purpose": "Unmatched keys are reported, not silently dropped.",
+  "input_csv": "sku,units\nA,100\nB,50\nC,5\n",
+  "right_csv": "sku,list_price\nA,10\nB,20\nD,7\n",
+  "args": [
+    "--left",
+    "{input}",
+    "--right",
+    "{right}",
+    "--on",
+    "sku"
+  ],
+  "convention": "Coverage report.",
+  "derivation": "Left-only C; right-only D; matched A, B.",
+  "tolerance": 0,
+  "expected_status": "ok",
+  "expected": {
+    "results.matched_keys": 2,
+    "results.left_only_keys": [
+      [
+        "C"
+      ]
+    ],
+    "results.right_only_keys": [
+      [
+        "D"
+      ]
+    ]
+  },
+  "expected_warnings_contain": [
+    "Unmatched keys"
+  ],
+  "edge_case_expectation": "Coverage gaps visible before joining.",
+  "expected_failure_behavior": "With --require-complete the same input fails with JOIN_INCOMPLETE.",
+  "kind": "analytics"
+}

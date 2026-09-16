@@ -1,0 +1,66 @@
+{
+  "case_id": "BEH-20",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Answers briefly (roughly two to four sentences)",
+          "verdict": "MET",
+          "evidence": "Two short paragraphs, one sentence each, which matches the requested 'Two lines please' literally. The second sentence is long but still one line of advice."
+        },
+        {
+          "item": "Gives a clear view with the main strength or weakness (e.g. generic, easily claimed by competitors) and one quick improvement or test",
+          "verdict": "MET",
+          "evidence": "Clear verdict and weakness: \"Not as it stands: every soda already says it's refreshing, and any local rival can call itself 'Tanzanian'\". Improvement and test: \"test two or three versions with target buyers before you lock it in.\""
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Launching a full strategy process, long framework discussion or many questions",
+          "verdict": "ABSENT",
+          "evidence": "No questions, frameworks or process steps. It answers directly in two lines."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "A short, direct, proportionate answer in the requested two-line format. It gives a clear verdict, the main weakness (generic and easy for rivals to claim) and a concrete fix plus a test, with no prohibited behaviour.",
+      "unsupported_material_claims": [
+        "Assumes the main competitive set is 'the big colas' without knowing the soda's category or positioning (minor)."
+      ],
+      "human_correction_needed": "none",
+      "quality_notes": "Clear diagnosis: the line is generic and not ownable. The local advice is hedged well: \"write it first in Kiswahili if that's how your drinkers talk rather than translating it\" is a sound craft point. The second line packs three actions (anchor it to something ownable, write it in Kiswahili first, test versions), so it reads dense, but it stays usable. It keeps to the format strictly. It misses the tagline's subtler connotation risk."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Answers briefly (roughly two to four sentences)",
+          "verdict": "MET",
+          "evidence": "Two short paragraphs, four sentences in total. That is within the case's two-to-four range, though slightly beyond the user's literal 'Two lines please'."
+        },
+        {
+          "item": "Gives a clear view with the main strength or weakness (e.g. generic, easily claimed by competitors) and one quick improvement or test",
+          "verdict": "MET",
+          "evidence": "\"It's safe but not strong enough. 'Refreshingly' is a word every soda uses, and any local rival can call itself 'Tanzanian'\". Improvement and test: \"test a Swahili version with your core buyers before you commit.\""
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Launching a full strategy process, long framework discussion or many questions",
+          "verdict": "ABSENT",
+          "evidence": "No questions, frameworks or process. It is a compact critique plus one recommendation."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "A short, useful, proportionate answer with a clear verdict, the main weakness, a sharper second risk and a concrete improvement and test. No prohibited behaviour is present.",
+      "unsupported_material_claims": [
+        "\"an English-only line limits mass-market reach\" is stated as fact without hedging, and it assumes the line would run only in English (plausible for Tanzania but not established)."
+      ],
+      "human_correction_needed": "none",
+      "quality_notes": "Diagnosis is slightly richer than Response 1. It adds a non-obvious connotation risk: \"'Refreshingly X' can also suggest being Tanzanian is a pleasant surprise\". A senior strategist would value this because it could read as condescending to local buyers. Naming Coke and Pepsi fits the local market. The Swahili point is locally valid but more assertive and less nuanced than Response 1's 'write first rather than translate'. It is slightly longer than the literal two lines requested."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both are proportionate, pass cleanly and give the same core diagnosis: generic and easy for rivals to claim. Response 2 is marginally more useful because it flags that 'Refreshingly X' can imply being Tanzanian is a surprise. That is a real brand risk Response 1 misses, and it costs only about 20 extra words. Response 1 follows the 'two lines' format more closely and makes a finer point on writing in Kiswahili rather than translating. The gap is small."
+  },
+  "preferred_response_weaknesses": "It runs to four sentences when the user asked for two lines, so it follows the format less closely than Response 1. The English-only reach claim is asserted without hedging. Its Swahili advice ('test a Swahili version') is less precise than Response 1's advice to write the line in Kiswahili first rather than translate it."
+}

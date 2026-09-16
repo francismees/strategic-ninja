@@ -1,0 +1,1351 @@
+{
+  "run_at": "2026-09-16T23:05:57+00:00",
+  "python": "3.9.6",
+  "passed": 39,
+  "total": 39,
+  "scope_note": "Deterministic checks establish arithmetic and structural correctness only; not causality, source truth or strategic validity.",
+  "results": [
+    {
+      "id": "buyers-01-penetration-frequency",
+      "file": "evals/fixtures/analytics/buyers-01-penetration-frequency.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.eligible_population == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.penetration == 585",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.occasions_per_buyer == -315",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.units_per_occasion == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.penetration_pct.base == 5.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.penetration_pct.current == 5.5",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.volume_change == 270",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "all segment bridges reconcile within tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-02-three-factor-shapley",
+      "file": "evals/fixtures/analytics/buyers-02-three-factor-shapley.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.eligible_population == 297.1666667",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.penetration == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.occasions_per_buyer == 297.1666667",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.effects.units_per_occasion == -420.3333333",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.all.volume_change == 174",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "all segment bridges reconcile within tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-03-rates-identity-mismatch",
+      "file": "evals/fixtures/analytics/buyers-03-rates-identity-mismatch.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code IDENTITY_MISMATCH",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-04-window-mismatch",
+      "file": "evals/fixtures/analytics/buyers-04-window-mismatch.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code WINDOW_MISMATCH",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-05-window-undefined",
+      "file": "evals/fixtures/analytics/buyers-05-window-undefined.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code WINDOW_UNDEFINED",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-06-buyers-exceed-population",
+      "file": "evals/fixtures/analytics/buyers-06-buyers-exceed-population.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code BUYERS_EXCEED_POPULATION",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-07-zero-base-buyers",
+      "file": "evals/fixtures/analytics/buyers-07-zero-base-buyers.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code ZERO_BASE_NOT_DECOMPOSABLE",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "buyers-08-occasions-below-buyers",
+      "file": "evals/fixtures/analytics/buyers-08-occasions-below-buyers.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code OCCASIONS_BELOW_BUYERS",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "contribution-01-channel",
+      "file": "evals/fixtures/analytics/contribution-01-channel.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.total_growth_pct == 10.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.0.group == Dukas and kiosks",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.0.contribution_to_total_growth_pp == 7.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.0.share_of_total_change_pct == 70.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.0.share_current_pct == 33.636364",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.0.share_change_pp == 3.636364",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.1.contribution_to_total_growth_pp == 6.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.1.share_base_pct == 20.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.group == Wholesale",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.contribution_to_total_growth_pp == -3.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.share_of_total_change_pct == -30.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.share_change_pp == -7.272727",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "contribution-02-share-loss-despite-growth",
+      "file": "evals/fixtures/analytics/contribution-02-share-loss-despite-growth.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.total_growth_pct == 20.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.group == Our brand",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.growth_pct == 10.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.share_base_pct == 30.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.share_current_pct == 27.5",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.groups.2.share_change_pp == -2.5",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.unallocated.base == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.unallocated.current == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'absolute growth with share loss'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "contribution-03-mixed-measures",
+      "file": "evals/fixtures/analytics/contribution-03-mixed-measures.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code MIXED_MEASURES",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "contribution-04-share-exceeds-total",
+      "file": "evals/fixtures/analytics/contribution-04-share-exceeds-total.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code SHARE_EXCEEDS_TOTAL",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "contribution-05-definition-changed",
+      "file": "evals/fixtures/analytics/contribution-05-definition-changed.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code DEFINITION_CHANGED",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "join-01-fanout",
+      "file": "evals/fixtures/analytics/join-01-fanout.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code JOIN_FANOUT",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "join-02-unmatched-keys-reported",
+      "file": "evals/fixtures/analytics/join-02-unmatched-keys-reported.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.matched_keys == 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.left_only_keys == [['C']]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.right_only_keys == [['D']]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning contains 'Unmatched keys'",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "profile-01-duplicates-and-missing",
+      "file": "evals/fixtures/analytics/profile-01-duplicates-and-missing.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.duplicate_key_count == 1",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.columns.units.missing == 1",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.keys_with_unit_changes == [{'key': 'A', 'units': ['case', 'unit']}]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.periods == ['2025', '2026']",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning contains 'Duplicate rows'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning contains 'more than one unit'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning contains 'missing value'",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-01-fixed-unit-price-led",
+      "file": "evals/fixtures/analytics/pvm-01-fixed-unit-price-led.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.base_revenue == 1000",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.current_revenue == 1080",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_change == 80",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_growth_pct == 8.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.volume_growth_pct == -10.0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.price == 180",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.volume == -100",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.mix == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.new_items == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.discontinued_items == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "reconciliation.residual == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'Revenue grew while total volume fell'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'Positive price effect with negative volume effect'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-02-fixed-unit-separate-interaction",
+      "file": "evals/fixtures/analytics/pvm-02-fixed-unit-separate-interaction.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.price == 200",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.price_volume_interaction == -20",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.volume == -100",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.mix == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_change == 80",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-03-multi-sku-mix-new-discontinued",
+      "file": "evals/fixtures/analytics/pvm-03-multi-sku-mix-new-discontinued.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.base_revenue == 2150",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.current_revenue == 2490",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_change == 340",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_growth_pct == 15.813953",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.price == 90",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.volume == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.mix == 100",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.new_items == 300",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.discontinued_items == -150",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.continuing.base_average_price == 13.3333333333",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.base_volume == 180",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.current_volume == 170",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.volume_growth_pct == -5.555556",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.new_items == [['D']]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.discontinued_items == [['C']]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.items.3.revenue_growth_pct == None",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.items.3.growth_note == not computed: no base revenue",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'Revenue grew while total volume fell'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'Mix effect exceeds volume effect'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'New or discontinued items present'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-04-zero-base-revenue",
+      "file": "evals/fixtures/analytics/pvm-04-zero-base-revenue.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_growth_pct == None",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_growth_note == not computed: base revenue is zero",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.new_items == 50",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.price == 0",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_change == 50",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-05-missing-value-fails",
+      "file": "evals/fixtures/analytics/pvm-05-missing-value-fails.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code MISSING_VALUES",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "details.lines == [3]",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-06-missing-value-explicit-exclusion",
+      "file": "evals/fixtures/analytics/pvm-06-missing-value-explicit-exclusion.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "coverage == partial",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "provenance.excluded_lines == [3]",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.volume == 100",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.components.new_items == 100",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "results.revenue_change == 200",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flag contains 'partial dataset'",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "bridge reconciles within declared tolerance",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-07-zero-quantity-with-revenue",
+      "file": "evals/fixtures/analytics/pvm-07-zero-quantity-with-revenue.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code ZERO_QUANTITY_WITH_REVENUE",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-08-duplicate-grain",
+      "file": "evals/fixtures/analytics/pvm-08-duplicate-grain.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code DUPLICATE_GRAIN",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-09-unit-change",
+      "file": "evals/fixtures/analytics/pvm-09-unit-change.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code UNIT_CHANGE",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-10-mixed-units",
+      "file": "evals/fixtures/analytics/pvm-10-mixed-units.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code MIXED_UNITS",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-11-mixed-currency",
+      "file": "evals/fixtures/analytics/pvm-11-mixed-currency.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code MIXED_CURRENCY",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-12-unequal-period-length",
+      "file": "evals/fixtures/analytics/pvm-12-unequal-period-length.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code PERIOD_LENGTH_MISMATCH",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-13-price-revenue-mismatch",
+      "file": "evals/fixtures/analytics/pvm-13-price-revenue-mismatch.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code PRICE_REVENUE_MISMATCH",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-14-ambiguous-number-format",
+      "file": "evals/fixtures/analytics/pvm-14-ambiguous-number-format.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code AMBIGUOUS_NUMBER_FORMAT",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "pvm-15-period-not-found",
+      "file": "evals/fixtures/analytics/pvm-15-period-not-found.json",
+      "kind": "analytics",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == error",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "exit code 2",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error code PERIOD_NOT_FOUND",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "outline-01-valid-conditional-storyline",
+      "file": "evals/fixtures/records/outline-01-valid-conditional-storyline.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == valid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "no errors",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "outline-02-beautiful-deck-unsupported",
+      "file": "evals/fixtures/records/outline-02-beautiful-deck-unsupported.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == invalid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error RECOMMENDATION_STRENGTH_MISMATCH reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error UNCERTAINTY_NOT_SHOWN reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error ASSERTION_WITHOUT_EVIDENCE reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error UNRESOLVED_EVIDENCE reported",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-01-valid-synthetic-engagement",
+      "file": "evals/fixtures/records/records-01-valid-synthetic-engagement.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == valid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "no errors",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-02-broken-links-and-claim-types",
+      "file": "evals/fixtures/records/records-02-broken-links-and-claim-types.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == invalid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error OBSERVED_WITHOUT_SOURCE reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error UNRESOLVED_REFERENCE reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error RECOMMENDATION_AS_EVIDENCE reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning UNKNOWN_WITHOUT_REASON reported",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-03-untraceable-recommendations",
+      "file": "evals/fixtures/records/records-03-untraceable-recommendations.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == invalid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error UNTRACEABLE_RECOMMENDATION reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error CONDITIONAL_WITHOUT_CONDITIONS reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error INSIGHT_ON_HYPOTHESES_ONLY reported",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-04-memory-revision-impact",
+      "file": "evals/fixtures/records/records-04-memory-revision-impact.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == ok",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "applied == True",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "change_entry.record_id == ASM-001",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "change_entry.previous == accepted_for_planning",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "change_entry.new == refuted",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "change_entry.flagged == ['OPT-001', 'ACT-001', 'MET-001']",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "flagged == ['ACT-001', 'MET-001', 'OPT-001']",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-05-stale-decision-after-revision",
+      "file": "evals/fixtures/records/records-05-stale-decision-after-revision.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == invalid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error OPTION_RELIES_ON_REFUTED reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "warning OPEN_REVIEW_FLAG reported",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "id": "records-06-schema-duplicates-locators",
+      "file": "evals/fixtures/records/records-06-schema-duplicates-locators.json",
+      "kind": "records",
+      "result": "PASSED",
+      "checks": [
+        {
+          "check": "status == invalid",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error SCHEMA reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error DUPLICATE_ID reported",
+          "ok": true,
+          "actual": null
+        },
+        {
+          "check": "error VERIFIED_WITHOUT_LOCATOR reported",
+          "ok": true,
+          "actual": null
+        }
+      ]
+    }
+  ]
+}

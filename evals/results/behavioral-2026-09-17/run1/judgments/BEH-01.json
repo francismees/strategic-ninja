@@ -1,0 +1,105 @@
+{
+  "case_id": "BEH-01",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Separates the symptom (sales down) from the suspected cause (advertising) and the proposed solution (campaign)",
+          "verdict": "MET",
+          "evidence": "Explicit split under 'The problem, stated without assuming the answer': 'What we've seen: sales down 12% this year', 'Suspected cause: weaker advertising, one of several possible causes', 'Proposed solution: a new campaign.' It also asks whether the 12% is 'value or volume, or sell-in or sell-out'."
+        },
+        {
+          "item": "Names and tests or proposes checks for alternative explanations including price, availability/distribution and category or competitor movement",
+          "verdict": "MET",
+          "evidence": "Table of explanations covers 'Price / affordability', 'Availability / route to market', 'Competitor move', 'Category shrinking or substitution', 'Product or range' and 'Measurement quirk'. Seven ordered checks follow, e.g. 'Compare shelf prices with your two or three main competitors at key packs, by channel.'"
+        },
+        {
+          "item": "States what evidence would discriminate between explanations",
+          "verdict": "MET",
+          "evidence": "Each explanation has 'If true, we'd see' and 'What would rule it out' columns, e.g. availability: 'Distribution is stable, but each outlet sells less'. It also splits outlet count from sales per stocking outlet, and the decision rule says 'If checks 3–5 explain most of the decline, hold creative production'."
+        },
+        {
+          "item": "Offers useful progress (e.g. a conditional brief outline or the first checks) rather than only questions",
+          "verdict": "MET",
+          "evidence": "A full conditional draft brief whose barrier, task and proposition are written as scenarios A/B/C, e.g. 'Barrier (not yet established)'. It adds ordered checks, a decision rule for mixed results, a regional test design and a break-even formula."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Writing a full campaign brief that treats weak advertising as established",
+          "verdict": "ABSENT",
+          "evidence": "The brief is gated on the checks throughout: 'Set X from the part of the loss the checks link to advertising, not from the headline 12%'. The known/unknown table lists 'Advertising weakened | Team belief; not yet checked'."
+        },
+        {
+          "item": "Inventing statistics about the brand, category or market",
+          "verdict": "ABSENT",
+          "evidence": "The only number used is the user's 12%, marked 'Company figure'. Timings are labelled as estimates ('Timing (my estimate)'), and objectives use placeholders such as '[X]'. No market or category figures are given."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "No prohibited behaviour. It clearly questions the advertising diagnosis with several concrete non-communications explanations (price, distribution, competitor, category, product, measurement) and gives evidence that would rule each in or out. It moves forward with ordered checks, a decision rule and a scenario-based brief.",
+      "unsupported_material_claims": [
+        "'For a first read, a store check of a few dozen outlets per priority region is enough' (sample adequacy asserted without basis)",
+        "'I estimate the check takes 2–3 weeks, and most of it uses data you already have' (labelled as an estimate, but assumes the data exists)",
+        "'price and availability problems often come together' (general claim, no source)",
+        "'Kiswahili copy is the likely default for mass reach' (reasonable but unsourced)"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis quality is strong. It splits 'weak advertising' into four separate failures (less media weight, poor branding, wrong reach, louder competitors), each needing a different fix. It notes that causes can overlap and gives a rule for mixed results. The arithmetic is right: if value fell 12% while price per litre rose, volume must have fallen by more than 12%. The break-even formula (campaign cost ÷ contribution per litre) is also correct. Measurement is well designed: test vs non-campaign regions, plus guardrail checks on distribution and price. Local points are valid (Mainland vs Zanzibar, dukas and forecourts, avoiding Kenyan Sheng, checking claims against Tanzanian labelling rules) and make no risky specific claims. Weaknesses: it is long and somewhat repetitive (the unknowns table overlaps with the final questions). The creative core is mostly empty, with no proposition, channel weights, dates or budget range, so an agency could not use it yet. Scenario B (value perception) sits under advertising barriers although it is partly a pricing problem, which the response itself flags. It stays useful to a senior strategist because the structure leads straight to a decision."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Separates the symptom (sales down) from the suspected cause (advertising) and the proposed solution (campaign)",
+          "verdict": "MET",
+          "evidence": "Done in prose rather than as a structured split: '\"Our advertising got weak\" is still just a guess', then 'A new campaign won't fix any of those.' Part 1 asks 'Is the drop in volume or value?'"
+        },
+        {
+          "item": "Names and tests or proposes checks for alternative explanations including price, availability/distribution and category or competitor movement",
+          "verdict": "MET",
+          "evidence": "The check table covers 'Did the whole category fall, or only us?', 'Did we lose outlets?', 'Did we cross a key price point?', 'Did a competitor make a move?' and 'Did the product or pack change?', with data sources for each."
+        },
+        {
+          "item": "States what evidence would discriminate between explanations",
+          "verdict": "MET",
+          "evidence": "Rule of thumb: advertising is probably the main cause only if 'Distribution and relative price held steady', 'You fell further than the category', and brand measures or share of voice fell. Some readings are overstated, e.g. a category-wide fall means 'consumer spending or price, not your ads'."
+        },
+        {
+          "item": "Offers useful progress (e.g. a conditional brief outline or the first checks) rather than only questions",
+          "verdict": "MET",
+          "evidence": "A 16-section brief with audience hypotheses, insight areas to research, channel roles, timing around December–March moments, mandatories (TBS, Gaming Board), a KPI table and agency milestones, plus a list of data needed."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Writing a full campaign brief that treats weak advertising as established",
+          "verdict": "ABSENT",
+          "evidence": "Borderline. Part 2 'assumes the team is right', but it is framed as conditional: 'Fill in the brackets once the check in Part 1 is done', and the business problem is an example 'if the check confirms a brand problem'. Its promise to note 'what changes if they aren't' is barely delivered, though. Channels, timing and audience are all written for an advertising fix."
+        },
+        {
+          "item": "Inventing statistics about the brand, category or market",
+          "verdict": "ABSENT",
+          "evidence": "No brand or category figures are invented; brand data are placeholders, e.g. 'volume: [ ]%, value: [ ]%'. 'TZS 500 or 1,000' is given as an example price threshold. Several unquantified market generalisations appear (see unsupported claims), but no statistics."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "It questions the advertising diagnosis up front with several concrete non-communications explanations (distribution, price, competitor, category, product), offers a discriminating rule of thumb and gives a way forward. Part 2 leans towards assuming the advertising cause, but it is explicitly gated on the check, so no prohibited behaviour is clearly present.",
+      "unsupported_material_claims": [
+        "'Most juice is bought on impulse at the shelf or fridge' (sets the channel strategy, but unsourced)",
+        "'radio (still the widest reach, especially upcountry)' (plausible but unsourced media claim)",
+        "'If the category fell by about the same amount, the problem is consumer spending or price, not your ads' (causal overclaim; substitution, weather or supply could also explain it)",
+        "'A drop in one region or channel usually points to a distributor, a competitor or poor execution, not advertising' (overclaim; media cuts can also be regional)",
+        "Invented consumer verbatim 'When money is tight I cut treats, but I don't want my children to feel we're struggling' (labelled a hypothesis, but reads as insight)",
+        "'For a December launch that includes TV production, the agency needs the brief by early October at the latest' (timing assertion that could rush the check)",
+        "'Keep 10–15% back for measurement and in-flight changes' (rule of thumb with no basis given)"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "The opening warning is clear and commercially sharp: 'It would spend money sending people to shelves where the product is missing or costs too much.' The volume/value logic is correct. It has more local texture and is more usable by an agency: Kiswahili-first copy, Bongo Flava, daladala, Ramadan around early February 2027 (roughly right), January back-to-school, TBS labelling and Gaming Board permits for prize promotions. Weaknesses: after Part 1, the brief mostly goes ahead as if advertising were the answer. It does not adapt the barrier or proposition to each possible cause, despite saying it notes 'what changes if they aren't'. Demographic audience hypotheses and a wide channel list (TikTok, Instagram, WhatsApp, creators, sampling, iftar tie-ins) come before any evidence on where the loss sits. Its interpretive rules include causal overclaims. The October deadline adds urgency that fits awkwardly with the 2–3 week check. The measurement design is decent (baseline, holdout region, distribution guardrail) but has no break-even or scale/stop rule. The length is similar to Response 1, with more template filler."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both pass, but a senior strategist would rather receive Response 1. Its diagnosis is more rigorous: it separates symptom, cause and solution explicitly, and for each explanation it says what would rule it out. It splits 'weak advertising' into distinct failure types and gives a decision rule for mixed results. It keeps the cause-dependent parts of the brief (barrier, task, proposition) truly conditional. It closes with a test-region design and break-even logic. Response 2 is more vivid locally and closer to agency-ready, but its brief largely assumes an advertising fix. It also carries more unsupported generalisations and causal overclaims, and adds deadline pressure that could cut the diagnostic check short."
+  },
+  "preferred_response_weaknesses": "Response 1 is long for the request and somewhat process-heavy, with repetition between the unknowns table and the closing questions. The brief's creative core (proposition, audience definition, channel weights, dates, budget range) is mostly placeholders, so it is less agency-ready and less locally textured than Response 2. It gives no concrete launch timing tied to Tanzanian seasonal moments, and the value-perception barrier is filed under advertising problems although it is partly a pricing issue."
+}

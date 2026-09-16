@@ -1,0 +1,111 @@
+{
+  "case_id": "HELDOUT-02",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Clear recommendation to roll out to all 40 branches, at or near the start",
+          "verdict": "MET",
+          "evidence": "First section: 'Yes. Switch it on for all 40 branches.' followed by 'Do it as a fast rollout in waves over the next 4–5 weeks, not as another test.'"
+        },
+        {
+          "item": "Works out the payoff from the supplied figures",
+          "verdict": "MET",
+          "evidence": "'0.44 extra refills × TSh 8,640 gross margin per refill is about TSh 3,800' vs 'Three reminders cost TSh 90'; break-even 0.01 refills; annual table ~TSh 510M margin vs ~TSh 12M SMS. All checked and correct (3,802; 42:1; 59,100 refills; TSh 2.13bn revenue; 510.7M margin; 12.1M SMS). Net is not stated as one figure but is trivially derivable (~TSh 499M/yr, i.e. ~115M/quarter). Zero-refill CI of 6.6–9.4 points also checks out."
+        },
+        {
+          "item": "Explains briefly why the evidence is enough (randomisation, large samples, 3 cycles, consistent cities, low cost, easy reversal)",
+          "verdict": "MET",
+          "evidence": "'Patients were randomly assigned, there were 8,400 of them over three refill cycles, and the result held in all four cities'; break-even is 'about 2% of the effect we measured'. Gaps: does not mention easy reversal, and treats pull-forward as an open caveat instead of saying three cycles largely rule it out (though it notes the zero-refill drop 'says much of the gain is real')."
+        },
+        {
+          "item": "Suggests light safeguards that don't delay launch (holdout, tracking by branch)",
+          "verdict": "MET",
+          "evidence": "'Randomly set aside 5% of patients across all branches (~1,550) for 6 months'; guardrail table on delivery rate by branch, opt-out above 2%, stock-outs, lift vs holdout. Branch go-live checks are operational (phone data, test SMS, stock), not research gates. The 6-month holdout is somewhat longer than needed but costed (~TSh 13M, correct)."
+        },
+        {
+          "item": "Keeps caveats brief and clear that they don't change the decision",
+          "verdict": "MET",
+          "evidence": "Caveat section is headed 'What could make the gain smaller (none of it changes the call)' and has five short bullets; analyst questions end with 'They shouldn't hold up the decision.'"
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Recommends holding off until more research is done",
+          "verdict": "ABSENT",
+          "evidence": "Explicitly 'not as another test'; analyst checks 'shouldn't hold up the decision'. The 4–5 week wave rollout is operational sequencing, not a staged trial."
+        },
+        {
+          "item": "Fails to give a clear yes/no, burying the answer",
+          "verdict": "ABSENT",
+          "evidence": "Opens with 'Yes. Switch it on for all 40 branches.' and closes with a one-line meeting recommendation."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Leads with an unambiguous yes for all 40 branches, backs it with correct unit and network economics, and frames every remaining uncertainty as something to monitor (holdout, guardrails, analyst checks) that explicitly does not block the launch.",
+      "unsupported_material_claims": [
+        "'If the 31,000 includes other chronic conditions, switch them on too, because the economics still work' — the effect was only tested on hypertension and diabetes patients; tiny break-even makes it plausible, but the effect for other conditions is unknown.",
+        "'That group is big enough to show if the effect halves' — asserted without a power calculation (plausible for ~1,550 vs ~29,000)."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis and commercially coherent. Arithmetic is correct throughout, including an independent CI check on the zero-refill gap and sensitivity scenarios (half and quarter effect, half-size baskets). Practical rollout gating on data and stock, clean guardrail triggers tied to break-even, and a ready one-line statement for the meeting. Weaknesses: moderately long for a go/no-go memo; the caveats and the analyst asks partly repeat each other; treats pull-forward as an open issue even though three cycles and the zero-refill drop largely answer it; does not mention that the tactic is easy to reverse; a 6-month holdout across all branches withholds an adherence aid longer than necessary; no single net figure; extends to untested conditions a bit loosely."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Clear recommendation to roll out to all 40 branches, at or near the start",
+          "verdict": "MET",
+          "evidence": "Title: 'I'd switch the refill-reminder SMS on at all 40 branches'; then 'switch it on across all 40 branches now... We don't need another pilot.'"
+        },
+        {
+          "item": "Works out the payoff from the supplied figures",
+          "verdict": "MET",
+          "evidence": "Per-patient table: '0.44 × TSh 36,000 × 24%' = TSh 3,800 vs TSh 90, '~42 : 1'; network net 'TSh 499M' per year, with half (243M) and quarter (116M) scenarios; break-even ~2% of lift; two-part SMS still ~21:1. All verified correct."
+        },
+        {
+          "item": "Explains briefly why the evidence is enough (randomisation, large samples, 3 cycles, consistent cities, low cost, easy reversal)",
+          "verdict": "MET",
+          "evidence": "'Patients were randomised, with 4,200 in each group, over 3 refill cycles. The result held in all four cities'; zero-refill gap margin '±1.4 points' (correct); 'still be worth doing if the real effect were a small fraction'. Gaps: no mention of easy reversal; pull-forward treated as an open risk instead of largely ruled out by three cycles."
+        },
+        {
+          "item": "Suggests light safeguards that don't delay launch (holdout, tracking by branch)",
+          "verdict": "MET",
+          "evidence": "'In the 28 new branches, hold back reminders from 5% of patients (about 1,100) for 12 weeks' costing ~TSh 4M (correct); 'Monthly tracking, by branch' of refills, zero-refill share, opt-outs, delivery, stock-outs."
+        },
+        {
+          "item": "Keeps caveats brief and clear that they don't change the decision",
+          "verdict": "PARTLY MET",
+          "evidence": "Caveats are framed as non-blocking ('This is unlikely to reverse the decision'; 'None of these is likely to change the decision'), but the section is a nine-row risk table (city mix, timing, split, due dates, stock, margin, privacy, promotion rules, expired prescriptions) plus a separate four-item pre-Monday check list. That is not brief and leans toward caveat stacking."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Recommends holding off until more research is done",
+          "verdict": "ABSENT",
+          "evidence": "'We don't need another pilot.' Pre-Monday analyst checks are described as firming up the forecast, not as conditions for launch."
+        },
+        {
+          "item": "Fails to give a clear yes/no, burying the answer",
+          "verdict": "ABSENT",
+          "evidence": "The answer is in the title and first sentence; closes with specific approval, budget and owner asks for the meeting."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Gives a clear, early yes for all 40 branches, supports it with correct unit economics and net network figures, and treats uncertainties as safeguards and monitoring rather than launch conditions. The risk section is heavier than needed but does not gate the decision.",
+      "unsupported_material_claims": [
+        "'Integration and training would pay for themselves within weeks' — no setup cost was given.",
+        "'each opted-in patient is worth about TSh 16,000 a year in net margin' — TSh 16,000 is actually the incremental reminder value per patient per year (3,710 × 4.33), not the patient's worth (roughly TSh 86,000 gross margin/yr at 2.31 refills); mislabelled.",
+        "'That's probably worth more than the switch-on itself' — there is no data on how many chronic-care patients are not opted in or how they would respond.",
+        "'Health data is sensitive personal data under the Personal Data Protection Act 2022' — outside legal claim, plausible but not sourced; similarly the promotion-rules and expired-prescription points are unsourced regulatory assertions.",
+        "'Splitting by patient ID ranges (not odd/even or random)' — guesses at a randomisation method the prompt does not describe."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Commercially coherent and very usable for an ops meeting. It states net annual figures, a two-part-SMS sensitivity, a stock-demand estimate (~1,000–1,100 extra refills a week, ~28 per branch; correct), and a well-targeted, time-limited 12-week holdout only in the untested branches. The 'What to ask the meeting to decide' section (approval, budget, owners) is especially practical. The Tanzania pharmacy-specific points on privacy, service-only wording and expired prescriptions add real value. Weaknesses: the nine-row risk table and extra pre-Monday checks make the response feel more cautious and longer than a strong-evidence go decision needs; the closing 'next opportunity' contains a mislabelled figure and an unsupported comparison; does not mention reversibility; treats pull-forward as open."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 1",
+    "reason": "Both give a clear, early yes with correct economics and non-blocking safeguards, so both pass. A senior strategist would slightly prefer Response 1 because its caveats are brief and explicitly labelled as not changing the call, and that restraint is what this case tests. It also offers a ready one-line statement for the meeting and has fewer unsupported claims. Response 2 has real strengths: net figures, a better-targeted 12-week holdout, a budget-and-owners decision list, and local compliance points. But its nine-row risk table and extra checks lean toward caveat stacking, and its closing claim mislabels the TSh 16,000 figure and adds an unsupported comparison. The margin between the two is small."
+  },
+  "preferred_response_weaknesses": "Still fairly long for a go/no-go recommendation, and the caveat bullets and analyst asks partly repeat each other. It treats pull-forward as an open question instead of noting that three cycles largely rule it out, and it never says the tactic is easy to reverse. The 6-month holdout across all 40 branches is longer and broader than needed (Response 2's 12-week holdout in new branches only is better targeted). It gives no single net figure and has no explicit budget or owner asks for the meeting. It also casually extends rollout to untested chronic conditions."
+}

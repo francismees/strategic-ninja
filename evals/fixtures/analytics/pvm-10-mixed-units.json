@@ -1,0 +1,31 @@
+{
+  "id": "pvm-10-mixed-units",
+  "recipe": "pvm",
+  "purpose": "Items in litres and kilograms cannot be added into one volume.",
+  "input_csv": "period,sku,units,price,unit\n2025,A,100,10,litre\n2025,B,50,20,kg\n2026,A,110,10,litre\n2026,B,55,20,kg\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price",
+    "--unit-col",
+    "unit"
+  ],
+  "convention": "Volume and mix need one common unit.",
+  "derivation": "Units litre and kg present.",
+  "expected_status": "error",
+  "expected_error_code": "MIXED_UNITS",
+  "edge_case_expectation": "No volume or mix effect is produced from incompatible units.",
+  "expected_failure_behavior": "Exit code 2 with MIXED_UNITS.",
+  "kind": "analytics"
+}

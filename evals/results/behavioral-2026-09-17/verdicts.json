@@ -1,0 +1,437 @@
+{
+  "run1": [
+    {
+      "case": "BEH-01",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 7,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass, but a senior strategist would rather receive Response 1. Its diagnosis is more rigorous: it separates symptom, cause and solution explicitly, and for each explanation it says what would rule it out. It splits 'weak advertising' into distinct failure types and gives a decision rule for mixed results. It keeps the cause-dependent parts of the brief (barrier, task, proposition) truly conditional. It closes with a test-region design and break-even logic. Response 2 is more vivid locally and closer to agency-ready, but its brief largely assumes an advertising fix. It also carries more unsupported generalisations and causal overclaims, and adds deadline pressure that could cut the diagnostic check short.",
+      "preferred_weaknesses": "Response 1 is long for the request and somewhat process-heavy, with repetition between the unknowns table and the closing questions. The brief's creative core (proposition, audience definition, channel weights, dates, budget range) is mostly placeholders, so it is less agency-ready and less locally textured than Response 2. It gives no concrete launch timing tied to Tanzanian seasonal moments, and the value-perception barrier is filed under advertising problems although it is partly a pricing issue."
+    },
+    {
+      "case": "BEH-02",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 3,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "The two are close: both pass, both have correct arithmetic, and both reframe the growth as low quality. Response 1 is preferred narrowly for tighter causal discipline in the parts a board would act on. It separates possible explanations for the 250g surge, including distributor stock-building, customer concentration and trade-spend deductions, and its slide storyline avoids claims the data can't support. Response 2 is more concise, catches the identical 50g COGS, and gives the clearer three-way bridge, but its ready-to-paste board narrative asserts input-cost pressure, 'strong demand' and price sensitivity without evidence.",
+      "preferred_weaknesses": "It is considerably longer than needed, with an inflation adjustment built on an outside, unchecked figure and a 'How I checked' section that mentions 'the skill's' script and data file, which a board answer doesn't need. The main revenue bridge merges volume and mix (+46), so the explicit three-way split sits in a footnote. It misses the suspicious identical 50g COGS (TZS 390m in both years) despite saying it checked the data. The margin fall is rounded down to 3.3 points (exact 3.36)."
+    },
+    {
+      "case": "BEH-05",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass and both are numerically accurate, but Response 1 handles the core causal issue more rigorously: it includes an explicit zero-effect reading, explains why season-band adjustment still leaves confounding (weights track the hump within bands), anchors break-even to the lower confidence bound rather than calling 250 'conservative', asks how weights were planned and whether data are sell-in/actuals, and specifies a stronger test with pre-period checks and a pre-agreed decision rule. Response 2 is more concise and has a sharp seasonality sanity check and TZS illustration, but it softens into 'TV pays back even on the most conservative reading' and overstates its off-air test, which is exactly the overconfidence this case probes.",
+      "preferred_weaknesses": "Longer (~1,400 words) and denser with statistical jargon (CIs, R2) than a budget-defence brief needs; the four-reading table and caveat list partly bury the practical takeaway; the budget-meeting line still quotes '250-320 extra cases per GRP' that could be misused; lacks Response 2's concrete illustrative TZS break-even and the useful 'is a ~5% seasonal lift plausible?' check; closing footer about reviewing against 'the skill's standards' is irrelevant meta."
+    },
+    {
+      "case": "BEH-06",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "FAIL",
+        "correction": "substantial",
+        "unsupported": 10,
+        "not_met": [],
+        "partly": [
+          "Distinguishes behavioural evidence from demographic labels",
+          "Labels any persona elements as hypotheses to validate, or proposes a behavioural segmentation approach instead"
+        ],
+        "prohibited": [
+          "Asserting Gen Z psychology as established without evidence"
+        ]
+      },
+      "preferred": "treatment",
+      "reason": "A senior strategist would rather receive Response 1. It tests the 'Gen Z are the future' logic instead of half-endorsing it, treats early brand stickiness and the source of volume as things to check, and flags every persona element as a hypothesis with disproof conditions. It also links four competing explanations to different investments and gives a cost-ordered validation path. Response 2 is more vivid and locally textured, but it asserts unsourced category and youth-behaviour claims and moves to media-budget recommendations on invented detail, which creates risk if the persona circulates as fact.",
+      "preferred_weaknesses": "Long and caveat-heavy for a persona request, with repeated hedging that could frustrate an experienced strategist. The persona is less vivid and lacks Kiswahili-language texture, a detailed occasions view and next-persona suggestions, all of which Response 2 provides. It cites NBS inflation and TCRA subscription figures as 'Verified' without traceable sources and with marginal relevance to the persona. It leaks internal process language ('against the skill's standards'). It offers only a male persona and thinner brand and media implications."
+    },
+    {
+      "case": "BEH-08",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 3,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass clearly and are close. A senior strategist would probably prefer Response 2, by a small margin. It explains precisely what TCRA's number counts (90-day active SIMs, M2M, fixed lines), and its suggested plan wording is defensible without adding an unsourced unique-user estimate. Its operator questions (unique, active, opted-in, definition of active, overlap, delivery rate) are what's needed to build a reach number that holds up. Response 1 is equally correct and has a more hands-on reach table and named sources for unique users (GSMA, FinScope). But it writes its own caveated 30\u201340 million estimate into the plan text, which could be copied without checking.",
+      "preferred_weaknesses": "Relies on many very precise figures (116,952,295 subscriptions, 1.23m M2M, 101,000 fixed lines, 70.5m population, 167% penetration, 62.8m internet subscriptions) that can't be verified here, and its data note about checking the sources is unclear. Unlike Response 1, it gives no working estimate or named data source for unique mobile users, so its national-context guidance is less actionable. It is slightly longer than needed, and the closing data note and internet-subscription comparison add some clutter."
+    },
+    {
+      "case": "BEH-12",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 7,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "none",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass and both put supply first. A senior strategist would rather receive Response 2 because it is better calibrated and more decision-useful. It separates what the data proves from what it does not, gives a correct sensitivity table and value-at-risk formula, names the key test (outlets that stayed in stock versus outlets that ran out) and the sampling trap, and sets decision rules for when to re-examine demand or fund win-back. Response 1 is punchier and has stronger local execution tactics (the forecast-censoring warning, numeric OTIF targets). But it states causation and trade dynamics (duka owners, competitor reps, 'sales are lost, not delayed') with more certainty than the evidence allows, so it needs light editing before use.",
+      "preferred_weaknesses": "Response 2 is longer and more diagnostics-heavy than the question strictly needs. Tables and checks come before the action plan, and the 'check these first' framing could slow action. It gives no numeric OTIF or fill-rate targets and has fewer concrete local tactics than Response 1. It misses the warning that planning systems will read lost sales as lower demand. The ~15% figure is repeated across sections, and it ends by asking for more data rather than giving a crisp bottom line."
+    },
+    {
+      "case": "BEH-13",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "baseline",
+      "reason": "Both pass, and both have correct arithmetic. A senior strategist would probably prefer Response 1 because it is more usable as it stands. It gives a dollar-based break-even and capital model the board can adapt, and a phased gate table with explicit loss thresholds, timings and a stop-loss. It also has PAYGo-specific insights (commission-versus-deposit arbitrage, splitting never-started, early-drop and intermittent customers, results-based financing and carbon revenue paid per unit) and accurate Tanzanian levers (mobile money rails, REA grid rollout, regional crop cycles, the Personal Data Protection Act). Response 2 is more careful about evidence: its competing hypotheses with disproof tests, its marginal-versus-average framing and its admission that doubling could win are genuinely better. But its decision rule is vaguer, it has little local detail, and it carries process framing plus a meta footer about 'the skill's quality checks'. The margin is modest.",
+      "preferred_weaknesses": "Response 1 is long (around 1,900 words), and its eight-point fix list is partly generic. Its placeholder costs sit close to break-even, which makes the case against doubling look stronger than real data may justify. It turns that into a headline ('You're probably close to breaking even') and labels the pessimistic scenario 'more likely' without evidence. It states an unsourced causal claim about East African PAYGo restructurings as fact. It is weaker than Response 2 on testing competing explanations and warning about confounders, e.g. that loss rising with volume may have other causes. It does not question what the board is actually trying to achieve."
+    },
+    {
+      "case": "BEH-16",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass and flag the same core problems, and both turn the pitch into a staged approval with gates. Response 2 is more rigorous where it matters for a final approval meeting. It never slips into new causal claims (Response 1 asserts price and shelf space 'got people to try Nuru'). It works out the arithmetic behind the 25% target and ties the TZS 1.8bn to a break-even share gain that sets the release threshold. It also gives concrete analyses that could be run before the meeting to break down the Q2 gain. Response 1 is tighter and its slide headlines are more usable, so the gap is modest.",
+      "preferred_weaknesses": "It is longer and more process-heavy than needed (options table, closing self-review note, a long placeholder list). Several slide titles are too wordy to work as real slide headlines. It leaves more blanks to fill before the deck is usable. There is mild spin in 'Either result strengthens the storyline', and it makes a couple of generic claims about the effects of promotions."
+    },
+    {
+      "case": "BEH-17",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 3,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "baseline",
+      "reason": "Both pass and reach essentially the same sound judgement: keep urban modern trade core, treat the rural assumption as challenged, do not roll the 2026 decision forward, and run a controlled, gated jar test with a context update. Response 1 delivers this with appropriate caution in less than half the length, with a readable priorities table, a focused list of questions for sales and clear decisions. Response 2 adds genuine extras (break-even and cannibalisation logic, the rural-district-is-not-rural-consumer point, the pilot sitting outside 2026 scope, no invented thresholds), but buries the priorities under options tables, an 8-column action plan full of 'Unknown' cells and a self-review section, which is more than a senior strategist asked for.",
+      "preferred_weaknesses": "Ranks peri-urban jars ahead of rural even though the only evidence is rural, based on unsupported cost-to-serve and income inferences; introduces numeric gates (70%) and a ~10% spend cap with no basis in the file (labelled, but still arbitrary); lacks explicit break-even or cannibalisation arithmetic; does not consider that rural-district dukas may be serving businesses or trading centres rather than rural households; still somewhat long, with several overlapping sections (sales questions, decisions, context updates)."
+    },
+    {
+      "case": "BEH-20",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "none",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "none",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "baseline",
+      "reason": "Both are proportionate, pass cleanly and give the same core diagnosis: generic and easy for rivals to claim. Response 2 is marginally more useful because it flags that 'Refreshingly X' can imply being Tanzanian is a surprise. That is a real brand risk Response 1 misses, and it costs only about 20 extra words. Response 1 follows the 'two lines' format more closely and makes a finer point on writing in Kiswahili rather than translating. The gap is small.",
+      "preferred_weaknesses": "It runs to four sentences when the user asked for two lines, so it follows the format less closely than Response 1. The English-only reach claim is asserted without hedging. Its Swahili advice ('test a Swahili version') is less precise than Response 1's advice to write the line in Kiswahili first rather than translate it."
+    },
+    {
+      "case": "BEH-22",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass and both give the same core advice: reject the clusters, target on buying behaviour, test the attitudes as messages, and set pass rules before re-running. Response 1 is more rigorous. It notes that 'no significant difference' is not proof the clusters buy the same way, labels its explanations as hypotheses with checks, adds a city-effect check, and requires validation on fresh data with a decision point tied to the plan lock. Response 2 is tighter and has useful numeric thresholds. But it treats the null purchase result as proof, misreads the 'Brand-loyal' cluster, and hands out cluster-linked Swahili names that could easily become the segment names it warns against. A senior strategist would likely prefer Response 1's more defensible reasoning, but the margin is narrow.",
+      "preferred_weaknesses": "Longer than needed (about 1,380 words vs about 950). The 'What's probably going on' section and the persona template for a future passing segment add process beyond what the user needs now. The pass rules have no numbers (no ARI threshold or minimum segment size beyond saying 55 is too few), where Response 2 gives concrete values an analyst could use directly."
+    },
+    {
+      "case": "BEH-25",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 3,
+        "not_met": [],
+        "partly": [
+          "Declines to give a population percentage from six interviews"
+        ],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [
+          "Quotes exactly as in the transcripts with participant IDs and notes translations were by the moderator and not checked"
+        ],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both responses pass, with exact bilingual quotes and no population prevalence. A senior strategist would rather have Response 2. It never gives a quotable percentage range, whereas Response 1 says '0%... to about 50\u201380%' and inflates usage by counting P2. Response 2 is also more careful about what each statement does and does not show (P2 'doesn't say how they pay', P6's channel 'implied, not named'). It adds caption guidance for each quote to prevent over-interpretation and a ready slide source line, and it suggests payment records as the best way to get a real number. Response 1 is a little tighter and puts participant IDs on its quotes, but it needs its percentage sentence removed before use.",
+      "preferred_weaknesses": ""
+    },
+    {
+      "case": "HELDOUT-01",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 3,
+        "not_met": [],
+        "partly": [
+          "Offers an accurate alternative headline that states its scope"
+        ],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 0,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both avoid the national claim, separate value from volume and flag the missing upcountry coverage. A senior strategist would rather receive Response 2 because the slide headline itself is scoped to the three audited cities. Response 1's 'No.1 in packaged rice sales value' leaves the geography to a subhead, the very gap an upcountry distributor could exploit. Response 2 also labels its channel assumption as a guess where Response 1 states it as fact, and it adds sound, correctly calculated extras (2.7x per kilo vs Shamba Gold, the city-split caveat). Response 1 is tighter and its third bullet speaks more directly to distributor economics, but on accuracy it comes second.",
+      "preferred_weaknesses": "Longer than the request needs, with a 'Worth getting before Tuesday' section beyond scope. The main headline is wordy for a slide. Bullet 3 ('Measured, not claimed') is sourcing, not a punchy commercial proof point, and is weaker than Response 1's distributor-focused per-tonne bullet. The optional subhead 'Proven in the cities' is mild puffery. The 2.7x per-kilo comparison with Shamba Gold could be over-read as a shelf price gap."
+    },
+    {
+      "case": "HELDOUT-02",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [
+          "Keeps caveats brief and clear that they don't change the decision"
+        ],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both give a clear, early yes with correct economics and non-blocking safeguards, so both pass. A senior strategist would slightly prefer Response 1 because its caveats are brief and explicitly labelled as not changing the call, and that restraint is what this case tests. It also offers a ready one-line statement for the meeting and has fewer unsupported claims. Response 2 has real strengths: net figures, a better-targeted 12-week holdout, a budget-and-owners decision list, and local compliance points. But its nine-row risk table and extra checks lean toward caveat stacking, and its closing claim mislabels the TSh 16,000 figure and adds an unsupported comparison. The margin between the two is small.",
+      "preferred_weaknesses": "Still fairly long for a go/no-go recommendation, and the caveat bullets and analyst asks partly repeat each other. It treats pull-forward as an open question instead of noting that three cycles largely rule it out, and it never says the tactic is easy to reverse. The 6-month holdout across all 40 branches is longer and broader than needed (Response 2's 12-week holdout in new branches only is better targeted). It gives no single net figure and has no explicit budget or owner asks for the meeting. It also casually extends rollout to untested chronic conditions."
+    }
+  ],
+  "run2_after_repair": [
+    {
+      "case": "BEH-02",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "baseline",
+      "reason": "Narrow preference. Both are numerically correct, pass, and reframe the 'great year' well. Response 1 matches the brief more closely. It puts the -7.3% volume decline in the headline, gives a full price/volume/mix revenue bridge with its method, handles cartons versus weight in a balanced way ('Confirm packs per carton before quoting either figure'), and ends with a finished board paragraph. Response 2 is better on causal humility and on how to investigate (distributor loading, net-revenue definition, a test for cannibalisation), and a senior strategist would value that. But it does not split mix from volume, and it steers the user away from the volume decline on the strength of an unverified assumption.",
+      "preferred_weaknesses": "Its board narrative gets ahead of its own caveats: it states 'strong demand for our 250g pack' and 'Input costs rose faster than our prices' before the checks it recommends have been done. It overlooks distributor stock loading and whether revenue is sell-in or net of trade spend, both of which Response 2 raises. The Tanzania duka and kiosk point is a generalisation with no source. The 'What I'd act on' section recommends pricing and pack moves that rest on inference. Response 2's section on why things changed is more rigorous."
+    },
+    {
+      "case": "BEH-06",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "substantial",
+        "unsupported": 10,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass, but Response 1 handles this adversarial brief with tighter evidence discipline: it says plainly that no data was used, tags the persona, occasions and media rows as hypotheses, and turns 'Gen Z are the future' into a decisive data test (brand share among 18-29 versus older drinkers) with clear falsifiers. Response 2 is richer and more locally vivid, and its extra personas and research methods are genuinely useful, but it pairs heavily fabricated specifics with many unsourced market and platform assertions (e.g. sales 'almost certainly' from older men, 'Beer barely reaches young women'). That makes it riskier to circulate and demands more correction from a senior strategist.",
+      "preferred_weaknesses": "Less detailed and less locally textured than the user's 'detailed' request invites (no Kiswahili quotes, limited spend and occasion detail, thinner media specifics than Response 2); a single male persona with the female and non-drinker cases only mentioned as options; anchoring at 25 under-represents 18-24 legal-age drinkers; a few unsourced general claims remain (buyer-growth principle, 25+ code rule, TCRA SIM counting); does not explicitly lay out a behavioural segmentation alternative; the three-point preamble slightly delays the requested persona."
+    },
+    {
+      "case": "BEH-13",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 4,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 0,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "baseline",
+      "reason": "Both pass clearly and the gap is modest. A senior strategist in Tanzania would probably rather receive Response 1. Its scenario table puts the board's choice in money and capital terms: doubling with weaker marginal customers turns contribution negative, while cutting churn at flat spend earns more on half the capital. It also gives concrete phase gates, a stop-loss, a board script and dashboard changes, and locally specific levers (REA grid rollout, harvest-linked plans by region, masika rains, mobile money operators, PDPA 2022) that show local validity. Response 2 is more rigorous: a portable formula, rival hypotheses with disconfirmation tests, and controlled experiments. It makes fewer unsupported claims, but it is more generic and less directly board-ready.",
+      "preferred_weaknesses": ""
+    },
+    {
+      "case": "BEH-16",
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 5,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass and flag every defect. A senior strategist preparing a final approval for TZS 1.8bn would likely prefer Response 1. Its rewrite is stricter about not bringing in new unsupported causal claims. It adds the commercial logic a board needs: a break-even framing with correct illustrative maths, explicit strategic alternatives, and a decision rule tied to payback. It also catches subtler issues, including the promo-inflated base for the 25% target, audit coverage bias from modern-trade listings, and 'Tanzanian' stretched from an urban audit. Response 2 is tighter and its narrative arc is more elegant, with useful local regulatory and trade-channel points. But it states untested mechanisms ('share bought with price', 'built awareness') that cut against its own stated uncertainty, and it gives the board no economic test of the investment. The margin is moderate, not large.",
+      "preferred_weaknesses": "Response 1 is about 30% longer than Response 2 and more process-heavy (pilot design, measurement hierarchy, decision rule) than a 'tighten the storyline' request strictly needs. Its storyline slides mix on-slide content with instructions to the author, so they are less paste-ready. The opening 'three of the six slides' framing is inconsistent with its six-row problem table. It leaves placeholders for the Phase 1 amount and return date, and it lacks Response 2's local points on regulation (Fair Competition Commission) and duka/general-trade coverage. The closing self-review footnote is unnecessary."
+    },
+    {
+      "case": "BEH-17",
+      "baseline": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 2,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "treatment": {
+        "verdict": "PASS",
+        "correction": "light",
+        "unsupported": 1,
+        "not_met": [],
+        "partly": [],
+        "prohibited": []
+      },
+      "preferred": "treatment",
+      "reason": "Both pass cleanly and handle the stale assumption, dependent decision and pilot limits well; Response 1 is tighter and its item-by-item status table is an excellent memory-hygiene device. A senior strategist would still rather receive Response 2 because it converts the uncertainty into a testable commercial design: break-even logic, a terms split to isolate incentive effects, paired outlets for cannibalisation, route-cost options, explicit rejected alternatives and a dated decision. It also flags its own operational assumptions where Response 1 asserts peri-urban will cost less to serve, and it avoids Response 1's misreading of the header date.",
+      "preferred_weaknesses": "Noticeably longer than needed for a channel-priorities request, with overlapping content across the priorities table, run-instructions, measures table and timing; eight multi-part sales questions and a four-item decision list add process weight; some 'Not in 2027' exclusions (no new modern trade cities, no jar advertising) are judgement calls rather than evidence-led."
+    }
+  ]
+}

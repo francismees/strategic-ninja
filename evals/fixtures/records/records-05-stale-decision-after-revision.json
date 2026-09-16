@@ -1,0 +1,370 @@
+{
+  "id": "records-05-stale-decision-after-revision",
+  "kind": "records",
+  "command": "validate",
+  "args": [
+    "--records",
+    "{records}"
+  ],
+  "expected_status": "invalid",
+  "purpose": "After the assumption is refuted, the approved decision that relies on it cannot validate as current.",
+  "records": {
+    "schema_version": "1.0",
+    "engagement": {
+      "id": "ENG-fixture-kilele-2027",
+      "namespace": "fixture-client/kilele/tanzania/annual-2027",
+      "decision": "Choose where to invest the 2027 trade budget for Kilele 330 ml juice (synthetic brand)",
+      "decision_maker": "Commercial director (fictional)",
+      "audience": "Leadership team (fictional)",
+      "client": "Fixture client (synthetic)",
+      "brand": "Kilele (synthetic)",
+      "category": "Ready-to-drink juice",
+      "market": "Tanzania Mainland, Dar es Salaam and Mwanza urban outlets",
+      "horizon": "annual",
+      "outcome": "Grow Kilele sell-out value in 2027",
+      "success_metric": "Kilele sell-out value, TZS, distributor-served outlets",
+      "baseline": "unknown: 2026 full-year sell-out not yet closed",
+      "constraints": [
+        "Trade budget fixed at 2026 level"
+      ],
+      "scope": "Trade investment allocation across channels",
+      "mode": "build_strategy",
+      "depth": "standard",
+      "unresolved_questions": [
+        "Is modern trade actually gaining category share?"
+      ],
+      "persistence": "authorised_local_files",
+      "synthetic": true
+    },
+    "sources": [
+      {
+        "id": "SRC-001",
+        "title": "Kilele sell-out by channel 2024-2025 (synthetic fixture)",
+        "url_or_file": "fixture: sellout_by_channel.csv",
+        "publisher_owner": "Fixture client (synthetic)",
+        "locator": "rows 2-7",
+        "publication_date": "2026-01",
+        "data_period": "2024-01 to 2025-12",
+        "geography": "Dar es Salaam and Mwanza, distributor-served outlets",
+        "population_sample": "All distributor-served outlets (synthetic)",
+        "method": "Distributor invoice aggregation to outlets",
+        "access_date": "2026-02-01",
+        "limitations": "Distributor-served outlets only; excludes wholesaler-served dukas",
+        "lineage": {
+          "origin": "original",
+          "derived_from": [],
+          "note": ""
+        },
+        "source_class": "first_party_data"
+      },
+      {
+        "id": "SRC-002",
+        "title": "2025 annual plan deck (synthetic fixture)",
+        "url_or_file": "fixture: plan_2025.pptx",
+        "publisher_owner": "Fixture client marketing team (synthetic)",
+        "locator": "slide 12",
+        "publication_date": "2024-11",
+        "data_period": "unknown: no data cited on the slide",
+        "geography": "Tanzania (unspecified)",
+        "population_sample": "unknown: no data cited",
+        "method": "unknown: planning assertion without cited basis",
+        "access_date": "2026-02-01",
+        "limitations": "Assertion repeated from 2023 and 2024 decks with no underlying data",
+        "lineage": {
+          "origin": "unknown",
+          "derived_from": [],
+          "note": "Earlier decks repeat the same sentence"
+        },
+        "source_class": "internal_document"
+      },
+      {
+        "id": "SRC-003",
+        "title": "Urban retail audit, Q2 2026 (synthetic fixture)",
+        "url_or_file": "fixture: audit_q2_2026.pdf",
+        "publisher_owner": "Fictional audit supplier",
+        "locator": "table 4, page 9",
+        "publication_date": "2026-08",
+        "data_period": "2025-04 to 2026-06",
+        "geography": "Audited urban outlets, Dar es Salaam and Mwanza",
+        "population_sample": "Audit panel of urban outlets (fictional)",
+        "method": "Store audit, projected to audited universe",
+        "access_date": "2026-09-01",
+        "limitations": "Urban audited universe only; informal outlets under-covered",
+        "lineage": {
+          "origin": "original",
+          "derived_from": [],
+          "note": ""
+        },
+        "source_class": "industry_research"
+      }
+    ],
+    "claims": [
+      {
+        "id": "CLM-001",
+        "statement": "Modern trade rose from 18% to 19% of Kilele sell-out value between 2024 and 2025",
+        "type": "computed",
+        "basis": {
+          "sources": [
+            "SRC-001"
+          ],
+          "records": [],
+          "calculation": "python3 scripts/commercial_analysis.py contribution --group-col channel --value-col value ..."
+        },
+        "units_denominator": "% of Kilele sell-out value (TZS), distributor-served outlets",
+        "period": "2024 vs 2025",
+        "confidence": {
+          "level": "medium",
+          "reason": "First-party and reproducible, but distributor-served outlets only"
+        },
+        "market_applicability": {
+          "status": "local_verified",
+          "scope": "Kilele distributor-served outlets, Dar es Salaam and Mwanza",
+          "reason": "Direct first-party data for this scope"
+        },
+        "verification_status": "reproduced",
+        "limitations": "Not a category measure"
+      },
+      {
+        "id": "CLM-002",
+        "statement": "Modern trade share of category value was flat at 14% in Q2 2026 versus Q2 2025",
+        "type": "observed",
+        "basis": {
+          "sources": [
+            "SRC-003"
+          ],
+          "records": [],
+          "locator": "table 4, page 9"
+        },
+        "units_denominator": "% of audited category value",
+        "period": "Q2 2025 vs Q2 2026",
+        "confidence": {
+          "level": "medium",
+          "reason": "Direct category measure; urban audit universe only"
+        },
+        "market_applicability": {
+          "status": "local_verified",
+          "scope": "Audited urban outlets, Dar es Salaam and Mwanza",
+          "reason": "Direct local audit"
+        },
+        "verification_status": "verified",
+        "limitations": "Informal outlets under-covered"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "ASM-001",
+        "kind": "assumption",
+        "proposition": "Modern trade will reach 25% of category value by end-2027",
+        "basis": "Repeated in 2023-2025 planning decks",
+        "basis_records": [
+          "SRC-002"
+        ],
+        "confirming_signal": "Audit share rising by roughly 3pp or more per year",
+        "falsifier": "Audit share flat or falling",
+        "current_support": "refuted",
+        "decision_impact": "Justifies moving 40% of trade budget into modern trade listings",
+        "validation_step": "Check the retail audit trend",
+        "status": "refuted",
+        "review_condition": "Next audit release",
+        "depends_on": [],
+        "confidence": {
+          "level": "low",
+          "reason": "No data behind the assumption"
+        }
+      },
+      {
+        "id": "HYP-001",
+        "kind": "hypothesis",
+        "proposition": "Slower growth in dukas is driven by cold availability gaps",
+        "basis": "Field sales comments (not yet recorded as evidence)",
+        "basis_records": [
+          "CLM-001"
+        ],
+        "confirming_signal": "Rate of sale higher in outlets with working coolers",
+        "falsifier": "No rate-of-sale difference by cooler status",
+        "current_support": "untested",
+        "decision_impact": "Would redirect budget to cooler placement",
+        "validation_step": "Compare rate of sale by cooler status in 40 outlets",
+        "status": "open",
+        "review_condition": "After outlet check",
+        "depends_on": [
+          "CLM-001"
+        ],
+        "confidence": {
+          "level": "low",
+          "reason": "Anecdotal"
+        }
+      }
+    ],
+    "insights": [
+      {
+        "id": "INS-001",
+        "decision": "2027 trade budget allocation",
+        "audience_context": "Urban outlets, Dar es Salaam and Mwanza",
+        "insight_kind": "channel",
+        "evidence": [
+          "CLM-001",
+          "CLM-002"
+        ],
+        "observation": "Kilele's modern trade share rose while the category's modern trade share did not",
+        "contrast": "Brand channel mix versus category channel mix, same period",
+        "mechanism": "Kilele gained listings within modern trade rather than riding a channel shift",
+        "tension": null,
+        "explanation": "Kilele's modern trade growth is a listing gain, not evidence that the channel is growing",
+        "alternatives": [
+          "Audit under-covers new modern trade stores"
+        ],
+        "contradictions": [],
+        "confidence": {
+          "level": "medium",
+          "reason": "Two direct sources with different scopes"
+        },
+        "implication": "The planning assumption about channel shift is not supported",
+        "validation_need": "Confirm audit coverage of new stores",
+        "status": "defensible"
+      }
+    ],
+    "options": [
+      {
+        "id": "OPT-001",
+        "title": "Shift trade investment to modern trade listings",
+        "diagnosis_addressed": "Growth concentration in modern trade",
+        "where_to_act": "Modern trade, urban",
+        "how_to_win": "More listings and secondary placement",
+        "mechanism": {
+          "levers": [
+            "distribution",
+            "volume"
+          ],
+          "explanation": "More listed outlets increase physical availability"
+        },
+        "supporting_records": [
+          "CLM-001"
+        ],
+        "assumptions": [
+          "ASM-001"
+        ],
+        "economics": "unknown: listing fees not yet quoted",
+        "resources": "40% of trade budget",
+        "risks": [
+          "Channel may not grow"
+        ],
+        "non_choices": [
+          "No new duka cooler programme in 2027"
+        ],
+        "conditions": [
+          "Modern trade keeps gaining category share"
+        ],
+        "reversal_triggers": [
+          "Audit share flat for two consecutive quarters"
+        ],
+        "status": "selected",
+        "recommendation_type": "conditional",
+        "decision_state": "approved_by_user",
+        "rationale": "Follows recent brand growth pattern",
+        "review_flags": [
+          {
+            "changed_record": "ASM-001",
+            "reason": "Assumption refuted by audit",
+            "date": "2026-09-17",
+            "resolved": false
+          }
+        ]
+      },
+      {
+        "id": "OPT-002",
+        "title": "Fix duka cold availability",
+        "diagnosis_addressed": "Slower duka growth",
+        "where_to_act": "Dukas",
+        "how_to_win": "Coolers where rate of sale justifies",
+        "mechanism": {
+          "levers": [
+            "distribution"
+          ],
+          "explanation": "Chilled availability at point of purchase"
+        },
+        "supporting_records": [
+          "HYP-001"
+        ],
+        "assumptions": [],
+        "economics": "unknown: cooler cost per outlet not collected",
+        "resources": "Cooler capex",
+        "risks": [
+          "Cooler maintenance"
+        ],
+        "non_choices": [],
+        "conditions": [],
+        "reversal_triggers": [],
+        "status": "rejected",
+        "recommendation_type": "not_recommended",
+        "decision_state": "proposed_by_analyst",
+        "rationale": "Untested at the time"
+      }
+    ],
+    "actions": [
+      {
+        "id": "ACT-001",
+        "decision_link": "OPT-001",
+        "description": "Negotiate listings in 60 additional modern trade outlets",
+        "intended_change": "More modern trade outlets stocking Kilele",
+        "mechanism": "Physical availability",
+        "owner_role": "Key account manager",
+        "dependencies": [
+          "Listing fee budget approval"
+        ],
+        "timing": "2027 Q1-Q2",
+        "resource_basis": "Share of trade budget (amount not set)",
+        "metrics": [
+          "MET-001"
+        ],
+        "review_condition": "Quarterly",
+        "reversal_trigger": "Rate of sale in new listings below delisting threshold",
+        "status": "planned",
+        "review_flags": [
+          {
+            "changed_record": "ASM-001",
+            "reason": "Assumption refuted by audit",
+            "date": "2026-09-17",
+            "resolved": false
+          }
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "id": "MET-001",
+        "actions": [
+          "ACT-001"
+        ],
+        "definition": "Kilele value share in audited modern trade outlets",
+        "level": "business_outcome",
+        "timing_role": "lagging",
+        "baseline": "unknown: first audit read of new listings pending",
+        "target_rationale": "Set after first quarter read",
+        "data_source": "Retail audit (fictional)",
+        "cadence": "Quarterly",
+        "owner_role": "Insights manager",
+        "decision_rule": "Continue if share rises; review if flat two quarters",
+        "horizon": "2027",
+        "review_flags": [
+          {
+            "changed_record": "ASM-001",
+            "reason": "Assumption refuted by audit",
+            "date": "2026-09-17",
+            "resolved": false
+          }
+        ]
+      }
+    ],
+    "learnings": [],
+    "defects": [],
+    "changes": []
+  },
+  "expected_error_codes": [
+    "OPTION_RELIES_ON_REFUTED"
+  ],
+  "expected_warning_codes": [
+    "OPEN_REVIEW_FLAG"
+  ],
+  "edge_case_expectation": "A user-approved decision is not evidence; it must be reviewed when its assumption fails."
+}

@@ -1,0 +1,33 @@
+{
+  "method": "Seed 20260918 placed every re-run treatment in position 1; order was then alternated manually to balance position bias",
+  "selected": [
+    "BEH-02",
+    "BEH-06",
+    "BEH-13",
+    "BEH-16",
+    "BEH-17"
+  ],
+  "mapping": {
+    "BEH-02": {
+      "Response 1": "baseline",
+      "Response 2": "treatment_v2"
+    },
+    "BEH-06": {
+      "Response 1": "treatment_v2",
+      "Response 2": "baseline"
+    },
+    "BEH-13": {
+      "Response 1": "baseline",
+      "Response 2": "treatment_v2"
+    },
+    "BEH-16": {
+      "Response 1": "treatment_v2",
+      "Response 2": "baseline"
+    },
+    "BEH-17": {
+      "Response 1": "baseline",
+      "Response 2": "treatment_v2"
+    }
+  },
+  "note": "Re-run after SKILL.md output-shaping repair; baseline outputs reused from run 1"
+}

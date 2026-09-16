@@ -1,0 +1,29 @@
+{
+  "id": "contribution-03-mixed-measures",
+  "recipe": "contribution",
+  "purpose": "Value and volume rows mixed in one comparison.",
+  "input_csv": "period,group,value,measure\n2025,A,100,value\n2025,B,50,volume\n2026,A,110,value\n2026,B,55,volume\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--group-col",
+    "group",
+    "--value-col",
+    "value",
+    "--measure-col",
+    "measure"
+  ],
+  "convention": "One measure per comparison.",
+  "derivation": "value and volume present.",
+  "expected_status": "error",
+  "expected_error_code": "MIXED_MEASURES",
+  "edge_case_expectation": "No share computed from incompatible measures.",
+  "expected_failure_behavior": "Exit code 2 with MIXED_MEASURES.",
+  "kind": "analytics"
+}

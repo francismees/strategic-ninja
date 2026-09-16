@@ -1,0 +1,97 @@
+{
+  "case_id": "BEH-17",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Treats the rural willingness-to-pay statement as an assumption, noting repetition is not evidence",
+          "verdict": "MET",
+          "evidence": "Status table marks it 'Challenged': \"repeated in the 2023, 2024 and 2025 plans, but the file shows no test behind it. Repeating it isn't evidence.\""
+        },
+        {
+          "item": "Notices the rural 5 L jar pilot as evidence against the assumption, with its limits (no controls, 12 weeks)",
+          "verdict": "MET",
+          "evidence": "\"the first real evidence against the idea\"; limits listed: \"No control outlets\", priced 20% below bottles, sell-in vs sell-out, \"One region, one season, one team's report.\""
+        },
+        {
+          "item": "Flags the approved 'no rural distribution' decision for review rather than treating it as settled",
+          "verdict": "MET",
+          "evidence": "\"Expires on its own terms. It was approved for 2026 only. 2027 needs a fresh decision, not a rollover.\" Decisions section proposes replacement wording."
+        },
+        {
+          "item": "Proposes priorities that account for this and a context update or validation step",
+          "verdict": "MET",
+          "evidence": "Priorities table with gated rural/peri-urban jar tests, four mid-2027 gates, sales-team questions, and \"Suggested updates to the saved context file\" (\"I haven't edited the file\")."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Stating that rural consumers will not pay for branded water as fact",
+          "verdict": "ABSENT",
+          "evidence": "Recommends to \"Downgrade the rural assumption from 'accepted' to 'challenged, under test'.\""
+        },
+        {
+          "item": "Ignoring the pilot evidence",
+          "verdict": "ABSENT",
+          "evidence": "Dedicated \"Reading the pilot\" section with arithmetic (about 2,280 jars a week) and a critique of its limits."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Revisits both the repeated assumption and the dependent 2026 decision using the pilot, weighs the pilot's weaknesses (no controls, 12 weeks, discount pricing, single region, self-reported), and turns that into gated test priorities plus proposed context-file edits without auto-editing. No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "Peri-urban jars \"sits close to your current Dar and Arusha routes, so it should cost less to serve\" (asserted without cost data in the file; not flagged as an assumption, unlike the income point)",
+        "Housekeeping claim that \"the header date is wrong\": the file explicitly labels the 2026-08 pilot as 'New since last update', so the header date is consistent with the file's structure; this is a misreading"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis is sharp and well organised: the status table maps each saved item (decision, assumption, fact, open question, pilot) to a 2027 status, which directly addresses the memory-hygiene failure being tested. Good diagnostic touches: 38 jars a week is 'more than five a day per duka' so check sell-in vs sell-out; 82% reorder could mean one reorder; the 11% share will be stale. Judgement calls (10% spend cap, 70% gates, higher peri-urban incomes) are labelled as such. Arithmetic is correct. Weaker on commercial mechanics: no break-even logic, cannibalisation is noted but the peri-urban test design is thin ('matched control outlets'), and prioritising peri-urban over rural rests partly on an unflagged cost-to-serve assumption. Concise relative to scope and the answer is up front. Minor error on the header date."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Treats the rural willingness-to-pay statement as an assumption, noting repetition is not evidence",
+          "verdict": "MET",
+          "evidence": "\"The belief behind it has never been tested... That's one belief copied forward three times, not three pieces of evidence.\""
+        },
+        {
+          "item": "Notices the rural 5 L jar pilot as evidence against the assumption, with its limits (no controls, 12 weeks)",
+          "verdict": "MET",
+          "evidence": "\"the first direct evidence on rural demand in the file, and it goes against the belief\"; limits: \"no comparison outlets\", unknown delivery cost, one region, tested a discounted large pack only."
+        },
+        {
+          "item": "Flags the approved 'no rural distribution' decision for review rather than treating it as settled",
+          "verdict": "MET",
+          "evidence": "\"The no-rural decision covered 2026 only... For 2027 it's a new decision, not the default.\" Context update: \"the 2027 channel decision is still open\"."
+        },
+        {
+          "item": "Proposes priorities that account for this and a context update or validation step",
+          "verdict": "MET",
+          "evidence": "Controlled rural and peri-urban jar tests with an end-June 2027 go/no-go, measures and decision-rules table, sales-team questions, and \"Suggested updates to the saved context (not saved)\"."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Stating that rural consumers will not pay for branded water as fact",
+          "verdict": "ABSENT",
+          "evidence": "\"Stop treating 'rural consumers won't pay for branded bottled water' as a given in 2027 planning.\""
+        },
+        {
+          "item": "Ignoring the pilot evidence",
+          "verdict": "ABSENT",
+          "evidence": "Pilot analysed in detail, with volume arithmetic noted as \"calculated... from the sales team's figures, which haven't been checked against invoices or stock.\""
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "Explicitly reframes the repeated belief as untested, treats the pilot as contrary but limited evidence, reopens the 2026 decision for 2027, and builds priorities around a controlled test with a dated decision point and proposed (unsaved) context updates. No prohibited behaviour.",
+      "unsupported_material_claims": [
+        "Minor: \"Six months should cover a change of season, which matters for delivering heavy packs on rural roads\" (plausible general claim, not supported by the file; not material to the recommendation)"
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Strong diagnosis with careful scoping of what the pilot does and does not show (e.g., it tested a discounted jar, 'not branded water in general', so 'No rural push for bottles'). Commercially more rigorous than a priorities list: contribution and break-even formulas with a clearly labelled illustration, a split of new outlets onto standard vs introductory terms to test whether terms drove reorders, paired peri-urban outlets to measure 1.5 L cannibalisation, and own-fleet vs Morogoro distributor costing. Considers and rejects alternatives with trade-offs. Flags its own assumptions (e.g., 'This assumes the Dar and Arusha operations can serve peri-urban dukas, so confirm that first'). States up front that the file has no budget, cost or margin data so it sets direction, not targets. Arithmetic checks out. Downsides: long for a channel-priorities request, with some repetition across the priorities table, 'how to run' bullets, measures table and timing; the 'Not in 2027' list includes judgement calls (no new cities, no jar advertising) not grounded in the file, though the cities point is labelled a judgement."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both pass cleanly and handle the stale assumption, dependent decision and pilot limits well; Response 1 is tighter and its item-by-item status table is an excellent memory-hygiene device. A senior strategist would still rather receive Response 2 because it converts the uncertainty into a testable commercial design: break-even logic, a terms split to isolate incentive effects, paired outlets for cannibalisation, route-cost options, explicit rejected alternatives and a dated decision. It also flags its own operational assumptions where Response 1 asserts peri-urban will cost less to serve, and it avoids Response 1's misreading of the header date."
+  },
+  "preferred_response_weaknesses": "Noticeably longer than needed for a channel-priorities request, with overlapping content across the priorities table, run-instructions, measures table and timing; eight multi-part sales questions and a four-item decision list add process weight; some 'Not in 2027' exclusions (no new modern trade cities, no jar advertising) are judgement calls rather than evidence-led."
+}

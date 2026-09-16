@@ -1,0 +1,29 @@
+{
+  "id": "pvm-14-ambiguous-number-format",
+  "recipe": "pvm",
+  "purpose": "A comma-formatted number is ambiguous (thousands separator or decimal comma).",
+  "input_csv": "period,sku,units,price\n2025,A,\"1,000\",10\n2026,A,1100,10\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price"
+  ],
+  "convention": "Numbers must be plain digits with '.' decimal point.",
+  "derivation": "'1,000' could be 1000 or 1.0.",
+  "expected_status": "error",
+  "expected_error_code": "AMBIGUOUS_NUMBER_FORMAT",
+  "edge_case_expectation": "No guess about locale.",
+  "expected_failure_behavior": "Exit code 2 with AMBIGUOUS_NUMBER_FORMAT.",
+  "kind": "analytics"
+}

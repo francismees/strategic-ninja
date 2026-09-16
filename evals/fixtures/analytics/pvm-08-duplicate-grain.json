@@ -1,0 +1,29 @@
+{
+  "id": "pvm-08-duplicate-grain",
+  "recipe": "pvm",
+  "purpose": "Two rows for the same SKU and period (e.g. an undeclared region split) must not be silently summed or overwritten.",
+  "input_csv": "period,sku,units,price\n2025,A,100,10\n2025,A,40,10\n2026,A,110,10\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--key",
+    "sku",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--quantity-col",
+    "units",
+    "--price-col",
+    "price"
+  ],
+  "convention": "Grain = dims + key + period must be unique.",
+  "derivation": "Lines 2 and 3 share (A, 2025).",
+  "expected_status": "error",
+  "expected_error_code": "DUPLICATE_GRAIN",
+  "edge_case_expectation": "The user must aggregate deliberately or declare --dims.",
+  "expected_failure_behavior": "Exit code 2 with DUPLICATE_GRAIN listing the duplicate lines.",
+  "kind": "analytics"
+}

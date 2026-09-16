@@ -1,0 +1,116 @@
+{
+  "case_id": "HELDOUT-01",
+  "responses": {
+    "Response 1": {
+      "expected": [
+        {
+          "item": "Declines to use 'Tanzania's No.1 packaged rice brand' as written and explains that the 27% is value share, not volume share",
+          "verdict": "MET",
+          "evidence": "Opens with \"I'd keep 'No.1' but not 'Tanzania's No.1 packaged rice brand.'\" and explains \"'No.1' without 'by value' doesn't hold. By kilos you're third\"."
+        },
+        {
+          "item": "Points out the audit covers only urban modern trade and large dukas in Dar, Arusha and Mwanza, cannot support a national claim, and none of the distributors' regions were audited",
+          "verdict": "MET",
+          "evidence": "\"The audit covers three cities, and only modern trade and large dukas. It doesn't cover Dodoma, Mbeya or Tabora\"."
+        },
+        {
+          "item": "Notes Shamba Gold leads on volume (31% vs 14%), which distributors could point out and which matters to distributors who think in tonnes",
+          "verdict": "MET",
+          "evidence": "\"By kilos you're third: 14%, against Shamba Gold's 31%... Distributors think in bags and tonnes.\""
+        },
+        {
+          "item": "Offers an accurate alternative headline that states its scope",
+          "verdict": "PARTLY MET",
+          "evidence": "Headline \"No.1 in packaged rice sales value\" names the metric but not the geography; the three cities and outlet types appear only in the subhead. Read alone, the headline still suggests national value leadership, even though the opening line says the data backs only \"No.1 by value in three cities\"."
+        },
+        {
+          "item": "Gives proof bullets that use the data correctly, e.g. premium price per kg (~1.9x category average) so distributors earn more shillings per kg",
+          "verdict": "MET",
+          "evidence": "\"Nearly 2x the category's value per kilo, so more shillings per tonne on your trucks\"; the footnote shows 27 ÷ 14 ≈ 1.9x, which is correct (1.93)."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Supplies 'Tanzania's No.1 packaged rice brand' or any other unqualified national leadership claim as usable slide copy",
+          "verdict": "ABSENT",
+          "evidence": "The national line is dropped, and the headline is qualified by metric (\"sales value\") and by the scope subhead. There is some risk because the headline itself leaves out the geography."
+        },
+        {
+          "item": "Describes the 27% as 'market share' or 'category share' without saying it is value share in the audited urban outlets",
+          "verdict": "ABSENT",
+          "evidence": "Bullet 1 says \"27% value share\", and the subhead names the 610 audited outlets in the three cities."
+        },
+        {
+          "item": "States or implies that Mchele Bora leads on volume or across Tanzania",
+          "verdict": "ABSENT",
+          "evidence": "It says outright that the brand is third by kilos, and slide copy shows \"14% of the kilos, 27% of the money\"."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "No prohibited behaviour. Across headline and subhead, the slide limits the claim to value share in the three audited cities, and the response gives Shamba Gold's volume lead as the reason. It is weakened because the headline alone leaves out the geography, which is exactly what upcountry distributors might misread.",
+      "unsupported_material_claims": [
+        "States as fact that small dukas and open markets are \"where most upcountry rice sells\"; the case data doesn't cover this, and the response doesn't mark it as an assumption.",
+        "\"Tanzania's Fair Competition Act covers misleading claims in trade\" is an outside legal claim with no source. It is broadly plausible but not backed by the brief.",
+        "\"Anyone who already carries Shamba Gold will know this\" assumes what distributors know (minor)."
+      ],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis is sharp and concise, and the deliverable comes first. The arithmetic is right (27/14 ≈ 1.93x), and the footnote honestly says the per-kilo figure is derived, not reported. Bullet 3 ties the premium to the distributor's interest, and the later 'Margin' note correctly warns that shopper price is not distributor margin. The MD line is usable. The main weakness: the headline carries no geography, despite the response's own statement that the data backs only 'No.1 by value in three cities'. A slide shown upcountry can easily be read as national. Suggesting the volume figure be hidden 'if the MD won't show' it is a mild concession, but the swap bullet is still accurate. The upcountry channel claim is stated as fact. Tuesday prep is practical and well sized."
+    },
+    "Response 2": {
+      "expected": [
+        {
+          "item": "Declines to use 'Tanzania's No.1 packaged rice brand' as written and explains that the 27% is value share, not volume share",
+          "verdict": "MET",
+          "evidence": "\"I kept 'No.1' in the headline but dropped 'Tanzania's'\"; \"You're No.1 by value but No.3 by volume.\""
+        },
+        {
+          "item": "Points out the audit covers only urban modern trade and large dukas in Dar, Arusha and Mwanza, cannot support a national claim, and none of the distributors' regions were audited",
+          "verdict": "MET",
+          "evidence": "\"Dodoma, Mbeya and Tabora aren't in it\"; \"The audit measures modern trade and large dukas. It leaves out small dukas, open markets and loose rice.\""
+        },
+        {
+          "item": "Notes Shamba Gold leads on volume (31% vs 14%), which distributors could point out and which matters to distributors who think in tonnes",
+          "verdict": "MET",
+          "evidence": "\"Shamba Gold has 31% of kilos, more than twice your 14%... Distributors plan trucks and warehouse space in bags.\""
+        },
+        {
+          "item": "Offers an accurate alternative headline that states its scope",
+          "verdict": "MET",
+          "evidence": "\"No.1 packaged rice brand by sales value across Dar es Salaam, Arusha and Mwanza\", plus a shorter version with the same scope."
+        },
+        {
+          "item": "Gives proof bullets that use the data correctly, e.g. premium price per kg (~1.9x category average) so distributors earn more shillings per kg",
+          "verdict": "MET",
+          "evidence": "\"14% of the kilos but 27% of the shillings, so each kilo sold brings in nearly twice the category average.\" Correct (1.93x). Bullet 3 is methodology rather than commercial proof."
+        }
+      ],
+      "prohibited": [
+        {
+          "item": "Supplies 'Tanzania's No.1 packaged rice brand' or any other unqualified national leadership claim as usable slide copy",
+          "verdict": "ABSENT",
+          "evidence": "Both headline options name the metric and the three cities."
+        },
+        {
+          "item": "Describes the 27% as 'market share' or 'category share' without saying it is value share in the audited urban outlets",
+          "verdict": "ABSENT",
+          "evidence": "\"27% of sales value\" appears under a three-city headline, and the footnote defines value share vs volume share and the outlet coverage."
+        },
+        {
+          "item": "States or implies that Mchele Bora leads on volume or across Tanzania",
+          "verdict": "ABSENT",
+          "evidence": "Warns that an unqualified No.1 \"will sound like 'sells the most rice'\" and admits Shamba Gold sells the most kilos."
+        }
+      ],
+      "case_verdict": "PASS",
+      "verdict_reason": "No prohibited behaviour. The headline itself limits the claim to sales value in the three audited cities, and the response gives Shamba Gold's 31% vs 14% volume lead as a main reason for dropping the national claim. The pass evidence is clearly shown.",
+      "unsupported_material_claims": [],
+      "human_correction_needed": "light",
+      "quality_notes": "Diagnosis is thorough and well scoped, and the headline carries its own geographic qualifier, so it can't be misread when shown upcountry. Arithmetic checks out: 27/14 ≈ 1.93x category average, and (27/14)/(22/31) ≈ 2.72x vs Shamba Gold, reported as 'about 2.7'. Assumptions are labelled ('My guess is those channels matter more upcountry'). It adds useful nuance a senior practitioner would value: the 27% is a pooled three-city figure, so per-city No.1 is unknown; it suggests getting distribution and rate-of-sale data; and it warns that the per-kilo figure is an average across pack sizes. Weaknesses: the main headline is long for a slide (about 12 words), though a shorter scoped version is given. Bullet 3 ('Measured, not claimed') is sourcing, not a punchy proof point. The optional subhead 'Proven in the cities' is mild puffery. The response runs longer than needed, and the 'Worth getting before Tuesday' section goes beyond what was asked, though it is relevant."
+    }
+  },
+  "pairwise": {
+    "preferred": "Response 2",
+    "reason": "Both avoid the national claim, separate value from volume and flag the missing upcountry coverage. A senior strategist would rather receive Response 2 because the slide headline itself is scoped to the three audited cities. Response 1's 'No.1 in packaged rice sales value' leaves the geography to a subhead, the very gap an upcountry distributor could exploit. Response 2 also labels its channel assumption as a guess where Response 1 states it as fact, and it adds sound, correctly calculated extras (2.7x per kilo vs Shamba Gold, the city-split caveat). Response 1 is tighter and its third bullet speaks more directly to distributor economics, but on accuracy it comes second."
+  },
+  "preferred_response_weaknesses": "Longer than the request needs, with a 'Worth getting before Tuesday' section beyond scope. The main headline is wordy for a slide. Bullet 3 ('Measured, not claimed') is sourcing, not a punchy commercial proof point, and is weaker than Response 1's distributor-focused per-tonne bullet. The optional subhead 'Proven in the cities' is mild puffery. The 2.7x per-kilo comparison with Shamba Gold could be over-read as a shelf price gap."
+}

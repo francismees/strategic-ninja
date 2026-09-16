@@ -1,0 +1,1376 @@
+{
+  "schema_version": "1.0",
+  "engagement": {
+    "id": "ENG-fizzi-2027-annual-plan",
+    "namespace": "demo-fizzi/fizzi-cola/tanzania/annual-plan-2027",
+    "decision": "Choose Fizzi Cola's 2027 growth route and allocate the flat TZS 3,200 million marketing and trade budget",
+    "decision_maker": "CEO and commercial leadership, Fizzi Beverages (fictional)",
+    "audience": "Leadership team and board (fictional)",
+    "client": "Fizzi Beverages (fictional)",
+    "brand": "Fizzi Cola (fictional)",
+    "category": "Carbonated soft drinks",
+    "market": "Tanzania Mainland: Dar es Salaam, Mwanza, Arusha, Dodoma",
+    "horizon": "annual",
+    "outcome": "Return Fizzi to buyer growth in Dar es Salaam and Mwanza in 2027 without diluting margin",
+    "success_metric": "Household penetration (52-week panel) in Dar es Salaam and Mwanza, with volume and contribution as outcomes",
+    "baseline": "52 weeks to June 2026: penetration 34% Dar es Salaam, 30% Mwanza; Dar es Salaam volume +2.3%, Mwanza -7.0% versus prior 52 weeks",
+    "constraints": [
+      "Budget flat at TZS 3,200 million",
+      "Distributor service in Mwanza and Arusha still being repaired (Demo A)",
+      "No premium product development capacity in 2027"
+    ],
+    "scope": "Brand, pack, channel and communications choices for 2027 in four regions",
+    "mode": "build_strategy",
+    "depth": "standard",
+    "unresolved_questions": [
+      "Does the cooler uplift hold outside the Dar es Salaam pilot outlets?",
+      "Which brand comes to mind for a cold drink on the way home?",
+      "How many high-footfall outlets have a 350 ml baseline near 59 litres per week?"
+    ],
+    "persistence": "authorised_local_files",
+    "synthetic": true,
+    "created": "2026-09-17"
+  },
+  "sources": [
+    {
+      "id": "SRC-B01",
+      "title": "Demo A diagnosis records (H1 2026)",
+      "url_or_file": "examples/demo-a-diagnosis/records.json",
+      "publisher_owner": "Strategy team (fictional)",
+      "locator": "INS-A01, OPT-A01, CLM-A02, CLM-A03",
+      "publication_date": "2026-09",
+      "data_period": "H1 2025 vs H1 2026",
+      "geography": "Four regions",
+      "population_sample": "See Demo A sources",
+      "method": "Prior diagnosis reused after checking for review flags (none open)",
+      "access_date": "2026-09-17",
+      "limitations": "Inherits Demo A limits: sell-in data, rough rate-of-sale proxy",
+      "lineage": {
+        "origin": "derived",
+        "derived_from": [],
+        "note": "Derived from Demo A sources SRC-A01 to SRC-A04"
+      },
+      "source_class": "internal_document"
+    },
+    {
+      "id": "SRC-B02",
+      "title": "Household panel by region, 52 weeks to June 2025 and June 2026 (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/panel_region.csv",
+      "publisher_owner": "Household panel provider (fictional)",
+      "locator": "All 4 rows",
+      "publication_date": "2026-08",
+      "data_period": "52 weeks to June 2025; 52 weeks to June 2026",
+      "geography": "Dar es Salaam and Mwanza households",
+      "population_sample": "Panel projected to 1.2 million Dar es Salaam and about 0.26 million Mwanza households",
+      "method": "Household purchase panel, projected",
+      "access_date": "2026-09-17",
+      "limitations": "Household (not individual) purchases; out-of-home consumption under-recorded; projection error not supplied",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "industry_research"
+    },
+    {
+      "id": "SRC-B03",
+      "title": "Household panel by pack, Dar es Salaam (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/panel_pack_dar.csv",
+      "publisher_owner": "Household panel provider (fictional)",
+      "locator": "All 6 rows",
+      "publication_date": "2026-08",
+      "data_period": "52 weeks to June 2025; 52 weeks to June 2026",
+      "geography": "Dar es Salaam households",
+      "population_sample": "Panel projected to 1.2 million households",
+      "method": "Household purchase panel, projected, by pack",
+      "access_date": "2026-09-17",
+      "limitations": "Out-of-home single-serve purchases likely under-recorded, so 350 ml buyer counts are conservative",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "industry_research"
+    },
+    {
+      "id": "SRC-B04",
+      "title": "Cooler pilot, 22 cooler outlets and 22 matched outlets (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/cooler_pilot.csv",
+      "publisher_owner": "Fizzi Beverages trade marketing (fictional)",
+      "locator": "All 4 rows",
+      "publication_date": "2026-06",
+      "data_period": "10 weeks before and after March 2026 installation",
+      "geography": "Dar es Salaam dukas near transport stages",
+      "population_sample": "44 outlets",
+      "method": "Matched comparison, not randomised",
+      "access_date": "2026-09-17",
+      "limitations": "Small, one city, matched not randomised; visibility and chilling effects not separated",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "first_party_data"
+    },
+    {
+      "id": "SRC-B05",
+      "title": "Commuter and duka shopper intercept interviews, May 2026 (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/interviews_excerpt.md",
+      "publisher_owner": "Insights team (fictional)",
+      "locator": "Respondents R01-R10",
+      "publication_date": "2026-05",
+      "data_period": "May 2026",
+      "geography": "Two Dar es Salaam bus stages; one Mwanza market street",
+      "population_sample": "10 adults who bought a soft drink in the past week",
+      "method": "Short intercept interviews in Kiswahili; analyst glosses",
+      "access_date": "2026-09-17",
+      "limitations": "Ten interviews at three locations; glosses not independently verified; explains mechanisms, not prevalence",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "qualitative_primary"
+    },
+    {
+      "id": "SRC-B06",
+      "title": "2026 annual plan deck (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/market_and_plan_notes.md",
+      "publisher_owner": "Fizzi Beverages marketing (fictional)",
+      "locator": "Item 1 (plan slide 9)",
+      "publication_date": "2025-11",
+      "data_period": "unknown: no data cited on the slide",
+      "geography": "Tanzania (unspecified)",
+      "population_sample": "unknown: no data cited",
+      "method": "unknown: planning assertion without cited basis",
+      "access_date": "2026-09-17",
+      "limitations": "Same sentence repeated in 2024, 2025 and 2026 plans with no underlying data",
+      "lineage": {
+        "origin": "unknown",
+        "derived_from": [],
+        "note": "Repeated across three plans; one lineage"
+      },
+      "source_class": "internal_document"
+    },
+    {
+      "id": "SRC-B07",
+      "title": "Retail audit, Q2 2025 and Q2 2026 (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/market_and_plan_notes.md",
+      "publisher_owner": "Audit supplier (fictional)",
+      "locator": "Item 2 (audit table 4)",
+      "publication_date": "2026-08",
+      "data_period": "Q2 2025 and Q2 2026",
+      "geography": "Audited urban outlets, Dar es Salaam and Mwanza",
+      "population_sample": "Audit panel of urban outlets",
+      "method": "Store audit projected to audited universe",
+      "access_date": "2026-09-17",
+      "limitations": "Urban audited universe; informal outlets under-covered",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "industry_research"
+    },
+    {
+      "id": "SRC-B08",
+      "title": "Route supervisor reports on competitor activity (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/market_and_plan_notes.md",
+      "publisher_owner": "Fizzi Beverages sales team (fictional)",
+      "locator": "Item 3",
+      "publication_date": "2026-06",
+      "data_period": "2025 to June 2026",
+      "geography": "Dar es Salaam",
+      "population_sample": "Supervisor estimates across routes",
+      "method": "Field observation estimates, not counts",
+      "access_date": "2026-09-17",
+      "limitations": "Estimate range only; no competitor sales data",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "internal_document"
+    },
+    {
+      "id": "SRC-B09",
+      "title": "East Africa On-the-Go Drinks 2025 (fictional regional study)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/market_and_plan_notes.md",
+      "publisher_owner": "Research firm (fictional)",
+      "locator": "Item 4",
+      "publication_date": "2025",
+      "data_period": "2025",
+      "geography": "Nairobi, Kenya",
+      "population_sample": "1,000 urban adults",
+      "method": "Survey",
+      "access_date": "2026-09-17",
+      "limitations": "Kenyan city; transfer to Tanzania untested",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "industry_research"
+    },
+    {
+      "id": "SRC-B10",
+      "title": "Budget, cooler quote and margin estimate (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/market_and_plan_notes.md",
+      "publisher_owner": "Fizzi Beverages finance and procurement (fictional)",
+      "locator": "Items 5-6",
+      "publication_date": "2026-08",
+      "data_period": "2026 estimates for 2027",
+      "geography": "Company-wide",
+      "population_sample": "Not applicable: internal estimates",
+      "method": "Budget allocation, supplier quote, finance estimate",
+      "access_date": "2026-09-17",
+      "limitations": "Margin is an internal estimate; quote may change with volume",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "internal_document"
+    },
+    {
+      "id": "SRC-B11",
+      "title": "Brand tracker H1 2026 (synthetic)",
+      "url_or_file": "examples/demo-b-annual-strategy/data/tracker_2026h1.md",
+      "publisher_owner": "Research agency (fictional)",
+      "locator": "Summary table",
+      "publication_date": "2026-07",
+      "data_period": "H1 2025 and H1 2026 waves",
+      "geography": "Urban Dar es Salaam, Mwanza, Arusha",
+      "population_sample": "Urban adults 18-45 CSD buyers, base 612",
+      "method": "Face-to-face survey",
+      "access_date": "2026-09-17",
+      "limitations": "No situational retrieval measure; urban only",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": ""
+      },
+      "source_class": "survey_primary"
+    },
+    {
+      "id": "SRC-TZ-NBS-NCPI-2026-08",
+      "title": "National Consumer Price Index (NCPI) for August 2026",
+      "url_or_file": "https://www.nbs.go.tz/uploads/statistics/documents/en-1788862063-CPI%20%20Release_082026_English.pdf",
+      "publisher_owner": "National Bureau of Statistics (NBS), Tanzania",
+      "locator": "p.2, Table 1: 'TOTAL - ALL ITEMS INDEX' and '7 Transport', 12-month change",
+      "publication_date": "2026-09-08",
+      "data_period": "August 2026 compared with August 2025",
+      "geography": "Tanzania Mainland",
+      "population_sample": "Price collection in 26 mainland regional headquarters; HBS 2017/18 weights",
+      "method": "Consumer price index, base 2020 = 100",
+      "access_date": "2026-09-17",
+      "limitations": "Mainland only; household consumer prices, not firm costs",
+      "lineage": {
+        "origin": "original",
+        "derived_from": [],
+        "note": "Copied from markets/tanzania-observations.json (verified 2026-09-17)"
+      },
+      "source_class": "official_statistics"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-B01",
+      "statement": "In Dar es Salaam, Fizzi household penetration fell from 36% to 34% while purchase occasions per buyer rose from 12 to 13; volume grew 2.3%, with a penetration effect of -330,000 litres offset by a frequency effect of +462,000 litres",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-B02"
+        ],
+        "records": [],
+        "calculation": "python3 scripts/commercial_analysis.py buyers --input examples/demo-b-annual-strategy/data/panel_region.csv --period-col period --base 52w_to_Jun2025 --current 52w_to_Jun2026 --buyers-col buyers --occasions-col occasions --units-col litres --population-col households --window-col window --segment-col region (output analysis/buyers_by_region.json)"
+      },
+      "units_denominator": "% of households; occasions per buying household; litres",
+      "period": "52 weeks to June 2025 vs 52 weeks to June 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Reconciled panel decomposition; projection error not supplied"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Dar es Salaam households",
+        "reason": "Local household panel"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Household panel under-records out-of-home purchases"
+    },
+    {
+      "id": "CLM-B02",
+      "statement": "In Mwanza, penetration fell from 34% to 30% and volume fell 7.0%, mostly through fewer buying households",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-B02"
+        ],
+        "records": [],
+        "calculation": "Same command as CLM-B01, segment Mwanza"
+      },
+      "units_denominator": "% of households; litres",
+      "period": "52 weeks to June 2025 vs 52 weeks to June 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Reconciled panel decomposition; smaller panel"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Mwanza households",
+        "reason": "Local household panel"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Overlaps the H1 2026 availability loss diagnosed in Demo A"
+    },
+    {
+      "id": "CLM-B03",
+      "statement": "In Dar es Salaam the 350 ml pack lost buyers (penetration 21.7% to 18.4%; bottles -12.2%) while the 1.25 L pack grew 21.9% through more buyers and higher frequency (7 to 8 occasions); 500 ml fell 2.9%",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-B03"
+        ],
+        "records": [],
+        "calculation": "python3 scripts/commercial_analysis.py buyers --input examples/demo-b-annual-strategy/data/panel_pack_dar.csv --period-col period --base 52w_to_Jun2025 --current 52w_to_Jun2026 --buyers-col buyers --occasions-col occasions --units-col bottles --population-col households --window-col window --segment-col pack (output analysis/buyers_by_pack_dar.json)"
+      },
+      "units_denominator": "% of households buying each pack; bottles",
+      "period": "52 weeks to June 2025 vs 52 weeks to June 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Reconciled; out-of-home 350 ml purchases likely under-recorded"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Dar es Salaam households",
+        "reason": "Local household panel"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Pack buyer groups overlap; not summed"
+    },
+    {
+      "id": "CLM-B04",
+      "statement": "Cooler outlets sold about 20.9 more litres of 350 ml per week than their matched-control counterfactual (49% uplift) in the ten weeks after installation; the 500 ml effect was small",
+      "type": "computed",
+      "basis": {
+        "sources": [
+          "SRC-B04"
+        ],
+        "records": [],
+        "calculation": "Counterfactual = 40.2 x (42.2 / 39.8) = 42.62; incremental = 63.5 - 42.62 = 20.88 (analysis/cooler_economics.md steps 1-2)"
+      },
+      "units_denominator": "Litres of 350 ml per outlet per week",
+      "period": "Ten weeks before and after March 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Matched comparison with pre-period; small sample, one city"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Dar es Salaam dukas near transport stages",
+        "reason": "Local pilot, 44 outlets"
+      },
+      "verification_status": "reproduced",
+      "limitations": "Not randomised; visibility and chilling effects combined"
+    },
+    {
+      "id": "CLM-B05",
+      "statement": "At pilot-level uplift a cooler pays back in about 3.1 years; a two-year payback needs about 29 incremental litres per week, implying outlets with a 350 ml baseline near 59 litres per week",
+      "type": "estimate",
+      "basis": {
+        "sources": [
+          "SRC-B04",
+          "SRC-B10"
+        ],
+        "records": [
+          "CLM-B04"
+        ],
+        "method": "Incremental litres x 52 weeks x TZS 700 contribution per litre, minus TZS 0.25 million annual maintenance, against TZS 1.6 million installed cost (analysis/cooler_economics.md)",
+        "uncertainty": "Depends on uplift transfer beyond pilot outlets, margin estimate and cooler uptime; no discounting"
+      },
+      "units_denominator": "Years; litres per outlet per week",
+      "period": "2027 planning estimate",
+      "confidence": {
+        "level": "low",
+        "reason": "Built on a small pilot and internal estimates"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Dar es Salaam high-footfall dukas",
+        "reason": "Local pilot inputs"
+      },
+      "verification_status": "unverified",
+      "limitations": "Outlet baseline distribution unknown"
+    },
+    {
+      "id": "CLM-B06",
+      "statement": "Six of ten interviewees described cold availability as deciding an on-the-go purchase, and none raised price as a barrier",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B05"
+        ],
+        "records": [],
+        "locator": "Analyst coding table: R01, R02, R03, R05, R06, R10; price R10"
+      },
+      "units_denominator": "Count of interviewees in a sample of 10",
+      "period": "May 2026",
+      "confidence": {
+        "level": "low",
+        "reason": "Small purposive sample at three locations"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Commuters at two Dar es Salaam stages and one Mwanza street",
+        "reason": "Local but small and non-representative"
+      },
+      "verification_status": "verified",
+      "limitations": "Counts describe the sample, not prevalence"
+    },
+    {
+      "id": "CLM-B07",
+      "statement": "R02 (Dar es Salaam bus stage): \"Fizzi ilikuwa ya moto, nikachukua hii\" (analyst gloss: \"Fizzi was warm, so I took this one\")",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B05"
+        ],
+        "records": [],
+        "locator": "Row R02"
+      },
+      "units_denominator": "Verbatim quote",
+      "period": "May 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Exact quote from transcript excerpt; single respondent"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "One respondent, Dar es Salaam",
+        "reason": "Single local account"
+      },
+      "verification_status": "verified",
+      "limitations": "Gloss by analyst, not independently verified",
+      "verbatim": true,
+      "respondent_id": "R02",
+      "translation_status": "translated_by_analyst"
+    },
+    {
+      "id": "CLM-B08",
+      "statement": "The claim that modern trade will reach 25% of category value by 2027 appears unchanged in the 2024, 2025 and 2026 plans with no supporting data",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B06"
+        ],
+        "records": [],
+        "locator": "Item 1"
+      },
+      "units_denominator": "Planning statement",
+      "period": "2024-2026 plans",
+      "confidence": {
+        "level": "high",
+        "reason": "Directly observed in the plan documents"
+      },
+      "market_applicability": {
+        "status": "not_applicable",
+        "scope": "Internal planning documents",
+        "reason": "Describes documents, not the market"
+      },
+      "verification_status": "verified",
+      "limitations": "Repetition is one lineage, not corroboration"
+    },
+    {
+      "id": "CLM-B09",
+      "statement": "Modern trade share of urban category value was 14% in both Q2 2025 and Q2 2026",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B07"
+        ],
+        "records": [],
+        "locator": "Item 2, audit table 4"
+      },
+      "units_denominator": "% of audited urban category value",
+      "period": "Q2 2025 vs Q2 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Direct category measure; informal outlets under-covered"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Audited urban outlets, Dar es Salaam and Mwanza",
+        "reason": "Local audit"
+      },
+      "verification_status": "verified",
+      "limitations": "Urban audited universe only"
+    },
+    {
+      "id": "CLM-B10",
+      "statement": "Route supervisors estimate that Bora Cola placed branded coolers in 1,500-2,500 Dar es Salaam dukas near transport stages during 2025",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B08"
+        ],
+        "records": [],
+        "locator": "Item 3"
+      },
+      "units_denominator": "Estimated outlet count range",
+      "period": "2025",
+      "confidence": {
+        "level": "low",
+        "reason": "Supervisor estimates, not counts"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Dar es Salaam dukas near stages",
+        "reason": "Local field observation"
+      },
+      "verification_status": "verified",
+      "limitations": "Estimate only; no competitor sales data"
+    },
+    {
+      "id": "CLM-B11",
+      "statement": "A Nairobi survey reports rising single-serve chilled purchases and faster growth for 250 ml than 350 ml packs",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B09"
+        ],
+        "records": [],
+        "locator": "Item 4"
+      },
+      "units_denominator": "Survey findings, urban adults, Nairobi",
+      "period": "2025",
+      "confidence": {
+        "level": "low",
+        "reason": "Regional proxy with unknown method detail"
+      },
+      "market_applicability": {
+        "status": "regional_proxy",
+        "scope": "Nairobi urban adults",
+        "reason": "Kenyan city; transfer to Tanzania untested"
+      },
+      "verification_status": "verified",
+      "limitations": "Not evidence about Tanzanian buyers"
+    },
+    {
+      "id": "CLM-B12",
+      "statement": "The 2027 budget is TZS 3,200 million (flat); coolers cost TZS 1.6 million installed plus TZS 0.25 million a year to maintain; 350 ml contribution is about TZS 700 per litre",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B10"
+        ],
+        "records": [],
+        "locator": "Items 5-6"
+      },
+      "units_denominator": "TZS",
+      "period": "2027 plan",
+      "confidence": {
+        "level": "medium",
+        "reason": "Internal figures; margin is an estimate"
+      },
+      "market_applicability": {
+        "status": "not_applicable",
+        "scope": "Company figures",
+        "reason": "Internal"
+      },
+      "verification_status": "verified",
+      "limitations": "Quote and margin may change"
+    },
+    {
+      "id": "CLM-B13",
+      "statement": "Tracker consideration (52% to 51%) and value perception (58% to 57%) were stable; the tracker does not measure brand retrieval in specific buying situations",
+      "type": "observed",
+      "basis": {
+        "sources": [
+          "SRC-B11"
+        ],
+        "records": [],
+        "locator": "Summary table"
+      },
+      "units_denominator": "% of urban CSD buyers, base 612",
+      "period": "H1 2025 vs H1 2026",
+      "confidence": {
+        "level": "medium",
+        "reason": "Consistent survey measures"
+      },
+      "market_applicability": {
+        "status": "local_supported",
+        "scope": "Urban Dar es Salaam, Mwanza, Arusha",
+        "reason": "Urban survey"
+      },
+      "verification_status": "verified",
+      "limitations": "Attitudes, not behaviour"
+    },
+    {
+      "id": "CLM-TZ-002",
+      "statement": "Transport division prices rose 13.8% over the 12 months to August 2026 in the Mainland NCPI",
+      "type": "observed",
+      "value": 13.8,
+      "basis": {
+        "sources": [
+          "SRC-TZ-NBS-NCPI-2026-08"
+        ],
+        "records": [],
+        "locator": "p.2 Table 1, row '7 Transport'"
+      },
+      "units_denominator": "% change in the transport division index over 12 months",
+      "period": "August 2026",
+      "confidence": {
+        "level": "high",
+        "reason": "Official release, direct measure"
+      },
+      "market_applicability": {
+        "status": "local_verified",
+        "scope": "Tanzania Mainland, household transport prices",
+        "reason": "Direct official measure"
+      },
+      "verification_status": "verified",
+      "limitations": "Household transport prices, not Fizzi's distribution costs"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "HYP-B01",
+      "kind": "hypothesis",
+      "proposition": "Fizzi is losing 350 ml buyers in Dar es Salaam mainly because cold Fizzi is often unavailable at on-the-go purchase points, where a competitor has expanded coolers",
+      "basis": "Panel pack decomposition, cooler pilot, interviews and competitor observation",
+      "basis_records": [
+        "CLM-B03",
+        "CLM-B04",
+        "CLM-B06",
+        "CLM-B07",
+        "CLM-B10"
+      ],
+      "confirming_signal": "350 ml buyer loss concentrated among out-of-home or commuter purchasers; cooler outlets recover 350 ml sales; switching accounts cite warm or absent Fizzi",
+      "falsifier": "350 ml losses equal in outlets with and without competitor coolers; cooler uplift disappears in replication; switching accounts cite price or taste",
+      "current_support": "mixed",
+      "decision_impact": "Determines whether chilled availability or communications and price should lead the 2027 plan",
+      "validation_step": "Phase 1 rollout with matched controls; add outlet-level check of competitor cooler presence",
+      "status": "open",
+      "review_condition": "Phase 1 gate review (end of Q2 2027)",
+      "depends_on": [],
+      "confidence": {
+        "level": "medium",
+        "reason": "Cooler effect supported by pilot; competitor link and out-of-home share untested"
+      }
+    },
+    {
+      "id": "HYP-B02",
+      "kind": "hypothesis",
+      "proposition": "Fizzi comes to mind less often than Bora Cola for a cold drink on the way home",
+      "basis": "Competitor presence at stages; no measurement",
+      "basis_records": [
+        "CLM-B10",
+        "CLM-B13"
+      ],
+      "confirming_signal": "Lower situational retrieval for Fizzi than Bora among commuters",
+      "falsifier": "Equal or higher retrieval for Fizzi",
+      "current_support": "untested",
+      "decision_impact": "If true, communications linking Fizzi to the moment should accompany cooler placement",
+      "validation_step": "Add a situational retrieval question to the Q4 2026 tracker wave",
+      "status": "open",
+      "review_condition": "Q4 2026 tracker results",
+      "depends_on": [],
+      "confidence": {
+        "level": "unknown",
+        "reason": "Not measured"
+      }
+    },
+    {
+      "id": "HYP-B03",
+      "kind": "hypothesis",
+      "proposition": "A premium Fizzi tier at +30% would add incremental margin in 2027",
+      "basis": "Management suggestion; no evidence supplied",
+      "basis_records": [
+        "CLM-B13"
+      ],
+      "confirming_signal": "Premium CSD tier sales growing in target outlets; priced test shows incremental buyers",
+      "falsifier": "No premium tier traction; cannibalisation of core",
+      "current_support": "untested",
+      "decision_impact": "Would divert budget and management attention from buyer recovery",
+      "validation_step": "Premium tier sell-out analysis before any 2028 test",
+      "status": "open",
+      "review_condition": "2028 planning",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "No willingness-to-pay evidence"
+      }
+    },
+    {
+      "id": "ASM-B01",
+      "kind": "assumption",
+      "proposition": "Modern trade will reach 25% of category value by 2027",
+      "basis": "Repeated in 2024-2026 plans",
+      "basis_records": [
+        "CLM-B08"
+      ],
+      "confirming_signal": "Audit modern trade share rising several points a year",
+      "falsifier": "Audit share flat or falling",
+      "current_support": "untested",
+      "decision_impact": "Justified shifting 40% of trade budget to modern trade listings",
+      "validation_step": "Check audit trend",
+      "status": "refuted",
+      "review_condition": "Each audit release",
+      "depends_on": [],
+      "confidence": {
+        "level": "low",
+        "reason": "No data behind the assumption"
+      }
+    },
+    {
+      "id": "ASM-B02",
+      "kind": "assumption",
+      "proposition": "The cooler uplift observed in the Dar es Salaam pilot (about 49%) will be of similar size in other high-footfall Dar es Salaam clusters and in Mwanza",
+      "basis": "Pilot result",
+      "basis_records": [
+        "CLM-B04"
+      ],
+      "confirming_signal": "Phase 1 uplift within 15 points of pilot versus matched controls",
+      "falsifier": "Phase 1 uplift below 25%",
+      "current_support": "untested",
+      "decision_impact": "Determines whether the cooler programme pays back",
+      "validation_step": "Phase 1 with matched controls, including 30 Mwanza outlets",
+      "status": "accepted_for_planning",
+      "review_condition": "Phase 1 gate review",
+      "depends_on": [
+        "CLM-B04"
+      ],
+      "confidence": {
+        "level": "low",
+        "reason": "One small pilot"
+      }
+    },
+    {
+      "id": "ASM-B03",
+      "kind": "assumption",
+      "proposition": "Distributor service in Mwanza and Arusha will be restored by the end of Q1 2027",
+      "basis": "Demo A action plan",
+      "basis_records": [
+        "SRC-B01"
+      ],
+      "confirming_signal": "Numeric distribution back within 3 points of 2025 levels",
+      "falsifier": "Distribution still below 45% at end of Q1 2027",
+      "current_support": "untested",
+      "decision_impact": "Mwanza cooler placements depend on reliable supply",
+      "validation_step": "Monthly audit",
+      "status": "accepted_for_planning",
+      "review_condition": "Monthly audit reads",
+      "depends_on": [],
+      "confidence": {
+        "level": "medium",
+        "reason": "Actions under way; no results yet"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "id": "INS-B01",
+      "decision": "2027 growth route",
+      "audience_context": "Commuters and on-the-go buyers at Dar es Salaam transport stages; household buyers",
+      "insight_kind": "consumer",
+      "evidence": [
+        "CLM-B01",
+        "CLM-B03",
+        "CLM-B04",
+        "CLM-B06",
+        "CLM-B07"
+      ],
+      "observation": "Dar es Salaam volume grew only because existing home buyers bought more often, while the brand lost 350 ml buyers",
+      "contrast": "350 ml versus 1.25 L buyers; cooler versus matched outlets; penetration versus frequency effects",
+      "mechanism": "The 350 ml purchase is an immediate, on-the-go decision made at the moment a cold drink is available; where cold Fizzi is absent, buyers take a cold competitor or skip",
+      "tension": "People want a cold drink the moment they step off the bus; Fizzi is often warm or missing at that moment",
+      "explanation": "Fizzi's growth problem in Dar es Salaam is not loyalty or price: it is losing the on-the-go moment to whoever has the cold bottle there",
+      "alternatives": [
+        "350 ml buyers moved to other categories (water, juice) for reasons unrelated to cold availability",
+        "Panel under-records out-of-home purchases, exaggerating the 350 ml buyer loss"
+      ],
+      "contradictions": [
+        "Household panel under-records out-of-home purchases, so 350 ml buyer loss may be understated or distorted"
+      ],
+      "confidence": {
+        "level": "medium",
+        "reason": "Behavioural panel, a controlled pilot and interviews point the same way; competitor role unmeasured"
+      },
+      "implication": "Recruit and win back buyers through chilled availability at high-footfall on-the-go points, backed by communication of the moment, rather than frequency promotions or premiumisation",
+      "validation_need": "Phase 1 replication with matched controls; situational retrieval measurement",
+      "status": "defensible"
+    },
+    {
+      "id": "INS-B02",
+      "decision": "2027 trade budget allocation",
+      "audience_context": "Urban channels, Dar es Salaam and Mwanza",
+      "insight_kind": "channel",
+      "evidence": [
+        "CLM-B08",
+        "CLM-B09"
+      ],
+      "observation": "Three annual plans assumed modern trade would reach a quarter of category value; audit share stayed at 14%",
+      "contrast": "Planning assumption versus audit trend",
+      "mechanism": "An unsourced planning sentence was carried forward each year and became treated as fact",
+      "tension": null,
+      "explanation": "The modern-trade budget shift rests on a repeated assumption that the only category data contradict",
+      "alternatives": [
+        "Audit under-covers new modern trade formats"
+      ],
+      "contradictions": [],
+      "confidence": {
+        "level": "medium",
+        "reason": "Direct audit data over one year; audit coverage limits"
+      },
+      "implication": "Do not move 40% of trade budget to modern trade in 2027",
+      "validation_need": "Semi-annual audit review",
+      "status": "defensible"
+    }
+  ],
+  "options": [
+    {
+      "id": "OPT-B01",
+      "title": "Win the on-the-go cold moment: chilled 350 ml availability at high-footfall clusters with communications of the moment, on a repaired supply base",
+      "diagnosis_addressed": "Loss of 350 ml on-the-go buyers (INS-B01) and Mwanza availability loss (Demo A)",
+      "where_to_act": "High-footfall dukas and kiosks near transport stages in Dar es Salaam first, then Mwanza once supply is restored",
+      "how_to_win": "Be the cold bottle within reach at the moment of need, and be the brand that comes to mind for it",
+      "mechanism": {
+        "levers": [
+          "penetration",
+          "distribution",
+          "volume"
+        ],
+        "explanation": "Chilled availability converts on-the-go moments into purchases, recovering lost 350 ml buyers; communications strengthen retrieval at those moments"
+      },
+      "supporting_records": [
+        "INS-B01",
+        "CLM-B03",
+        "CLM-B04",
+        "CLM-B05",
+        "SRC-B01"
+      ],
+      "assumptions": [
+        "ASM-B02",
+        "ASM-B03"
+      ],
+      "economics": "Phase 1: 180 coolers (TZS 288 million installed plus TZS 45 million a year maintenance). At pilot uplift, payback about 3.1 years; a two-year payback requires outlets with a baseline near 59 litres a week. Scale only after the gate",
+      "resources": "Trade budget for coolers; field team for placement and uptime; communications budget redirected from national weight to cooler clusters",
+      "risks": [
+        "Uplift does not replicate",
+        "Outlets with high enough baselines are scarce",
+        "Competitor exclusivity deals block placements",
+        "Cooler uptime poor (power, maintenance)"
+      ],
+      "non_choices": [
+        "No premium tier launch in 2027",
+        "No shift of 40% of trade budget to modern trade",
+        "No football sponsorship",
+        "No national cooler roll-out before the Phase 1 gate"
+      ],
+      "conditions": [
+        "Phase 1 incremental 350 ml sales at least 25 litres a week versus matched controls",
+        "Cooler uptime at least 90%",
+        "Mwanza placements only after distribution recovers (ASM-B03)"
+      ],
+      "reversal_triggers": [
+        "Phase 1 uplift below 25% versus controls: stop expansion and reassess on-the-go strategy",
+        "Situational retrieval research shows Fizzi already leads and uplift is visibility-only: shift spend from communications to placement"
+      ],
+      "status": "selected",
+      "recommendation_type": "conditional",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Addresses the diagnosed buyer loss with the only lever with controlled evidence; staged and reversible"
+    },
+    {
+      "id": "OPT-B02",
+      "title": "Launch a premium Fizzi tier at +30%",
+      "diagnosis_addressed": "Margin growth ambition",
+      "where_to_act": "Modern trade and premium outlets",
+      "how_to_win": "Trade-up",
+      "mechanism": {
+        "levers": [
+          "price",
+          "mix",
+          "margin"
+        ],
+        "explanation": "Higher price per litre from trading up existing buyers"
+      },
+      "supporting_records": [
+        "HYP-B03"
+      ],
+      "assumptions": [],
+      "economics": "unknown: no willingness-to-pay or premium tier data",
+      "resources": "Product development, launch support",
+      "risks": [
+        "Cannibalisation",
+        "Diverts budget from buyer recovery"
+      ],
+      "non_choices": [],
+      "conditions": [],
+      "reversal_triggers": [],
+      "status": "rejected",
+      "recommendation_type": "not_recommended",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "No evidence of willingness to pay; core buyer loss is the binding constraint; revisit with a priced test in 2028 if premium tier data justify it"
+    },
+    {
+      "id": "OPT-B03",
+      "title": "Drive frequency among existing buyers with 1.25 L family promotions",
+      "diagnosis_addressed": "Volume growth",
+      "where_to_act": "Home occasions, all channels",
+      "how_to_win": "More frequent family purchases",
+      "mechanism": {
+        "levers": [
+          "frequency",
+          "volume"
+        ],
+        "explanation": "Promotions increase occasions per buyer"
+      },
+      "supporting_records": [
+        "CLM-B01",
+        "CLM-B03"
+      ],
+      "assumptions": [],
+      "economics": "Margin dilution risk on the lowest price-per-litre pack; incremental volume unknown",
+      "resources": "Trade promotion budget",
+      "risks": [
+        "Frequency already rising without promotion",
+        "Stock loading rather than consumption"
+      ],
+      "non_choices": [],
+      "conditions": [],
+      "reversal_triggers": [],
+      "status": "rejected",
+      "recommendation_type": "not_recommended",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Frequency is already growing; the constraint is lost buyers; promotions would dilute margin"
+    },
+    {
+      "id": "OPT-B04",
+      "title": "Continue the 2026 plan: shift 40% of trade budget to modern trade listings",
+      "diagnosis_addressed": "Assumed channel shift",
+      "where_to_act": "Modern trade",
+      "how_to_win": "Listings and secondary placement",
+      "mechanism": {
+        "levers": [
+          "distribution"
+        ],
+        "explanation": "Presence in a channel assumed to be growing"
+      },
+      "supporting_records": [
+        "CLM-B08"
+      ],
+      "assumptions": [
+        "ASM-B01"
+      ],
+      "economics": "Moves a large share of trade budget into listings (amount depends on the trade budget split, not supplied)",
+      "resources": "Key account management, listing fees",
+      "risks": [
+        "Channel not growing"
+      ],
+      "non_choices": [],
+      "conditions": [],
+      "reversal_triggers": [],
+      "status": "rejected",
+      "recommendation_type": "not_recommended",
+      "decision_state": "proposed_by_analyst",
+      "rationale": "Rests on a repeated assumption contradicted by audit data (INS-B02)",
+      "review_flags": [
+        {
+          "changed_record": "ASM-B01",
+          "reason": "Audit shows modern trade share flat at 14% (CLM-B09); assumption was one repeated planning statement (CLM-B08)",
+          "date": "2026-09-17",
+          "resolved": true
+        }
+      ],
+      "notes": "Reviewed 2026-09-17 after ASM-B01 was refuted: option remains rejected; no further action."
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-B01",
+      "decision_link": "OPT-B01",
+      "description": "Complete availability repair in Mwanza and Arusha wholesaler-served dukas (continuation of Demo A actions)",
+      "intended_change": "Distribution back to 2025 levels",
+      "mechanism": "Supply base for recovery and for Mwanza cooler placements",
+      "owner_role": "Regional sales manager, Lake and Northern zones",
+      "dependencies": [
+        "Distributor B service agreement"
+      ],
+      "timing": "Q4 2026 to Q1 2027",
+      "resource_basis": "Within existing trade budget; van-sales cost if triggered",
+      "metrics": [
+        "MET-B05"
+      ],
+      "review_condition": "Monthly",
+      "reversal_trigger": "Distribution below 45% at end of Q1 2027: change distributor",
+      "status": "in_progress"
+    },
+    {
+      "id": "ACT-B02",
+      "decision_link": "OPT-B01",
+      "description": "Phase 1: place 150 coolers in Dar es Salaam high-footfall outlets with the highest 350 ml baselines (target near 59 litres a week) and 30 in Mwanza after supply recovers, with 60 matched control outlets",
+      "intended_change": "More on-the-go buyers find cold Fizzi at the moment of purchase",
+      "mechanism": "Chilled physical availability",
+      "owner_role": "Head of trade marketing",
+      "dependencies": [
+        "Outlet sales ranking to identify high-baseline outlets",
+        "Cooler supplier delivery",
+        "ACT-B01 for Mwanza"
+      ],
+      "timing": "Q1-Q2 2027",
+      "resource_basis": "TZS 288 million installed for 180 coolers plus TZS 45 million a year maintenance, from the flat budget",
+      "metrics": [
+        "MET-B01",
+        "MET-B02",
+        "MET-B03"
+      ],
+      "review_condition": "Gate review end of Q2 2027",
+      "reversal_trigger": "Incremental 350 ml sales below 25 litres a week versus controls or uptime below 90%",
+      "status": "planned"
+    },
+    {
+      "id": "ACT-B03",
+      "decision_link": "OPT-B01",
+      "description": "Communications linking Fizzi to the cold drink on the way home, concentrated around cooler clusters (outdoor at stages, radio in drive time); brief written after the Q4 2026 retrieval read",
+      "intended_change": "Fizzi comes to mind for the on-the-go cold moment",
+      "mechanism": "Situational mental availability supporting conversion where cold Fizzi is available",
+      "owner_role": "Marketing director",
+      "dependencies": [
+        "ACT-B04 retrieval baseline",
+        "ACT-B02 placements"
+      ],
+      "timing": "Q2-Q4 2027",
+      "resource_basis": "Reallocation of part of national media weight; amount set after the retrieval read",
+      "metrics": [
+        "MET-B01",
+        "MET-B04",
+        "MET-B07"
+      ],
+      "review_condition": "Q3 2027 tracker",
+      "reversal_trigger": "No retrieval gain in cooler clusters versus non-cooler clusters by Q4 2027",
+      "status": "planned"
+    },
+    {
+      "id": "ACT-B04",
+      "decision_link": "OPT-B01",
+      "description": "Add a situational retrieval question (brand that comes to mind for a cold drink on the way home) to the Q4 2026 tracker wave, with a commuter boost sample",
+      "intended_change": "Baseline for HYP-B02",
+      "mechanism": "Measurement",
+      "owner_role": "Insights manager",
+      "dependencies": [
+        "Agency questionnaire change"
+      ],
+      "timing": "Q4 2026",
+      "resource_basis": "Existing tracker budget plus boost sample cost (to be quoted)",
+      "metrics": [
+        "MET-B04"
+      ],
+      "review_condition": "Q4 2026 results",
+      "reversal_trigger": "Not applicable (measurement action)",
+      "status": "planned"
+    },
+    {
+      "id": "ACT-B05",
+      "decision_link": "OPT-B01",
+      "description": "Keep modern trade investment at 2026 levels; review audit share every six months instead of moving 40% of trade budget",
+      "intended_change": "Budget not moved on an unsupported assumption",
+      "mechanism": "Avoids misallocation",
+      "owner_role": "Commercial director",
+      "dependencies": [
+        "Audit releases"
+      ],
+      "timing": "2027",
+      "resource_basis": "No incremental cost",
+      "metrics": [
+        "MET-B06"
+      ],
+      "review_condition": "Semi-annual",
+      "reversal_trigger": "Modern trade share up 2 points or more in two consecutive half-years: revisit allocation",
+      "status": "planned"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "MET-B01",
+      "actions": [
+        "ACT-B02",
+        "ACT-B03"
+      ],
+      "definition": "Fizzi household penetration, 52-week panel, Dar es Salaam and Mwanza",
+      "level": "business_outcome",
+      "timing_role": "lagging",
+      "baseline": "52 weeks to June 2026: Dar es Salaam 34%, Mwanza 30%",
+      "target_rationale": "Stop the decline in 2027 (Dar es Salaam at least 34%); stretch 35% if Phase 2 proceeds; Mwanza recovery depends on supply repair",
+      "data_source": "Household panel",
+      "cadence": "Quarterly (rolling 52 weeks)",
+      "owner_role": "Insights manager",
+      "decision_rule": "Penetration still falling at 52 weeks to December 2027 despite placements: reassess route",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-B02",
+      "actions": [
+        "ACT-B02"
+      ],
+      "definition": "350 ml litres per outlet per week, Phase 1 cooler outlets versus matched controls, relative to pre-period",
+      "level": "behavioural_response",
+      "timing_role": "leading",
+      "baseline": "Pre-period levels measured per outlet before installation",
+      "target_rationale": "At least 25 incremental litres a week to proceed to Phase 2 (break-even analysis in analysis/cooler_economics.md)",
+      "data_source": "Distributor outlet sales and field audits",
+      "cadence": "Monthly",
+      "owner_role": "Trade marketing analyst",
+      "decision_rule": "Below 25 litres a week at gate: stop expansion",
+      "horizon": "Q1-Q2 2027"
+    },
+    {
+      "id": "MET-B03",
+      "actions": [
+        "ACT-B02"
+      ],
+      "definition": "Cooler uptime: share of visits where the cooler is working and stocked with Fizzi",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "unknown: not measured in pilot",
+      "target_rationale": "At least 90% to protect payback",
+      "data_source": "Field audit visits",
+      "cadence": "Monthly",
+      "owner_role": "Field operations manager",
+      "decision_rule": "Below 90% for two months: fix maintenance before adding coolers",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-B04",
+      "actions": [
+        "ACT-B03",
+        "ACT-B04"
+      ],
+      "definition": "Share of commuters naming Fizzi for a cold drink on the way home (situational retrieval), cooler clusters versus other areas",
+      "level": "brand_effect",
+      "timing_role": "lagging",
+      "baseline": "unknown: first measured in the Q4 2026 wave",
+      "target_rationale": "Set after baseline; test for a gain in cooler clusters versus other areas",
+      "data_source": "Brand tracker with commuter boost",
+      "cadence": "Half-yearly",
+      "owner_role": "Insights manager",
+      "decision_rule": "No difference by Q4 2027: stop cluster communications",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-B05",
+      "actions": [
+        "ACT-B01"
+      ],
+      "definition": "Numeric distribution in wholesaler-served dukas, Mwanza and Arusha",
+      "level": "operational",
+      "timing_role": "leading",
+      "baseline": "H1 2026: Mwanza 37%, Arusha 38%",
+      "target_rationale": "Within 3 points of H1 2025 levels (58% and 55%) by end of Q1 2027",
+      "data_source": "Monthly field audit",
+      "cadence": "Monthly",
+      "owner_role": "Sales operations manager",
+      "decision_rule": "Below 45% at end of Q1 2027: change distributor",
+      "horizon": "Q4 2026-Q1 2027"
+    },
+    {
+      "id": "MET-B06",
+      "actions": [
+        "ACT-B05"
+      ],
+      "definition": "Modern trade share of urban category value (audit)",
+      "level": "business_outcome",
+      "timing_role": "lagging",
+      "baseline": "14% (Q2 2026)",
+      "target_rationale": "Monitoring metric, no target",
+      "data_source": "Retail audit",
+      "cadence": "Semi-annual",
+      "owner_role": "Commercial director",
+      "decision_rule": "Up 2 points or more in two consecutive half-years: revisit trade allocation",
+      "horizon": "2027"
+    },
+    {
+      "id": "MET-B07",
+      "actions": [
+        "ACT-B03"
+      ],
+      "definition": "Reach of on-the-go communications among commuters in cooler clusters",
+      "level": "exposure_output",
+      "timing_role": "leading",
+      "baseline": "unknown: campaign not yet run",
+      "target_rationale": "Delivery check only; not a success measure",
+      "data_source": "Media delivery reports",
+      "cadence": "Monthly during flight",
+      "owner_role": "Media manager",
+      "decision_rule": "Under-delivery: correct placement; never used alone to judge success",
+      "horizon": "Q2-Q4 2027"
+    }
+  ],
+  "learnings": [],
+  "defects": [
+    {
+      "id": "DEF-B01",
+      "claim_or_section": "Consumer mechanism for 350 ml buyer loss (INS-B01)",
+      "gate": "customer_relevance",
+      "verdict": "CONCERN",
+      "defect": "Mechanism rests partly on ten interviews at three locations",
+      "evidence_or_missing_evidence": "Panel and pilot data support the pattern; interviews explain it but cannot size it",
+      "strategic_consequence": "The share of buyer loss due to cold availability could be smaller than implied",
+      "required_fix": "Keep recommendation conditional; add situational retrieval measurement and Phase 1 controls",
+      "retest_condition": "Phase 1 gate and Q4 2026 tracker results",
+      "status": "bounded_provisional",
+      "affected_records": [
+        "INS-B01",
+        "OPT-B01"
+      ]
+    },
+    {
+      "id": "DEF-B02",
+      "claim_or_section": "Cooler economics (CLM-B05, OPT-B01)",
+      "gate": "commercial_mechanism",
+      "verdict": "CONCERN",
+      "defect": "At pilot outlet baselines the payback is about 3.1 years, longer than a typical two-year hurdle",
+      "evidence_or_missing_evidence": "Break-even calculation in analysis/cooler_economics.md; outlet baseline distribution unknown",
+      "strategic_consequence": "A broad roll-out could destroy value",
+      "required_fix": "Target high-baseline outlets; gate expansion on measured uplift; obtain outlet sales ranking",
+      "retest_condition": "Outlet ranking shows enough outlets near 59 litres a week and Phase 1 uplift meets the gate",
+      "status": "bounded_provisional",
+      "affected_records": [
+        "OPT-B01",
+        "ACT-B02"
+      ]
+    },
+    {
+      "id": "DEF-B03",
+      "claim_or_section": "Competitive response to Fizzi cooler placements",
+      "gate": "competitive_response",
+      "verdict": "CONCERN",
+      "defect": "Competitor response (exclusivity deals, price moves) not assessed; competitor cooler count is an estimate",
+      "evidence_or_missing_evidence": "Only supervisor estimates (CLM-B10)",
+      "strategic_consequence": "Placements could be blocked or uplift eroded",
+      "required_fix": "Record competitor cooler presence in Phase 1 outlet audits; prepare a response plan for exclusivity demands",
+      "retest_condition": "Phase 1 audit data on competitor presence",
+      "status": "open",
+      "affected_records": [
+        "OPT-B01"
+      ]
+    },
+    {
+      "id": "DEF-B04",
+      "claim_or_section": "First draft proposed a 250 ml pack launch citing the Nairobi on-the-go study",
+      "gate": "local_validity",
+      "verdict": "FAIL",
+      "defect": "Kenyan survey used as evidence for Tanzanian pack demand",
+      "evidence_or_missing_evidence": "CLM-B11 is a regional proxy; no Tanzanian 250 ml evidence",
+      "strategic_consequence": "A pack launch could be committed on evidence that has not been shown to transfer",
+      "required_fix": "Remove from the recommendation; record as an open question for a 2028 pack test",
+      "retest_condition": "Tanzanian pack-size evidence obtained",
+      "status": "repaired",
+      "affected_records": [
+        "CLM-B11"
+      ],
+      "resolution": "250 ml launch removed from the draft plan; listed as an open question with a suggested local test"
+    }
+  ],
+  "gate_results": [
+    {
+      "gate": "problem_framing",
+      "verdict": "PASS",
+      "reason": "Decision, baseline and constraints explicit; growth task framed as buyer recovery"
+    },
+    {
+      "gate": "evidence",
+      "verdict": "PASS",
+      "reason": "Load-bearing claims trace to panel, pilot and audit data with limits stated; planning assertion recognised as one lineage"
+    },
+    {
+      "gate": "logic_causality",
+      "verdict": "CONCERN",
+      "reason": "Pilot is matched rather than randomised; mechanism conclusions bounded",
+      "defects": [
+        "DEF-B01"
+      ]
+    },
+    {
+      "gate": "insight",
+      "verdict": "PASS",
+      "reason": "Consumer and channel insights with contrasts, mechanisms and alternatives; tension used only where interviews evidence it"
+    },
+    {
+      "gate": "meaningful_choice",
+      "verdict": "PASS",
+      "reason": "Four routes including status quo; explicit non-choices"
+    },
+    {
+      "gate": "commercial_mechanism",
+      "verdict": "CONCERN",
+      "reason": "Payback marginal at pilot baselines; gated",
+      "defects": [
+        "DEF-B02"
+      ]
+    },
+    {
+      "gate": "customer_relevance",
+      "verdict": "CONCERN",
+      "reason": "Small qualitative base",
+      "defects": [
+        "DEF-B01"
+      ]
+    },
+    {
+      "gate": "competitive_response",
+      "verdict": "CONCERN",
+      "reason": "Competitor response not assessed",
+      "defects": [
+        "DEF-B03"
+      ]
+    },
+    {
+      "gate": "brand_credibility",
+      "verdict": "PASS",
+      "reason": "Recommendation relies on availability and situational relevance, not unproven brand claims"
+    },
+    {
+      "gate": "local_validity",
+      "verdict": "PASS",
+      "reason": "Kenyan proxy removed from support after first-draft FAIL (DEF-B04 repaired); CPI used only as context",
+      "defects": [
+        "DEF-B04"
+      ]
+    },
+    {
+      "gate": "feasibility",
+      "verdict": "CONCERN",
+      "reason": "Number of high-baseline outlets unknown; cooler uptime unmeasured",
+      "defects": [
+        "DEF-B02"
+      ]
+    },
+    {
+      "gate": "measurement",
+      "verdict": "PASS",
+      "reason": "Chain from exposure to penetration with controls and decision rules"
+    },
+    {
+      "gate": "clarity",
+      "verdict": "PASS",
+      "reason": "Governing thought and storyline validated against records"
+    }
+  ],
+  "changes": [
+    {
+      "id": "CHG-001",
+      "date": "2026-09-17",
+      "record_id": "ASM-B01",
+      "field": "status",
+      "previous": "accepted_for_planning",
+      "new": "refuted",
+      "reason": "Audit shows modern trade share flat at 14% (CLM-B09); assumption was one repeated planning statement (CLM-B08)",
+      "author": "analyst",
+      "flagged": [
+        "OPT-B04"
+      ]
+    }
+  ]
+}

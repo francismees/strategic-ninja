@@ -1,0 +1,41 @@
+{
+  "id": "buyers-02-three-factor-shapley",
+  "recipe": "buyers",
+  "purpose": "Three factors change at once; attribution must be order-independent and exact.",
+  "input_csv": "period,population,buyers,occasions,units,window_days\n2025,20000,1000,4000,6000,364\n2026,21000,1050,4410,6174,364\n",
+  "args": [
+    "--input",
+    "{input}",
+    "--period-col",
+    "period",
+    "--base",
+    "2025",
+    "--current",
+    "2026",
+    "--buyers-col",
+    "buyers",
+    "--occasions-col",
+    "occasions",
+    "--units-col",
+    "units",
+    "--window-col",
+    "window_days",
+    "--population-col",
+    "population"
+  ],
+  "convention": "Shapley attribution over four multiplicative factors.",
+  "derivation": "Population a 20000 -> 21000; penetration 0.05 -> 0.05; frequency b 4.0 -> 4.2; units/occasion c 1.5 -> 1.4. Volume 6000 -> 6174 (+174). Three-factor Shapley with weights 1/3, 1/6, 1/6, 1/3 and penetration constant (0.05): population effect = 1000 x 0.05 x [6/3 + 6.3/6 + 5.6/6 + 5.88/3] = 1783/6 = 297.1666667; frequency effect = 0.2 x 0.05 x [30000/3 + 31500/6 + 28000/6 + 29400/3] = 1783/6 = 297.1666667; units/occasion effect = -0.1 x 0.05 x [80000/3 + 84000/6 + 84000/6 + 88200/3] = -1261/3 = -420.3333333. Sum = 174.",
+  "tolerance": 1e-06,
+  "expected_status": "ok",
+  "expect_reconciles": true,
+  "expected": {
+    "results.all.effects.eligible_population": 297.1666667,
+    "results.all.effects.penetration": 0,
+    "results.all.effects.occasions_per_buyer": 297.1666667,
+    "results.all.effects.units_per_occasion": -420.3333333,
+    "results.all.volume_change": 174
+  },
+  "edge_case_expectation": "Result must not depend on factor order.",
+  "expected_failure_behavior": "Not applicable (valid input).",
+  "kind": "analytics"
+}

@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "engagement_id": "ENG-fizzi-2027-annual-plan",
+  "title": "Fizzi Cola 2027: win back the on-the-go buyer",
+  "audience": "Fizzi leadership team and board (fictional)",
+  "format": "deck",
+  "synthetic": true,
+  "decision_requested": "Approve Phase 1 of the on-the-go plan (180 coolers, measurement and cluster communications) with a gate review at end of Q2 2027, and stop the planned shift of 40% of trade budget to modern trade",
+  "governing_thought": "Fizzi is losing on-the-go buyers at the moment of purchase where cold Fizzi is missing; win that moment back with chilled availability in high-footfall clusters, on a repaired supply base, and scale only if Phase 1 proves the uplift",
+  "recommendation_type": "conditional",
+  "sections": [
+    {
+      "id": "S01",
+      "role": "context",
+      "assertion": "2027 must restore buyer growth on a flat TZS 3,200 million budget",
+      "audience_decision": "Agree the objective and constraint",
+      "evidence_ids": [
+        "CLM-B12"
+      ],
+      "exhibit": "Objective, budget and constraints on one slide",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": [
+        "data/market_and_plan_notes.md items 5-6"
+      ]
+    },
+    {
+      "id": "S02",
+      "role": "diagnosis",
+      "assertion": "Dar es Salaam volume grew only because existing buyers bought more often; the brand lost buyers in both core cities",
+      "audience_decision": "Accept that buyer loss, not frequency, is the problem",
+      "evidence_ids": [
+        "CLM-B01",
+        "CLM-B02"
+      ],
+      "exhibit": "Penetration and frequency effects bridge, Dar es Salaam and Mwanza",
+      "notes": "Mwanza loss overlaps the distributor problem from the H1 diagnosis",
+      "uncertainty": "Household panel under-records out-of-home purchases",
+      "source_locators": [
+        "analysis/buyers_by_region.json"
+      ]
+    },
+    {
+      "id": "S03",
+      "role": "evidence",
+      "assertion": "The loss is concentrated in 350 ml, the on-the-go pack; the 1.25 L home pack is growing",
+      "audience_decision": "Focus on the on-the-go occasion",
+      "evidence_ids": [
+        "CLM-B03"
+      ],
+      "exhibit": "Pack-level penetration change, Dar es Salaam",
+      "notes": "",
+      "uncertainty": "350 ml out-of-home purchases likely under-recorded",
+      "source_locators": [
+        "analysis/buyers_by_pack_dar.json"
+      ]
+    },
+    {
+      "id": "S04",
+      "role": "insight",
+      "assertion": "On the way home, the brand with the cold bottle wins: where cold Fizzi is missing, buyers take a cold competitor or skip",
+      "audience_decision": "Accept the mechanism as the basis for the plan, subject to Phase 1",
+      "evidence_ids": [
+        "INS-B01",
+        "CLM-B04",
+        "CLM-B06",
+        "CLM-B07"
+      ],
+      "exhibit": "Cooler pilot versus matched outlets; three quotes with respondent IDs",
+      "notes": "Quotes are analyst glosses of Kiswahili originals",
+      "uncertainty": "Ten interviews at three locations; pilot matched not randomised; competitor role unmeasured",
+      "source_locators": [
+        "data/cooler_pilot.csv",
+        "data/interviews_excerpt.md R02, R06, R10"
+      ]
+    },
+    {
+      "id": "S05",
+      "role": "alternatives",
+      "assertion": "Premiumisation, family-pack promotions and the modern-trade shift do not address the buyer loss",
+      "audience_decision": "Agree the non-choices",
+      "evidence_ids": [
+        "OPT-B02",
+        "OPT-B03",
+        "OPT-B04",
+        "INS-B02",
+        "CLM-B09"
+      ],
+      "exhibit": "Options table: mechanism, evidence, economics, why not",
+      "notes": "The modern-trade assumption was repeated in three plans without data",
+      "uncertainty": "Premium tier potential untested rather than disproven; audit under-covers informal outlets",
+      "source_locators": [
+        "data/market_and_plan_notes.md items 1-2"
+      ]
+    },
+    {
+      "id": "S06",
+      "role": "recommendation",
+      "assertion": "Win the on-the-go cold moment in high-footfall clusters, conditionally and in phases",
+      "audience_decision": "Approve Phase 1 and the gate",
+      "evidence_ids": [
+        "OPT-B01"
+      ],
+      "exhibit": "Choice on a page: where to play, how to win, non-choices, conditions",
+      "notes": "",
+      "uncertainty": "Conditional on Phase 1 uplift replicating and on supply repair in Mwanza",
+      "source_locators": []
+    },
+    {
+      "id": "S07",
+      "role": "economics",
+      "assertion": "Coolers pay back in about three years at pilot outlets; high-baseline outlets are needed for a two-year payback",
+      "audience_decision": "Accept outlet targeting and the gate threshold",
+      "evidence_ids": [
+        "CLM-B05",
+        "CLM-B04",
+        "CLM-B12"
+      ],
+      "exhibit": "Break-even chart: incremental litres versus payback years",
+      "notes": "",
+      "uncertainty": "Built on a small pilot, a margin estimate and unknown uptime; undiscounted",
+      "source_locators": [
+        "analysis/cooler_economics.md"
+      ]
+    },
+    {
+      "id": "S08",
+      "role": "action",
+      "assertion": "Five actions, sequenced: repair supply, place coolers with controls, measure retrieval, communicate in clusters, hold modern trade",
+      "audience_decision": "Confirm owners and timing",
+      "evidence_ids": [
+        "ACT-B01",
+        "ACT-B02",
+        "ACT-B03",
+        "ACT-B04",
+        "ACT-B05"
+      ],
+      "exhibit": "Action timeline with owners and dependencies",
+      "notes": "",
+      "uncertainty": "Communications budget set only after the retrieval baseline",
+      "source_locators": []
+    },
+    {
+      "id": "S09",
+      "role": "measurement",
+      "assertion": "We will know by end of Q2 2027 whether to scale, using matched controls and uptime",
+      "audience_decision": "Agree the gate rules",
+      "evidence_ids": [
+        "MET-B01",
+        "MET-B02",
+        "MET-B03",
+        "MET-B04",
+        "MET-B07"
+      ],
+      "exhibit": "Measurement ladder from reach to penetration with decision rules",
+      "notes": "Reach is a delivery check only",
+      "uncertainty": "Situational retrieval baseline not yet measured",
+      "source_locators": []
+    },
+    {
+      "id": "S10",
+      "role": "risk",
+      "assertion": "The main risks are non-replication, too few high-baseline outlets and competitor exclusivity deals",
+      "audience_decision": "Accept risks and mitigations",
+      "evidence_ids": [
+        "DEF-B01",
+        "DEF-B02",
+        "DEF-B03",
+        "CLM-B10",
+        "CLM-TZ-002"
+      ],
+      "exhibit": "Risk table with triggers",
+      "notes": "Transport price inflation is household-level context, not Fizzi's distribution cost",
+      "uncertainty": "Competitor cooler count is an estimate; competitor response not assessed",
+      "source_locators": [
+        "data/market_and_plan_notes.md item 3",
+        "NBS NCPI August 2026 p.2 Table 1"
+      ]
+    },
+    {
+      "id": "S11",
+      "role": "ask",
+      "assertion": "Approve Phase 1 and stop the modern-trade budget shift today",
+      "audience_decision": "Approve",
+      "evidence_ids": [],
+      "exhibit": "Decision box",
+      "notes": "",
+      "uncertainty": "",
+      "source_locators": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategic-ninja/outline.schema.json",
+  "title": "Renderer-neutral storyline outline",
+  "description": "Argument structure for a memo, one-pager or deck. The strategy skill owns this contract; any available document or presentation capability owns rendering. scripts/records.py outline checks structure and evidence links; whether evidence supports each assertion requires judgement (see references/storytelling.md).",
+  "type": "object",
+  "required": ["schema_version", "engagement_id", "title", "audience", "decision_requested", "governing_thought", "recommendation_type", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["1.0"]},
+    "engagement_id": {"type": "string", "pattern": "^ENG-[A-Za-z0-9._-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "audience": {"type": "string", "minLength": 1},
+    "format": {"type": "string", "enum": ["deck", "memo", "one_pager", "workshop", "board_paper"]},
+    "decision_requested": {"type": "string", "minLength": 1},
+    "governing_thought": {"type": "string", "minLength": 1},
+    "recommendation_type": {"type": "string", "enum": ["supported", "conditional", "research_first", "not_recommended"]},
+    "synthetic": {"type": "boolean"},
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "role", "assertion", "audience_decision", "evidence_ids", "exhibit", "notes", "uncertainty", "source_locators"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^S[0-9]{2,3}$"},
+          "role": {"type": "string", "enum": ["context", "complication", "diagnosis", "evidence", "insight", "alternatives", "recommendation", "action", "economics", "risk", "measurement", "ask", "appendix"]},
+          "assertion": {"type": "string", "minLength": 1},
+          "audience_decision": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string", "pattern": "^(SRC|CLM|HYP|ASM|INS|OPT|ACT|MET|LRN|DEF)-[A-Za-z0-9._-]+$"}},
+          "exhibit": {"type": "string"},
+          "notes": {"type": "string"},
+          "uncertainty": {"type": "string"},
+          "source_locators": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}
