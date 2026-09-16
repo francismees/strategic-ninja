@@ -45,6 +45,7 @@ import records as records_lib  # noqa: E402
 
 ALLOWED_UPLOAD_KEYS = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
 JUNK_NAMES = {".DS_Store", "__pycache__", "Thumbs.db"}
+VCS_NAMES = {".git", ".gitignore", ".gitattributes"}
 JUNK_SUFFIXES = (".pyc", ".pyo")
 EMAIL_ALLOW = {"noreply@anthropic.com"}
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
@@ -93,8 +94,10 @@ def parse_frontmatter(text):
 def package_files():
     out = []
     for base, dirs, files in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in JUNK_NAMES and not d.startswith(".git")]
+        dirs[:] = [d for d in dirs if d not in JUNK_NAMES and d not in VCS_NAMES]
         for name in files:
+            if name in VCS_NAMES:
+                continue
             out.append(os.path.relpath(os.path.join(base, name), ROOT))
     return sorted(out)
 
@@ -204,6 +207,7 @@ def check_reachability(res, files):
 def check_hygiene(res, files):
     problems = []
     for base, dirs, names in os.walk(ROOT):
+        dirs[:] = [d for d in dirs if d not in VCS_NAMES]
         rel = os.path.relpath(base, ROOT)
         if any(part in JUNK_NAMES for part in rel.split(os.sep)):
             problems.append("junk folder: " + rel)
