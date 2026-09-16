@@ -27,6 +27,7 @@ import json
 import os
 import re
 import sys
+from importlib.metadata import version as package_version
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECORD_SCHEMA = os.path.join(ROOT, "schemas", "records.schema.json")
@@ -135,7 +136,7 @@ def schema_validate(instance, schema_path, report):
         validator = jsonschema.Draft202012Validator(schema)
         for error in sorted(validator.iter_errors(instance), key=lambda e: list(e.path)):
             report.error("SCHEMA", ".".join(str(p) for p in error.path) or "$", error.message)
-        return "jsonschema " + getattr(jsonschema, "__version__", "")
+        return "jsonschema " + package_version("jsonschema")
     except ImportError:
         subset_validate(instance, schema, schema, "", report)
         return "builtin-subset"

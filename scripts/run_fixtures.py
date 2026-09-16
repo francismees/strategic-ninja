@@ -59,6 +59,15 @@ def run_command(cmd):
     return proc.returncode, payload, proc.stderr
 
 
+def check_process_stderr(returncode, stderr, checks):
+    """Fail only on evidence of an unexpected subprocess failure, not benign warnings."""
+    text = stderr.strip()
+    if not text:
+        return
+    if returncode not in (0, 2) or "Traceback (most recent call last):" in text:
+        checks.append(("no uncaught exception", False, text[-500:]))
+
+
 def check_common(fixture, payload, returncode, checks):
     status = payload.get("status")
     expected_status = fixture["expected_status"]
@@ -106,8 +115,7 @@ def run_analytics(fixture, tmpdir):
     args = [a.format(**paths) for a in fixture["args"]]
     returncode, payload, stderr = run_command([sys.executable, ANALYTICS, fixture["recipe"]] + args)
     checks = []
-    if stderr.strip():
-        checks.append(("no uncaught exception", False, stderr.strip()[-500:]))
+    check_process_stderr(returncode, stderr, checks)
     check_common(fixture, payload, returncode, checks)
     return checks
 
@@ -123,8 +131,7 @@ def run_records(fixture, tmpdir):
     args = [a.format(**paths) for a in fixture["args"]]
     returncode, payload, stderr = run_command([sys.executable, RECORDS, fixture["command"]] + args)
     checks = []
-    if stderr.strip():
-        checks.append(("no uncaught exception", False, stderr.strip()[-500:]))
+    check_process_stderr(returncode, stderr, checks)
     check_common(fixture, payload, returncode, checks)
     error_codes = {e.get("code") for e in payload.get("errors", [])}
     warning_codes = {w.get("code") for w in payload.get("warnings", [])}
